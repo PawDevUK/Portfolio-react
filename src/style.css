@@ -1,0 +1,201 @@
+html {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    scroll-behavior: smooth;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+#logo {
+    margin-left: 70px;
+    height: 60px;
+    width: auto;
+}
+a:hover {
+    color: white;
+}
+.fixed-top {
+    min-height: 91px;
+    background-color: #35495e;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    background-color: #41b883;
+}
+.cardSolo{
+    width: 550px;
+}
+.nav-link{
+    font-size: 22px;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #41b883;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #1598c3 !important;
+}
+
+/* home */
+#home {
+    height: 600px;
+    width: 100%;
+    background: url("img/grayscale-photo-of-computer-laptop-near-white-notebook-and-169573.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -20px;
+}
+
+.main-hello {
+    font-size: 40px;
+    color: #ededed;
+    margin-top: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 26px;
+    border-radius: 10px;
+}
+
+#hallo {
+    text-transform: capitalize;
+}
+
+/* about */
+#about {
+    background-color: #fff;
+    margin-top: 30px;
+}
+
+#about img {
+    max-height: 200px;
+    max-width: 250px;
+}
+
+#about-header-text {
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+}
+.text-blue {
+    color: #5990b9 !important;
+}
+
+.text-yel {
+    color: #fed136;
+}
+.text-red {
+    color: #f24e1e;
+}
+.text-orange {
+    color: #f16529;
+}
+.text-blue {
+    color: #1471b7;
+}
+
+.text-boot {
+    color: #5b4084;
+}
+
+/* projects */
+#projects {
+    min-height: 1100px;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width:767px) {
+    #projects {
+        min-height: 1900px;
+    }
+}
+
+.jumbo {
+    background: #fff;
+}
+
+.jumbo h2 {
+    text-transform: uppercase;
+    color: #181818;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.jumbo .card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 30px;
+}
+
+.jumbo .card img {
+    margin-top: 10px;
+}
+
+.btn-green {
+    background-color: #41b883;
+    color: #fff;
+}
+
+.btn-green:hover {
+    background-color: #369d6f;
+    color: #fff;
+}
+
+/* contact */
+#Contact {
+    margin: 25px 0px;
+}
+
+#Contact label {
+    font-size: 20px;
+}
+
+/* footer */
+#footer {
+    background-color: #35495e;
+}
+
+.socials {
+    text-align: center;
+    font-size: 27px;
+    padding-top: 15px;
+}
+
+.socials a {
+    margin-left: 20px;
+    color: #41b883;
+}
+
+.socials a:hover {
+    color: #369d6f;
+}
+
+.credit p {
+    color: #fff;
+    margin-bottom: 0px;
+    padding: 0px 0px 15px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: pre-wrap;
+    font-size: 14px;
+}

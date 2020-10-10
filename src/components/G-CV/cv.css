@@ -1,0 +1,159 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: #f5f5f5;
+}
+
+.page {
+    color: #585858;
+    /* width: 100%; */
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 1px 0px 25px rgba(50, 50, 50, 0.75);
+}
+
+@media (min-width: 900px) {
+    .page {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding-top: 25px;
+    }
+}
+
+h1 {
+    font-size: 35px;
+    color: #333;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin: 0px;
+    text-transform: capitalize;
+    padding: 10px 0px 0px 0px;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h4 {
+    padding-top: 10px;
+    margin: 0px;
+    font-size: 24px;
+    color: #007297;
+    text-transform: capitalize;
+}
+
+h5 {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 19px;
+    margin: 20px 0px 5px 0px;
+}
+
+p {
+    color: #585858;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #007297;
+}
+
+a:hover {
+    color: #0faee1;
+}
+
+#header, #contact, #know, #work, #edu {
+    padding: 10px 35px;
+}
+
+#header {
+    margin-top: 0px;
+}
+
+.grid-plus {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 800px) {
+    .grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+article {
+    padding: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #D3D3D3;
+}
+
+/* header */
+#socials {
+    margin: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 35px;
+}
+
+#socials a {
+    color: #585858;
+    margin: 5px;
+}
+
+#socials a:first-child:hover {
+    color: #0e76a8;
+}
+
+#socials a:hover {
+    color: #333;
+}
+
+#contact header {
+    padding: 0px;
+}
+
+#cont-art {
+    margin-top: 0px;
+}
+
+#cont-art #left {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#cont-art #right, ul {
+    text-transform: ;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* work/edu */
+.non-margin-top {
+    margin-top: 0px;
+}
+
+time {
+    font-weight: normal;
+    float: right;
+}
