@@ -1,27 +1,29 @@
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Navigation from "react-sticky-nav";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
 import Particles from 'react-particles-js'
 import styled from 'styled-components';
 import logo from "../../img/pavdev.png"
-import '../../style.css'
 
 const height = "50px";
+const blue = "#1598C3"
 
 const NavigationSticky = styled(Navigation)`
-display:flex;
+// display:flex;
 z-index:100;
 min-height:${height};
 `;
 const Cont = styled(Container)`
-min-height:${height};
-`
+
+`;
 const Parti = styled(Particles)`
 position:absolute;
 top:0px;
-height:90px;
+height:80px;
 width:100%;
 margin:auto
 `;
@@ -30,28 +32,31 @@ z-index:100;
 min-height:${height};
 `;
 const Collapse = styled(Navbar.Collapse)`
-margin-bottom:21px;
-`
+
+`;
 const Link = styled(Nav.Link)`
 color:#d2d4d6 !important;
-display: flex;
-justify-content: center;
-// align-items: center;
 font-size:18px;
 font-weight:600;
-margin-top:12px ;
 { transition: all .2s ease-in-out; }
 &:hover{
-    color:#5990b9 !important;
+    color:#1598C3 !important;
     { transform: scale(1.04); }
 }
 `;
+// const Toggle = styled(Navbar.Toggle)`
+// color:white !important;
+// `
 const Logo = styled.img`
 display: flex;
 justify-content: center;
 height:50px;
 width:auto;
+`;
+const Burger = styled(FontAwesomeIcon)`
+color:#d2d4d6;
 `
+
 class HeaderReactBootstrap extends Component {
     constructor(props) {
         super(props);
@@ -92,13 +97,13 @@ class HeaderReactBootstrap extends Component {
             <NavigationSticky>
                 <Cont style={{
                     backgroundColor: "#35495e",
-                    minHeight: "100px !important"
+                    minHeight: "110px !important"
                 }}>
                     <NavbarStyled expand="lg" >
                         <Navbar.Brand href="#">
                             <Logo src={logo} alt="pavdev"></Logo>
                         </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Toggle variant="light" aria-controls="basic-navbar-nav"><Burger icon={faBars} /></Navbar.Toggle>
                         <Collapse >
                             <Nav className="ml-auto">
                                 {this.state.menu.map((item, i) => {
@@ -112,7 +117,6 @@ class HeaderReactBootstrap extends Component {
                             </Nav>
                         </Collapse>
                     </NavbarStyled>
-
                     <Parti
                         params={{
                             particles: {
