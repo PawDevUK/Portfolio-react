@@ -9,15 +9,24 @@
   "keywords": [],
   "author": "Paweł",
   "license": "ISC",
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/styles": "^4.10.0",
     "axios": "^0.20.0",
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.5.3",
     "css-loader": "^4.3.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.3.0",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-sticky": "^6.0.3",
+    "react-sticky-nav": "^4.0.6",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

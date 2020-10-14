@@ -10,52 +10,10 @@ body {
     padding: 0px;
     margin: 0px;
 }
-img {
-    width: 100%;
-    height: auto;
-}
-#logo {
-    margin-left: 70px;
-    height: 60px;
-    width: auto;
-}
-a:hover {
-    color: white;
-}
-.fixed-top {
-    min-height: 91px;
-    background-color: #35495e;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
 
-#mainNav .navbar-toggler {
-    font-size: 12px;
-    right: 0;
-    padding: 13px;
-    text-transform: uppercase;
-    color: #fff;
-    border: 0;
-    background-color: #41b883;
-}
 .cardSolo{
     width: 550px;
 }
-.nav-link{
-    font-size: 22px;
-}
-.navbar-dark .navbar-nav .nav-link.active {
-    color: #41b883;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #1598c3 !important;
-}
-
-/* home */
 #home {
     height: 600px;
     width: 100%;
@@ -181,10 +139,6 @@ p {
     padding-top: 15px;
 }
 
-.socials a {
-    margin-left: 20px;
-    color: #41b883;
-}
 
 .socials a:hover {
     color: #369d6f;
