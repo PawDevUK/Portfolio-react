@@ -44,9 +44,6 @@ font-weight:600;
     { transform: scale(1.04); }
 }
 `;
-// const Toggle = styled(Navbar.Toggle)`
-// color:white !important;
-// `
 const Logo = styled.img`
 display: flex;
 justify-content: center;

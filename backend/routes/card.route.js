@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Card = require('../models/card-model.js')
+console.log(Card);
 
 router.route('/').get((req,res)=>{
     Card.find()
