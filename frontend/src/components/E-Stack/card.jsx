@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     }
 
 })
-
+// img need to been ajusted, I cant figureout how to do it right now. Imgs are different sizes and they look bad. Option 1 is to resize them in figma or option 2 is to make them fill 100% wrapper. 
 export default function card(props) {
 
     const classes = useStyles();
