@@ -29,13 +29,6 @@ body {
     margin-top: -20px;
 }
 
-.main-hello {
-    font-size: 40px;
-    color: #ededed;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 26px;
-    border-radius: 10px;
-}
 
 #hallo {
     text-transform: capitalize;

@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from "../../img/pavdev.png"
 
+
 const height = "80px";
 const logoBlue = "#1598C3"
 const backgroundColor = '#35495e'
@@ -104,7 +105,7 @@ class HeaderReactBootstrap extends Component {
         return (
             <NavigationSticky  >
                 <div style={{
-                    backgroundColor: "#35495e",
+                    backgroundColor:'#35495e',
                     minHeight: "110px !important"
                 }}>
                     <NavbarStyled expand="lg" >
