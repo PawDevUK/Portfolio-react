@@ -1,24 +1,27 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Navbar, Nav, Container } from 'react-bootstrap';
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-import Navigation from "react-sticky-nav";
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { Component } from 'react';
+import Navigation from "react-sticky-nav";
 import Particles from 'react-particles-js'
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from "../../img/pavdev.png"
 
-const height = "50px";
-const blue = "#1598C3"
+const height = "80px";
+const logoBlue = "#1598C3"
+const backgroundColor = '#35495e'
 
 const NavigationSticky = styled(Navigation)`
-// display:flex;
 z-index:100;
 min-height:${height};
+-webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
 `;
 const Cont = styled(Container)`
-
+// It need to be in order to 
 `;
 const Parti = styled(Particles)`
 position:absolute;
@@ -30,20 +33,28 @@ margin:auto
 const NavbarStyled = styled(Navbar)`
 z-index:100;
 min-height:${height};
+font-size:20px
 `;
 const Collapse = styled(Navbar.Collapse)`
 
 `;
+const Navi = styled(Nav)`
+margin-right:10vw;
+`;
+
 const Link = styled(Nav.Link)`
 color:#d2d4d6 !important;
-font-size:18px;
-font-weight:600;
+font-size:20px;
+font-weight:500;
 { transition: all .2s ease-in-out; }
 &:hover{
     color:#1598C3 !important;
     { transform: scale(1.04); }
 }
 `;
+const Brand = styled(Navbar.Brand)`
+margin-left:10vw;
+`
 const Logo = styled.img`
 display: flex;
 justify-content: center;
@@ -59,19 +70,19 @@ class HeaderReactBootstrap extends Component {
         super(props);
         this.state = {
             menu: [{
-                title: "HOME",
+                title: "Home",
                 href: "#home",
                 style: "Green",
 
             },
             {
-                title: "PROJECTS",
+                title: "Projects",
                 href: "#projects",
 
 
             },
             {
-                title: "ABOUT",
+                title: "About",
                 href: "#about",
 
 
@@ -91,18 +102,18 @@ class HeaderReactBootstrap extends Component {
     }
     render() {
         return (
-            <NavigationSticky>
-                <Cont style={{
+            <NavigationSticky  >
+                <div style={{
                     backgroundColor: "#35495e",
                     minHeight: "110px !important"
                 }}>
                     <NavbarStyled expand="lg" >
-                        <Navbar.Brand href="#">
+                        <Brand href="#">
                             <Logo src={logo} alt="pavdev"></Logo>
-                        </Navbar.Brand>
-                        <Navbar.Toggle variant="light" aria-controls="basic-navbar-nav"><Burger icon={faBars} /></Navbar.Toggle>
+                        </Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav"><Burger icon={faBars} /></Navbar.Toggle>
                         <Collapse >
-                            <Nav className="ml-auto">
+                            <Navi className="ml-auto">
                                 {this.state.menu.map((item, i) => {
                                     return (
                                         <Link key={i}
@@ -111,7 +122,7 @@ class HeaderReactBootstrap extends Component {
                                         </Link>
                                     )
                                 })}
-                            </Nav>
+                            </Navi>
                         </Collapse>
                     </NavbarStyled>
                     <Parti
@@ -137,7 +148,7 @@ class HeaderReactBootstrap extends Component {
                             }
 
                         }} />
-                </Cont>
+                </div>
             </NavigationSticky>
         );
     }

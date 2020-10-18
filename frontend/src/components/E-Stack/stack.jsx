@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+
 import Card from './card.jsx'
 import axios from 'axios'
 

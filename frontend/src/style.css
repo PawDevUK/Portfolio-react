@@ -109,16 +109,6 @@ p {
     margin-top: 10px;
 }
 
-.btn-green {
-    background-color: #41b883;
-    color: #fff;
-}
-
-.btn-green:hover {
-    background-color: #369d6f;
-    color: #fff;
-}
-
 /* contact */
 #Contact {
     margin: 25px 0px;
