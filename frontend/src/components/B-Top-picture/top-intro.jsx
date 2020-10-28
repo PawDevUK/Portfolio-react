@@ -8,7 +8,7 @@ const Card = styled.div`
 margin:10px 0px;
 color: rgba(0, 0, 0, 0.7);
 background: #fff;
-background-opacity: 0.5;
+/* background-opacity: 0.5; */
 padding: 12px;
 border-radius: 10px;
 `
@@ -37,7 +37,7 @@ export default class TopIntro extends Component {
 
                             <Card data-aos="fade-right" className=" col-sm-12 col-md-8 mx-auto">
                             <P>
-                                    I'm self thought and self motivated developer. I started from jumping without prior knowledge into programming back in 2018 and I have no regrets. Coding is fun and interesting, when everything works as should !
+                                    I'm self thought and self motivated developer. I started from jumping without prior knowledge into programming back in 2018 and I have no regrets. Coding is fun when everything works as should! 
                             </P>
                             <P>
                                     At the moment I haven't got any commercial experience but I've done lots of React small projects like static pages and few MERN Stack apps. I use React, which is fantastic as it's main advantage is jsx and reusable components.

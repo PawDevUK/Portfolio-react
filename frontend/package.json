@@ -4,7 +4,8 @@
   "description": "Webpack/Babel/React starter bundle",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "Paweł",
@@ -29,6 +30,7 @@
     "react-particles-js": "^3.3.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.0",
     "react-sticky": "^6.0.3",
     "react-sticky-nav": "^4.0.6",
     "styled-components": "^5.2.0"
@@ -44,7 +46,6 @@
     "prettier": "^2.1.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }

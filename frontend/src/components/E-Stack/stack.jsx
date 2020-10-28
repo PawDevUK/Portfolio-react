@@ -14,7 +14,7 @@ export default class Stack extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/stack')
+        axios.get('https://portfolio-server-293806.ew.r.appspot.com/stack')
         .then((res)=>{
             console.log(res.data);
             this.setState({stack:res.data})

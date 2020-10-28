@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap'
 
 import HeaderReactBootstrap from "./A-Header/Header-reactBootstrap"
 
+import Intro from "./Intro/intro"
 import TopIntro from './B-Top-picture/top-intro'
 import WhatIDO from './C-What-I-do/what-I-do'
 import Projects from './D-Projects/projects'
@@ -19,6 +20,7 @@ function App() {
     return (
 
         <div>
+            <Intro></Intro>
                 <HeaderReactBootstrap></HeaderReactBootstrap>
             <Container>
                 <TopIntro></TopIntro>
@@ -26,11 +28,7 @@ function App() {
                 <Projects></Projects>
                 <Stack></Stack>
             </Container>
-
             <Footer></Footer>
-
-
-
         </div>
 
 

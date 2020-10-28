@@ -22,7 +22,7 @@ min-height:${height};
 box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
 `;
 const Cont = styled(Container)`
-// It need to be in order to 
+// It's need 
 `;
 const Parti = styled(Particles)`
 position:absolute;
@@ -47,10 +47,10 @@ const Link = styled(Nav.Link)`
 color:#d2d4d6 !important;
 font-size:20px;
 font-weight:500;
-{ transition: all .2s ease-in-out; }
+transition: all .2s ease-in-out; 
 &:hover{
     color:#1598C3 !important;
-    { transform: scale(1.04); }
+    transform: scale(1.04); 
 }
 `;
 const Brand = styled(Navbar.Brand)`
@@ -74,24 +74,25 @@ class HeaderReactBootstrap extends Component {
                 title: "Home",
                 href: "#home",
                 style: "Green",
-
+                disabled: false
             },
             {
                 title: "Projects",
                 href: "#projects",
-
+                disabled: false
 
             },
-            {
+            /* {
                 title: "About",
                 href: "#about",
+                disabled:true
 
-
-            },
+            }, */
             {
                 title: "CV",
                 target: "_blank",
                 href: "https://gitcrackeruk.github.io/CV/",
+                disabled: false
             }
             ]
         }
@@ -99,11 +100,11 @@ class HeaderReactBootstrap extends Component {
     checkForCv(item) {
         if (item.title === "CV") {
             return item.target
-        }
+            }
     }
     render() {
         return (
-            <NavigationSticky  >
+            <NavigationSticky>
                 <div style={{
                     backgroundColor:'#35495e',
                     minHeight: "110px !important"
@@ -116,10 +117,10 @@ class HeaderReactBootstrap extends Component {
                         <Collapse >
                             <Navi className="ml-auto">
                                 {this.state.menu.map((item, i) => {
+                                    
                                     return (
-                                        <Link key={i}
-                                            target={this.checkForCv(item)} href={item.href}> {
-                                                item.title}
+                                        <Link key={i} target={this.checkForCv(item)}  href={item.href}> 
+                                            { item.title}
                                         </Link>
                                     )
                                 })}

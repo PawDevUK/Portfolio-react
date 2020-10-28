@@ -13,7 +13,7 @@ export default class Projects extends Component {
     };
 
     componentDidMount() {
-        axios.get('http://localhost:5000/card')
+        axios.get('https://portfolio-server-293806.ew.r.appspot.com/card')
             .then(
                 (res) => {
                     this.setState({
