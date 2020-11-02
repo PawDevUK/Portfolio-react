@@ -7,6 +7,7 @@ import Navigation from "react-sticky-nav";
 import Particles from 'react-particles-js'
 import React, { Component } from 'react';
 import styled from 'styled-components';
+// import Logo from '../common/logo';
 import logo from "../../img/pavdev.png"
 
 
@@ -21,9 +22,9 @@ min-height:${height};
 -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
 box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
 `;
-const Cont = styled(Container)`
-// It's need 
-`;
+// const Cont = styled(Container)`
+// // It's need 
+// `;
 const Parti = styled(Particles)`
 position:absolute;
 top:0px;
@@ -31,14 +32,13 @@ height:80px;
 width:100%;
 margin:auto
 `;
+
 const NavbarStyled = styled(Navbar)`
 z-index:100;
 min-height:${height};
 font-size:20px
 `;
-const Collapse = styled(Navbar.Collapse)`
 
-`;
 const Navi = styled(Nav)`
 margin-right:10vw;
 `;
@@ -56,12 +56,13 @@ transition: all .2s ease-in-out;
 const Brand = styled(Navbar.Brand)`
 margin-left:10vw;
 `
-const Logo = styled.img`
+const LogoHeader = styled.img`
 display: flex;
 justify-content: center;
 height:50px;
 width:auto;
 `;
+
 const Burger = styled(FontAwesomeIcon)`
 color:#d2d4d6;
 `
@@ -100,58 +101,59 @@ class HeaderReactBootstrap extends Component {
     checkForCv(item) {
         if (item.title === "CV") {
             return item.target
-            }
+        }
     }
     render() {
         return (
-            <NavigationSticky>
-                <div style={{
-                    backgroundColor:'#35495e',
-                    minHeight: "110px !important"
-                }}>
-                    <NavbarStyled expand="lg" >
-                        <Brand href="#">
-                            <Logo src={logo} alt="pavdev"></Logo>
-                        </Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav"><Burger icon={faBars} /></Navbar.Toggle>
-                        <Collapse >
-                            <Navi className="ml-auto">
-                                {this.state.menu.map((item, i) => {
-                                    
-                                    return (
-                                        <Link key={i} target={this.checkForCv(item)}  href={item.href}> 
-                                            { item.title}
-                                        </Link>
-                                    )
-                                })}
-                            </Navi>
-                        </Collapse>
-                    </NavbarStyled>
-                    <Parti
-                        params={{
-                            particles: {
-                                number: {
-                                    value: 20
-                                },
-                                size: {
-                                    value: 1
-                                },
-                                autoPlay: true,
+            <div>
+                <NavigationSticky>
+                    <div style={{ backgroundColor: '#35495e', minHeight: "110px !important" }}>
+                        <NavbarStyled expand="lg">
+                            <Brand href="#">
+                            <LogoHeader  src={logo} alt="pavdev"></LogoHeader>
+                            </Brand>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav"><Burger icon={faBars} /></Navbar.Toggle>
+                            <Navbar.Collapse >
+                                <Navi className="ml-auto">
+                                    {this.state.menu.map((item, i) => {
 
-                                opacity: {
-                                    value: 0.3,
-                                    random: true
-                                },
-                                links: {
-                                    enable: true,
-                                    opacity: 0.1
-                                },
+                                        return (
+                                            <Link key={i} target={this.checkForCv(item)} href={item.href}>
+                                                { item.title}
+                                            </Link>
+                                        )
+                                    })}
+                                </Navi>
+                            </Navbar.Collapse>
+                        </NavbarStyled>
+                        <Parti
+                            params={{
+                                particles: {
+                                    number: {
+                                        value: 20
+                                    },
+                                    size: {
+                                        value: 1
+                                    },
+                                    autoPlay: true,
 
-                            }
+                                    opacity: {
+                                        value: 0.3,
+                                        random: true
+                                    },
+                                    links: {
+                                        enable: true,
+                                        opacity: 0.1
+                                    },
 
-                        }} />
-                </div>
-            </NavigationSticky>
+                                }
+
+                            }} />
+                    </div>
+                </NavigationSticky>
+
+            </div>
+
         );
     }
 }

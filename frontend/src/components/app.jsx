@@ -21,14 +21,14 @@ function App() {
 
         <div>
             <Intro></Intro>
-                <HeaderReactBootstrap></HeaderReactBootstrap>
+            {/* <HeaderReactBootstrap></HeaderReactBootstrap>
             <Container>
                 <TopIntro></TopIntro>
                 <WhatIDO></WhatIDO>
                 <Projects></Projects>
                 <Stack></Stack>
             </Container>
-            <Footer></Footer>
+            <Footer></Footer> */}
         </div>
 
 
