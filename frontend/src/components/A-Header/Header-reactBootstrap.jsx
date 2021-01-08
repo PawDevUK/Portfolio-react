@@ -1,4 +1,3 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Navbar, Nav, Container } from 'react-bootstrap';
@@ -7,7 +6,6 @@ import Navigation from "react-sticky-nav";
 import Particles from 'react-particles-js'
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import Logo from '../common/logo';
 import logo from "../../img/pavdev.png"
 
 
@@ -22,9 +20,6 @@ min-height:${height};
 -moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
 box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
 `;
-// const Cont = styled(Container)`
-// // It's need 
-// `;
 const Parti = styled(Particles)`
 position:absolute;
 top:0px;
@@ -83,12 +78,6 @@ class HeaderReactBootstrap extends Component {
                 disabled: false
 
             },
-            /* {
-                title: "About",
-                href: "#about",
-                disabled:true
-
-            }, */
             {
                 title: "CV",
                 target: "_blank",
