@@ -31,9 +31,12 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.0",
+    "react-slidedown": "^2.4.5",
     "react-sticky": "^6.0.3",
     "react-sticky-nav": "^4.0.6",
-    "styled-components": "^5.2.0"
+    "react-svgmt": "^1.1.11",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
