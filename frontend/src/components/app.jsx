@@ -1,6 +1,6 @@
 import React from "react"
-import { Container } from 'react-bootstrap'
-
+// import { Container } from 'react-bootstrap'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import HeaderReactBootstrap from "./A-Header/Header-reactBootstrap"
 
@@ -14,22 +14,37 @@ import Footer from './F-Footer/footer.jsx'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../style.css'
 
+const GlobalStyle = createGlobalStyle`
+body{
+margin:0px;
+padding:0px;
+}
+`
+const Wrapper = styled.div`
+width:100%;
+`
+const Container = styled.div`
+width:1000px;
+margin: auto;
+margin-top:30px;
+padding:0px;
 
-
+`
 function App() {
     return (
-
-        <div>
-            <Intro></Intro>
-            {/* <HeaderReactBootstrap></HeaderReactBootstrap>
+        <Wrapper>
+            <GlobalStyle />
+            {/* <Intro></Intro> */}
+            <HeaderReactBootstrap></HeaderReactBootstrap>
             <Container>
                 <TopIntro></TopIntro>
                 <WhatIDO></WhatIDO>
                 <Projects></Projects>
                 <Stack></Stack>
             </Container>
-            <Footer></Footer> */}
-        </div>
+            <Footer></Footer>
+        </Wrapper>
+
 
 
 
