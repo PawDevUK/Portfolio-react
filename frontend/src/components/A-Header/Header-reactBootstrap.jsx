@@ -1,151 +1,165 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from "react-sticky-nav";
-import Particles from 'react-particles-js'
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import logo from "../../img/pavdev.png"
+import styled, { css } from 'styled-components';
+import 'react-slidedown/lib/slidedown.css'
+import { SlideDown } from 'react-slidedown'
+import React, { useState } from 'react';
+import logo from "../../img/pavdev.png";
+import Burger from '../common/burger'
+const backgroundColor = '#17293F';
 
-
-const height = "80px";
-const logoBlue = "#1598C3"
-const backgroundColor = '#35495e'
-
-const NavigationSticky = styled(Navigation)`
-z-index:100;
-min-height:${height};
--webkit-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
-`;
-const Parti = styled(Particles)`
-position:absolute;
-top:0px;
-height:80px;
-width:100%;
-margin:auto
-`;
-
-const NavbarStyled = styled(Navbar)`
-z-index:100;
-min-height:${height};
-font-size:20px
-`;
-
-const Navi = styled(Nav)`
-margin-right:10vw;
-`;
-
-const Link = styled(Nav.Link)`
-color:#d2d4d6 !important;
-font-size:20px;
-font-weight:500;
-transition: all .2s ease-in-out; 
-&:hover{
-    color:#1598C3 !important;
-    transform: scale(1.04); 
-}
-`;
-const Brand = styled(Navbar.Brand)`
-margin-left:10vw;
-`
 const LogoHeader = styled.img`
-display: flex;
-justify-content: center;
-height:50px;
+margin:auto 50px auto auto;
 width:auto;
+height:50px;
 `;
 
-const Burger = styled(FontAwesomeIcon)`
-color:#d2d4d6;
+const Wrapper = styled.div`
+margin:0px;
+`;
+
+
+const MobilTopDiv = styled.div`
+display:none;
+@media(max-width:992px){
+    margin:0px;
+    height:70px ;
+    background-color:#fff;
+    display:flex;
+    width:100%;
+}
 `
 
-class HeaderReactBootstrap extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            menu: [{
-                title: "Home",
-                href: "#home",
-                style: "Green",
-                disabled: false
-            },
-            {
-                title: "Projects",
-                href: "#projects",
-                disabled: false
 
-            },
-            {
-                title: "CV",
-                target: "_blank",
-                href: "https://gitcrackeruk.github.io/CV/",
-                disabled: false
-            }
-            ]
-        }
-    }
-    checkForCv(item) {
-        if (item.title === "CV") {
-            return item.target
-        }
-    }
-    render() {
-        return (
-            <div>
-                <NavigationSticky>
-                    <div style={{ backgroundColor: '#35495e', minHeight: "110px !important" }}>
-                        <NavbarStyled expand="lg">
-                            <Brand href="#">
-                            <LogoHeader  src={logo} alt="pavdev"></LogoHeader>
-                            </Brand>
-                            <Navbar.Toggle aria-controls="basic-navbar-nav"><Burger icon={faBars} /></Navbar.Toggle>
-                            <Navbar.Collapse >
-                                <Navi className="ml-auto">
-                                    {this.state.menu.map((item, i) => {
+const MobileNav = styled.div`
+${p => p.toggle ? css`display:block;` : css`display:none;`};
+@media(max-width:992px){
+    margin-top:0px;
+    background-color:#ffffff;
+}
+>${MobileLink}{
+    margin: 16px auto 22px 86px;
+}
+`
+const LinkContainer = styled.div`
+  margin: 16px auto 22px 86px;
+  height:auto;
+`
+const MobileLink = styled.a`
+display:none;
+@media(max-width:992px){
+display:block;
+}
+`
+const MobileText = styled.p`
+color:#444444;
+display:inline-block;
+margin:30px auto 16px 64px;
+`
+// Main nav
 
-                                        return (
-                                            <Link key={i} target={this.checkForCv(item)} href={item.href}>
-                                                { item.title}
-                                            </Link>
-                                        )
-                                    })}
-                                </Navi>
-                            </Navbar.Collapse>
-                        </NavbarStyled>
-                        <Parti
-                            params={{
-                                particles: {
-                                    number: {
-                                        value: 20
-                                    },
-                                    size: {
-                                        value: 1
-                                    },
-                                    autoPlay: true,
-
-                                    opacity: {
-                                        value: 0.3,
-                                        random: true
-                                    },
-                                    links: {
-                                        enable: true,
-                                        opacity: 0.1
-                                    },
-
-                                }
-
-                            }} />
-                    </div>
-                </NavigationSticky>
-
-            </div>
-
-        );
+const MainNav = styled.div`
+height:150px;
+width:100%;
+display:inline-block;
+`
+const InnerMainNav = styled.div`
+margin:43px 0px auto auto; 
+width:600px;
+display:flex;
+justify-content:flex-end;
+`
+const Link = styled.a`
+display:none;
+@media(min-width:990px){
+    display:block;
+    font-family:'Nunito Sans', sans-serif;
+    font-size:18px;
+    color:#CDCDCD;
+    text-transform:capitalize;
+    margin-right:32px;
+    font-weight:700;
+    &:hover{
+        text-decoration:none;
+        color:#fff;
     }
 }
+`
+const BigBlue = styled.div`
+height:583px;
+background-color:${backgroundColor};
+`
+export default function HeaderReactBootstrap() {
+    const [toggle, setToggle] = useState(false)
+    const [menu, setMenu] = useState([{
+        title: "Projects",
+        href: "#home",
+        style: "Green",
+        disabled: false
+    },
+    {
+        title: "About",
+        href: "#about",
+        disabled: false,
+
+    },
+    {
+        title: "What I Use",
+        href: "#use",
+        disabled: false
+    },
+    {
+        title: "React",
+        href: "#react",
+        disabled: false,
+    },
+    {
+        title: "Hacker News",
+        href: "#hacker",
+        disabled: false,
+    }
+    ])
+
+    function click() {
+        setToggle(p => !p)
+    }
+    return (
+        <Wrapper>
 
 
-export default HeaderReactBootstrap;
+            <MobilTopDiv>
+                <Burger click={click}></Burger>
+                <LogoHeader src={logo}></LogoHeader>
+            </MobilTopDiv>
+            <SlideDown>
+                {toggle ? <MobileNav toggle={toggle}>
+                    <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
+                    <LinkContainer>
+                        {menu.map((item, i) => {
+                            return (
+                                <MobileLink key={i} href={item.href}>
+                                    { item.title}
+                                </MobileLink>
+                            )
+                        })}
+                    </LinkContainer>
+                </MobileNav> : null}
+            </SlideDown>
+            <BigBlue>
+                <MainNav>
+                    <InnerMainNav>
+                        {menu.map((item, i) => {
+                            return (
+                                <Link key={i} href={item.href}>
+                                    { item.title}
+                                </Link>
+                            )
+                        })}
+                    </InnerMainNav>
+                </MainNav>
+            </BigBlue>
+
+
+
+
+        </Wrapper>
+    );
+}
