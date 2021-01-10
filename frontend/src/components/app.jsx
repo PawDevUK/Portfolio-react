@@ -2,7 +2,7 @@ import React from "react"
 // import { Container } from 'react-bootstrap'
 import styled, { createGlobalStyle } from 'styled-components'
 
-import HeaderReactBootstrap from "./A-Header/Header-reactBootstrap"
+import Header from "./A-Header/Header"
 
 import Intro from "./Intro/intro"
 import TopIntro from './B-Top-picture/top-intro'
@@ -35,7 +35,7 @@ function App() {
         <Wrapper>
             <GlobalStyle />
             {/* <Intro></Intro> */}
-            <HeaderReactBootstrap></HeaderReactBootstrap>
+            <Header></Header>
             <Container>
                 <TopIntro></TopIntro>
                 <WhatIDO></WhatIDO>

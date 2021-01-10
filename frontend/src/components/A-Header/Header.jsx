@@ -1,19 +1,25 @@
+import { Transition } from 'react-transition-group';
+import { SvgLoader, SvgProxy } from 'react-svgmt';
 import styled, { css } from 'styled-components';
+import { SlideDown } from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css'
-import { SlideDown } from 'react-slidedown'
 import React, { useState } from 'react';
-import logo from "../../img/pavdev.png";
+import logo from "../../img/pavdev.svg";
 import Burger from '../common/burger'
 const backgroundColor = '#17293F';
 
-const LogoHeader = styled.img`
+const LogoHeader = styled(SvgLoader)`
 margin:auto 50px auto auto;
 width:auto;
 height:50px;
+>path{
+    fill:#17293f;
+}
 `;
 
 const Wrapper = styled.div`
 margin:0px;
+padding:0px;
 `;
 
 
@@ -27,23 +33,28 @@ display:none;
     width:100%;
 }
 `
-
-
-const MobileNav = styled.div`
+const MobilNav = styled.div`
 ${p => p.toggle ? css`display:block;` : css`display:none;`};
 @media(max-width:992px){
-    margin-top:0px;
+    margin:0px;
     background-color:#ffffff;
-}
->${MobileLink}{
-    margin: 16px auto 22px 86px;
 }
 `
 const LinkContainer = styled.div`
-  margin: 16px auto 22px 86px;
-  height:auto;
+padding-bottom:20px;
+margin: 16px auto 0px 86px;
+height:auto;
+@media(min-width:992px){
+    display:none;
+}
 `
 const MobileLink = styled.a`
+&:hover{
+    color:#353535;
+    text-decoration:none;
+    opacity:0.7;
+}
+color:#353535;
 display:none;
 @media(max-width:992px){
 display:block;
@@ -53,23 +64,39 @@ const MobileText = styled.p`
 color:#444444;
 display:inline-block;
 margin:30px auto 16px 64px;
+@media(min-width:992px){
+    display:none;
+}
 `
 // Main nav
 
 const MainNav = styled.div`
+display:flex;
 height:150px;
 width:100%;
-display:inline-block;
+/* display:inline-block; */
 `
 const InnerMainNav = styled.div`
+display:flex;
 margin:43px 0px auto auto; 
 width:600px;
-display:flex;
-justify-content:flex-end;
 `
+const MainLogo = styled(SvgLoader)`
+display:none;
+@media(min-width:993px){
+    display:inline-block;
+    margin:30px auto auto 30px;
+    width:auto;
+    height:50px;
+}
+>path{
+    fill:#fff;
+}
+`;
+
 const Link = styled.a`
 display:none;
-@media(min-width:990px){
+@media(min-width:993px){
     display:block;
     font-family:'Nunito Sans', sans-serif;
     font-size:18px;
@@ -83,11 +110,14 @@ display:none;
     }
 }
 `
+
 const BigBlue = styled.div`
+display:block;
+margin:0px;
 height:583px;
 background-color:${backgroundColor};
 `
-export default function HeaderReactBootstrap() {
+export default function Header() {
     const [toggle, setToggle] = useState(false)
     const [menu, setMenu] = useState([{
         title: "Projects",
@@ -117,34 +147,54 @@ export default function HeaderReactBootstrap() {
         disabled: false,
     }
     ])
+    const duration = 300;
+    const defaultStyle = {
+        transition: `opacity ${duration}ms ease-in-out`,
+        opacity: 0,
+    }
 
+    const transitionStyles = {
+        entering: { opacity: 0 },
+        entered: { opacity: 1 },
+        exiting: { opacity: 1 },
+        exited: { opacity: 0 },
+    };
     function click() {
         setToggle(p => !p)
     }
     return (
         <Wrapper>
-
-
             <MobilTopDiv>
                 <Burger click={click}></Burger>
-                <LogoHeader src={logo}></LogoHeader>
+                <LogoHeader path={logo}>
+
+                </LogoHeader>
             </MobilTopDiv>
             <SlideDown>
-                {toggle ? <MobileNav toggle={toggle}>
-                    <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
-                    <LinkContainer>
-                        {menu.map((item, i) => {
-                            return (
-                                <MobileLink key={i} href={item.href}>
-                                    { item.title}
-                                </MobileLink>
-                            )
-                        })}
-                    </LinkContainer>
-                </MobileNav> : null}
+                <Transition in={toggle} timeout={duration}>
+                    {(state) => toggle ? <MobilNav style={{
+                        ...defaultStyle,
+                        ...transitionStyles[state]
+                    }}
+                        className={`fade fade-${state}`} toggle={toggle}>
+                        <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
+                        <LinkContainer>
+                            {menu.map((item, i) => {
+                                return (
+                                    <MobileLink key={i} href={item.href}>
+                                        { item.title}
+                                    </MobileLink>
+                                )
+                            })}
+                        </LinkContainer>
+                    </MobilNav> : null}
+                </Transition>
             </SlideDown>
+
+
             <BigBlue>
                 <MainNav>
+                    <MainLogo path={logo} ></MainLogo>
                     <InnerMainNav>
                         {menu.map((item, i) => {
                             return (
@@ -156,10 +206,6 @@ export default function HeaderReactBootstrap() {
                     </InnerMainNav>
                 </MainNav>
             </BigBlue>
-
-
-
-
         </Wrapper>
     );
 }
