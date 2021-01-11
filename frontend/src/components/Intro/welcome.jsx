@@ -1,7 +1,8 @@
-import styled from 'styled-components'
-import logo from 'img/pavdev.svg'
 import Button from 'components/common/button'
 import { SvgLoader } from 'react-svgmt';
+import styled from 'styled-components'
+import logo from 'img/pavdev.svg'
+import {Link } from 'react-router-dom'
 
 const LogoTextWrapper = styled.div`
 width:300px;
@@ -33,13 +34,13 @@ const StButton = styled(Button)`
 margin:40px auto auto auto;
 `
 
-function Welcome() {
+function Welcome({...props}) {
     return ( 
     <LogoTextWrapper>
         <H1>I'm</H1>
         <MobilLogo path={logo}></MobilLogo>
         <Text>This is my Portfolio <br /> I hope you will find it interesting.</Text>
-        <StButton>Enter</StButton>
+        {props.buttonIntro?<Link to='/content'><StButton>Enter</StButton></Link>:null}
     </LogoTextWrapper>)
 }
 
