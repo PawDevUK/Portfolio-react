@@ -4,6 +4,18 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components'
 
+
+const Wrapper= styled.div`
+ display: flex;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -20px;
+
+`
 const Card = styled.div`
 margin:10px 0px;
 color: rgba(0, 0, 0, 0.7);
@@ -26,19 +38,11 @@ export default class TopIntro extends Component {
 
     render() {
         return (
-            <section id="home">
+            <Wrapper id="home">
                 <div className="container">
                     <div className="row justify-content-sm-center">
                         <div className="col-12">
-                            <Card data-aos="fade-left" className=" col-sm-12 col-md-5 mx-auto">
-                                <h2  ><strong>Hello & Welcome</strong></h2>
-                                <h5>I'm <strong className="text-blue">PAWEL SIWEK</strong>, a React developer.</h5>
-                            </Card>
-
                             <Card data-aos="fade-right" className=" col-sm-12 col-md-8 mx-auto">
-                            <P>
-                                    I'm self thought and self motivated developer. I started from jumping without prior knowledge into programming back in 2018 and I have no regrets. Coding is fun when everything works as should! 
-                            </P>
                             <P>
                                     At the moment I haven't got any commercial experience but I've done lots of React small projects like static pages and few MERN Stack apps. I use React, which is fantastic as it's main advantage is jsx and reusable components.
 
@@ -51,7 +55,7 @@ export default class TopIntro extends Component {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Wrapper>
         )
     }
 }

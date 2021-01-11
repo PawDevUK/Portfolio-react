@@ -1,12 +1,12 @@
 import { Transition } from 'react-transition-group';
-import { SvgLoader } from 'react-svgmt';
 import styled, { css } from 'styled-components';
 import { SlideDown } from 'react-slidedown';
+import Button from 'components/common/button'
 import 'react-slidedown/lib/slidedown.css'
 import React, { useState } from 'react';
+import { SvgLoader } from 'react-svgmt';
 import logo from "../../img/pavdev.svg";
 import Burger from '../common/burger'
-import Button from 'components/common/button'
 const backgroundColor = '#17293F';
 
 const LogoHeader = styled(SvgLoader)`
@@ -234,7 +234,7 @@ export default function Header() {
                 </MainNav>
                 <JumboTextWrapper>
                     <JumboHeader>Good Website is the key</JumboHeader>
-                    <JumboText>I'm self thought and self motivated developer. <br /> I started from jumping without prior knowledge into programming back in 2018 and I have no regrets. Coding is fun when everything works as should! </JumboText>
+                    <JumboText>I'm self thought and self motivated developer. <br /> I started from jumping without prior knowledge into programming back in 2018 and now I'm React Developer, happy days. <br/> Coding is fun when everything works as should! </JumboText>
                     <Button style={{ margin: "auto" }}>Projects</Button>
                 </JumboTextWrapper>
 

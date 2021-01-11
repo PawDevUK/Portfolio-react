@@ -33,8 +33,7 @@ function App() {
         <Router>
             <Wrapper>
                 <GlobalStyle />
-                <Switch>
-                    
+                <Switch> 
                     <Route path='/content'>
                         <Header></Header>
                         <Container>
