@@ -34,7 +34,7 @@ function App() {
     return (
         <Wrapper>
             <GlobalStyle />
-            {/* <Intro></Intro> */}
+            <Intro></Intro>
             <Header></Header>
             <Container>
                 <TopIntro></TopIntro>

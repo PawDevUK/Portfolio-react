@@ -1,5 +1,5 @@
 import { Transition } from 'react-transition-group';
-import { SvgLoader, SvgProxy } from 'react-svgmt';
+import { SvgLoader} from 'react-svgmt';
 import styled, { css } from 'styled-components';
 import { SlideDown } from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css'
@@ -190,8 +190,6 @@ export default function Header() {
                     </MobilNav> : null}
                 </Transition>
             </SlideDown>
-
-
             <BigBlue>
                 <MainNav>
                     <MainLogo path={logo} ></MainLogo>

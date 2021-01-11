@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../../style.css'
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
@@ -42,7 +42,7 @@ const useStyles = makeStyles({
     }
 })
 
-export default function card(props) {
+export default function CardSection(props) {
 
     useEffect(()=>{
         AOS.init({duration:1000});
