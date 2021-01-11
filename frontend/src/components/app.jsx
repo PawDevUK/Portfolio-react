@@ -1,9 +1,7 @@
 import React from "react"
-// import { Container } from 'react-bootstrap'
 import styled, { createGlobalStyle } from 'styled-components'
-
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import Header from "./A-Header/Header"
-
 import Intro from "./Intro/intro"
 import TopIntro from './B-Top-picture/top-intro'
 import WhatIDO from './C-What-I-do/what-I-do'
@@ -32,18 +30,31 @@ padding:0px;
 `
 function App() {
     return (
-        <Wrapper>
-            <GlobalStyle />
-            <Intro></Intro>
-            <Header></Header>
-            <Container>
-                <TopIntro></TopIntro>
-                <WhatIDO></WhatIDO>
-                <Projects></Projects>
-                <Stack></Stack>
-            </Container>
-            <Footer></Footer>
-        </Wrapper>
+        <Router>
+            <Wrapper>
+                <GlobalStyle />
+                <Switch>
+                    
+                    <Route path='/content'>
+                        <Header></Header>
+                        <Container>
+                            <TopIntro></TopIntro>
+                            <WhatIDO></WhatIDO>
+                            <Projects></Projects>
+                            <Stack></Stack>
+                        </Container>
+                        <Footer></Footer>
+                    </Route>
+                    <Route exact path='/'>
+                        <Intro></Intro>
+                    </Route>
+
+
+                </Switch>
+
+            </Wrapper>
+        </Router>
+
 
 
 
