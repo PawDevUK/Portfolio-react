@@ -1,11 +1,12 @@
 import { Transition } from 'react-transition-group';
-import { SvgLoader} from 'react-svgmt';
+import { SvgLoader } from 'react-svgmt';
 import styled, { css } from 'styled-components';
 import { SlideDown } from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css'
 import React, { useState } from 'react';
 import logo from "../../img/pavdev.svg";
 import Burger from '../common/burger'
+import Button from 'components/common/button'
 const backgroundColor = '#17293F';
 
 const LogoHeader = styled(SvgLoader)`
@@ -21,7 +22,6 @@ const Wrapper = styled.div`
 margin:0px;
 padding:0px;
 `;
-
 
 const MobilTopDiv = styled.div`
 display:none;
@@ -69,7 +69,6 @@ margin:30px auto 16px 64px;
 }
 `
 // Main nav
-
 const MainNav = styled.div`
 display:flex;
 height:150px;
@@ -116,6 +115,36 @@ display:block;
 margin:0px;
 height:583px;
 background-color:${backgroundColor};
+@media(max-width:700px){
+    height:60vw;
+}
+`
+const JumboTextWrapper = styled.div`
+text-align:center;
+width:600px;
+margin:auto;
+@media(max-width:700px){
+    width:60vw;
+    height:auto;
+}
+`
+const JumboHeader = styled.h1`
+display:block;
+color:white;
+@media(max-width:700px){
+    font-size:5vw;
+}
+`
+const JumboText = styled.p`
+display:none;
+@media(min-width:700px){
+    display:block;
+    font-family:'Nunito Sans', sans-serif;
+    color:#fff;
+    font-size:20px;
+    font-weight:200;
+}
+
 `
 export default function Header() {
     const [toggle, setToggle] = useState(false)
@@ -203,6 +232,12 @@ export default function Header() {
                         })}
                     </InnerMainNav>
                 </MainNav>
+                <JumboTextWrapper>
+                    <JumboHeader>Good Website is the key</JumboHeader>
+                    <JumboText>I'm self thought and self motivated developer. <br /> I started from jumping without prior knowledge into programming back in 2018 and I have no regrets. Coding is fun when everything works as should! </JumboText>
+                    <Button style={{ margin: "auto" }}>Projects</Button>
+                </JumboTextWrapper>
+
             </BigBlue>
         </Wrapper>
     );
