@@ -32,10 +32,8 @@ const useStyles = makeStyles({
         position: "absolute",
         top: "0px",
     },
-    RightWrapper: {
-
-    },
     Particles: {
+        display:"block",
         position: "absolute",
         height: "100%",
         width: " 100%",
@@ -54,7 +52,8 @@ left: 50vw;
 const Mobile = styled.div`
 display:none;
 @media(max-width:992px){
-    display:block
+    display:block;
+    height:500px;
 }
 `
 const TopImg = styled.div`
@@ -69,6 +68,18 @@ display:flex;
 justify-content:center;
 height:50vh;
 width:100%;
+position:relative;
+`
+const ParticlesBottom= styled(Particles)`
+*{
+    height:50vh;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+}
+
 `
 function Intro(props) {
     const classes = useStyles();
@@ -99,13 +110,13 @@ function Intro(props) {
 
                     }
                 }} />
-                    <Welcome></Welcome>
+                    <Welcome buttonIntro={true}></Welcome>
                 </RightWrapper>
             </Large>
             <Mobile>
                 <TopImg></TopImg>
                 <BottomWrapper>
-                <Particles className={classes.Particles}
+                <ParticlesBottom
                 params={{
                     particles: {
                         number: {
@@ -127,7 +138,7 @@ function Intro(props) {
 
                     }
                 }} />
-                    <Welcome></Welcome>
+                    <Welcome buttonIntro={true}> </Welcome>
                 </BottomWrapper>
             </Mobile>
         </div>
