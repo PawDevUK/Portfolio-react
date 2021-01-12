@@ -19,7 +19,7 @@ padding:0px;
 }
 `
 const Wrapper = styled.div`
-width:100%;
+width:100vw;
 `
 const Container = styled.div`
 width:1000px;
