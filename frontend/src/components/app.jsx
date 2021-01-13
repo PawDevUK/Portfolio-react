@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import Header from "./A-Header/Header"
 import Intro from "./Intro/intro"
 import TopIntro from './B-Top-picture/top-intro'
-import WhatIDO from './WhatIUse/whatIUse'
+import WhatIUse from './WhatIUse/whatIUse'
 import Projects from './D-Projects/projects'
 import Stack from './E-Stack/stack.jsx'
 import Footer from './F-Footer/footer.jsx'
@@ -37,9 +37,9 @@ function App() {
                         <Header></Header>
                         <Container>
                             <TopIntro></TopIntro>
-                            {/* <WhatIDO></WhatIDO>
+                            <WhatIUse></WhatIUse>
                             <Projects></Projects>
-                            <Stack></Stack> */}
+                            <Stack></Stack>
                         </Container>
                         <Footer></Footer>
                     </Route>
