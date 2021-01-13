@@ -23,11 +23,6 @@ body {
     margin-top: 30px;
 }
 
-#about img {
-    max-height: 200px;
-    max-width: 250px;
-}
-
 #about-header-text {
     font-size: 22px;
 }
