@@ -1,28 +1,29 @@
 import React, { useEffect } from 'react'
+import SectionHeader from 'components/common/SectionHeader'
 import styled from 'styled-components'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 
 const Wrapper = styled.div`
-margin:0px;
-padding:0px;
+   padding:100px 0px;
+@media(max-width:992px){
+    margin:auto;
+    padding:85px 0px;
+    width:80%;
+}
+width:100%;
 `
 const Card = styled.div`
-width:500px;
+width:100%;
 color: rgba(0, 0, 0, 0.7);
 background: #fff;
-
 `
 const P = styled.p`
 font-size: 16px ;
 color: rgba(0, 0, 0, 0.6);
 `
-const Header = styled.h6`
-font-size:20px;
-height:30px;
-width:20%;
-`
+
 
 
 export default function TopIntro() {
@@ -32,9 +33,8 @@ export default function TopIntro() {
 
     return (
         <Wrapper>
-
                     <Card data-aos="fade-right" >
-                        <Header>About</Header>
+                        <SectionHeader>About</SectionHeader>
                         <P>
                             At the moment I haven't got any commercial experience but I've done lots of React small projects like static pages and few MERN Stack apps. I use React, which is fantastic as it's main advantage is jsx and reusable components.
 
