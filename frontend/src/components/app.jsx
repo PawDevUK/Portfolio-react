@@ -10,7 +10,6 @@ import Stack from './E-Stack/stack.jsx'
 import Footer from './F-Footer/footer.jsx'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../style.css'
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -23,7 +22,10 @@ const Wrapper = styled.div`
 width:100%;
 `
 const Container = styled.div`
-width:1000px;
+width:100%;
+@media(min-width:992px){
+    width:1000px;
+}
 margin: auto;
 padding:0px;
 `
