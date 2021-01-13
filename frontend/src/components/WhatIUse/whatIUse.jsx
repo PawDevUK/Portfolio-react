@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import 'style.css'
 
 
-export default class WhatIDO extends Component {
+export default class WhatIUse extends Component {
     render() {
         return (
             <div >
             
                 <h2>What I Do</h2>
-            
+
             <div >
                 <div className="card">
                     <div className="card-body">
