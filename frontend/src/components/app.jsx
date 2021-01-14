@@ -1,16 +1,16 @@
-import React from "react"
-import styled, { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
+import styled, { createGlobalStyle } from 'styled-components'
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import Projects from './F-Projects/projects'
+import Footer from './G-Footer/footer.jsx'
+import TopIntro from './C-About/top-intro'
+// import ReactSection from './E-React/React'
+import Stack from './D-Stack/stack.jsx'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
-import TopIntro from './C-About/top-intro'
-import ReactSection from './E-React/React'
-import Projects from './F-Projects/projects'
-import Stack from './D-Stack/stack.jsx'
-import Footer from './G-Footer/footer.jsx'
-import CV from './H-CV/cv'
+// import CV from './H-CV/cv'
+import React from "react"
 
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -42,7 +42,7 @@ function App() {
                             <TopIntro></TopIntro>
                             <Stack></Stack>
                             {/* <ReactSection></ReactSection> */}
-                            {/* <Projects></Projects> */}
+                            <Projects></Projects>
                             {/* <CV></CV> */}
                         </Container>
                         <Footer></Footer>
