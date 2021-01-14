@@ -1,7 +1,7 @@
 import { asparago, nasa, royal, barber, solicitors, fitnessApp } from 'img';
 
 import React, { useState, useEffect } from 'react'
-import 'aos/dist/aos.css';
+import '../../../node_modules/aos/dist/aos.css';
 import AOS from 'aos';
 
 

@@ -16,7 +16,6 @@ width:100%;
 `
 const Card = styled.div`
 width:100%;
-color: rgba(0, 0, 0, 0.7);
 background: #fff;
 `
 const P = styled.p`
