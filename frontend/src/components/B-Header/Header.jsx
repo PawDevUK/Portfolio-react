@@ -125,8 +125,14 @@ text-align:center;
 width:400px;
 margin:auto;
 @media(max-width:700px){
-    width:50vw;
+    width:350px;
     height:auto;
+}
+`
+const JumboHeaderWrapper = styled.div`
+height:130px;
+@media(max-width:700px){
+    height:16vw;
 }
 `
 const JumboHeader = styled.h1`
@@ -136,18 +142,18 @@ color:white;
     font-size:5vw;
 }
 `
-const Quote= styled.p`
+const Quote = styled.p`
 font-style: oblique;
 height:20px;
 width:120px;
 position:absolute;
-bottom:10px;
-right:0px;
+bottom:0px;
+right:20px;
 color:white;
-
 @media(max-width:700px){
     font-size:13px;
     margin:3px;
+    right:5vw;
 }
 `
 const JumboText = styled.p`
@@ -249,10 +255,13 @@ export default function Header() {
                     </InnerMainNav>
                 </MainNav>
                 <JumboTextWrapper>
-                    <JumboHeader>"Talk is cheap, <br/> show me the code."</JumboHeader>
-                    <Quote>Linus Torvalds</Quote>
-                    <JumboText> </JumboText>
-                    <Button style={{ margin: "auto" }}>Projects</Button>
+                    <JumboHeaderWrapper>
+                        <JumboHeader>"Talk is cheap, <br /> show me the code."</JumboHeader>
+                        <Quote>Linus Torvalds</Quote>
+                    </JumboHeaderWrapper>
+
+                    {/* <JumboText> </JumboText> */}
+                    {/* <Button style={{ margin: "auto" }}>Projects</Button> */}
                 </JumboTextWrapper>
 
             </BigBlue>
