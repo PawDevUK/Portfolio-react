@@ -3,10 +3,12 @@ import styled, { css } from 'styled-components';
 import { SlideDown } from 'react-slidedown';
 import Button from 'components/common/button'
 import 'react-slidedown/lib/slidedown.css'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SvgLoader } from 'react-svgmt';
 import logo from "img/pavdev.svg";
 import Burger from 'components/common/burger'
+import { Menu } from 'store'
+import { useWindowWidth } from 'functions'
 const backgroundColor = '#17293F';
 
 const LogoHeader = styled(SvgLoader)`
@@ -70,14 +72,16 @@ margin:30px auto 16px 64px;
 `
 // Main nav
 const MainNav = styled.div`
-display:flex;
-height:150px;
-width:100%;
-/* display:inline-block; */
+display:none;
+@media(min-width:993px){
+    display:flex;
+    height:110px;
+    width:100%;
+}
 `
 const InnerMainNav = styled.div`
 display:flex;
-margin:43px 0px auto auto; 
+margin:43px 0px 0px auto; 
 width:600px;
 `
 const MainLogo = styled(SvgLoader)`
@@ -120,26 +124,35 @@ background-color:${backgroundColor};
 }
 `
 const JumboTextWrapper = styled.div`
-position:relative;
 text-align:center;
-width:400px;
-margin:auto;
+width:600px;
+margin:0px auto;
+padding-top:1px;
 @media(max-width:700px){
     width:350px;
-    height:auto;
 }
 `
 const JumboHeaderWrapper = styled.div`
+position:relative;
+margin:0px auto auto auto;
 height:130px;
+width:400px;
+margin:100px auto auto auto;
 @media(max-width:700px){
     height:16vw;
+    margin:100px auto auto auto;
+height:80px;
+width:250px;
 }
 `
 const JumboHeader = styled.h1`
+ font-family:'Nunito Sans', sans-serif;
+font-weight:400;
+width:100%;
 display:block;
 color:white;
 @media(max-width:700px){
-    font-size:5vw;
+    font-size:26px;
 }
 `
 const Quote = styled.p`
@@ -147,13 +160,12 @@ font-style: oblique;
 height:20px;
 width:120px;
 position:absolute;
-bottom:0px;
-right:20px;
 color:white;
+right:0px;
+bottom:0px;
 @media(max-width:700px){
     font-size:13px;
     margin:3px;
-    right:5vw;
 }
 `
 const JumboText = styled.p`
@@ -166,38 +178,19 @@ display:none;
     font-size:20px;
     font-weight:200;
 }
-
 `
+
+
 export default function Header() {
     const [toggle, setToggle] = useState(false)
-    const [menu] = useState([{
-        title: "Projects",
-        href: "#home",
-        style: "Green",
-        disabled: false
-    },
-    {
-        title: "About",
-        href: "#about",
-        disabled: false,
+    const [mobile, setMobile] = useState(false)
+    const windowWidth = useWindowWidth()
 
-    },
-    {
-        title: "What I Use",
-        href: "#use",
-        disabled: false
-    },
-    {
-        title: "React",
-        href: "#react",
-        disabled: false,
-    },
-    {
-        title: "Hacker News",
-        href: "#hacker",
-        disabled: false,
-    }
-    ])
+
+    useEffect(() => {
+        windowWidth < 700 ? setMobile(true) : setMobile(false)
+    },[windowWidth])
+
     const duration = 300;
     const defaultStyle = {
         transition: `opacity ${duration}ms ease-in-out`,
@@ -230,7 +223,7 @@ export default function Header() {
                         className={`fade fade-${state}`} toggle={toggle}>
                         <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
                         <LinkContainer>
-                            {menu.map((item, i) => {
+                            {Menu.map((item, i) => {
                                 return (
                                     <MobileLink key={i} href={item.href}>
                                         { item.title}
@@ -245,7 +238,7 @@ export default function Header() {
                 <MainNav>
                     <MainLogo path={logo} ></MainLogo>
                     <InnerMainNav>
-                        {menu.map((item, i) => {
+                        {Menu.map((item, i) => {
                             return (
                                 <Link key={i} href={item.href}>
                                     { item.title}
@@ -260,8 +253,8 @@ export default function Header() {
                         <Quote>Linus Torvalds</Quote>
                     </JumboHeaderWrapper>
 
-                    {/* <JumboText> </JumboText> */}
-                    {/* <Button style={{ margin: "auto" }}>Projects</Button> */}
+                    <JumboText>If you wish, You can checkout my GitHub repositories.</JumboText>
+                    <Button href='' mobile={mobile} style={{ margin: "auto" }}>My GitHub</Button>
                 </JumboTextWrapper>
 
             </BigBlue>
