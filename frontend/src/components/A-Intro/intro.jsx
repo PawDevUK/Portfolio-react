@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components'
 import Particles from 'react-particles-js'
 import { makeStyles } from '@material-ui/core/styles';
-import Welcome from 'components/Intro/welcome'
+import Welcome from 'components/A-Intro/welcome'
 
 const LeftImg = styled.div`
 background: url(${img});

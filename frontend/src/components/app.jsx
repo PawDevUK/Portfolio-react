@@ -1,8 +1,8 @@
 import React from "react"
 import styled, { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
-import Header from "./A-Header/Header"
-import Intro from "./Intro/intro"
+import Header from "./B-Header/Header"
+import Intro from "./A-Intro/intro"
 import TopIntro from './B-Top-picture/top-intro'
 import WhatIUse from './WhatIUse/whatIUse'
 import Projects from './D-Projects/projects'

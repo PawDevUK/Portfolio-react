@@ -5,8 +5,8 @@ import Button from 'components/common/button'
 import 'react-slidedown/lib/slidedown.css'
 import React, { useState } from 'react';
 import { SvgLoader } from 'react-svgmt';
-import logo from "../../img/pavdev.svg";
-import Burger from '../common/burger'
+import logo from "img/pavdev.svg";
+import Burger from 'components/common/burger'
 const backgroundColor = '#17293F';
 
 const LogoHeader = styled(SvgLoader)`
@@ -120,11 +120,12 @@ background-color:${backgroundColor};
 }
 `
 const JumboTextWrapper = styled.div`
+position:relative;
 text-align:center;
-width:600px;
+width:400px;
 margin:auto;
 @media(max-width:700px){
-    width:60vw;
+    width:50vw;
     height:auto;
 }
 `
@@ -135,11 +136,26 @@ color:white;
     font-size:5vw;
 }
 `
+const Quote= styled.p`
+font-style: oblique;
+height:20px;
+width:120px;
+position:absolute;
+bottom:10px;
+right:0px;
+color:white;
+
+@media(max-width:700px){
+    font-size:13px;
+    margin:3px;
+}
+`
 const JumboText = styled.p`
 display:none;
 @media(min-width:700px){
     display:block;
     font-family:'Nunito Sans', sans-serif;
+    
     color:#fff;
     font-size:20px;
     font-weight:200;
@@ -148,7 +164,7 @@ display:none;
 `
 export default function Header() {
     const [toggle, setToggle] = useState(false)
-    const [menu, setMenu] = useState([{
+    const [menu] = useState([{
         title: "Projects",
         href: "#home",
         style: "Green",
@@ -233,8 +249,9 @@ export default function Header() {
                     </InnerMainNav>
                 </MainNav>
                 <JumboTextWrapper>
-                    <JumboHeader>Good Website is the key</JumboHeader>
-                    <JumboText>I'm self thought and self motivated developer. <br /> I started from jumping without prior knowledge into programming back in 2018 and now I'm React Developer, happy days. <br/> Coding is fun when everything works as should! </JumboText>
+                    <JumboHeader>"Talk is cheap, <br/> show me the code."</JumboHeader>
+                    <Quote>Linus Torvalds</Quote>
+                    <JumboText> </JumboText>
                     <Button style={{ margin: "auto" }}>Projects</Button>
                 </JumboTextWrapper>
 
