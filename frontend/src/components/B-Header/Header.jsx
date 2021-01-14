@@ -253,7 +253,7 @@ export default function Header() {
                         <Quote>Linus Torvalds</Quote>
                     </JumboHeaderWrapper>
 
-                    <JumboText>If you wish, You can checkout my GitHub repositories.</JumboText>
+                    <JumboText>If you wish, You can check my GitHub repositories.</JumboText>
                     <Button href='' mobile={mobile} style={{ margin: "auto" }}>My GitHub</Button>
                 </JumboTextWrapper>
 
