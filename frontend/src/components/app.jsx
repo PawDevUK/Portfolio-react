@@ -3,11 +3,12 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
-import TopIntro from './B-Top-picture/top-intro'
-import WhatIUse from './WhatIUse/whatIUse'
-import Projects from './D-Projects/projects'
-import Stack from './E-Stack/stack.jsx'
-import Footer from './F-Footer/footer.jsx'
+import TopIntro from './C-About/top-intro'
+import ReactSection from './E-React/React'
+import Projects from './F-Projects/projects'
+import Stack from './D-Stack/stack.jsx'
+import Footer from './G-Footer/footer.jsx'
+import CV from './H-CV/cv'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
@@ -39,9 +40,10 @@ function App() {
                         <Header></Header>
                         <Container>
                             <TopIntro></TopIntro>
-                            <WhatIUse></WhatIUse>
-                            <Projects></Projects>
                             <Stack></Stack>
+                            {/* <ReactSection></ReactSection> */}
+                            {/* <Projects></Projects> */}
+                            {/* <CV></CV> */}
                         </Container>
                         <Footer></Footer>
                     </Route>
