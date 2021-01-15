@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import Projects from './F-Projects/projects'
+// import Projects from './F-Projects/projects'
 import Footer from './G-Footer/footer.jsx'
 import TopIntro from './C-About/top-intro'
 // import ReactSection from './E-React/React'
@@ -14,6 +14,7 @@ import React from "react"
 
 const GlobalStyle = createGlobalStyle`
 body{
+font-family:'Nunito Sans', sans-serif;
 width:100%;
 margin:0px;
 padding:0px;
@@ -40,9 +41,9 @@ function App() {
                         <Header></Header>
                         <Container>
                             <TopIntro></TopIntro>
-                            <Stack></Stack>
+                            {/* <Stack></Stack> */}
                             {/* <ReactSection></ReactSection> */}
-                            <Projects></Projects>
+                            {/* <Projects></Projects> */}
                             {/* <CV></CV> */}
                         </Container>
                         <Footer></Footer>
