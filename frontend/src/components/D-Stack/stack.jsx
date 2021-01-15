@@ -19,7 +19,7 @@ display:flex;
 flex-wrap:wrap;
 width:748px;
 @media(max-width:700px){
-    width:400px;
+    width:100%;
 }
 `
 
