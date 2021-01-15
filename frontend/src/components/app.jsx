@@ -41,7 +41,7 @@ function App() {
                         <Header></Header>
                         <Container>
                             <TopIntro></TopIntro>
-                            {/* <Stack></Stack> */}
+                            <Stack></Stack>
                             {/* <ReactSection></ReactSection> */}
                             {/* <Projects></Projects> */}
                             {/* <CV></CV> */}
