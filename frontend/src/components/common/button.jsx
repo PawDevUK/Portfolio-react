@@ -18,6 +18,7 @@ justify-content:center;
 align-items:center;
 &:hover{
     border:2px solid #fff;
+    text-decoration:none;
     cursor:pointer;
 }
 `

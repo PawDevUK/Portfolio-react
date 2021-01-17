@@ -33,14 +33,18 @@ line-height:1.25;
 const StButton = styled(Button)`
 margin:40px auto auto auto;
 `
-
+const StLink = styled(Link)`
+&:hover{
+    text-decoration:none;
+}
+`
 function Welcome({...props}) {
     return ( 
     <LogoTextWrapper>
         <H1>I'm</H1>
         <MobilLogo path={logo}></MobilLogo>
         <Text>This is my Portfolio <br /> I hope you will find it interesting.</Text>
-        {props.buttonIntro?<Link to='/content'><StButton>Enter</StButton></Link>:null}
+        {props.buttonIntro?<StLink to='/content'><StButton>Enter</StButton></StLink>:null}
     </LogoTextWrapper>)
 }
 
