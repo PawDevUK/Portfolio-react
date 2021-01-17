@@ -6,41 +6,37 @@ import SectionHeader from './SectionHeader'
 import JumboHeader from './JumboHeader'
 
 const Wrapper = styled.div`
-@media(min-width:992px){
-    height:144px;
-position:relative;
+@media(max-width:992px){
+    height:80px;
+    position:relative;
 }
-height:80px;
+height:100px;
 position:relative;
 `
 const Header = styled(SectionHeader)`
-@media(min-width:992px){
+@media(max-width:992px){
     margin:0px;
 padding:0px;
 position:absolute;
 left:7px;
-top:87px;
+top:30px;
 }
 margin:0px;
 padding:0px;
 position:absolute;
 left:7px;
-top:30px;
+top:57px;
 `
 const Jumbo = styled(JumboHeader)`
-@media(min-width:992px){
-font-size:144px;
-height:144px;
+@media(max-width:992px){
+    opacity:0.5;
+    font-size:60px;
+height:80px;
 margin:0px;
 padding:0px;
 position:absolute;
 top:0px;
 }
-opacity:0.5;
-font-size:60px;
-height:80px;
-margin:0px;
-padding:0px;
 position:absolute;
 top:0px;
 `
@@ -52,7 +48,7 @@ export default function JumboSectionHeader({ children }) {
     return (
         <Wrapper>
             <Header>{children}</Header>
-            <Jumbo data-aos="zoom-in" >{children}</Jumbo>
+            <Jumbo data-aos="zoom-in">{children}</Jumbo>
         </Wrapper>
 
 
