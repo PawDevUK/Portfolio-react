@@ -4,33 +4,35 @@ import { asparago, nasa, royal, barber, solicitors, fitnessApp } from 'img';
 
 export const Menu = [
     {
-        title: "Projects",
-        href: "#home",
-        style: "Green",
-        disabled: false
-    },
-    {
         title: "About",
         href: "#about",
         disabled: false,
-
     },
     {
         title: "What I Use",
         href: "#use",
+        disabled: false,
+        react:{
+            title: "Why I use React ?",
+            href: "#react",
+            style: "Blue",
+            disabled: false
+        }
+    },
+    {
+        title: "Projects",
+        href: "#projects",
+        style: "Green",
         disabled: false
     },
     {
-        title: "React",
-        href: "#react",
+        title: "My Github",
+        href: "https://github.com/GitcrackerUK",
         disabled: false,
-    },
-    {
-        title: "Hacker News",
-        href: "#hacker",
-        disabled: false,
+        target:"_blank"
     }
 ]
+
 export const stack = [
     {
         img: react,
