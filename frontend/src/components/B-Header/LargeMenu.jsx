@@ -65,7 +65,7 @@ export default function MainLarge({ ...props }) {
         setMouseOver((mouseOver) => !mouseOver)
     }
     return (
-        <Wrapper data-aos="fade-in">
+        <Wrapper >
             <MainLogo path={logo} ></MainLogo>
             <InnerMainNav>
                 {Menu.map((item, i) => {

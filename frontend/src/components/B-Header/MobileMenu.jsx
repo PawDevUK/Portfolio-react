@@ -101,7 +101,7 @@ export default function MobileMenu() {
         setMouseOver((mouseOver)=>!mouseOver)
     }
     return (
-        <Wrapper data-aos="fade-in" >
+        <Wrapper >
             <MobilTopDiv  >
                 <Burger click={click}></Burger>
                 <LogoHeader path={logo}>
@@ -124,7 +124,6 @@ export default function MobileMenu() {
                                         </MobileLink>
                                 )
                             })}
-                            
                         </LinkContainer>
                     </MobilNav> : null}
                 </Transition>
