@@ -2,8 +2,8 @@ import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import SectionHeader from 'components/common/SectionHeader'
-import JumboHeader from 'components/common/JumboHeader'
+import SectionHeader from './SectionHeader'
+import JumboHeader from './JumboHeader'
 
 const Wrapper = styled.div`
 @media(min-width:992px){

@@ -11,7 +11,7 @@ width:24px;
 height:28px;
 transition: transform .2s;
 &:hover{
-    transform: scale(1.25)
+    transform: scale(1.2)
 }
 `
 const Line = styled.div`

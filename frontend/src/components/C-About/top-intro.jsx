@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import JumboSectionHeader from 'components/C-About/JumboSectionHeader'
+import JumboSectionHeader from 'components/common/JumboHeaders/JumboSectionHeader'
 import styled from 'styled-components'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
