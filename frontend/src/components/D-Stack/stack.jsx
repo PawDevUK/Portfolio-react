@@ -3,7 +3,7 @@ import { stack } from 'store.js'
 import Card from './card.jsx'
 import styled from 'styled-components'
 import { useWindowWidth } from 'functions'
-import SectionHeader from 'components/common/SectionHeader'
+import JumboSectionHeader from 'components/common/JumboHeaders/JumboSectionHeader'
 
 const Wrapper = styled.div`
 @media(max-width:992px){
@@ -33,7 +33,7 @@ export default function Stack() {
 
     return (
         <Wrapper>
-            <SectionHeader>What I use</SectionHeader>
+            <JumboSectionHeader>What I use</JumboSectionHeader>
             <Thumbnails>
                 {
                     stack.map((item) => {
