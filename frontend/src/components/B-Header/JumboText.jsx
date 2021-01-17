@@ -58,7 +58,13 @@ display:none;
 }
 `
 
-export default function JumboMainText({...props }) {
+const Anchor = styled.a`
+&:hover{
+    text-decoration:none;
+}
+`
+
+export default function JumboMainText({ ...props }) {
     return (
         <JumboTextWrapper>
             <JumboHeaderWrapper>
@@ -66,7 +72,9 @@ export default function JumboMainText({...props }) {
                 <Quote>Linus Torvalds</Quote>
             </JumboHeaderWrapper>
             <JumboText>If you wish, You can check my GitHub repositories.</JumboText>
-            <Button href='' mobile={props.mobile} style={{ margin: "auto" }}>My GitHub</Button>
+            <Anchor href="https://github.com/GitcrackerUK" target="_blank">
+                <Button mobile={props.mobile} style={{ margin: "auto" }}>My GitHub</Button>
+            </Anchor>
         </JumboTextWrapper>
     )
 }

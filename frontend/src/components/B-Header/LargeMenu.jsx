@@ -1,7 +1,8 @@
+import React, { useEffect, useState } from 'react';
+import dropdown from 'img/icon/dropdown.svg'
 import 'react-slidedown/lib/slidedown.css';
 import styled from 'styled-components';
 import { SvgLoader } from 'react-svgmt';
-import React,{useEffect}from 'react';
 import logo from "img/pavdev.svg";
 import { Menu } from 'store'
 import 'aos/dist/aos.css';
@@ -28,6 +29,7 @@ const MainLogo = styled(SvgLoader)`
 `;
 
 const Link = styled.a`
+position:relative;
     font-size:18px;
     color:#CDCDCD;
     text-transform:capitalize;
@@ -38,19 +40,40 @@ const Link = styled.a`
         color:#fff;
     }
 `
+const DropDown = styled(Link)`
+width:200px;
+position :absolute;
+top:30px;
+left:0px;
+padding:0px;
+&:hover{
+color:#fff;
+}
+`
+const DropdownIcon = styled(SvgLoader)`
+position :absolute;
+top:25px;
+left:50%;
 
+`
 export default function MainLarge({ ...props }) {
-    useEffect(()=>{
+    const [mouseOver, setMouseOver] = useState(false)
+    useEffect(() => {
         AOS.init({ duration: 1000 });
     })
+    function handleMouseHover() {
+        setMouseOver((mouseOver) => !mouseOver)
+    }
     return (
         <Wrapper data-aos="fade-in">
             <MainLogo path={logo} ></MainLogo>
             <InnerMainNav>
                 {Menu.map((item, i) => {
                     return (
-                        <Link key={i} href={item.href}>
+                        <Link  onMouseEnter={item.react ? handleMouseHover : null} onMouseLeave={item.react ? handleMouseHover : null} key={i} href={item.href}>
+                         
                             {item.title}
+                      {mouseOver ? <DropDown href={item.href}>{item.react ? item.react.title : null}</DropDown> : item.react? <DropdownIcon path={dropdown}></DropdownIcon>:null}
                         </Link>
                     )
                 })}

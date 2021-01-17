@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Burger from 'components/common/burger'
 import { SlideDown } from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css'
+import dropdown from 'img/icon/dropdown.svg'
 import { SvgLoader } from 'react-svgmt';
 import logo from "img/pavdev.svg";
 import { Menu } from 'store';
@@ -46,18 +47,27 @@ height:auto;
     display:none;
 }
 `
+
 const MobileLink = styled.a`
 &:hover{
     color:#353535;
     text-decoration:none;
     opacity:0.7;
 }
+position:relative;
 color:#353535;
-display:none;
-@media(max-width:992px){
 display:block;
-}
 `
+const DropDowIcon =styled(SvgLoader)`
+position:absolute;
+left:85px;
+top:10px;
+`
+const DropDown= styled(MobileLink)`
+margin-left:50px;
+padding:0px;
+
+` 
 const MobileText = styled.p`
 color:#444444;
 display:inline-block;
@@ -68,6 +78,7 @@ margin:30px auto 16px 64px;
 `
 export default function MobileMenu() {
     const [toggle, setToggle] = useState(false)
+    const [mouseOver, setMouseOver] = useState(false)
     const duration = 300;
     const defaultStyle = {
         transition: `opacity ${duration}ms ease-in-out`,
@@ -86,6 +97,9 @@ export default function MobileMenu() {
     useEffect(() => {
         AOS.init({ duration: 1000 })
     })
+    function handleMouseHover(){
+        setMouseOver((mouseOver)=>!mouseOver)
+    }
     return (
         <Wrapper data-aos="fade-in" >
             <MobilTopDiv  >
@@ -104,11 +118,13 @@ export default function MobileMenu() {
                         <LinkContainer>
                             {Menu.map((item, i) => {
                                 return (
-                                    <MobileLink key={i} href={item.href}>
-                                        { item.title}
-                                    </MobileLink>
+                                        <MobileLink   onMouseEnter={item.react?handleMouseHover:null} onMouseLeave={item.react?handleMouseHover:null} key={i} href={item.href}>
+                                            {item.title}
+                                            <SlideDown>  {mouseOver?<DropDown href={item.href}>{item.react?item.react.title:null}</DropDown>:item.react?<DropDowIcon path={dropdown}></DropDowIcon>:null}</SlideDown>
+                                        </MobileLink>
                                 )
                             })}
+                            
                         </LinkContainer>
                     </MobilNav> : null}
                 </Transition>
