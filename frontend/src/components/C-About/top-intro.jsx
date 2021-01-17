@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import JumboSectionHeader from 'components/common/JumboHeaders/JumboSectionHeader'
+import {P,Bold} from '../common/typography'
+import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import styled from 'styled-components'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -17,13 +18,7 @@ const Card = styled.div`
 background: #fff;
 width:100%;
 `
-const P = styled.p`
-font-size: 16px ;
-color: rgba(0, 0, 0, 0.6);
-`
-const Bold = styled.span`
-font-weight:600;
-`
+
 
 
 export default function TopIntro() {
