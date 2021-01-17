@@ -3,7 +3,7 @@ import { stack } from 'store.js'
 import Card from './card.jsx'
 import styled from 'styled-components'
 import { useWindowWidth } from 'functions'
-import JumboSectionHeader from 'components/common/JumboHeaders/JumboSectionHeader'
+import JumboSectionHeader from 'components/common/JumboSectionHeader'
 
 const Wrapper = styled.div`
 @media(max-width:992px){
