@@ -1,10 +1,10 @@
-import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 // import Projects from './F-Projects/projects'
 import Footer from './G-Footer/footer.jsx'
 import TopIntro from './C-About/top-intro'
-// import ReactSection from './E-React/React'
+import ReactSection from './E-React/React'
 import Stack from './D-Stack/stack.jsx'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
@@ -36,13 +36,15 @@ function App() {
         <Router>
             <Wrapper>
                 <GlobalStyle />
-                <Switch> 
+                <Switch>
                     <Route path='/content'>
-                        <Header></Header>
+                        {/* <Header></Header> */}
                         <Container>
-                            <TopIntro></TopIntro>
-                            <Stack></Stack>
-                            {/* <ReactSection></ReactSection> */}
+                            {/* <TopIntro></TopIntro> */}
+                            {/* <Stack></Stack> */}
+                        </Container>
+                        <ReactSection></ReactSection>
+                        <Container>
                             {/* <Projects></Projects> */}
                             {/* <CV></CV> */}
                         </Container>
