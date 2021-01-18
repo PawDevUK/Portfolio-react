@@ -27,14 +27,13 @@ margin-bottom:10px;
 height:550px;
 };
 @media(min-width:992px){
-/* height:450px; */
+
 }
 `
 const ContentWrapper = styled.div`
 display:flex;
 @media(max-width:1000px){
     width:80%;
-    /* height:350px; */
 }
 height:${height};
 width:1000px;
@@ -71,9 +70,9 @@ height:${height};
 
 export default function ReactSection() {
     const [Large, setLarge] = useState(true)
-    const [size, setSize] = useState(0)
+    const [size, setSize] = useState(window.innerWidth)
     useEffect(() => {
-        if(size>1000){
+        if(size>=1000){
             setLarge(true)
         }else{
             setLarge(false)
