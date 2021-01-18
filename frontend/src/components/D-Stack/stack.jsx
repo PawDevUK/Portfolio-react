@@ -6,9 +6,6 @@ import { useWindowWidth } from 'functions'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 
 const Wrapper = styled.div`
-@media(max-width:992px){
-width:80%;
-}
 width:100%;
 margin:auto;
 `
