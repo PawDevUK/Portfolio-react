@@ -19,7 +19,7 @@ font-size:50px;
 export default function Footer() {
     return (
         <Wrapper>
-            <Year></Year>
+            {/* <Year></Year> */}
         </Wrapper>
 
 
