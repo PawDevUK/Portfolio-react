@@ -33,7 +33,6 @@ display:none;
 }
 `
 const MobilNav = styled.div`
-${p=>console.log(p)}
 ${p => p.toggle ? css`display:block;` : css`display:none;`};
 @media(max-width:992px){
     margin:0px;
