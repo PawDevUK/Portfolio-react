@@ -7,7 +7,7 @@ import JumboSectionHeader from 'components/common/JumboSectionHeader'
 
 const Wrapper = styled.div`
 width:100%;
-margin:auto;
+margin:0px auto 50px auto;
 `
 const Thumbnails = styled.div`
 justify-content:center;
