@@ -9,6 +9,7 @@ import Card from  './card'
 
 
 const Wrapper = styled.div`
+margin:auto;
 display:flex;
 flex-wrap:wrap;
 `

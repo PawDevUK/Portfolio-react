@@ -3,10 +3,8 @@ import styled from 'styled-components'
 
 
 const Wrapper =styled.div`
-
 @media(min-width:900px){
-   
-width:40%;
+width:45%;
 height:500px;
 }
 border-radius:20px;
@@ -16,7 +14,6 @@ width:100%;
 `
 const StImg = styled.img`
 border-radius: 20px 20px 0px 0px;
-
 `
 
 export default function Card({ ...props }){
