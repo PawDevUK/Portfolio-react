@@ -10,9 +10,6 @@ const Wrapper = styled.div`
 padding:50px 0px;
 margin:auto;
 width:100%;
-@media(max-width:992px){
-    width:80%;
-}
 `
 const Card = styled.div`
 background: #fff;
