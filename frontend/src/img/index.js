@@ -1,4 +1,6 @@
 export {default as asparago} from './asparago.png';
+export {default as login} from './login.png';
+export {default as bot} from './bot.png';
 export {default as nasa} from './nasa.png';
 export {default as royal} from './royal.png';
 export {default as barber} from './barber.jpg';
