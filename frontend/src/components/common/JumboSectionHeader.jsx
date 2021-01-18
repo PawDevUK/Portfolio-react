@@ -29,8 +29,8 @@ top:57px;
 const Jumbo = styled(JumboHeader)`
 @media(max-width:992px){
     opacity:0.5;
-    font-size:60px;
-height:80px;
+    font-size:50px;
+height:60px;
 margin:0px;
 padding:0px;
 position:absolute;

@@ -54,12 +54,10 @@ const DropdownIcon = styled(SvgLoader)`
 position :absolute;
 top:25px;
 left:50%;
-
 `
 export default function MainLarge({ ...props }) {
     const [mouseOver, setMouseOver] = useState(false)
     useEffect(() => {
-        AOS.init({ duration: 1000 });
     })
     function handleMouseHover() {
         setMouseOver((mouseOver) => !mouseOver)
