@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-// import Projects from './F-Projects/projects'
+import Projects from './F-Projects/projects'
 import Footer from './G-Footer/footer.jsx'
 import TopIntro from './C-About/top-intro'
 import ReactSection from './E-React/React'
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 width:100%;
 `
 const Container = styled.div`
-width:100%;
+width:80%;
 @media(min-width:992px){
     width:1000px;
 }
@@ -45,7 +45,7 @@ function App() {
                         </Container>
                         <ReactSection></ReactSection>
                         <Container>
-                            {/* <Projects></Projects> */}
+                            <Projects></Projects>
                             {/* <CV></CV> */}
                         </Container>
                         <Footer></Footer>
