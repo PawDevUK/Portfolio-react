@@ -12,7 +12,7 @@ export const Menu = [
         title: "What I Use",
         href: "#use",
         disabled: false,
-        react:{
+        react: {
             title: "Why I use React ?",
             href: "#react",
             style: "Blue",
@@ -29,7 +29,18 @@ export const Menu = [
         title: "My Github",
         href: "https://github.com/GitcrackerUK",
         disabled: false,
-        target:"_blank"
+        target: "_blank"
+    },
+    {
+        title: "CV",
+        href: "/content/cv",
+        disabled: false,
+        target: "_blank"
+    },
+    {
+        title: "Contact",
+        href: "",
+        disabled: false,
     }
 ]
 
