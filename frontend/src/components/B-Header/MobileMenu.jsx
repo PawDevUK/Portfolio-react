@@ -1,5 +1,5 @@
-import { Transition } from 'react-transition-group';
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import Burger from 'components/common/burger'
 import { SlideDown } from 'react-slidedown';
@@ -9,7 +9,7 @@ import { SvgLoader } from 'react-svgmt';
 import logo from "img/pavdev.svg";
 import { Menu } from 'store';
 import 'aos/dist/aos.css';
-import AOS from 'aos';
+
 
 const Wrapper = styled.div`
 `
@@ -33,6 +33,7 @@ display:none;
 }
 `
 const MobilNav = styled.div`
+${p=>console.log(p)}
 ${p => p.toggle ? css`display:block;` : css`display:none;`};
 @media(max-width:992px){
     margin:0px;
@@ -79,24 +80,13 @@ margin:30px auto 16px 64px;
 export default function MobileMenu() {
     const [toggle, setToggle] = useState(false)
     const [mouseOver, setMouseOver] = useState(false)
-    const duration = 300;
-    const defaultStyle = {
-        transition: `opacity ${duration}ms ease-in-out`,
-        opacity: 0,
-    }
 
-    const transitionStyles = {
-        entering: { opacity: 0 },
-        entered: { opacity: 1 },
-        exiting: { opacity: 1 },
-        exited: { opacity: 0 },
-    };
+   
+   
     function click() {
         setToggle(p => !p)
     }
-    useEffect(() => {
-        AOS.init({ duration: 1000 })
-    })
+
     function handleMouseHover(){
         setMouseOver((mouseOver)=>!mouseOver)
     }
@@ -107,13 +97,9 @@ export default function MobileMenu() {
                 <LogoHeader path={logo}>
                 </LogoHeader>
             </MobilTopDiv>
-            <SlideDown>
-                <Transition in={toggle} timeout={duration}>
-                    {(state) => toggle ? <MobilNav style={{
-                        ...defaultStyle,
-                        ...transitionStyles[state]
-                    }}
-                        className={`fade fade-${state}`} toggle={toggle}>
+      
+                
+                <MobilNav toggle={toggle}>
                         <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
                         <LinkContainer>
                             {Menu.map((item, i) => {
@@ -125,9 +111,9 @@ export default function MobileMenu() {
                                 )
                             })}
                         </LinkContainer>
-                    </MobilNav> : null}
-                </Transition>
-            </SlideDown>
+                    </MobilNav>
+               
+          
         </Wrapper>
 
 
