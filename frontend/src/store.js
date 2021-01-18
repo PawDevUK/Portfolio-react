@@ -1,5 +1,5 @@
 import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma } from 'img'
-import { asparago, nasa, royal, barber, solicitors, fitnessApp } from 'img';
+import {login, bot, asparago, nasa, royal, barber, solicitors, fitnessApp } from 'img';
 
 
 export const Menu = [
@@ -93,14 +93,14 @@ export const stack = [
 ]
 export const projects = [
     {
-        alt: "Royal Oak Architects",
-        githubHref: "https://github.com/GitcrackerUK/Architect",
-        src: royal,
-        text: "Light mobile-first website dedicated for customers who like simple and smart looking solutions.",
-        title: "Royal Oak Architects",
-        webHref: { href: "https://gitcrackeruk.github.io/Architect/", button: "Visit Royal Oak" },
-        _id: "5f818007f14466ba5c71f59b",
-    }, {
+        alt: "Bot Chat",
+        githubHref: "https://github.com/GitcrackerUK/Messenger ",
+        src: bot,
+        text: "Bot Chat is a simple app allowing any one to  have conversation with AI. It’s simple and fun.",
+        title: "Bot Chat",
+        webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Bot Chat" },
+    },
+     {
         alt: "Nasa",
         githubHref: "https://github.com/GitcrackerUK/Nasa",
         src: nasa,
@@ -108,6 +108,23 @@ export const projects = [
         title: "Nasa",
         webHref: { href: "https://gitcrackeruk.github.io/NASA/", button: "Visit Nasa" },
         _id: "5f822f7ef004f97587496990"
+    },
+    {
+        alt: "Login",
+        githubHref: "https://github.com/GitcrackerUK/Login",
+        src: login,
+        text: "Simple app with home component and login. App has two color schemes ",
+        title: "Login Page",
+        webHref: { href: "https://loadin.ew.r.appspot.com", button: "Visit" },
+    },
+    {
+        alt: "Royal Oak Architects",
+        githubHref: "https://github.com/GitcrackerUK/Architect",
+        src: royal,
+        text: "Light mobile-first website dedicated for customers who like simple and smart looking solutions.",
+        title: "Royal Oak Architects",
+        webHref: { href: "https://gitcrackeruk.github.io/Architect/", button: "Visit Royal Oak" },
+        _id: "5f818007f14466ba5c71f59b",
     }, {
         alt: "GENTLEMAN BARBER",
         githubHref: "https://github.com/GitcrackerUK/Barber",
