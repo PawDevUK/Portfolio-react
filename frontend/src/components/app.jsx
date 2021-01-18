@@ -38,10 +38,10 @@ function App() {
                 <GlobalStyle />
                 <Switch>
                     <Route path='/content'>
-                        {/* <Header></Header> */}
+                        <Header></Header>
                         <Container>
-                            {/* <TopIntro></TopIntro> */}
-                            {/* <Stack></Stack> */}
+                            <TopIntro></TopIntro>
+                            <Stack></Stack>
                         </Container>
                         <ReactSection></ReactSection>
                         <Container>
