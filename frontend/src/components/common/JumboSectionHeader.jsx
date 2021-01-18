@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 }
 height:100px;
 position:relative;
+margin:5px;
 `
 const Header = styled(SectionHeader)`
 @media(max-width:992px){
