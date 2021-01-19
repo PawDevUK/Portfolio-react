@@ -1,4 +1,3 @@
-
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import '../../../node_modules/aos/dist/aos.css';
 import styled from 'styled-components'
@@ -7,7 +6,9 @@ import {projects} from 'store'
 import AOS from 'aos';
 import Card from  './card'
 
-
+const MainWrapper = styled.div`
+margin-bottom:20px;
+`
 const Wrapper = styled.div`
 margin:auto;
 display:flex;
@@ -22,9 +23,9 @@ export default function Projects() {
     }, [])
 
     return (
-        <div>
+        <MainWrapper id="projects">
            <JumboSectionHeader>Projects</JumboSectionHeader>
-            <Wrapper id="projects" >
+            <Wrapper  >
             
                 {projects.map((item, index) => {
                     return (
@@ -33,7 +34,7 @@ export default function Projects() {
                 })
                 }
             </Wrapper>
-        </div>
+        </MainWrapper>
     )
 
 }
