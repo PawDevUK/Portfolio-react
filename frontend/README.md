@@ -1,15 +1,15 @@
 ## To Do
 
-### Implement Bot Chat.\
-===19.01.21===
-        - design modern looking interface, not too big and not too fancy\ 
-             Simple with basic functionally and matching color schemes  6H\
-        -create base directory with: 1H\
-                    * jsconfig.json\
-                    * src\
-                    *components
-                    *common
-                    *MainLayout  !!!!
-                    *store
-                    *img
-                        - index.js  // Used to name export img
+### Implement Bot Chat. <br>
+===19.01.21===<br>
+        - design modern looking interface, not too big and not too fancy <br>
+             Simple with basic functionally and matching color schemes  6H <br>
+        -create base directory with: 1H <br>
+                    * jsconfig.json <br>
+                    * src <br>
+                    *components <br>
+                    *common <br>
+                    *MainLayout  !!!! <br>
+                    *store <br>
+                    *img <br>
+                        - index.js  // Used to name export img <br>
