@@ -29,7 +29,7 @@ export default function Stack() {
     })
 
     return (
-        <Wrapper>
+        <Wrapper id="use">
             <JumboSectionHeader>What I use</JumboSectionHeader>
             <Thumbnails>
                 {
