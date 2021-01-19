@@ -8,12 +8,13 @@ import ReactSection from './E-React/React'
 import Stack from './D-Stack/stack.jsx'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
-// import CV from './H-CV/cv'
+import CV from './H-CV/cv'
 import React from "react"
 
 
 const GlobalStyle = createGlobalStyle`
 body{
+    background-color:#fff;
 font-family:'Nunito Sans', sans-serif;
 width:100%;
 margin:0px;
@@ -37,7 +38,7 @@ function App() {
             <Wrapper>
                 <GlobalStyle />
                 <Switch>
-                    <Route path='/content'>
+                    <Route exact path='/content'>
                         <Header></Header>
                         <Container>
                             <TopIntro></TopIntro>
@@ -46,13 +47,16 @@ function App() {
                         <ReactSection></ReactSection>
                         <Container>
                             <Projects></Projects>
-                            {/* <CV></CV> */}
                         </Container>
                         <Footer></Footer>
+                    </Route>
+                    <Route exact path='/cv'>
+                        <CV></CV>
                     </Route>
                     <Route exact path='/'>
                         <Intro></Intro>
                     </Route>
+                   
 
 
                 </Switch>
