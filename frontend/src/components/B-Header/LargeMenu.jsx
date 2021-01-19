@@ -68,7 +68,7 @@ export default function MainLarge({ ...props }) {
             <InnerMainNav>
                 {Menu.map((item, i) => {
                     return (
-                        <Link  onMouseEnter={item.react ? handleMouseHover : null} onMouseLeave={item.react ? handleMouseHover : null} key={i} href={item.href}>
+                        <Link onMouseEnter={item.react ? handleMouseHover : null} onMouseLeave={item.react ? handleMouseHover : null} key={i} href={item.href}>
                          
                             {item.title}
                       {mouseOver ? <DropDown href={item.href}>{item.react ? item.react.title : null}</DropDown> : item.react? <DropdownIcon path={dropdown}></DropdownIcon>:null}
