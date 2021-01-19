@@ -33,15 +33,15 @@ export const Menu = [
     },
     {
         title: "CV",
-        href: "/content/cv",
+        href: "/cv",
         disabled: false,
         target: "_blank"
-    },
-    {
-        title: "Contact",
-        href: "",
-        disabled: false,
     }
+    // {
+    //     title: "Contact",
+    //     href: "",
+    //     disabled:true,
+    // }
 ]
 
 export const stack = [
