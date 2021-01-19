@@ -1,10 +1,10 @@
-## To Do
+##To Do
 
-### Implement Bot Chat. <br>
+##Implement Bot Chat.<br>
 ===19.01.21===<br>
-        - design modern looking interface, not too big and not too fancy <br>
+1.design modern looking interface, not too big and not too fancy <br>
              Simple with basic functionally and matching color schemes  6H <br>
-        -create base directory with: 1H <br>
+        1. create base directory with: 1H <br>
                     * jsconfig.json <br>
                     * src <br>
                     *components <br>
