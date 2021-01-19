@@ -33,12 +33,14 @@ function Cv() {
                             <div className="head">email:</div>
                             <div className="head">town:</div>
                             <div className="head">telephone:</div>
+                            <div className="head">portfolio:</div>
                             <div className="head">languages:</div>
                         </div>
                         <div id="right">
                             <div className="">P.F.Siwek@gmail.com</div>
                             <div className="">Reading, UK</div>
                             <div className="">07463765514</div>
+                            <div className=""><a href="http://www.pawelsiwek.co.uk">pawelsiwek.co.uk</a></div>
                             <ul>
                                 <li>English-fluent</li>
                                 <li>Polish-native</li>
@@ -101,6 +103,7 @@ function Cv() {
                             <span>Relevant Coursework</span>
                             <time></time>
                         </h5>
+                        <p>Complete React Developer in 2021 (w/ Redux, Hooks, GraphQL)</p>
                         <p>JavaScript: Understanding the Weird Parts</p>
                         <p>The Modern Javascript Bootcamp Course 2020</p>
                         <p>
