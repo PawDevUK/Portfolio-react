@@ -3,7 +3,7 @@
 - src
   - components
   - img
-  - functions.js
+  - factory.js
   - index.js
   - store.js
 - package-lock.json
