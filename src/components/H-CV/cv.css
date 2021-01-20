@@ -7,7 +7,6 @@ body {
 
 .page {
     color: #585858;
-    /* width: 100%; */
     max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
@@ -44,7 +43,7 @@ h3 {
 h4 {
     padding-top: 10px;
     margin: 0px;
-    font-size: 24px;
+    font-size: 20px;
     color: #007297;
     text-transform: capitalize;
 }
@@ -97,7 +96,7 @@ a:hover {
     .grid {
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 4fr;
     }
 }
 
@@ -142,7 +141,6 @@ article {
 }
 
 #cont-art #right, ul {
-    text-transform: ;
     list-style-type: none;
     margin: 0px;
     padding: 0px;

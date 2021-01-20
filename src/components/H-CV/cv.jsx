@@ -46,20 +46,29 @@ function Cv() {
                                 <li>English-fluent</li>
                                 <li>Polish-native</li>
                             </ul>
+
+
                         </div>
                     </article>
                 </section>
+                <section className="grid mx-4"> 
+                <header></header>
+                <article>
+
+                <p className="mx-1">I am a self-thought and self-motivated programmer from Reading, UK.
+                    I started programming without any prior knowledge back in 2018 and now I'm proficient React Developer.
+                    </p>
+                </article>
+                    
+                    </section>
                 {/* <!-- Knowledge --> */}
 
                 <section className="grid" id="know">
                     <header id="header-know">
-                        <h4>Knowledge and skills</h4>
+                        <h4>Knowledge/skills</h4>
                     </header>
                     <article id="art-know">
-                        <p>I am a self-thought and self-motivated programmer from Reading, UK.
-                    I started programming without any prior knowledge back in 2018 and now I'm proficient React Developer.</p>
-                        <p>
-                            I currently use  React which requires good knowledge of number of technologies like JavaScript ES6, HTML, CSS, Package Manager,  WebPack, Babel and many more. Most of my work is kept via Git CLI on GitHub so I branch, commit, push, pull and merge fairly often.
+                        <p> I currently use  React which requires good knowledge of number of technologies like JavaScript ES6, HTML, CSS, Package Manager,  WebPack, Babel and many more. Most of my work is kept via Git CLI on GitHub so I branch, commit, push, pull and merge fairly often.
                     </p>
                         <h5>Programming Languages</h5>
                         <p>JavaScript</p>
@@ -68,7 +77,7 @@ function Cv() {
                         <h5>Operating systems</h5>
                         <p>Linux</p>
                         <h5>Version Control</h5>
-                        <p>Git</p>
+                        <p>Git, GitHub </p>
                         <h5>Cloud computing</h5>
                         <p>Google Cloud</p>
                     </article>
@@ -81,7 +90,7 @@ function Cv() {
                     </header>
                     <article id="art-work">
                         <h5><span>Portfolio</span></h5>
-                        <p>Website created in React with create-react-app, react-bootstrap, react-router-dom, styled-components, material-ui and few more.</p>
+                        <p>Website created with use of React, create-react-app, react-bootstrap, react-router-dom, styled-components, material-ui and few more.</p>
                         <h5><span>Bot Chat</span></h5>
                         <p>Bot Chat is a simple app allowing any one to have conversation with AI. It’s simple and fun.</p>
                         <h5><span>Fitness App</span></h5>
