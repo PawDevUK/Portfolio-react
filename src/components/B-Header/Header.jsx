@@ -2,7 +2,7 @@ import JumboMainText from 'components/B-Header/JumboText';
 import MainLarge from 'components/B-Header/LargeMenu'
 import MobileMenu from 'components/B-Header/MobileMenu'
 import React, { useEffect, useState } from 'react';
-import { useWindowWidth } from 'functions'
+import { useWindowWidth } from 'factory'
 import styled from 'styled-components';
 const backgroundColor = '#17293F';
 

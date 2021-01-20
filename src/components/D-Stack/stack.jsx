@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { stack } from 'store.js'
 import Card from './card.jsx'
 import styled from 'styled-components'
-import { useWindowWidth } from 'functions'
+import { useWindowWidth } from 'factory'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 
 const Wrapper = styled.div`
