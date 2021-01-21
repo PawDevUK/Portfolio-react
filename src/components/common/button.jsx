@@ -7,19 +7,29 @@ font-size:12px;
 `:css`
 width:100px;
 `}
-
-height:30px;
+${p=>p.light?css`
+background-color:#fff;
+border:1px solid #17293F;
+color:#17293F;
+`:css`
 background-color:#17293F;
 border:1px solid white;
+color:#fff;
+`}
+height:30px;
 border-radius:5px;
-color:white;
 display:flex;
 justify-content:center;
 align-items:center;
 &:hover{
-    border:2px solid #fff;
-    text-decoration:none;
+   
     cursor:pointer;
+    ${p=>p.light?css`
+    
+    
+    `:css`
+     border:2px solid #fff;
+    text-decoration:none;`}
 }
 `
 export default Button
