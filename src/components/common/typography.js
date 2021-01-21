@@ -1,6 +1,5 @@
 import styled,{css} from 'styled-components'
 
-
 const JumboHeader = styled.h1`
 text-transform:capitalize;
 font-weight:600;
