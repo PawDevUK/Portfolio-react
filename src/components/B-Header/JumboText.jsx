@@ -59,6 +59,8 @@ display:none;
 `
 
 const Anchor = styled.a`
+display:block;
+margin-top:30px;
 &:hover{
     text-decoration:none;
 }
