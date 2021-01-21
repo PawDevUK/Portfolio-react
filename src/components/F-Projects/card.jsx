@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Button from 'components/common/button'
 
 const Wrapper =styled.div`
+box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
 @media(min-width:900px){
 width:45%;
 height:430px;
@@ -30,6 +31,11 @@ width:210px;
 const P = styled.p`
 
 `
+const A = styled.a`
+:hover{
+    text-decoration:none;
+}
+`
 export default function Card({ ...props }){
 
     function LimitText(str,length){
@@ -49,12 +55,12 @@ export default function Card({ ...props }){
                
 
                <ButtonWrapper>
-               <a href={props.item.webHref.href} target="_blank" >
+               <A href={props.item.webHref.href} target="_blank" >
                      <Button light>{props.item.webHref.button}</Button>
-                </a>
-                <a href={props.item.githubHref} target="_blank">
+                </A>
+                <A href={props.item.githubHref} target="_blank">
                     <Button light>Github Repo</Button>
-                </a>
+                </A>
                </ButtonWrapper>
                
             </CardContent>
