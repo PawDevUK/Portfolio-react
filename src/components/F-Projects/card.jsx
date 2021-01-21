@@ -50,10 +50,10 @@ export default function Card({ ...props }){
 
                <ButtonWrapper>
                <a href={props.item.webHref.href} target="_blank" >
-                     <Button>{props.item.webHref.button}</Button>
+                     <Button light>{props.item.webHref.button}</Button>
                 </a>
                 <a href={props.item.githubHref} target="_blank">
-                    <Button>Github Repo</Button>
+                    <Button light>Github Repo</Button>
                 </a>
                </ButtonWrapper>
                
