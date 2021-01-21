@@ -68,7 +68,7 @@ function Cv() {
                         <h4>Knowledge/skills</h4>
                     </header>
                     <article id="art-know">
-                        <p> I currently use  React which requires good knowledge of number of technologies like JavaScript ES6, HTML, CSS, Package Manager,  WebPack, Babel and many more. Most of my work is kept via Git CLI on GitHub so I branch, commit, push, pull and merge fairly often.
+                        <p>React requires good knowledge of number of technologies like JavaScript ES6, HTML, CSS, Node.js, Package Manager,  WebPack, Babel and many more. Most of my work is kept via Git CLI on GitHub so I branch, commit, push, pull and merge fairly often. 
                     </p>
                         <h5>Programming Languages</h5>
                         <p>JavaScript</p>
@@ -84,7 +84,7 @@ function Cv() {
                 </section>
 
                 {/* <!-- Work History --> */}
-                <section className="grid" id="work">
+                <section className="grid mb-5" id="work">
                     <header id="header-know">
                         <h4>Experience</h4>
                     </header>
@@ -100,11 +100,15 @@ function Cv() {
                         <h5><span>Gentleman Barber</span></h5>
                         <p>Simple barber shop website.</p>
                         <h5><span>Goodwood Solicitors</span></h5>
-                        <p>Mobile-first webpage with menu to sub-pages.</p>
+                        <p classname="mb-5" >Mobile-first webpage with menu to sub-pages.</p>
                     </article>
                 </section>
+                <div className="m-5 heigh-3 breaker">
+
+                </div>
+                
                 {/* <!-- Education --> */}
-                <section className="grid" id="edu">
+                <section className="grid mt-5" id="edu">
                     <header id="header-edu">
                         <h4>Education</h4>
                     </header>
