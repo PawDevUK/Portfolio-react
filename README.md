@@ -29,6 +29,7 @@
   * Added text reducer to card text 
   * removed bootstrap
   * Added styled Button with "light" theme
+* removed width passed as props and used for rwd, added css media and styled rwd based on media queries
 
 
 ### To Do
