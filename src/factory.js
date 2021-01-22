@@ -13,3 +13,13 @@ export function useWindowWidth() {
 
   return width;
 }
+
+
+// export function ScreenWidth() {
+//   let width
+//   function checkSize(){
+//       width = window.innerWidth
+//   }
+//   window.addEventListener('resize', checkSize())
+//   return width
+// }
