@@ -4,22 +4,23 @@ import React from 'react';
 
 const JumboTextWrapper = styled.div`
 text-align:center;
+margin:auto;
 width:600px;
-margin:0px auto;
 padding-top:1px;
-@media(max-width:700px){
+@media(max-width:992px){
     width:350px;
+    height:200px;
 }`
 
 const JumboHeaderWrapper = styled.div`
 position:relative;
 margin:0px auto auto auto;
-height:130px;
+height:95px;
 width:400px;
 margin:100px auto auto auto;
-@media(max-width:700px){
+@media(max-width:992px){
     height:16vw;
-    margin:100px auto auto auto;
+    margin-top:20%;
 height:80px;
 width:250px;
 }
@@ -30,7 +31,7 @@ font-weight:400;
 width:100%;
 display:block;
 color:white;
-@media(max-width:700px){
+@media(max-width:992px){
     font-size:26px;
 }
 `
@@ -42,14 +43,15 @@ position:absolute;
 color:white;
 right:0px;
 bottom:0px;
-@media(max-width:700px){
+@media(max-width:992px){
     font-size:13px;
     margin:3px;
 }
 `
 const JumboText = styled.p`
 display:none;
-@media(min-width:700px){
+@media(min-width:992px){
+    margin-top:10px;
     display:block;
     font-family:'Nunito Sans', sans-serif;
     color:#fff;

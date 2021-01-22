@@ -9,12 +9,11 @@ justify-content:center;
 align-items:center;
 
 //mobile size
-${p=>p.mobile?css`
-width:80px;
+@media(max-width:700px){
+    width:80px;
 font-size:12px;
-`:css`
+}
 width:100px;
-`}
 
 //light theme
 ${p=>p.light?css`
@@ -31,7 +30,8 @@ color:#fff;
 //hover transition for transform and background-color
 &:hover{
     transition:width .3s;
-    ${p=>p.mobile?css`width:90px;`:css`width:110px;`}
+    @media(max-width:700px){width:90px;}
+    width:110px;
     cursor:pointer;
     text-decoration:none;
     border:2px solid #fff;

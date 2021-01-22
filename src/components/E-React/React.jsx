@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import styled, { keyframes, css } from 'styled-components'
+import React from 'react'
+import styled, { keyframes} from 'styled-components'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import { P } from 'components/common/typography'
 import Pros from 'components/E-React/pros'
@@ -41,7 +41,10 @@ margin:auto;
 `
 
 const LeftWrapper = styled.div`
-${p => p.Large ? css`width:60%;` : css`width:100%;`};
+@media(max-width:992px){
+    width:100%
+}
+width:60%;
 `
 
 const ProsWrapper = styled.div`
@@ -62,6 +65,10 @@ fill:rgba(41, 87, 111, 0.46);
 }
 `
 const RightWrapper = styled.div`
+@media(max-width:992px){
+    display:none;
+}
+
 display:flex;
 margin:auto;
 justify-content:center;
@@ -70,21 +77,12 @@ height:${height};
 `
 
 export default function ReactSection() {
-    const [Large, setLarge] = useState(true)
-    const [size, setSize] = useState(window.innerWidth)
-    useEffect(() => {
-        if(size>=1000){
-            setLarge(true)
-        }else{
-            setLarge(false)
-        };
-        window.addEventListener('resize',()=>{ setSize(window.innerWidth)})
-    })
+
 
     return (
         <Wrapper id="react" >
             <ContentWrapper>
-                <LeftWrapper Large={Large}>
+                <LeftWrapper >
                     <JumboSectionHeader dark >why react ?</JumboSectionHeader>
                     <P dark >I use React because it's great tool allowing to mix HTML/CSS and JavaScript with help of JSX.
                     Great benefits of React are also quick rendering of content and changing data without reloading page what helps improve user experience.
@@ -102,9 +100,9 @@ export default function ReactSection() {
                         <Pros dark >Reusable Components</Pros>
                     </ProsWrapper>
                 </LeftWrapper>
-                {Large ? <RightWrapper>
+                <RightWrapper>
                     <ReactIcon path={Reacticon}> </ReactIcon>
-                </RightWrapper> : null}
+                </RightWrapper>
             </ContentWrapper>
         </Wrapper>
     )

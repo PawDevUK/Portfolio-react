@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { stack } from 'store.js'
 import Card from './card.jsx'
 import styled from 'styled-components'
-import { useWindowWidth } from 'factory'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 
 const Wrapper = styled.div`
@@ -21,13 +20,6 @@ width:748px;
 `
 
 export default function Stack() {
-    const Width = useWindowWidth()
-    const [Mobile,setMobile] = useState(false)
-
-    useEffect(()=>{
-        Width<700?setMobile(true):setMobile(false)
-    })
-
     return (
         <Wrapper id="use">
             <JumboSectionHeader>What I use</JumboSectionHeader>
@@ -35,7 +27,7 @@ export default function Stack() {
                 {
                     stack.map((item) => {
                         return (
-                            <Card  Mobile={Mobile} key={item._id} image={item.img} title={item.title} text={item.text} href={item.webHref
+                            <Card key={item._id} image={item.img} title={item.title} text={item.text} href={item.webHref
                             }></Card>
                         )
                     })
