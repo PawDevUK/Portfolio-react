@@ -1,11 +1,9 @@
-import JumboMainText from 'components/B-Header/JumboText';
-import MainLarge from 'components/B-Header/LargeMenu'
-import MobileMenu from 'components/B-Header/MobileMenu'
+import JumboMainText from './JumboText';
+import MainLarge from './LargeMenu'
+import MobileMenu from './MobileMenu'
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 const backgroundColor = '#17293F';
-
-
 
 const Wrapper = styled.div`
 margin:0px;
@@ -14,10 +12,13 @@ padding:0px;
 
 const BigBlue = styled.div`
 margin:0px;
-height:583px;
+@media(min-width:992px){
+    height:583px;
+}
+height:300px;
 background-color:${backgroundColor};
 @media(max-width:700px){
-    height:60vw;
+    height:250px;
 }
 `
 const JumboTextWrapper = styled.div`
@@ -33,12 +34,11 @@ padding-top:1px;
 export default function Header() {
     const [width, setWidth] = useState(window.innerWidth);
     const [large,setLarge] = useState(false)
-    const [mobile, setMobile] = useState(false)
+
     useEffect(() => {
         window.addEventListener('resize', ()=> setWidth(
             window.innerWidth
         ))
-        width < 700 ? setMobile(true) : setMobile(false)
         width > 993 ? setLarge(true) : setLarge(false)
     },[width])
 
@@ -49,7 +49,7 @@ export default function Header() {
             <BigBlue >
                {large?<MainLarge></MainLarge> :null}
                 <JumboTextWrapper>
-                  <JumboMainText  mobile={mobile}></JumboMainText>
+                  <JumboMainText ></JumboMainText>
                 </JumboTextWrapper>
             </BigBlue>
         </Wrapper>

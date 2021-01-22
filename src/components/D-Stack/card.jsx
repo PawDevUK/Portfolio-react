@@ -1,19 +1,18 @@
 import '../../../node_modules/aos/dist/aos.css';
 import { AnimationWrapper } from 'react-hover-animation'
 import React, { useEffect } from 'react';
-import styled,{css} from 'styled-components'
+import styled from 'styled-components'
 import AOS from 'aos';
 
 const Wrapper = styled.div`
-${p=>p.mobile?css`
-margin: 10px;
+@media(max-width:700px){
+    margin: 10px;
 height:120px;
 width:120px;
-`:css`
+}
 margin: 5px;
 height:150px;
 width:150px;
-`}
 box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
 text-align:center;
 border-radius: 10px;
@@ -26,15 +25,13 @@ font-size:16px;
 font-family:'Nunito Sans';
 `
 const Img = styled.img`
-${p=>p.mobile?css`
-width:100px;
-height:80px;
-`:css`
+@media(max-width:700px){
+    width:100px;
+    height:80px;
+}
 width:122px;
 height:100px;
-`}
 object-fit: scale-down;
-
 `
 const Link = styled.a`
 &:hover{
