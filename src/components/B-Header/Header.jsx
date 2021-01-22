@@ -2,9 +2,10 @@ import JumboMainText from 'components/B-Header/JumboText';
 import MainLarge from 'components/B-Header/LargeMenu'
 import MobileMenu from 'components/B-Header/MobileMenu'
 import React, { useEffect, useState } from 'react';
-import { useWindowWidth } from 'factory'
 import styled from 'styled-components';
 const backgroundColor = '#17293F';
+
+
 
 const Wrapper = styled.div`
 margin:0px;
@@ -30,15 +31,16 @@ padding-top:1px;
 `
 
 export default function Header() {
+    const [width, setWidth] = useState(window.innerWidth);
     const [large,setLarge] = useState(false)
     const [mobile, setMobile] = useState(false)
-    const windowWidth = useWindowWidth()
-
-
     useEffect(() => {
-        windowWidth < 700 ? setMobile(true) : setMobile(false)
-        windowWidth > 993 ? setLarge(true) : setLarge(false)
-    },[windowWidth])
+        window.addEventListener('resize', ()=> setWidth(
+            window.innerWidth
+        ))
+        width < 700 ? setMobile(true) : setMobile(false)
+        width > 993 ? setLarge(true) : setLarge(false)
+    },[width])
 
 
     return (
