@@ -33,6 +33,7 @@
 - package-lock.json
 - package.json
 <hr>
+
 #### Updates
 * Added Node.js to skills
 * Card component
