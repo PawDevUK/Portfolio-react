@@ -10,6 +10,9 @@ const MainWrapper = styled.div`
 margin-bottom:20px;
 `
 const Wrapper = styled.div`
+@media(max-width:992px){
+    display:block;
+}
 margin:auto;
 display:flex;
 flex-wrap:wrap;
