@@ -44,7 +44,7 @@ function App() {
                             <TopIntro></TopIntro>
                             <Stack></Stack>
                         </Container>
-                        <ReactSection></ReactSection>
+                        {/* <ReactSection></ReactSection> */}
                         <Container>
                             <Projects></Projects>
                         </Container>
