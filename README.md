@@ -35,13 +35,10 @@
 
 ### To Do
 * add stack icons to project cards
-* change login project img on content centered.
+
 * add github theme to button
-<<<<<<< HEAD
-* reduce react component height on mobile devices
-=======
+* <s>change login project img on content centered.</s>
 * <s>reduce "why react" component height on mobile devices</s>
->>>>>>> 558f9a2ccd9d4f924251f365e1ae96c5474aa604
 #### Implement Bot Chat To Main Page.
 * design modern looking interface, not too big and not too fancy\
   Simple with basic functionally and matching color schemes
