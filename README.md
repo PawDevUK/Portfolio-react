@@ -27,9 +27,10 @@
 * Added Node.js to skills
 * Card component
   * Added text reducer to card text 
-  * removed bootstrap
+  * Removed bootstrap
   * Added styled Button with "light" theme
-* removed width passed as props and used for rwd, added css media and styled rwd based on media queries
+* Removed width passed as props and used for rwd.
+* Added css media and styled rwd based on media queries
 
 
 ### To Do
