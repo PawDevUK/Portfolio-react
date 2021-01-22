@@ -11,11 +11,21 @@
       - LargeMenu.jsx
       - MobileMenu.jsx
     - About
+      - top-intro.jsx
     - Stack
+      - card.jsx
+      - stack.jsx
     - React
+      - pros.jsx
+      - React.jsx
     - Projects
+      - card.jsx
+      - projects.jsx
     - Footer
+      - footer.jsx
     - Cv
+      - cv.css
+      - cv.jsx
   - img
   - factory.js
   - index.js
@@ -35,7 +45,8 @@
 
 ### To Do
 * add stack icons to project cards
-
+* reduce text line height in "Why React" component
+* reduce "Tick" svg in "Why React"
 * add github theme to button
 * <s>change login project img on content centered.</s>
 * <s>reduce "why react" component height on mobile devices</s>
