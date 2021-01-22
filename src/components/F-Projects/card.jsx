@@ -4,14 +4,19 @@ import Button from 'components/common/button'
 
 const Wrapper =styled.div`
 box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
-@media(min-width:900px){
-width:45%;
-height:430px;
-}
 border-radius:20px;
 border:solid 1px #dbdbdb;
-margin:10px auto 0px auto;
-width:100%;
+margin:20px auto 0px auto;
+@media(max-width:600px){
+    width:100%;
+}
+width:60%;
+@media(min-width:992px){
+width:40%;
+height:430px;
+}
+
+
 `
 const CardContent = styled.div`
 text-align:center;
