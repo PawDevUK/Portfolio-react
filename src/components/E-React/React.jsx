@@ -20,14 +20,14 @@ const Wrapper = styled.div`
 margin:0px;
 padding:0px;
 width:100%;
-height:370px;
+height:400px;
 background-color:#17293f;
 margin-bottom:10px;
-@media(max-width:500px){
+@media(max-width:400px){
 height:550px;
 };
 @media(min-width:992px){
-
+ height:370px;
 }
 `
 const ContentWrapper = styled.div`
