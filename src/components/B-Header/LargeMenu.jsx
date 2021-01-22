@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { SvgLoader } from 'react-svgmt';
 import logo from "img/pavdev.svg";
 import { Menu } from 'store'
-import 'aos/dist/aos.css';
-import AOS from 'aos';
 
 const Wrapper = styled.div`
     display:flex;
