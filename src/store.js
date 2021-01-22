@@ -98,7 +98,7 @@ export const projects = [
         src: bot,
         text: "Bot Chat is a simple app allowing any one to have conversation with AI. It’s simple and fun. At the moment app contains only chat but will be added chat history in MERN stack",
         title: "Bot Chat",
-        webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Bot Chat" },
+        webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
         stack:["react","VanillaJs","html","css","figma"]
     },
      {
