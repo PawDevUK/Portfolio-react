@@ -27,15 +27,21 @@
 * Added Node.js to skills
 * Card component
   * Added text reducer to card text 
-  * removed bootstrap
+  * Removed bootstrap
   * Added styled Button with "light" theme
+* Removed width passed as props and used for rwd.
+* Added css media and styled rwd based on media queries
 
 
 ### To Do
 * add stack icons to project cards
 * change login project img on content centered.
 * add github theme to button
+<<<<<<< HEAD
 * reduce react component height on mobile devices
+=======
+* <s>reduce "why react" component height on mobile devices</s>
+>>>>>>> 558f9a2ccd9d4f924251f365e1ae96c5474aa604
 #### Implement Bot Chat To Main Page.
 * design modern looking interface, not too big and not too fancy\
   Simple with basic functionally and matching color schemes
