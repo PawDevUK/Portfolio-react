@@ -3,6 +3,7 @@ import styled, { keyframes} from 'styled-components'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import { P } from 'components/common/typography'
 import Pros from 'components/E-React/pros'
+import {ReactComponentData} from 'store'
 import Reacticon from 'img/react.svg'
 import { SvgLoader } from 'react-svgmt'
 
@@ -17,25 +18,24 @@ const rotate = keyframes`
 
 `
 const Wrapper = styled.div`
+@media(max-width:400px){
+height:500px;
+};
 margin:0px;
-padding:0px;
 width:100%;
-height:400px;
+min-height:380px;
 background-color:#17293f;
 margin-bottom:10px;
-@media(max-width:400px){
-height:550px;
+@media(min-width:600px){
+ min-height:310px;
 };
-@media(min-width:992px){
- height:370px;
-}
 `
 const ContentWrapper = styled.div`
 display:flex;
 @media(max-width:1000px){
     width:80%;
 }
-height:${height};
+/* height:${height}; */
 width:1000px;
 margin:auto;
 `
@@ -51,6 +51,7 @@ const ProsWrapper = styled.div`
 height:80px;
 display:flex;
 flex-wrap:wrap;
+margin-bottom:10px;
 `
 const ReactIcon = styled(SvgLoader)`
 display:flex;
@@ -75,7 +76,10 @@ justify-content:center;
 align-items:center;
 height:${height};
 `
-
+let StP = styled(P)`
+line-height:19px;
+margin-bottom:15px;
+`
 export default function ReactSection() {
 
 
@@ -83,21 +87,14 @@ export default function ReactSection() {
         <Wrapper id="react" >
             <ContentWrapper>
                 <LeftWrapper >
-                    <JumboSectionHeader dark >why react ?</JumboSectionHeader>
-                    <P dark >I use React because it's great tool allowing to mix HTML/CSS and JavaScript with help of JSX.
-                    Great benefits of React are also quick rendering of content and changing data without reloading page what helps improve user experience.
-                    As React uses reusable components, source code is ease to maintain. Data flows in one way so code is stable.
-                    React is safe, JSX blocks injection and XSS.
-                    </P>
+                    <JumboSectionHeader dark >{ReactComponentData.Header}</JumboSectionHeader>
+                    <StP dark >{ReactComponentData.MainText}
+                    </StP>
                     <ProsWrapper>
-                        <Pros dark >Fast Rendering</Pros>
-                        <Pros dark >JSX</Pros>
-                        <Pros dark >Stable Code</Pros>
-                        <Pros dark >Safety</Pros>
-                        <Pros dark >Maintenance</Pros>
-                        <Pros dark >One-way data flow</Pros>
-                        <Pros dark >Facebook Support</Pros>
-                        <Pros dark >Reusable Components</Pros>
+                    {ReactComponentData.Pros.map((pro,i)=>{
+                        return  <Pros dark>{pro}</Pros>
+                    })}
+                       
                     </ProsWrapper>
                 </LeftWrapper>
                 <RightWrapper>
