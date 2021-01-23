@@ -10,7 +10,7 @@ align-items:center;
 
 //mobile size
 @media(max-width:700px){
-    width:80px;
+
 font-size:12px;
 }
 width:100px;
