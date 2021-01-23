@@ -54,16 +54,17 @@ flex-wrap:wrap;
 margin-bottom:10px;
 `
 const ReactIcon = styled(SvgLoader)`
+filter:drop-shadow(0px 5px 22px rgb(0, 0, 0));
 display:flex;
 animation:${rotate} 30s infinite linear;
 height:270px;
 width:300px;
 .background{
 fill:rgba(41, 87, 111, 0.46);
-}
+};
 .ring{
     fill:#17293f;
-}
+};
 `
 const RightWrapper = styled.div`
 @media(max-width:992px){
