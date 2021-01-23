@@ -3,7 +3,7 @@ import styled,{css} from 'styled-components'
 const JumboHeader = styled.h1`
 text-transform:capitalize;
 font-weight:600;
-font-size:100px;
+font-size:70px;
 height:100px;
 color:rgba(0, 0, 0, 0.1);
 ${p=>p.dark?css`color:rgba(41, 87, 111, 0.46);`:css``}
