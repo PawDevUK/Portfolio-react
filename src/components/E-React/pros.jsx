@@ -11,10 +11,12 @@ display:flex;
 align-items:center;
 `
 const Icon = styled(SvgLoader)`
-margin:2px;
+margin:0px 4px 0px 0px;
+height:14px;
 `
 const StP = styled(P)`
 margin:0px;
+padding:0px;
 `
 export default function Pros({ ...props }) {
     return (

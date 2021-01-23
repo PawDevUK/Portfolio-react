@@ -25,7 +25,7 @@ margin:0px;
 padding:0px;
 position:absolute;
 left:7px;
-top:57px;
+top:30px;
 `
 const Jumbo = styled(JumboHeader)`
 @media(max-width:992px){
