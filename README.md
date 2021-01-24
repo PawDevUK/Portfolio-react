@@ -32,6 +32,7 @@
     - Cv
       - cv.css
       - cv.jsx
+    - app.jsx
   - img
   - factory.js
   - index.js
