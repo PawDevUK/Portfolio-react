@@ -35,7 +35,6 @@ display:flex;
 @media(max-width:1000px){
     width:80%;
 }
-/* height:${height}; */
 width:1000px;
 margin:auto;
 `
@@ -59,6 +58,8 @@ display:flex;
 animation:${rotate} 30s infinite linear;
 height:270px;
 width:300px;
+/* transition:transform 1s; */
+
 .background{
 fill:rgba(41, 87, 111, 0.46);
 };

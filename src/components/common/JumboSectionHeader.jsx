@@ -14,6 +14,7 @@ position:relative;
 margin:5px;
 `
 const Header = styled(SectionHeader)`
+
 @media(max-width:992px){
     margin:0px;
 padding:0px;
