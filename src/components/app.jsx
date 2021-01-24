@@ -10,7 +10,7 @@ import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
 import CV from './H-CV/cv'
 import React from "react"
-
+import Chat from './Z-Chat/Chat'
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -22,6 +22,7 @@ padding:0px;
 }
 `
 const Wrapper = styled.div`
+position:relative;
 width:100%;
 `
 const Container = styled.div`
@@ -32,6 +33,7 @@ width:80%;
 margin: auto;
 padding:0px;
 `
+
 function App() {
     return (
         <Router>
@@ -49,6 +51,7 @@ function App() {
                             <Projects></Projects>
                         </Container>
                         <Footer></Footer>
+                        <Chat></Chat>
                     </Route>
                     <Route exact path='/cv'>
                         <CV></CV>
