@@ -45,11 +45,11 @@
 
 
 ### To Do
+* add github theme to button
 * add stack icons to project cards
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
 * <s>reduce text line height in "Why React" component</s>
 * <s>reduce "Tick" svg in "Why React"</s>
-* add github theme to button
 * <s>change login project img on content centered.</s>
 * <s>reduce "why react" component height on mobile devices</s>
 #### Implement Bot Chat To Main Page.
