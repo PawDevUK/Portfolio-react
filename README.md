@@ -2,6 +2,12 @@
 - public
 - src
   - components
+    - common
+      - burger.jsx
+      - button.jsx
+      - JumboSectionHeader.jsx
+      - logo.jsx
+      - typography.js
     - Intro
       - intro.jsx
       - welcome.jsx
@@ -26,6 +32,7 @@
     - Cv
       - cv.css
       - cv.jsx
+    - app.jsx
   - img
   - factory.js
   - index.js
@@ -47,6 +54,7 @@
 ### To Do
 * add github theme to button
 * add stack icons to project cards
+* add heart/like to project card (implement db to store global counter for all hearts/likes)
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
 * <s>reduce text line height in "Why React" component</s>
 * <s>reduce "Tick" svg in "Why React"</s>
