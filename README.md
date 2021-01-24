@@ -2,6 +2,12 @@
 - public
 - src
   - components
+    - common
+      - burger.jsx
+      - button.jsx
+      - JumboSectionHeader.jsx
+      - logo.jsx
+      - typography.js
     - Intro
       - intro.jsx
       - welcome.jsx
