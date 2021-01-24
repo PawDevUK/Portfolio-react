@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from 'components/common/button'
 
+const Header = styled.h5`
+transition:transform 0.5s;
+`
 const Wrapper =styled.div`
 box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
 border-radius:20px;
@@ -15,8 +18,9 @@ width:60%;
 width:40%;
 height:430px;
 }
-
-
+&:hover ${Header}{
+        transform:scale(1.2); 
+}
 `
 const CardContent = styled.div`
 text-align:center;
@@ -27,6 +31,7 @@ border-radius: 20px 20px 0px 0px;
 height:250px;
 width:100%;
 `
+
 const ButtonWrapper = styled.div`
 display:flex;
 justify-content:space-between;
@@ -55,7 +60,7 @@ export default function Card({ ...props }){
             <StImg  src={props.item.src} alt={props.item.alt}></StImg>
             <CardContent>
 
-                <h5 className="card-title">{props.item.title}</h5>
+                <Header className="card-title">{props.item.title}</Header>
                 <P className="card-text">{LimitText(props.item.text,120)}</P>
                
 
