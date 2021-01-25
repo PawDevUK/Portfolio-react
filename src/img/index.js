@@ -8,7 +8,7 @@ export {default as solicitors} from './solicitors.png';
 export {default as fitnessApp} from './FitnessApp.png';
 
 export { default as react} from './React.png'
-export { default as ChatWindow} from './BotChatWindow.svg'
+export { default as ChatButtonL1} from './ChatButtonLarge1px.svg'
 export { default as reactSvg} from './react.svg'
 export { default as git} from './github.png'
 export { default as mongo} from './mongoDb.png'
