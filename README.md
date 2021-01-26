@@ -55,6 +55,7 @@
 * add github theme to button.
 * add stack icons to project cards.
 * add heart/like to project card (implement db to store global counter for all hearts/likes).
+* fix not visible chat icon on entry (need to be reloaded to show up)
 * fix showing up square bug on reload next to bot chat window.
 * add "Talk to Brian Bot" banner on Bot Chat
 * add send message "hi" on chat open
