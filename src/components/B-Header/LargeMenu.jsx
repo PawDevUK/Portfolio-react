@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 const InnerMainNav = styled.div`
 display:flex;
 margin:43px 0px 0px auto; 
-width:600px;
+width:500px;
 `
 const MainLogo = styled(SvgLoader)`
     display:inline-block;
