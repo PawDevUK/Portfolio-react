@@ -42,6 +42,7 @@ function App() {
                 <Switch>
                     <Route exact path='/content'>
                         <Header></Header>
+                        <Chat></Chat>
                         <Container>
                             <TopIntro></TopIntro>
                             <Stack></Stack>
@@ -51,7 +52,7 @@ function App() {
                             <Projects></Projects>
                         </Container>
                         <Footer></Footer>
-                        <Chat></Chat>
+                       
                     </Route>
                     <Route exact path='/cv'>
                         <CV></CV>
