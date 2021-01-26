@@ -52,10 +52,12 @@
 
 
 ### To Do
-* add github theme to button
-* add stack icons to project cards
-* add heart/like to project card (implement db to store global counter for all hearts/likes)
-* fix showing up square bug on reload next to bot chat
+* add github theme to button.
+* add stack icons to project cards.
+* add heart/like to project card (implement db to store global counter for all hearts/likes).
+* fix showing up square bug on reload next to bot chat window.
+* add "Talk to Brian Bot" banner on Bot Chat
+* add send message "hi" on chat open
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
 * <s>reduce text line height in "Why React" component</s>
 * <s>reduce "Tick" svg in "Why React"</s>
