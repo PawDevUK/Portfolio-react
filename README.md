@@ -55,12 +55,13 @@
 * add github theme to button
 * add stack icons to project cards
 * add heart/like to project card (implement db to store global counter for all hearts/likes)
+* fix showing up square bug on reload next to bot chat
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
 * <s>reduce text line height in "Why React" component</s>
 * <s>reduce "Tick" svg in "Why React"</s>
 * <s>change login project img on content centered.</s>
 * <s>reduce "why react" component height on mobile devices</s>
 #### Implement Bot Chat To Main Page.
-* design modern looking interface, not too big and not too fancy\
-  Simple with basic functionally and matching color schemes
+* <s>design modern looking interface, not too big and not too fancy\
+  Simple with basic functionally and matching color schemes.</s>
 * get access token for unlimited requests. At the moment 150 per day
