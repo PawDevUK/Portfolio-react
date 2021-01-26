@@ -49,6 +49,7 @@
   * Added styled Button with "light" theme
 * Removed width passed as props and used for rwd.
 * Added css media and styled rwd based on media queries
+* Added Bot Chat which slides out from the right on click. 
 
 
 ### To Do
