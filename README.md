@@ -59,6 +59,7 @@
 * <s>fix not visible chat icon on entry (need to be reloaded to show up)</s>
 * fix showing up square bug on reload next to bot chat window.
 * reduce chat window width
+* implement moving button for a chat
 * add "Talk to Brian Bot" banner on Bot Chat
 * add send message "hi" on chat open
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
