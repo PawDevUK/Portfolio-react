@@ -60,8 +60,8 @@
 * fix showing up square bug on reload next to bot chat window.
 * reduce chat window width
 * implement moving button for a chat
-* add "Talk to Brian Bot" banner on Bot Chat
-* add send message "hi" on chat open
+* add "Talk to Brian Bot" banner to message window of Bot Chat
+* add send message "hi" on chat open and "writing"
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
 * <s>reduce text line height in "Why React" component</s>
 * <s>reduce "Tick" svg in "Why React"</s>
