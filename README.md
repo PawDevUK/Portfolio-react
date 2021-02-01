@@ -54,6 +54,7 @@
 
 ### To Do
 * run lighthouse test
+  * consider implement sections with lighthouse reports for each of projects
 * implement responsive "main layout" for components.
 * Refactor Code
 * find better way to display directory tree in readme.md 
