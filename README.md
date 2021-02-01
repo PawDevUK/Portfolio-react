@@ -53,6 +53,9 @@
 
 
 ### To Do
+* run lighthouse test
+* implement responsive "main layout" for components.
+* Refactor Code
 * find better way to display directory tree in readme.md 
 * design and implement "contact me" with details to reach me and form to message me directly(back-end required).
 * design and implement footer.
