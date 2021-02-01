@@ -99,18 +99,18 @@
   * consider implement sections with lighthouse reports for each of projects
 * implement responsive "main layout" for components.
 * Refactor Code
-* find better way to display directory tree in readme.md 
 * design and implement "contact me" with details to reach me and form to message me directly(back-end required).
 * design and implement footer.
 * add github theme to button.
 * add stack icons to project cards.
 * add heart/like to project card (implement db to store global counter for all hearts/likes).
-* <s>fix not visible chat icon on entry (need to be reloaded to show up)</s>
 * fix showing up square bug on reload next to bot chat window.
 * reduce chat window width
 * implement moving button for a chat
 * add "Talk to Brian Bot" banner to message window of Bot Chat
 * add send message "hi" on chat open and "writing"
+* <s>fix not visible chat icon on entry (need to be reloaded to show up)</s>
+* <s>find better way to display directory tree in readme.md</s>
 * <s>move text and pros out  of React.jsx component to store and export it back, then map it out.</s> 
 * <s>reduce text line height in "Why React" component</s>
 * <s>reduce "Tick" svg in "Why React"</s>
