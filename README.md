@@ -1,44 +1,86 @@
 ## Directory
-- public
-- src
-  - components
-    - common
-      - burger.jsx
-      - button.jsx
-      - JumboSectionHeader.jsx
-      - logo.jsx
-      - typography.js
-    - Intro
-      - intro.jsx
-      - welcome.jsx
-    - Header
-      - Header.jsx
-      - JumboText.jsx
-      - LargeMenu.jsx
-      - MobileMenu.jsx
-    - About
-      - top-intro.jsx
-    - Stack
-      - card.jsx
-      - stack.jsx
-    - React
-      - pros.jsx
-      - React.jsx
-    - Projects
-      - card.jsx
-      - projects.jsx
-    - Footer
-      - footer.jsx
-    - Cv
-      - cv.css
-      - cv.jsx
-    - app.jsx
-  - img
-  - factory.js
-  - index.js
-  - store.js
-- package-lock.json
-- package.json
+```bash
+.
+├── app.yaml
+├── package.json
+├── package-lock.json
+├── public
+│   └── index.html
+├── README.md
+└── src
+    ├── components
+    │   ├── A-Intro
+    │   │   ├── intro.jsx
+    │   │   └── welcome.jsx
+    │   ├── app.jsx
+    │   ├── B-Header
+    │   │   ├── Header.jsx
+    │   │   ├── JumboText.jsx
+    │   │   ├── LargeMenu.jsx
+    │   │   └── MobileMenu.jsx
+    │   ├── C-About
+    │   │   └── top-intro.jsx
+    │   ├── common
+    │   │   ├── burger.jsx
+    │   │   ├── button.jsx
+    │   │   ├── JumboSectionHeader.jsx
+    │   │   ├── logo.jsx
+    │   │   └── typography.js
+    │   ├── D-Stack
+    │   │   ├── card.jsx
+    │   │   └── stack.jsx
+    │   ├── E-React
+    │   │   ├── pros.jsx
+    │   │   └── React.jsx
+    │   ├── F-Projects
+    │   │   ├── card.jsx
+    │   │   └── projects.jsx
+    │   ├── G-Footer
+    │   │   ├── footer.jsx
+    │   │   └── FooterYear.jsx
+    │   ├── H-CV
+    │   │   ├── cv.css
+    │   │   └── cv.jsx
+    │   └── Z-Chat
+    │       ├── BlueMSG.jsx
+    │       ├── Chat.jsx
+    │       ├── Input.jsx
+    │       └── WhiteMSG.jsx
+    ├── factory.js
+    ├── img
+    │   ├── asparagogit.png
+    │   ├── asparago.png
+    │   ├── barber.jpg
+    │   ├── bootstrap.png
+    │   ├── bot.png
+    │   ├── ChatButtonLarge1px.svg
+    │   ├── computer-2982270_1920.jpg
+    │   ├── css.jpeg
+    │   ├── figma.png
+    │   ├── FitnessApp.png
+    │   ├── gcloud.png
+    │   ├── github.png
+    │   ├── html-logo.png
+    │   ├── icon
+    │   │   ├── done_24px.svg
+    │   │   └── dropdown.svg
+    │   ├── index.js
+    │   ├── JavaScript-logo.png
+    │   ├── login1.png
+    │   ├── login.png
+    │   ├── materialUI.png
+    │   ├── mongoDb.png
+    │   ├── nasa.png
+    │   ├── node.jpg
+    │   ├── pavdev.png
+    │   ├── pavdev.svg
+    │   ├── React.png
+    │   ├── react.svg
+    │   ├── royal.png
+    │   └── solicitors.png
+    ├── index.js
+    └── store.js
+```
 <hr>
 
 #### Updates
