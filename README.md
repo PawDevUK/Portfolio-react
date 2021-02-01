@@ -54,7 +54,8 @@
 
 ### To Do
 * find better way to display directory tree in readme.md 
-* create "contact me" with details to reach me and form to message me directly(back-end required).
+* design and implement "contact me" with details to reach me and form to message me directly(back-end required).
+* design and implement footer.
 * add github theme to button.
 * add stack icons to project cards.
 * add heart/like to project card (implement db to store global counter for all hearts/likes).
