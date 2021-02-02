@@ -17,10 +17,10 @@ const Header = styled(SectionHeader)`
 
 @media(max-width:992px){
     margin:0px;
-padding:0px;
-position:absolute;
-left:7px;
-top:30px;
+    padding:0px;
+    position:absolute;
+    left:7px;
+    top:30px;
 }
 margin:0px;
 padding:0px;
@@ -32,11 +32,11 @@ const Jumbo = styled(JumboHeader)`
 @media(max-width:992px){
     opacity:0.5;
     font-size:50px;
-height:60px;
-margin:0px;
-padding:0px;
-position:absolute;
-top:0px;
+    height:60px;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    top:0px;
 }
 position:absolute;
 top:0px;
@@ -48,8 +48,8 @@ export default function JumboSectionHeader({ ...props }) {
 
     return (
         <Wrapper>
-            <Header {...props} >{props.children}</Header>
             <Jumbo  {...props}data-aos="zoom-in">{props.children}</Jumbo>
+            <Header {...props} >{props.children}</Header>
         </Wrapper>
 
 
