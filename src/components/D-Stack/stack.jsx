@@ -13,7 +13,7 @@ justify-content:center;
 margin:auto;
 display:flex;
 flex-wrap:wrap;
-width:748px;
+width:100%;
 @media(max-width:700px){
     width:100%;
 }
@@ -27,7 +27,7 @@ export default function Stack() {
                 {
                     stack.map((item) => {
                         return (
-                            <Card key={item._id} image={item.img} title={item.title} text={item.text} href={item.webHref
+                            <Card  styled={item.styled} key={item._id} image={item.img} title={item.title} text={item.text} href={item.webHref
                             }></Card>
                         )
                     })
