@@ -1,4 +1,4 @@
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma } from 'img'
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled } from 'img'
 import { login, bot, asparago, nasa, royal, barber, solicitors, fitnessApp } from 'img';
 
 
@@ -46,11 +46,37 @@ export const Menu = [
 
 export const stack = [
     {
+        img: html,
+        title: "HTML",
+        text: "",
+        webHref: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    }
+    , {
+        img: css,
+        title: "CSS",
+        text: "",
+        webHref: "https://www.w3.org/Style/CSS/Overview.en.html",
+    }
+    , {
+        img: js,
+        title: "JavaScript",
+        text: "",
+        webHref: "https://javascript.info/",
+    },
+    {
         img: react,
         title: "React",
         text: "React makes it painless to create interactive UIs. Design simple views...",
         webHref: "https://reactjs.org/",
-    }, {
+    }, 
+    {
+        img: styled,
+        title: "Styled-components",
+        text: "",
+        webHref: "https://styled-components.com/",
+        styled: true
+    },
+    {
         img: bootstrap,
         title: "Bootstarp",
         text: "Quickly design and customize responsive mobile-first sites with Bootst...",
@@ -164,7 +190,7 @@ export const projects = [
 ]
 
 export const ReactComponentData = {
-    Header:"why react ?",
+    Header: "why react ?",
     MainText: "I use React because it's great tool allowing to mix HTML/CSS and JavaScript with help of JSX.  Great benefits of React are also quick rendering of content and changing data without reloading page what helps improve user experience.As React uses reusable components, source code is ease to maintain. Data flows in one way so code is stable. React is safe, JSX blocks injection and XSS.",
     Pros: ["Fast Rendering", "JSX", "Stable Code", "Safety", "Maintenance", "One-way data flow", "Facebook Support", "Reusable Components"]
 }
