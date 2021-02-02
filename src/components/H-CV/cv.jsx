@@ -1,6 +1,5 @@
-/* eslint-disable no-script-url */
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import './cv.css'
 
 const A = styled.a`
@@ -9,16 +8,15 @@ const A = styled.a`
 };
 `
 
-
 function Cv() {
+
     return (
-        <A href="/content">
+        <A href="/content" >
             <div id="cv" className="page">
                 <header className="grid-plus " id='header'>
                     <div id="header-info">
                         <h1>pawel siwek</h1>
                         <h2>React Developer</h2>
-                        {/* <h3>Websites developer. </h3> */}
                     </div>
                     <div id="socials">
                         <a href="https://www.linkedin.com/in/pawel-s-78432119b" target="_blank"><i className="fa fa-linkedin"></i></a>
@@ -51,16 +49,16 @@ function Cv() {
                         </div>
                     </article>
                 </section>
-                <section className="grid mx-4"> 
-                <header></header>
-                <article>
+                <section className="grid mx-4">
+                    <header></header>
+                    <article>
 
-                <p className="mx-1">I am a self-thought and self-motivated programmer from Reading, UK.
-                    I started programming without any prior knowledge back in 2018 and now I'm proficient React Developer.
+                        <p className="mx-1">I am a React developer from Reading, UK. I create React web apps based on components styled in styled-components.
+                        I use mainly JavaScript for front-end and have experience in Node.Js for back-end and MongoDB. <br/> 
+                        I design and create, modern looking websites and web applications with functionality including Rest API. I use Figma to helps me with design of modern looking layouts with the use of number of popular design patterns. <br/> Currently, most of the internet users browse Web on mobile devices therefore RWD is quite important that is why I am implementing it in my websites and applications. <br/>
                     </p>
-                </article>
-                    
-                    </section>
+                    </article>
+                </section>
                 {/* <!-- Knowledge --> */}
 
                 <section className="grid" id="know">
@@ -68,18 +66,24 @@ function Cv() {
                         <h4>Knowledge/skills</h4>
                     </header>
                     <article id="art-know">
-                        <p>React requires good knowledge of number of technologies like JavaScript ES6, HTML, CSS, Node.js, Package Manager,  WebPack, Babel and many more. Most of my work is kept via Git CLI on GitHub so I branch, commit, push, pull and merge fairly often. 
-                    </p>
-                        <h5>Programming Languages</h5>
-                        <p>JavaScript</p>
-                        <h5>Libraries</h5>
-                        <p>React js, Bootstrap, Material Ui</p>
-                        <h5>Operating systems</h5>
-                        <p>Linux</p>
-                        <h5>Version Control</h5>
-                        <p>Git, GitHub </p>
-                        <h5>Cloud computing</h5>
-                        <p>Google Cloud</p>
+                        <ul>
+                            <li>React (1 year)</li>
+                            <li>Node Package Manager</li>
+                            <li>Styled-Components</li>
+                            <li>React-Router</li>
+                            <li>Git / GitHub</li>
+                            <li>JavaScript ES6 (1 years)</li>
+                            <li>HTML (3 years)</li>
+                            <li>CSS (3 years)</li>
+                            <li>Bootstrap</li>
+                            <li>Material Ui</li>
+                            <li>Node.js</li>
+                            <li>WebPack</li>
+                            <li>Babel</li>
+                            <li>Linux</li>
+                            <li>Figma</li>
+
+                        </ul>
                     </article>
                 </section>
 
@@ -96,17 +100,17 @@ function Cv() {
                         <h5><span>Fitness App</span></h5>
                         <p>Very simple fitness app to track exercises duration, date. App is created in React/Node.js and deployed on Gcloud. Database used to storage inputs is MongoDb Atlas.</p>
                         <h5><span>Nasa website</span></h5>
-                        <p>Webpage dedicated to space related topics based on Nasa API</p>
+                        <p>Webpage created in Vanilla Js and Bootstrap for RWD, dedicated to space related topics. All data presented on page is fetched from Nasa via Nasa API</p>
                         <h5><span>Gentleman Barber</span></h5>
                         <p>Simple barber shop website.</p>
                         <h5><span>Goodwood Solicitors</span></h5>
-                        <p classname="mb-5" >Mobile-first webpage with menu to sub-pages.</p>
+                        <p className="mb-5" >Mobile-first webpage with menu to sub-pages.</p>
                     </article>
                 </section>
                 <div className="m-5 heigh-3 breaker">
 
                 </div>
-                
+
                 {/* <!-- Education --> */}
                 <section className="grid mt-5" id="edu">
                     <header id="header-edu">
@@ -121,7 +125,7 @@ function Cv() {
                         <p>JavaScript: Understanding the Weird Parts</p>
                         <p>The Modern Javascript Bootcamp Course 2020</p>
                         <p>
-                        React styled-components v5 (2021 edition)
+                            React styled-components v5 (2021 edition)
                         </p>
                         <p>The MERN Stack - Full Tutorial (MongoDB, Express, React, Node.js)</p>
                         <p>Figma - UI/UX Design</p>
@@ -145,9 +149,6 @@ function Cv() {
                     </article>
                 </section>
             </div>
-
-
-
         </A>
 
     );
