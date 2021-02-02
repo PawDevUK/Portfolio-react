@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 const Wrapper = styled.div`
-width:280px;
+width:250px;
 height:70px;
 margin:auto;
 /* border-radius:0 0 0 5px; */
