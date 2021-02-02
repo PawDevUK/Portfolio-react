@@ -30,8 +30,7 @@ export default function TopIntro() {
             <Card data-aos="fade-right" >
                 <JumboSectionHeader>About Me</JumboSectionHeader>
                 <StP>
-                    My name is <Bold>Pawel</Bold>, I am a self-thought and motivated programmer from Reading, UK. <br />
-                    I started programming without any prior knowledge back in 2018 and now I'm proficient <Bold>React Developer</Bold>.</StP>
+                I am a <Bold>React</Bold> developer from Reading, UK. I create React web apps based on components styled in <br/><Bold>styled-components</Bold>. I use mainly JavaScript for front-end and have some knowledge of Node.Js for back-end and MongoDB.</StP>
                 <StP>
                     I design and create, modern looking websites and web applications with functionality including <Bold>API</Bold>. I use <Bold>Figma</Bold> to helps me with design of modern looking layouts with the use of number of popular design patterns. Currently, most of the internet users browse Web on mobile devices therefor <Bold>RWD</Bold> is quite important that is why I am implementing it in my websites and applications.
                 </StP>
