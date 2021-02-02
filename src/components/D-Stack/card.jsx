@@ -1,7 +1,7 @@
 import '../../../node_modules/aos/dist/aos.css';
 import { AnimationWrapper } from 'react-hover-animation'
 import React, { useEffect } from 'react';
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import AOS from 'aos';
 
 const Wrapper = styled.div`
@@ -25,10 +25,19 @@ font-size:16px;
 font-family:'Nunito Sans';
 `
 const Img = styled.img`
+
 @media(max-width:700px){
+
+${p => p.styled ?
+        css`
+    width:80px;
+    height:60px;`
+        :
+        css`
     width:100px;
     height:80px;
-}
+    `};
+};
 width:122px;
 height:100px;
 object-fit: scale-down;
@@ -42,16 +51,16 @@ const Link = styled.a`
 export default function CardSection(props) {
 
     useEffect(() => {
-    
+
         AOS.init({ duration: 1000 });
     })
 
     return (
         <Link href={props.href} target="_blank" key={props.key} data-aos="fade">
             <AnimationWrapper>
-                <Wrapper mobile={props.Mobile} >
+                <Wrapper >
                     <Text>{props.title}</Text>
-                    <Img src={props.image} mobile={props.Mobile}></Img>
+                    <Img styled={props.styled} src={props.image} ></Img>
                 </Wrapper>
             </AnimationWrapper>
 
