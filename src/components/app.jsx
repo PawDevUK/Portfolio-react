@@ -8,6 +8,7 @@ import ReactSection from './E-React/React'
 import Stack from './D-Stack/stack.jsx'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
+import Contact from "./G-Contact/Contact"
 import CV from './I-CV/cv'
 import React from "react"
 import Chat from './Z-Chat/Chat'
@@ -50,6 +51,7 @@ function App() {
                         <ReactSection></ReactSection>
                         <Container>
                             <Projects></Projects>
+                            <Contact></Contact>
                         </Container>
                         <Footer></Footer>
               
