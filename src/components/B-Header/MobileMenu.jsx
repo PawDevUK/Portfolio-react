@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-import Burger from 'components/common/burger'
+import Burger from 'components/common/Burger'
 import { SlideDown } from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css'
 import dropdown from 'img/icon/dropdown.svg'

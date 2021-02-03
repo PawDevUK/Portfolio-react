@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Button from 'components/common/button'
+import Button from 'components/common/Button'
 import React from 'react';
 
 const JumboTextWrapper = styled.div`
