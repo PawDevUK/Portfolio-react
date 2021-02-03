@@ -24,3 +24,8 @@ export { default as css} from './css.jpeg'
 export { default as styled} from './styled.jpeg'
 // export { default as router} from './ReactRouter.png'
 export { default as js} from './JavaScript.png'
+
+
+
+export { default as SkyScraper} from './skyScrapers.png'
+
