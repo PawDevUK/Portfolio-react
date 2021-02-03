@@ -53,7 +53,7 @@ flex-wrap:wrap;
 margin-bottom:10px;
 `
 const ReactIcon = styled(SvgLoader)`
-filter:drop-shadow(0px 5px 22px rgb(0, 0, 0));
+
 display:flex;
 animation:${rotate} 30s infinite linear;
 height:270px;
@@ -94,7 +94,7 @@ export default function ReactSection() {
                     </StP>
                     <ProsWrapper>
                     {ReactComponentData.Pros.map((pro,i)=>{
-                        return  <Pros dark>{pro}</Pros>
+                        return  <Pros dark>{pro} </Pros>
                     })}
                        
                     </ProsWrapper>
