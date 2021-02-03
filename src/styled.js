@@ -7,4 +7,5 @@ export const ImgCover = css`
 background-size: cover;
 background-position: top center; 
 background-repeat:no-repeat;
+background-attachment: fixed;
 `
