@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import Projects from './F-Projects/projects'
-import Footer from './G-Footer/footer.jsx'
+import Footer from './H-Footer/footer.jsx'
 import TopIntro from './C-About/top-intro'
 import ReactSection from './E-React/React'
 import Stack from './D-Stack/stack.jsx'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
-import CV from './H-CV/cv'
+import CV from './I-CV/cv'
 import React from "react"
 import Chat from './Z-Chat/Chat'
 
@@ -52,7 +52,7 @@ function App() {
                             <Projects></Projects>
                         </Container>
                         <Footer></Footer>
-                       
+              
                     </Route>
                     <Route exact path='/cv'>
                         <CV></CV>
@@ -60,18 +60,9 @@ function App() {
                     <Route exact path='/'>
                         <Intro></Intro>
                     </Route>
-                   
-
-
                 </Switch>
-
             </Wrapper>
         </Router>
-
-
-
-
-
     )
 }
 export default App
