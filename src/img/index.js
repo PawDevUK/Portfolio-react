@@ -7,6 +7,8 @@ export {default as barber} from './barber.jpg';
 export {default as solicitors} from './solicitors.png';
 export {default as fitnessApp} from './FitnessApp.png';
 
+export {default as MyPhoto} from './MyPhoto.png';
+
 export { default as react} from './React.png'
 export { default as ChatButtonL1} from './ChatButtonLarge1px.svg'
 export { default as reactSvg} from './react.svg'
