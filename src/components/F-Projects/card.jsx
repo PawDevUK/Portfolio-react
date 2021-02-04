@@ -1,22 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
 import Button from 'components/common/Button'
+import styled from 'styled-components'
+import {boxShadow12} from 'styled.js'
+import{LimitText} from 'factory'
+import React from 'react'
 
 const Header = styled.h5`
 transition:transform 0.5s;
 `
 const Wrapper =styled.div`
-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
-border-radius:20px;
 border:solid 1px #dbdbdb;
 margin:20px auto 0px auto;
+border-radius:10px;
+${boxShadow12}
+width:60%;
 @media(max-width:600px){
     width:100%;
 }
-width:60%;
 @media(min-width:992px){
-width:40%;
 height:430px;
+width:40%;
 }
 &:hover ${Header}{
         transform:scale(1.2); 
@@ -27,15 +29,15 @@ text-align:center;
 margin:0 5px 10px 5px;
 `
 const StImg = styled.img`
-border-radius: 20px 20px 0px 0px;
+border-radius: 10px 10px 0px 0px;
 height:250px;
 width:100%;
 `
 
 const ButtonWrapper = styled.div`
-display:flex;
 justify-content:space-between;
 margin:10px auto auto auto;
+display:flex;
 width:210px;
 `
 const P = styled.p`
@@ -48,13 +50,7 @@ const A = styled.a`
 `
 export default function Card({ ...props }){
 
-    function LimitText(str,length){
-        let dots = "..."
-        if(str.length>length){
-            str = str.substring(0,length) + dots
-        }
-        return str
-    }
+    
     return (
         <Wrapper >
             <StImg  src={props.item.src} alt={props.item.alt}></StImg>
