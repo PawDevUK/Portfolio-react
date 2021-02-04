@@ -2,7 +2,7 @@ import JumboSectionHeader from 'components/common/JumboSectionHeader';
 import {P,Bold} from 'components/common/typography'
 import { boxShadow12, ImgCover } from 'styled.js'
 import styled from 'styled-components';
-import { MyPhoto, SkyScraper } from 'img'
+import {SkyScraper } from 'img'
 import React from 'react';
 
 
@@ -16,16 +16,16 @@ width:100%;
 const OuterTextWrapper = styled.div`
 border-radius:5px;
 position:absolute;
+right:10vw;
 top:100px;
 left:10vw;
-right:10vw;
 `
 const WhiteBox = styled.div`
-${boxShadow12}
-border-radius:5px;
 background-color:#fff;
-width:100%;
+border-radius:5px;
+${boxShadow12}
 padding:10px;
+width:100%;
 `
 const TextWrapper = styled.div`
 margin:20px 0px 0px 10px;
