@@ -119,6 +119,14 @@ export const stack = [
 ]
 export const projects = [
     {
+        alt: "Covid-app",
+        githubHref: "https://github.com/GitcrackerUK/Covid-Tracker",
+        // src: covidApp,
+        text: "",
+        webHref: { href: "/covid", button: "Visit" },
+        stack: ["react", "VanillaJs", "html", "css", "figma"]
+    },
+    {
         alt: "Bot Chat",
         githubHref: "https://github.com/GitcrackerUK/Messenger ",
         src: bot,
