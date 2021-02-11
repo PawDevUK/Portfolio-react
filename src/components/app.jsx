@@ -5,13 +5,15 @@ import Projects from './F-Projects/projects'
 import Footer from './H-Footer/footer.jsx'
 import TopIntro from './C-About/top-intro'
 import ReactSection from './E-React/React'
+import Contact from "./G-Contact/Contact"
 import Stack from './D-Stack/stack.jsx'
 import Header from "./B-Header/Header"
 import Intro from "./A-Intro/intro"
-import Contact from "./G-Contact/Contact"
+import Chat from './Z-Chat/Chat'
 import CV from './I-CV/cv'
 import React from "react"
-import Chat from './Z-Chat/Chat'
+import Covid from './covid-app/Covid'
+
 
 const GlobalStyle = createGlobalStyle`
 body{
@@ -41,6 +43,9 @@ function App() {
             <Wrapper>
                 <GlobalStyle />
                 <Switch>
+                    <Route exact path='/covid'>
+                        <Covid></Covid>
+                    </Route>
                     <Route exact path='/content'>
                         <Header></Header>
                         <Chat></Chat>
