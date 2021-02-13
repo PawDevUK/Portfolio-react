@@ -1,0 +1,1 @@
+export const rightData = [ "pawelsiwek.co.uk","api.covid19api.com ","p.f.siwek@gmail.com"]
