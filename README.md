@@ -150,7 +150,7 @@ http://portfolio-client-293919.appspot.com/content
 
 
 #### Covid-App
-* create footer
+* <s>create footer </s>
 * implement live api with fall back to store in case of 404
 * create rwd for app
 * fix country picker scroll bug
