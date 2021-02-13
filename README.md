@@ -7,54 +7,130 @@ http://portfolio-client-293919.appspot.com/content
 ```bash
 .
 ├── app.yaml
+├── gist.md
+├── jsconfig.json
 ├── package.json
 ├── package-lock.json
 ├── public
-│   └── index.html
+│   └── index.html
 ├── README.md
 └── src
     ├── components
-    │   ├── A-Intro
-    │   │   ├── intro.jsx
-    │   │   └── welcome.jsx
-    │   ├── app.jsx
-    │   ├── B-Header
-    │   │   ├── Header.jsx
-    │   │   ├── JumboText.jsx
-    │   │   ├── LargeMenu.jsx
-    │   │   └── MobileMenu.jsx
-    │   ├── C-About
-    │   │   └── top-intro.jsx
-    │   ├── common
-    │   │   ├── burger.jsx
-    │   │   ├── button.jsx
-    │   │   ├── JumboSectionHeader.jsx
-    │   │   ├── logo.jsx
-    │   │   └── typography.js
-    │   ├── D-Stack
-    │   │   ├── card.jsx
-    │   │   └── stack.jsx
-    │   ├── E-React
-    │   │   ├── pros.jsx
-    │   │   └── React.jsx
-    │   ├── F-Projects
-    │   │   ├── card.jsx
-    │   │   └── projects.jsx
-    │   ├── G-Footer
-    │   │   ├── footer.jsx
-    │   │   └── FooterYear.jsx
-    │   ├── H-CV
-    │   │   ├── cv.css
-    │   │   └── cv.jsx
-    │   └── Z-Chat
-    │       ├── BlueMSG.jsx
-    │       ├── Chat.jsx
-    │       ├── Input.jsx
-    │       └── WhiteMSG.jsx
+    │   ├── A-Intro
+    │   │   ├── intro.jsx
+    │   │   └── welcome.jsx
+    │   ├── app.jsx
+    │   ├── B-Header
+    │   │   ├── Header.jsx
+    │   │   ├── JumboText.jsx
+    │   │   ├── LargeMenu.jsx
+    │   │   └── MobileMenu.jsx
+    │   ├── C-About
+    │   │   └── top-intro.jsx
+    │   ├── common
+    │   │   ├── Burger.jsx
+    │   │   ├── Button.jsx
+    │   │   ├── ComponentLayout.jsx
+    │   │   ├── JumboSectionHeader.jsx
+    │   │   ├── Logo.jsx
+    │   │   └── typography.js
+    │   ├── covid-app
+    │   │   ├── api
+    │   │   │   ├── Global.js
+    │   │   │   ├── Test.js
+    │   │   │   └── UK.js
+    │   │   ├── components
+    │   │   │   ├── common
+    │   │   │   │   ├── Covid.jsx
+    │   │   │   │   └── SectionHeader.jsx
+    │   │   │   ├── factory.js
+    │   │   │   ├── Footer
+    │   │   │   │   └── Footer.jsx
+    │   │   │   ├── Header
+    │   │   │   │   └── Header.jsx
+    │   │   │   ├── index.js
+    │   │   │   ├── Main
+    │   │   │   │   ├── Chart.jsx
+    │   │   │   │   ├── CountryPicker.jsx
+    │   │   │   │   ├── Global.jsx
+    │   │   │   │   ├── index.js
+    │   │   │   │   ├── Main.jsx
+    │   │   │   │   └── Summary.jsx
+    │   │   │   └── styled.js
+    │   │   ├── Covid.jsx
+    │   │   ├── img
+    │   │   │   ├── covidIcon.svg
+    │   │   │   ├── covidMain.png
+    │   │   │   ├── demo.png
+    │   │   │   ├── graph.png
+    │   │   │   └── index.js
+    │   │   └── store
+    │   │       ├── countries.json
+    │   │       ├── PageFeed
+    │   │       │   └── Footer.js
+    │   │       └── total.json
+    │   ├── D-Stack
+    │   │   ├── card.jsx
+    │   │   └── stack.jsx
+    │   ├── E-React
+    │   │   ├── pros.jsx
+    │   │   └── React.jsx
+    │   ├── F-Projects
+    │   │   ├── card.jsx
+    │   │   └── projects.jsx
+    │   ├── G-Contact
+    │   │   └── Contact.jsx
+    │   ├── H-Footer
+    │   │   ├── footer.jsx
+    │   │   └── FooterYear.jsx
+    │   ├── I-CV
+    │   │   ├── cv.css
+    │   │   └── cv.jsx
+    │   └── Z-Chat
+    │       ├── BlueMSG.jsx
+    │       ├── Chat.jsx
+    │       ├── Input.jsx
+    │       └── WhiteMSG.jsx
     ├── factory.js
     ├── img
+    │   ├── asparagogit.png
+    │   ├── asparago.png
+    │   ├── barber.jpg
+    │   ├── bootstrap.png
+    │   ├── bot.png
+    │   ├── ChatButtonLarge1px.svg
+    │   ├── computer-2982270_1920.jpg
+    │   ├── CovidApp.png
+    │   ├── css.jpeg
+    │   ├── figma.png
+    │   ├── FitnessApp.png
+    │   ├── gcloud.png
+    │   ├── github.png
+    │   ├── html.png
+    │   ├── icon
+    │   │   ├── done_24px.svg
+    │   │   └── dropdown.svg
+    │   ├── index.js
+    │   ├── JavaScript.png
+    │   ├── login1.png
+    │   ├── login.png
+    │   ├── materialUI.png
+    │   ├── mongoDb.png
+    │   ├── MyPhoto.png
+    │   ├── nasa.png
+    │   ├── node.jpg
+    │   ├── pavdev.png
+    │   ├── pavdev.svg
+    │   ├── React.png
+    │   ├── ReactRouter.png
+    │   ├── react.svg
+    │   ├── royal.png
+    │   ├── skyScrapers.png
+    │   ├── solicitors.png
+    │   └── styled.jpeg
     ├── index.js
-    └── store.js
+    ├── store.js
+    └── styled.js
 ```
 <hr>
 
