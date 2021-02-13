@@ -93,41 +93,6 @@ http://portfolio-client-293919.appspot.com/content
     │       └── WhiteMSG.jsx
     ├── factory.js
     ├── img
-    │   ├── asparagogit.png
-    │   ├── asparago.png
-    │   ├── barber.jpg
-    │   ├── bootstrap.png
-    │   ├── bot.png
-    │   ├── ChatButtonLarge1px.svg
-    │   ├── computer-2982270_1920.jpg
-    │   ├── CovidApp.png
-    │   ├── css.jpeg
-    │   ├── figma.png
-    │   ├── FitnessApp.png
-    │   ├── gcloud.png
-    │   ├── github.png
-    │   ├── html.png
-    │   ├── icon
-    │   │   ├── done_24px.svg
-    │   │   └── dropdown.svg
-    │   ├── index.js
-    │   ├── JavaScript.png
-    │   ├── login1.png
-    │   ├── login.png
-    │   ├── materialUI.png
-    │   ├── mongoDb.png
-    │   ├── MyPhoto.png
-    │   ├── nasa.png
-    │   ├── node.jpg
-    │   ├── pavdev.png
-    │   ├── pavdev.svg
-    │   ├── React.png
-    │   ├── ReactRouter.png
-    │   ├── react.svg
-    │   ├── royal.png
-    │   ├── skyScrapers.png
-    │   ├── solicitors.png
-    │   └── styled.jpeg
     ├── index.js
     ├── store.js
     └── styled.js
