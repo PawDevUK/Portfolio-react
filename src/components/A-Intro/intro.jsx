@@ -79,7 +79,6 @@ const ParticlesBottom= styled(Particles)`
     right:0px;
     bottom:0px;
 }
-
 `
 function Intro(props) {
     const classes = useStyles();

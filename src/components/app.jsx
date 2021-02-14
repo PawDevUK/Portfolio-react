@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import Projects from './F-Projects/projects'
-import Footer from './H-Footer/footer.jsx'
+import Footer from './H-Footer/Footer.jsx'
 import TopIntro from './C-About/top-intro'
 import ReactSection from './E-React/React'
 import Contact from "./G-Contact/Contact"
