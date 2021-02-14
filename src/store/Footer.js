@@ -1,0 +1,1 @@
+export const rightData = [ "pawelsiwek.co.uk","p.f.siwek@gmail.com"]
