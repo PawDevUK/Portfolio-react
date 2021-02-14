@@ -1,6 +1,7 @@
-export function Year(){
+export function getYear() {
     return new Date().getFullYear()
-}
+ };
+ 
 export function LimitText(str,length){
     let dots = "..."
     if(str.length>length){
