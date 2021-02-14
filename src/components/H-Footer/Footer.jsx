@@ -37,9 +37,9 @@ ${center};
 width:20%; 
 `
 const NickHover = css`
-red
-
-`;
+color:#01579B;
+font-weight:500;
+`
 
 const H2 = styled.h2`
 cursor:pointer;
@@ -47,8 +47,11 @@ color:#fff;
 display:flex;
 `
 const Nick = styled.p`
-color:${p => p.nick?css`${NickHover}`:css`#fff`};
 margin:0px 3px;
+${p => p.nick?css`${NickHover}`:
+css`color:#fff;
+`};
+
 `
 const Text = styled.p`
 color:#fff;
@@ -62,10 +65,10 @@ export default function Footer() {
     }
 
     return (
-       <Wrapper>
+       <Wrapper  onMouseEnter={mouseEnterH2} onMouseLeave={mouseEnterH2}>
            <InnerWrapper>
                <Left></Left>
-               <Mid><H2 onMouseEnter={mouseEnterH2} onMouseLeave={mouseEnterH2} >All rights reserved <Nick nick={nick}> pavdev </Nick> London </H2>{getYear()}</Mid>
+               <Mid><H2 >All rights reserved <Nick nick={nick}> pavdev </Nick> London </H2>{getYear()}</Mid>
                <Right>
                    <ul>
                       {rightData.map(( li)=>{
