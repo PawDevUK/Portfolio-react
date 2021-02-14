@@ -3,7 +3,7 @@ import MainLarge from './LargeMenu'
 import MobileMenu from './MobileMenu'
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-const backgroundColor = '#17293F';
+import { BackgroundBlue } from 'styled'
 
 const Wrapper = styled.div`
 margin:0px;
@@ -16,7 +16,7 @@ margin:0px;
     height:583px;
 }
 height:300px;
-background-color:${backgroundColor};
+${BackgroundBlue};
 @media(max-width:700px){
     height:250px;
 }
