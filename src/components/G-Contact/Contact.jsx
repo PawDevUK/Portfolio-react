@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import {P,Bold} from 'components/common/typography'
 import Button from 'components/common/Button'
+// import {SectionHeader} from 'components/common/typography'/
 import { boxShadow12, ImgCover } from 'styled.js'
 import styled from 'styled-components';
 import {SkyScraper } from 'img'
@@ -12,7 +13,6 @@ import React from 'react';
 const Wrapper = styled.div`
 background-image: url(${SkyScraper});
 ${ImgCover} // properties for parallax background
-/* height:1000px; */
 width:100%;
 padding:1px;
 `
@@ -30,7 +30,7 @@ width:540px;
 margin:auto;
 `
 const TextWrapper = styled.div`
-margin:0px auto;
+margin:10px auto 0px auto;
 `
 const Form = styled.form`
 margin:auto;
@@ -54,7 +54,6 @@ margin:20px auto !important;
 
 }
 `
-
 export default function Contact() {
     return (
         <Wrapper>
@@ -64,13 +63,19 @@ export default function Contact() {
                         Contact
                     </JumboSectionHeader>
                     <TextWrapper>
-                        <P>If you would like to contact me regarding any queries please don't  <br/> hesitate and drop me an email  or call me directly on my mobile. <br/> I'm always more than happy to speak and answer any questions.</P> <br/>
-                        <P style={{display:"flex"}}>
-                             <Bold>Email:</Bold> p.f.siwek@gmail.com<br/>
-                             <Bold>Mobile:</Bold> 07463765514
+                        <P>If you would like to contact me regarding any queries please don't  <br/> hesitate and drop me an email  or call me directly on my mobile. <br/> I'm always more than happy to speak and answer any questions.</P>
+                        {/* <SectionHeader>Message Me</SectionHeader> */}
+                        <hr/>
+                        <P style={{marginTop:"10px"}}>
+                             <Bold>Email:</Bold> p.f.siwek@gmail.com <br/>
+                             <Bold>Mobile:</Bold> 07463765514 <br/>
+                             <Bold>LinkedIn:</Bold>
+                             <a href="www.linkedin.com/in/pawel-siwek-78432119b">Profile</a>
                         </P>
                     </TextWrapper>
+                    
                             <Form  noValidate autoComplete="off">
+
                                 <StTextField required id="standard-basic" label="First Name" />
                                 <StTextField id="standard-basic" label="Last Name" />
                                 <StTextField  required id="standard-basic" label="Email" />
@@ -86,7 +91,6 @@ export default function Contact() {
                             <TextWrapper>
                     </TextWrapper>
                     </InnerWrapper>
-                   
                 </WhiteBox>
         </Wrapper>
     )
