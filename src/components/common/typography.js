@@ -23,7 +23,6 @@ const SectionHeader = styled.h6`
 color: rgba(0, 0, 0, 0.7);
 font-size:20px;
 height:30px;
-
 text-transform:capitalize;
 ${p=>p.dark?css`
 color:#fff;
