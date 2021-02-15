@@ -109,25 +109,28 @@ http://portfolio-client-293919.appspot.com/content
 * Added css media and styled rwd based on media queries
 * Added Bot Chat which slides out from the right on click.
 * Created "Contact" section with basic info and parallax background
-* merged with Covid-app 
+* merged with Covid-app
+* added backend in node.js
+* component Contact with form to send me email directly.
 
 ### To Do
 
 #### Portfolio
-
+* add automatic response on submition of Contact form  
 * Add personal image to "About" component
 * Refactor Code
 * run lighthouse test
   * consider implement sections with lighthouse reports for each of projects
-* design and implement footer.
 * add github theme to button.
 * add stack icons to project cards.
 * add heart/like to project card (implement db to store global counter for all hearts/likes).
 * fix showing up square bug on reload next to bot chat window.
 * Set up automatic app deploy when project is commited and pushed on GitHub 
 * create cookie to get info of visitors (date,time)
-* create backend and db to store cookie
+* add db to store cookie
 * create stats component to display visitors
+* <s> create backend </s>
+* <s> design and implement footer.</s>
 * <s> Add intro in readme.md to explain some details about this project </s>
 * <s>design and implement "contact me" with details to reach me</s> and form to message me directly(back-end required).
 * <s>implement responsive "main layout" for components.</s>
