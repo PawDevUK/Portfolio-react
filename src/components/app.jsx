@@ -59,7 +59,6 @@ function App() {
                             <Contact></Contact>
                         </Container>
                         <Footer></Footer>
-              
                     </Route>
                     <Route exact path='/cv'>
                         <CV></CV>
