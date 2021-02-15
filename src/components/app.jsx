@@ -47,7 +47,7 @@ function App() {
                         <Covid></Covid>
                     </Route>
                     <Route exact path='/content'>
-                        {/* <Header></Header> */}
+                        <Header></Header>
                         <Chat></Chat>
                         <Container>
                             <TopIntro></TopIntro>
