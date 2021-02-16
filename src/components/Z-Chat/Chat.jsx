@@ -56,7 +56,6 @@ export default function Chat({...props}){
     };
     function toBottom() {
         const wrapper = document.getElementById("wrapper");
-        console.log(wrapper);
         if (wrapper.scrollHeight !== null) { return wrapper.scrollTop = wrapper.scrollHeight - wrapper.clientHeight }
         else { return };
     }
