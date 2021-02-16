@@ -1,5 +1,5 @@
 import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled } from 'img'
-import { login, bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp } from 'img';
+import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp } from 'img';
 
 
 export const Menu = [
@@ -145,15 +145,15 @@ export const projects = [
         webHref: { href: "https://gitcrackeruk.github.io/NASA/", button: "Visit" },
         stack: ["VanillaJs", "html", "css", "bootstrap"]
     },
-    {
-        alt: "Login",
-        githubHref: "https://github.com/GitcrackerUK/Login",
-        src: login,
-        text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
-        title: "Login Page",
-        webHref: { href: "https://loadin.ew.r.appspot.com", button: "Visit" },
-        stack: ["react", "html", "css"]
-    },
+    // {
+    //     alt: "Login",
+    //     githubHref: "https://github.com/GitcrackerUK/Login",
+    //     src: login,
+    //     text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
+    //     title: "Login Page",
+    //     webHref: { href: "https://loadin.ew.r.appspot.com", button: "Visit" },
+    //     stack: ["react", "html", "css"]
+    // },
     {
         alt: "Royal Oak Architects",
         githubHref: "https://github.com/GitcrackerUK/Architect",
