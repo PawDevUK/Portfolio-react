@@ -5,6 +5,10 @@ import Particles from 'react-particles-js'
 import { makeStyles } from '@material-ui/core/styles';
 import Welcome from 'components/A-Intro/welcome'
 
+
+
+
+
 const LeftImg = styled.div`
 background: url(${img});
 background-size: cover;
@@ -82,6 +86,7 @@ const ParticlesBottom= styled(Particles)`
 `
 function Intro(props) {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <Large>
