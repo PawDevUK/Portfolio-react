@@ -3,6 +3,8 @@ import { SvgLoader } from 'react-svgmt';
 import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
 import {Link } from 'react-router-dom'
+import {onEnter,LocalOnEnter} from './axiosData'
+import Axios from 'axios';
 
 const LogoTextWrapper = styled.div`
 width:300px;
@@ -39,12 +41,19 @@ const StLink = styled(Link)`
 }
 `
 function Welcome({...props}) {
+
+
+    function VisitorsRecorder(){
+        const visitorCounter = {counter:1}
+        Axios.post('http://localhost:8080/VisitorCounter',visitorCounter)
+        .then(res=> console.log(res))
+    }
     return ( 
     <LogoTextWrapper>
         <H1>I'm</H1>
         <MobilLogo path={logo}></MobilLogo>
         <Text>This is my Portfolio <br /> I hope you will find it interesting.</Text>
-        {props.buttonIntro?<StLink to='/content'><StButton>Enter</StButton></StLink>:null}
+        {props.buttonIntro?<StLink to='/content'><StButton onClick={VisitorsRecorder}>Enter</StButton></StLink>:null}
     </LogoTextWrapper>)
 }
 
