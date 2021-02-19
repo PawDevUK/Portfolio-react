@@ -54,6 +54,11 @@ h5 {
     font-size: 19px;
     margin: 20px 0px 5px 0px;
 }
+.Tools{
+    font-weight: bold;
+    font-size: 15px;
+    color:#585858;
+}
 
 p {
     color: #585858;
@@ -67,7 +72,12 @@ a {
     text-decoration: none;
     color: #007297;
 }
-
+#art-know{
+    display:flex;
+}
+.Skills{
+    margin: 0px 0px 0px 20px;
+}
 a:hover {
     color: #0faee1;
 }
@@ -81,20 +91,20 @@ a:hover {
 }
 
 .grid-plus {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .grid {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr;
 }
 
 @media (min-width: 800px) {
     .grid {
-        margin-top: 20px;
+        /* margin-top: 20px; */
         display: grid;
         grid-template-columns: 1fr 4fr;
     }
