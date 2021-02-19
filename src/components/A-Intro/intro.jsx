@@ -1,12 +1,9 @@
-import img from 'img/computer-2982270_1920.jpg'
-import React from 'react';
-import styled from 'styled-components'
-import Particles from 'react-particles-js'
 import { makeStyles } from '@material-ui/core/styles';
 import Welcome from 'components/A-Intro/welcome'
-
-
-
+import img from 'img/computer-2982270_1920.jpg'
+import Particles from 'react-particles-js'
+import styled from 'styled-components'
+import React from 'react';
 
 
 const LeftImg = styled.div`
@@ -74,7 +71,7 @@ height:50vh;
 width:100%;
 position:relative;
 `
-const ParticlesBottom= styled(Particles)`
+const ParticlesBottom = styled(Particles)`
 *{
     height:50vh;
     position:absolute;

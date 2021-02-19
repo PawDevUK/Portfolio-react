@@ -53,7 +53,7 @@ function Welcome({...props}) {
         <H1>I'm</H1>
         <MobilLogo path={logo}></MobilLogo>
         <Text>This is my Portfolio <br /> I hope you will find it interesting.</Text>
-        {props.buttonIntro?<StLink to='/content'><StButton onClick={VisitorsRecorder}>Enter</StButton></StLink>:null}
+        <StLink to='/content'><StButton onClick={VisitorsRecorder}>Enter</StButton></StLink>
     </LogoTextWrapper>)
 }
 
