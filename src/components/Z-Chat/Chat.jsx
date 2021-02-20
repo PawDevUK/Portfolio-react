@@ -1,4 +1,5 @@
-import ChatButtonLarge1px from 'img/ChatButtonLarge1px.svg'
+import { ChatButtonLarge1px, BrainBot } from 'img'
+import { SectionHeader } from 'components/common/typography'
 import styled, { css } from 'styled-components'
 import { SvgLoader } from 'react-svgmt'
 import WhiteMessage from './WhiteMSG'
@@ -15,11 +16,11 @@ const Button = styled(SvgLoader)`
       ? css`
           transition: margin-right 0.4s;
           margin-right: 5px;
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14),
+            0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
         `
       : css``}
 
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
-    0px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 0px;
 `
 const Wrapper = styled.div`
@@ -54,13 +55,42 @@ const Window = styled.div`
   width: 250px;
   height: 400px;
   background-color: white;
+  position: relative;
 `
+
 const ChatWrapper = styled.div`
   overflow-y: auto;
   height: 242px;
   width: 100%;
   padding-top: 7px;
 `
+//header
+const WrapperHeader = styled.div`
+  position: absolute;
+  align-items: center;
+  top: -50px;
+  right: 10px;
+  display: flex;
+`
+const Header = styled.div`
+  z-index: 1;
+  left: -100px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px 0px 0px 5px;
+  width: 109px;
+  height: 30px;
+  display: flex;
+  padding: 3px 5px;
+`
+const HeaderImg = styled.div`
+  z-index: 100;
+  height: 50px;
+  width: 50px;
+  background-image: url(${BrainBot});
+`
+// <- header
+
 export default function Chat({ ...props }) {
   const [open, setOpen] = useState(false)
   const [formInput, setInput] = useState('')
@@ -71,7 +101,6 @@ export default function Chat({ ...props }) {
     const timeout = setTimeout(() => {
       setButtonAnimation((p) => !p)
     }, 500)
-
     return () => clearTimeout(timeout)
   }, [buttonAnimation])
 
@@ -130,13 +159,20 @@ export default function Chat({ ...props }) {
   return (
     <Wrapper open={open}>
       <Button
-        buttonAnimation={buttonAnimation}
+        buttonAnimation={!open ? buttonAnimation : null}
         onClick={HandleClick}
         onMouseEnter={HandleMouseOn}
         path={ChatButtonLarge1px}
       ></Button>
 
       <Window open={open}>
+        <WrapperHeader>
+          <Header>
+            <SectionHeader>Brain Bot</SectionHeader>
+          </Header>
+          <HeaderImg></HeaderImg>
+        </WrapperHeader>
+
         <ChatWrapper id="wrapper">
           {chat.map((p) => {
             return p.user ? (
