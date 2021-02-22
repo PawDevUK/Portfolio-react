@@ -1,6 +1,6 @@
 Website to present my projects and skills to whom it may concern.<br>  It's react based created with create-react-app and styled with styled-components. <br>
 Source code is hosted on Gcloud. <br>
-Live on:<br>
+Live on:
 http://portfolio-client-293919.appspot.com/content
 
 
