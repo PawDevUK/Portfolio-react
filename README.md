@@ -20,6 +20,7 @@ http://portfolio-client-293919.appspot.com/content
 * added backend in node.js
 * component Contact with form to send me email directly.
 * annimated chat button and chat header "Brain bot"
+* added visitor counter on every intro button click
 
 ### To Do
 
