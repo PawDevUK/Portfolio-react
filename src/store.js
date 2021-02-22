@@ -1,4 +1,4 @@
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled } from 'img'
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm } from 'img'
 import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp } from 'img';
 
 
@@ -64,6 +64,12 @@ export const stack = [
         webHref: "https://javascript.info/",
     },
     {
+        img: npm,
+        title: "NPM",
+        text: "",
+        webHref: "https://www.npmjs.com/",
+    },
+    {
         img: react,
         title: "React",
         text: "React makes it painless to create interactive UIs. Design simple views...",
@@ -75,6 +81,12 @@ export const stack = [
         text: "",
         webHref: "https://styled-components.com/",
         styled: true
+    },
+    {
+        img: router,
+        title: "React-Router",
+        text: "",
+        webHref: "https://reactrouter.com/",
     },
     {
         img: bootstrap,
@@ -101,6 +113,12 @@ export const stack = [
         title: "NodeJs",
         text: "Node.Js (Node) is an open source development platform for executing Ja...",
         webHref: "https://nodejs.org/en/",
+    },
+    {
+        img: express,
+        title: "Express.js",
+        text: "",
+        webHref: "https://expressjs.com/",
     }, {
         img: mongo,
         title: "MongoDB",
@@ -111,10 +129,12 @@ export const stack = [
         title: "GitHub",
         text: "GitHub is a Git repository hosting service, but it adds many of its ow...",
         webHref: "https://github.com/",
+    }, {
+        img: vscode,
+        title: "VS Code",
+        text: "",
+        webHref: "https://code.visualstudio.com/",
     }
-
-
-
 
 ]
 export const projects = [
