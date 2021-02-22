@@ -17,19 +17,11 @@ const rotate = keyframes`
   }
 
 `
-
 const Wrapper = styled.div`
-  @media (max-width: 400px) {
-    height: 500px;
-  }
   margin: 0px;
   width: 100%;
-  min-height: 380px;
   background-color: #17293f;
   margin-bottom: 10px;
-  @media (min-width: 600px) {
-    min-height: 310px;
-  }
 `
 const ContentWrapper = styled.div`
   display: flex;
@@ -41,6 +33,7 @@ const ContentWrapper = styled.div`
 `
 
 const LeftWrapper = styled.div`
+  margin: 20px 0px;
   @media (max-width: 992px) {
     width: 100%;
   }
@@ -48,7 +41,6 @@ const LeftWrapper = styled.div`
 `
 
 const ProsWrapper = styled.div`
-  height: 80px;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
