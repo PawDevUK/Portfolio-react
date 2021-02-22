@@ -36,12 +36,12 @@ export const Menu = [
         href: "/cv",
         disabled: false,
         target: "_blank"
+    },
+    {
+        title: "Contact",
+        href: "#contact",
+        disabled: true,
     }
-    // {
-    //     title: "Contact",
-    //     href: "",
-    //     disabled:true,
-    // }
 ]
 
 export const stack = [
@@ -68,7 +68,7 @@ export const stack = [
         title: "React",
         text: "React makes it painless to create interactive UIs. Design simple views...",
         webHref: "https://reactjs.org/",
-    }, 
+    },
     {
         img: styled,
         title: "Styled-components",
