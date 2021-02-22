@@ -6,8 +6,8 @@ import 'aos/dist/aos.css'
 import AOS from 'aos'
 
 const Wrapper = styled.div`
-  padding: 50px 0px;
-  margin: auto;
+  padding: 10px 0px;
+  margin: 0px auto;
   width: 100%;
 `
 const Card = styled.div`
