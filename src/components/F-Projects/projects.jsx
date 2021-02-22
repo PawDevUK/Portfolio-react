@@ -2,7 +2,7 @@ import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import '../../../node_modules/aos/dist/aos.css'
 import styled from 'styled-components'
 import React, { useEffect } from 'react'
-import { projects } from 'store'
+import { projects } from 'store/projects'
 import Card from './card'
 import AOS from 'aos'
 
@@ -25,7 +25,7 @@ export default function Projects() {
   return (
     <MainWrapper id="projects">
       <JumboSectionHeader>Projects</JumboSectionHeader>
-      <Wrapper >
+      <Wrapper>
         {projects.map((item, index) => {
           return <Card item={item}></Card>
         })}

@@ -1,10 +1,10 @@
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
+import { ReactComponentData } from 'store/reactComponent'
 import styled, { keyframes } from 'styled-components'
 import { P } from 'components/common/typography'
 import Pros from 'components/E-React/pros'
-import { ReactComponentData } from 'store'
-import Reacticon from 'img/react.svg'
 import { SvgLoader } from 'react-svgmt'
+import Reacticon from 'img/react.svg'
 import React from 'react'
 
 const height = '350px'
