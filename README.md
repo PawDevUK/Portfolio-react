@@ -1,6 +1,6 @@
 Website to present my projects and skills to whom it may concern.<br>  It's react based created with create-react-app and styled with styled-components. <br>
 Source code is hosted on Gcloud. <br>
-Live on:<br>
+Live:
 http://portfolio-client-293919.appspot.com/content
 
 
@@ -19,12 +19,13 @@ http://portfolio-client-293919.appspot.com/content
 * merged with Covid-app
 * added backend in node.js
 * component Contact with form to send me email directly.
+* annimated chat button and chat header "Brain bot"
+* added visitor counter on every intro button click
 
 ### To Do
 
 #### Portfolio
 * sort out problem with axios instance for intro. Path function sending empty obj.
-* add automatic response on submition of Contact form  
 * Add personal image to "About" component
 * Refactor Code
 * run lighthouse test
@@ -32,11 +33,12 @@ http://portfolio-client-293919.appspot.com/content
 * add github theme to button.
 * add stack icons to project cards.
 * add heart/like to project card (implement db to store global counter for all hearts/likes).
-* fix showing up square bug on reload next to bot chat window.
 * Set up automatic app deploy when project is commited and pushed on GitHub 
 * create cookie to get info of visitors (date,time)
 * add db to store cookie
 * create stats component to display visitors
+* <s> add automatic response on submition of Contact form </s>
+* <s>fix showing up square bug on reload next to bot chat window.</s>
 * <s> create backend </s>
 * <s> design and implement footer.</s>
 * <s> Add intro in readme.md to explain some details about this project </s>
