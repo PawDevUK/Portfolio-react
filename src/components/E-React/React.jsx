@@ -69,15 +69,17 @@ const RightWrapper = styled.div`
   @media (max-width: 992px) {
     display: none;
   }
-
   display: flex;
   margin: auto;
   justify-content: center;
   align-items: center;
   height: ${height};
 `
-let StP = styled(P)`
-  line-height: 19px;
+const StP = styled(P)`
+  line-height: 22px;
+  @media (min-width: 1000px) {
+    margin-top: 17px;
+  }
   margin-bottom: 15px;
 `
 export default function ReactSection() {
@@ -88,7 +90,9 @@ export default function ReactSection() {
           <JumboSectionHeader dark>
             {ReactComponentData.Header}
           </JumboSectionHeader>
+
           <StP dark>{ReactComponentData.MainText}</StP>
+
           <ProsWrapper>
             {ReactComponentData.Pros.map((pro, i) => {
               return <Pros dark>{pro} </Pros>
