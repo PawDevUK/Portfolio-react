@@ -19,7 +19,7 @@ http://portfolio-client-293919.appspot.com/content
 * merged with Covid-app
 * added backend in node.js
 * component Contact with form to send me email directly.
-* annimated button and header "Brain bot" for chat in top section 
+* annimated chat button and chat header "Brain bot"
 
 ### To Do
 
