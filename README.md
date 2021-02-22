@@ -24,7 +24,6 @@ http://portfolio-client-293919.appspot.com/content
 
 #### Portfolio
 * sort out problem with axios instance for intro. Path function sending empty obj.
-* add automatic response on submition of Contact form  
 * Add personal image to "About" component
 * Refactor Code
 * run lighthouse test
@@ -32,11 +31,12 @@ http://portfolio-client-293919.appspot.com/content
 * add github theme to button.
 * add stack icons to project cards.
 * add heart/like to project card (implement db to store global counter for all hearts/likes).
-* fix showing up square bug on reload next to bot chat window.
 * Set up automatic app deploy when project is commited and pushed on GitHub 
 * create cookie to get info of visitors (date,time)
 * add db to store cookie
 * create stats component to display visitors
+* <s> add automatic response on submition of Contact form </s>
+* <s>fix showing up square bug on reload next to bot chat window.</s>
 * <s> create backend </s>
 * <s> design and implement footer.</s>
 * <s> Add intro in readme.md to explain some details about this project </s>
