@@ -1,4 +1,4 @@
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm } from 'img'
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, ubuntu } from 'img'
 import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp } from 'img';
 
 
@@ -134,6 +134,12 @@ export const stack = [
         title: "VS Code",
         text: "",
         webHref: "https://code.visualstudio.com/",
+    }
+    , {
+        img: ubuntu,
+        title: "Ubuntu",
+        text: "",
+        webHref: "https://ubuntu.com/",
     }
 
 ]

@@ -27,6 +27,7 @@ export { default as js } from './JavaScript.png'
 export { default as express } from './express.png'
 export { default as vscode } from './vscode.png'
 export { default as npm } from './npm.png'
+export { default as ubuntu } from './ubuntu.png'
 
 
 
