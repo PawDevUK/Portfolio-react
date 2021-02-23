@@ -28,12 +28,11 @@ http://portfolio-client-293919.appspot.com/content
 #### Portfolio
 
 -
+
 - Add personal image to "About" component
 - Refactor Code
 - run lighthouse test
-
   - consider implement sections with lighthouse reports for each of projects
-
 - add stack icons to project cards.
 - add heart/like to project card (implement db to store global counter for all hearts/likes).
 - <s> create cookie to get info of visitors (date,time) </s>
