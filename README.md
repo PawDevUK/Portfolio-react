@@ -8,14 +8,14 @@ http://portfolio-client-293919.appspot.com/content
 #### Updates
 
 - Added Node.js to skills
-- Card component
-  - Added text reducer to card text
-  - Removed bootstrap
-  - Added styled Button with "light" theme
-- Removed width passed as props and used for rwd.
-- Added css media and styled rwd based on media queries
-- Added Bot Chat which slides out from the right on click.
-- Created "Contact" section with basic info and parallax background
+- card component
+  - added text reducer to card text
+  - removed bootstrap
+  - added styled Button with "light" theme
+- removed width passed as props and used for rwd.
+- added css media and styled rwd based on media queries
+- added Bot Chat which slides out from the right on click.
+- created "Contact" section with basic info and parallax background
 - merged with Covid-app
 - added backend in node.js
 - component Contact with form to send me email directly.
@@ -27,15 +27,12 @@ http://portfolio-client-293919.appspot.com/content
 
 #### Portfolio
 
--
-
 - Add personal image to "About" component
 - Refactor Code
 - run lighthouse test
   - consider implement sections with lighthouse reports for each of projects
 - add stack icons to project cards.
 - add heart/like to project card (implement db to store global counter for all hearts/likes).
-- 
 - add db to store cookie
 - create stats component to display visitors
 - <s> create cookie to get info of visitors (date,time) </s>
