@@ -9,16 +9,20 @@ export function LimitText(str, length) {
     }
     return str
 }
+
+const AddZero = (param) => {
+    return param < 10 ? `0${param}` : param
+}
+
 export const CurrentTime = () => {
     const Hour = new Date().getHours()
     const Minutes = new Date().getMinutes()
-    return `${Hour}:${Minutes}`
+    return `${AddZero(Hour)}:${AddZero(Minutes)}`
 }
 export const CurrentDate = () => {
     const day = new Date().getDate()
     const month = new Date().getMonth()
     const year = new Date().getFullYear()
-    const date = `${day}.${month + 1}.${year}`
-    console.log(date)
+    const date = `${AddZero(day)}.${AddZero(month + 1)}.${year}`
     return date
 }
