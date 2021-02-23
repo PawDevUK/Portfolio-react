@@ -47,7 +47,6 @@ function Welcome({ ...props }) {
       date: CurrentDate(),
       time: CurrentTime(),
     }
-
     onEnter.post('/', visitorCounter).then((res) => console.log(res.data))
   }
 
