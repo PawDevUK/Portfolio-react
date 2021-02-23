@@ -7,7 +7,7 @@ http://portfolio-client-293919.appspot.com/content
 
 #### Updates
 
-- Added Node.js to skills
+- added Node.js to skills
 - card component
   - added text reducer to card text
   - removed bootstrap
@@ -27,8 +27,8 @@ http://portfolio-client-293919.appspot.com/content
 
 #### Portfolio
 
-- Add personal image to "About" component
-- Refactor Code
+- add personal image to "About" component
+- refactor Code
 - run lighthouse test
   - consider implement sections with lighthouse reports for each of projects
 - add stack icons to project cards.
