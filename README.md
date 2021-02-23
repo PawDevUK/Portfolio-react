@@ -21,12 +21,13 @@ http://portfolio-client-293919.appspot.com/content
 - component Contact with form to send me email directly.
 - annimated chat button and chat header "Brain bot"
 - added visitor counter on every intro button click
+- added email notification on every visitor
 
 ### To Do
 
 #### Portfolio
 
-- sort out problem with axios instance for intro. Path function sends empty obj.
+-
 - Add personal image to "About" component
 - Refactor Code
 - run lighthouse test
@@ -35,10 +36,10 @@ http://portfolio-client-293919.appspot.com/content
 
 - add stack icons to project cards.
 - add heart/like to project card (implement db to store global counter for all hearts/likes).
-- Set up automatic app deploy when project is committed and pushed on GitHub
-- create cookie to get info of visitors (date,time)
+- <s> create cookie to get info of visitors (date,time) </s>
 - add db to store cookie
 - create stats component to display visitors
+- <s>sort out problem with axios instance for intro. Path function sends empty obj.</s> propblem was with axios.create({method:post})
 - <s> add automatic response on submission of Contact form </s>
 - <s>fix showing up square bug on reload next to bot chat window.</s>
 - <s> create backend </s>
