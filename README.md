@@ -30,8 +30,9 @@ http://portfolio-client-293919.appspot.com/content
 - Add personal image to "About" component
 - Refactor Code
 - run lighthouse test
+
   - consider implement sections with lighthouse reports for each of projects
-- add github theme to button.
+
 - add stack icons to project cards.
 - add heart/like to project card (implement db to store global counter for all hearts/likes).
 - Set up automatic app deploy when project is committed and pushed on GitHub
