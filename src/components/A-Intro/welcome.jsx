@@ -3,9 +3,8 @@ import { SvgLoader } from 'react-svgmt'
 import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
 import { Link } from 'react-router-dom'
-import { onEnter, LocalOnEnter } from './axiosData'
+import { onEnter } from './axiosData'
 import { CurrentTime, CurrentDate } from 'factory'
-import Axios from 'axios'
 
 const LogoTextWrapper = styled.div`
   width: 300px;
