@@ -1,4 +1,4 @@
-Website to present my projects and skills to whom it may concern.<br> It's react based created with create-react-app and styled with styled-components. <br>
+Website to present my projects and skills to whom it may concern.<br> It's react app, created with create-react-app and styled with styled-components. <br>
 Source code is hosted on Gcloud. <br>
 Live:
 http://portfolio-client-293919.appspot.com/content
@@ -36,16 +36,17 @@ http://portfolio-client-293919.appspot.com/content
 
 - add stack icons to project cards.
 - add heart/like to project card (implement db to store global counter for all hearts/likes).
-- <s> create cookie to get info of visitors (date,time) </s>
+- 
 - add db to store cookie
 - create stats component to display visitors
+- <s> create cookie to get info of visitors (date,time) </s>
 - <s>sort out problem with axios instance for intro. Path function sends empty obj.</s> propblem was with axios.create({method:post})
 - <s> add automatic response on submission of Contact form </s>
 - <s>fix showing up square bug on reload next to bot chat window.</s>
 - <s> create backend </s>
 - <s> design and implement footer.</s>
 - <s> Add intro in readme.md to explain some details about this project </s>
-- <s>design and implement "contact me" with details to reach me</s> and form to message me directly(back-end required).
+- <s>design and implement "contact me" with details to reach me and form to message me directly(back-end required).</s>
 - <s>implement responsive "main layout" for components.</s>
 - <s>reduce chat window width</s>
 - <s>fix not visible chat icon on entry (need to be reloaded to show up)</s>
