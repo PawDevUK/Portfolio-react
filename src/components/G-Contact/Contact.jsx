@@ -3,7 +3,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize'
 import TextField from '@material-ui/core/TextField'
 import { P, Bold } from 'components/common/typography'
 import { boxShadow12, ImgCover } from 'styled.js'
-import { SendFormData } from 'RESTapi/contactForm'
+import { SendFormData } from 'components/G-Contact/axiosCreate'
 import Button from 'components/common/Button'
 import styled from 'styled-components'
 import React, { useState } from 'react'
@@ -72,7 +72,7 @@ export default function Contact() {
     }))
   }
   function handleSubmit() {
-    SendFormData.post('./contactForm', formData)
+    SendFormData.post('/', formData)
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
     handleClear()
