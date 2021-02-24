@@ -33,12 +33,11 @@ export default function TopIntro() {
         </StP>
         <StP>
           I design and create, modern looking websites and web applications with
-          functionality including <Bold>API</Bold>. I use <Bold>Figma</Bold> to
-          helps me with design of modern looking layouts with the use of number
-          of popular design patterns. Currently, most of the internet users
-          browse Web on mobile devices therefor <Bold>RWD</Bold> is quite
-          important that is why I am implementing it in my websites and
-          applications.
+          functionality including <Bold>APIs</Bold>. I use <Bold>Figma</Bold> to
+          design a modern looking layout with the use of number of popular
+          design patterns. Currently, most of the internet users browse Web on
+          mobile devices therefor <Bold>RWD</Bold> is quite important that is
+          why I am implementing it in my websites and applications.
         </StP>
         <StP>
           I use <Bold>React</Bold> which requires good knowledge of number of
