@@ -27,7 +27,7 @@ export default function Projects() {
       <JumboSectionHeader>Projects</JumboSectionHeader>
       <Wrapper>
         {projects.map((item, index) => {
-          return <Card item={item}></Card>
+          return <Card key={index} item={item}></Card>
         })}
       </Wrapper>
     </MainWrapper>

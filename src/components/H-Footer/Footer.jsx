@@ -109,9 +109,9 @@ export default function Footer() {
         </Mid>
         <Right>
           <ul>
-            {rightData.map((li) => {
+            {rightData.map((li, i) => {
               return (
-                <li>
+                <li key={i}>
                   <Text>{li}</Text>
                 </li>
               )

@@ -25,11 +25,11 @@ export default function Stack() {
     <Wrapper id="use">
       <JumboSectionHeader>What I use</JumboSectionHeader>
       <Thumbnails>
-        {stack.map((item) => {
+        {stack.map((item, i) => {
           return (
             <Card
+              key={i}
               styled={item.styled}
-              key={item._id}
               image={item.img}
               title={item.title}
               text={item.text}

@@ -87,7 +87,11 @@ export default function ReactSection() {
 
           <ProsWrapper>
             {ReactComponentData.Pros.map((pro, i) => {
-              return <Pros dark>{pro} </Pros>
+              return (
+                <Pros key={i} dark>
+                  {pro}
+                </Pros>
+              )
             })}
           </ProsWrapper>
         </LeftWrapper>
