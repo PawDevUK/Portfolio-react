@@ -56,8 +56,8 @@ function App() {
             <ReactSection></ReactSection>
             <Container>
               <Projects></Projects>
-              <Contact></Contact>
             </Container>
+            <Contact></Contact>
             <Footer></Footer>
           </Route>
           <Route exact path="/cv">
