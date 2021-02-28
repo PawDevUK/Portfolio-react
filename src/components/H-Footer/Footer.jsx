@@ -28,9 +28,16 @@ const InnerWrapper = styled.div`
   display: flex;
   margin: auto;
   height: 100px;
-  width: 960px;
+  width: 95%;
+  @media (max-width: 992px) {
+    display: block;
+    height: auto;
+  }
 `
 const Left = styled.div`
+  @media (max-width: 992px) {
+    display: none;
+  }
   ${center};
   width: 20%;
 `
@@ -38,11 +45,27 @@ const Left = styled.div`
 const Mid = styled.div`
   ${center};
   width: 60%;
+  @media (max-width: 992px) {
+    display: none;
+  }
+`
+const Mobile = styled.div`
+  margin: auto;
+  display: none;
+  @media (max-width: 992px) {
+    text-align: center;
+    padding: 20px;
+    display: block;
+    margin: auto;
+  }
 `
 
 const Right = styled.div`
   ${center};
   width: 20%;
+  @media (max-width: 992px) {
+    display: none;
+  }
 `
 const NickHover = css`
   color: #01579b;
@@ -50,9 +73,11 @@ const NickHover = css`
 `
 
 const H2 = styled.h2`
+  margin: auto;
   cursor: pointer;
   color: #fff;
   display: flex;
+  width: 379px;
 `
 const Nick = styled.p`
   margin: 0px 3px;
@@ -103,7 +128,7 @@ export default function Footer() {
         <Left></Left>
         <Mid>
           <H2>
-            All rights reserved <Nick nick={nick}> pavdev </Nick> London{' '}
+            All rights reserved <Nick nick={nick}> pavdev </Nick> London
             {getYear()}
           </H2>
         </Mid>
@@ -118,6 +143,22 @@ export default function Footer() {
             })}
           </ul>
         </Right>
+
+        <Mobile>
+          <H2>
+            All rights reserved <Nick nick={nick}> pavdev </Nick> London
+            {` ${getYear()}`}
+          </H2>
+          <ul>
+            {rightData.map((li, i) => {
+              return (
+                <li key={i}>
+                  <Text>{li}</Text>
+                </li>
+              )
+            })}
+          </ul>
+        </Mobile>
       </InnerWrapper>
     </Wrapper>
   )
