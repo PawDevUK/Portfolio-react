@@ -15,19 +15,17 @@ const center = css`
 const Wrapper = styled.div`
   position: relative;
   ${BackgroundBlue}
-  height:140px;
   width: 100%;
 `
 const StParticles = styled(Particles)`
   position: absolute;
   height: 100%;
   width: 100%;
-  /* opacity:0.5; */
 `
 const InnerWrapper = styled.div`
+  height: 100px;
   display: flex;
   margin: auto;
-  height: 100px;
   width: 95%;
   @media (max-width: 992px) {
     display: block;
@@ -78,6 +76,10 @@ const H2 = styled.h2`
   color: #fff;
   display: flex;
   width: 379px;
+  @media (max-width: 400px) {
+    display: block;
+    width: 300px;
+  }
 `
 const Nick = styled.p`
   margin: 0px 3px;
