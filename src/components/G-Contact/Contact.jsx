@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   padding: 1px;
   @media (max-width: 992px) {
     background-attachment: scroll; //property for mobile non-parallax
+    width: 100%;
   }
 `
 const WhiteBox = styled.div`
@@ -40,7 +41,6 @@ const ContactInfo = styled.div``
 
 const ContactInfoRow = styled.div`
   display: flex;
-  width: 40%;
   @media (max-width: 992px) {
     display: block;
     width: 100%;
@@ -48,7 +48,7 @@ const ContactInfoRow = styled.div`
   margin: 0 auto 5px auto;
 `
 const ContactInfoItem = styled.div`
-  margin: 0 10px;
+  margin: 0 20px 0px 0px;
 `
 
 const Form = styled.form`
@@ -62,6 +62,12 @@ const ButtonWrapper = styled.div`
   display: flex;
   padding: 10px;
   width: 250px;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
 `
 const StTextField = styled(TextField)`
   margin: 5px 10px !important;
@@ -216,10 +222,12 @@ export default function Contact() {
               onChange={handleChange}
             />
             <ButtonWrapper>
-              <Button onClick={handleSubmit} value="Send">
+              <Button contact onClick={handleSubmit} value="Send">
                 Send
               </Button>
-              <Button onClick={handleClear}>Clear</Button>
+              <Button contact onClick={handleClear}>
+                Clear
+              </Button>
             </ButtonWrapper>
           </Form>
         </InnerWrapper>

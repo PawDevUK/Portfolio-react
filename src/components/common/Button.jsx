@@ -49,5 +49,11 @@ const Button = styled.div`
           `
         : css``}
   }
+  ${(p) =>
+    p.contact
+      ? css`
+          margin-bottom: 20px;
+        `
+      : css``}
 `
 export default Button
