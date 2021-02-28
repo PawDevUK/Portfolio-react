@@ -12,8 +12,11 @@ import { SkyScraper } from 'img'
 const Wrapper = styled.div`
   background-image: url(${SkyScraper});
   ${ImgCover} // properties for parallax background
-width:100%;
+  width:100%;
   padding: 1px;
+  @media (max-width: 992px) {
+    background-attachment: scroll; //property for mobile non-parallax
+  }
 `
 const WhiteBox = styled.div`
   background-color: #fff;
@@ -22,31 +25,50 @@ const WhiteBox = styled.div`
   ${boxShadow12}
   padding:10px;
   width: 80%;
+  @media (max-width: 992px) {
+    width: 95%;
+  }
 `
 const InnerWrapper = styled.div`
   width: 540px;
   margin: auto;
+  @media (max-width: 992px) {
+    width: 90%;
+  }
 `
-const TextWrapper = styled.div`
-  margin: 10px auto 0px auto;
+const ContactInfo = styled.div``
+
+const ContactInfoRow = styled.div`
+  display: flex;
+  width: 40%;
+  @media (max-width: 992px) {
+    display: block;
+    width: 100%;
+  }
+  margin: 0 auto 5px auto;
 `
-const ContactL = styled.div`
-  display: block;
+const ContactInfoItem = styled.div`
+  margin: 0 10px;
 `
-const ContactR = styled.div``
+
 const Form = styled.form`
+  display: block;
   margin: auto;
+  width: 100%;
 `
 const ButtonWrapper = styled.div`
   justify-content: space-between;
   margin: 5px auto;
   display: flex;
-  height: 100px;
+  padding: 10px;
   width: 250px;
 `
 const StTextField = styled(TextField)`
-  margin: 10px !important;
+  margin: 5px 10px !important;
   width: 250px;
+  @media (max-width: 992px) {
+    width: 90%;
+  }
 `
 const StTextareaAutosize = styled(TextareaAutosize)`
   display: block;
@@ -94,33 +116,42 @@ export default function Contact() {
       <WhiteBox>
         <InnerWrapper>
           <JumboSectionHeader>Contact</JumboSectionHeader>
-          <TextWrapper>
-            <P>
-              If you would like to contact me regarding any queries please don't{' '}
-              <br /> hesitate and drop me an email or call me directly on my
-              mobile. <br /> I'm always more than happy to speak and answer any
-              questions.
-            </P>
-            {/* <SectionHeader>Message Me</SectionHeader> */}
-            <hr />
-            <TextWrapper style={{ marginTop: '10px', display: 'flex' }}>
-              <ContactL style={{ marginLeft: '15px' }}>
-                <Bold>Email:</Bold> <br />
-                <Bold>Mobile:</Bold> <br />
-                <Bold>LinkedIn:</Bold> <br />
-              </ContactL>
-              <ContactR style={{ marginLeft: '200px' }}>
-                p.f.siwek@gmail.com <br />
-                07463765514 <br />
+          <P>
+            If you would like to contact me regarding any queries please don't{' '}
+            <br /> hesitate and drop me an email or call me directly on my
+            mobile. <br /> I'm always more than happy to speak and answer any
+            questions.
+          </P>
+          <hr />
+          <ContactInfo>
+            <ContactInfoRow>
+              <ContactInfoItem>
+                <Bold>Email:</Bold>{' '}
+              </ContactInfoItem>{' '}
+              <ContactInfoItem>p.f.siwek@gmail.com </ContactInfoItem>
+            </ContactInfoRow>
+
+            <ContactInfoRow>
+              <ContactInfoItem>
+                <Bold>Mobile:</Bold>{' '}
+              </ContactInfoItem>{' '}
+              <ContactInfoItem>07463765514 </ContactInfoItem>
+            </ContactInfoRow>
+
+            <ContactInfoRow>
+              <ContactInfoItem>
+                <Bold>LinkedIn:</Bold>
+              </ContactInfoItem>
+              <ContactInfoItem>
                 <a
                   target="blank"
                   href="http://www.linkedin.com/in/pawel-siwek-78432119b"
                 >
                   Profile
                 </a>
-              </ContactR>
-            </TextWrapper>
-          </TextWrapper>
+              </ContactInfoItem>
+            </ContactInfoRow>
+          </ContactInfo>
           <Form noValidate autoComplete="on">
             <StTextField
               type="text"
@@ -191,7 +222,6 @@ export default function Contact() {
               <Button onClick={handleClear}>Clear</Button>
             </ButtonWrapper>
           </Form>
-          <TextWrapper></TextWrapper>
         </InnerWrapper>
       </WhiteBox>
     </Wrapper>
