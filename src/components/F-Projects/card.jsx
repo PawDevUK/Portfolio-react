@@ -31,7 +31,6 @@ const CardContent = styled.div`
   margin: 0 5px 10px 5px;
 `
 const StImg = styled.img`
-  /* border-radius: 10px 10px 0px 0px; */
   height: 200px;
   width: 100%;
 `
