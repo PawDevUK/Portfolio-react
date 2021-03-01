@@ -7,7 +7,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 <hr>
 
-#### Updates
+## Updates
 
 - added Node.js to skills
 - card component
@@ -27,7 +27,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - added RWD for Contact and Footer
 - Changed parallax for contact and widened it to full width of the page.
 
-### To Do
+## To Do
 
 #### Portfolio
 
@@ -56,17 +56,15 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - <s>reduce "Tick" svg in "Why React"</s>
 - <s>change login project img on content centered.</s>
 - <s>reduce "why react" component height on mobile devices</s>
-
-##### <s> Swap-Bot Chat to texting directly to my mobile from the chat window. </s>
-
-##### <s> Implement Bot-Chat To Main Page. </s>
-
+- <s> Implement Bot-Chat To Main Page. </s>
 - <s>create backend for chat and maybe even chat history</s>
 - <s>add "Talk to Brian Bot" banner to message window of Bot Chat</s>
 - <s>add send message "hi" on chat open and "writing"</s>
 - <s>get access token for unlimited requests. At the moment 150 per day</s>
 - <s>design modern looking interface, not too big and not too fancy\
   Simple with basic functionally and matching color schemes.</s>
+
+## To Do
 
 #### Covid-App
 
