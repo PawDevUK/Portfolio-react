@@ -1,7 +1,8 @@
-### Portfolio
+# Portfolio
 
-Website to present my projects and skills to whom it may concern.<br> It's react app, created with create-react-app and styled with styled-components.\
-Source code is hosted on Gcloud. <br>
+Website to present my projects and skills to whom it may concern.\
+It's react app, created with create-react-app and styled with styled-components.\
+Source code is hosted on Gcloud.\
 Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 <hr>
