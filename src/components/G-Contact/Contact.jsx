@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   ${ImgCover} // properties for parallax background
   width:100%;
   padding: 1px;
-  @media (max-width: 992px) {
+  @media (max-width: 400px) {
     background-attachment: scroll;
   }
 `
