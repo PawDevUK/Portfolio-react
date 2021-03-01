@@ -24,9 +24,12 @@ const WhiteBox = styled.div`
   margin: 100px auto;
   ${boxShadow12}
   padding:10px;
-  width: 80%;
-  @media (max-width: 992px) {
-    width: 95%;
+  width: 60%;
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+  @media (max-width: 800px) {
+    width: 80%;
   }
 `
 const InnerWrapper = styled.div`
