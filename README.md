@@ -1,7 +1,8 @@
-Website to present my projects and skills to whom it may concern.<br> It's react app, created with create-react-app and styled with styled-components. <br>
+### Portfolio
+
+Website to present my projects and skills to whom it may concern.<br> It's react app, created with create-react-app and styled with styled-components.\
 Source code is hosted on Gcloud. <br>
-Live:
-[Portfolio](http://pawelsiwek.co.uk/)
+Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 <hr>
 
@@ -18,8 +19,8 @@ Live:
 - created "Contact" section with basic info and parallax background
 - merged with Covid-app
 - added backend in node.js
-- component Contact with form to send me email directly.
-- annimated chat button and chat header "Brain bot"
+- added component Contact with form to send me email directly.
+- animated chat button and chat header "Brain bot"
 - added visitor counter on every intro button click
 - added email notification on every visitor
 
@@ -36,7 +37,7 @@ Live:
 - add db to store cookie
 - create stats component to display visitors
 - <s> create cookie to get info of visitors (date,time) </s>
-- <s>sort out problem with axios instance for intro. Path function sends empty obj.</s> propblem was with axios.create({method:post})
+- <s> sort out problem with axios instance for intro. Path function sends empty obj.</s> problem was with axios.create({method:post})
 - <s> add automatic response on submission of Contact form </s>
 - <s>fix showing up square bug on reload next to bot chat window.</s>
 - <s> create backend </s>
