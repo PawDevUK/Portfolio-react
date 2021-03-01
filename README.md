@@ -25,7 +25,8 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - added visitor counter on every intro button click
 - added email notification on every visitor
 - added RWD for Contact and Footer
-- Changed parallax for contact and widened it to full width of the page.
+- changed contact background parallax and widened it to full width of the page.
+- added stack icons to each project card
 
 ## To Do
 
@@ -35,10 +36,10 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - refactor Code
 - run lighthouse test
   - consider implement sections with lighthouse reports for each of projects
-- add stack icons to project cards.
 - add heart/like to project card (implement db to store global counter for all hearts/likes).
 - add db to store cookie
 - create stats component to display visitors
+- <s>add stack icons to project cards.</s>
 - <s> create cookie to get info of visitors (date,time) </s>
 - <s> sort out problem with axios instance for intro. Path function sends empty obj.</s> problem was with axios.create({method:post})
 - <s> add automatic response on submission of Contact form </s>
