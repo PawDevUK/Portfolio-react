@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { boxShadow12 } from 'styled.js'
 import { LimitText } from 'factory'
 import React from 'react'
+import Stack from './Stack'
 
 const Header = styled.h5`
   transition: transform 0.5s;
@@ -30,8 +31,8 @@ const CardContent = styled.div`
   margin: 0 5px 10px 5px;
 `
 const StImg = styled.img`
-  border-radius: 10px 10px 0px 0px;
-  height: 250px;
+  /* border-radius: 10px 10px 0px 0px; */
+  height: 200px;
   width: 100%;
 `
 
@@ -50,6 +51,7 @@ const A = styled.a`
 export default function Card({ ...props }) {
   return (
     <Wrapper>
+      <Stack stack={props.stack}></Stack>
       <StImg src={props.item.src} alt={props.item.alt}></StImg>
       <CardContent>
         <Header className="card-title">{props.item.title}</Header>
