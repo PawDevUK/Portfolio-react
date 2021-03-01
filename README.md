@@ -24,6 +24,8 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - animated chat button and chat header "Brain bot"
 - added visitor counter on every intro button click
 - added email notification on every visitor
+- added RWD for Contact and Footer
+- Changed parallax for contact and widened it to full width of the page.
 
 ### To Do
 
