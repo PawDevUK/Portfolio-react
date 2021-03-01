@@ -64,9 +64,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - <s>design modern looking interface, not too big and not too fancy\
   Simple with basic functionally and matching color schemes.</s>
 
-## To Do
-
-#### Covid-App
+#### To Do Covid-App
 
 - implement live api with fall back to store in case of 404
 - create rwd for app
