@@ -15,8 +15,7 @@ const Wrapper = styled.div`
   width:100%;
   padding: 1px;
   @media (max-width: 992px) {
-    background-attachment: scroll; //property for mobile non-parallax
-    width: 100%;
+    background-attachment: scroll;
   }
 `
 const WhiteBox = styled.div`
