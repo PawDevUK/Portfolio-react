@@ -1,5 +1,5 @@
 import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp } from 'img';
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, ubuntu } from 'img'
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, } from 'img'
 
 
 
@@ -12,7 +12,7 @@ export const projects = [
         text: "Application for informational purpose with data related to Covid-19. It is react application created with create-react-app and styled with styled-components.",
         title: "Covid-Data",
         webHref: { href: "/covid", button: "Visit" },
-        stack: [react, js, html, css, figma, styled, gcloud, npm]
+        stack: [react, router, js, figma, styled, gcloud, nodeJS, npm]
     },
     {
         alt: "Bot Chat",
@@ -21,7 +21,7 @@ export const projects = [
         text: "Bot Chat is a simple app allowing any one to have conversation with AI. It’s simple and fun. At the moment app contains only chat but will be added chat history in MERN stack",
         title: "Bot Chat",
         webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
-        stack: [react, js, html, css, figma, styled, gcloud, npm]
+        stack: [react, router, js, figma, styled, gcloud, git, npm]
     }, {
         alt: "Fitness App",
         githubHref: "https://github.com/GitcrackerUK/Architect",
@@ -29,7 +29,7 @@ export const projects = [
         text: "Very simple fitness app to track exercises duration, date. App is created in React/Node.js and deployed on Gcloud. Database used to storage inputs is MongoDb Atlas.",
         title: "Fitness App",
         webHref: { href: "https://code-camp-front.ew.r.appspot.com/", button: "Visit" },
-        stack: [js, react, bootstrap, nodeJS, mongo, gcloud, npm]
+        stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
     },
     {
         alt: "Nasa",
@@ -38,7 +38,7 @@ export const projects = [
         text: "Website about space related events and topics based on Nasa API. Front page is dedicated to SpaceX. Next pages contains images from space.",
         title: "Nasa",
         webHref: { href: "https://gitcrackeruk.github.io/NASA/", button: "Visit" },
-        stack: [js, html, css, bootstrap]
+        stack: [js, html, css, bootstrap, git, vscode]
     },
     // {
     //     alt: "Login",
@@ -56,7 +56,7 @@ export const projects = [
         text: "Light mobile-first website dedicated for customers who like simple and smart looking solutions. Website is done with use of Bootstrap",
         title: "Royal Oak Architects",
         webHref: { href: "https://gitcrackeruk.github.io/Architect/", button: "Visit" },
-        stack: [html, css, bootstrap]
+        stack: [html, css, bootstrap, git, vscode]
     }, {
         alt: "GENTLEMAN BARBER",
         githubHref: "https://github.com/GitcrackerUK/Barber",
@@ -64,7 +64,7 @@ export const projects = [
         text: "Simple bootstrap barber website. It's informative in very friendly tone aimed for every age range customers. ",
         title: "GENTLEMAN BARBER",
         webHref: { href: "https://gitcrackeruk.github.io/Barber/", button: "Visit" },
-        stack: [html, css, bootstrap]
+        stack: [html, css, bootstrap, git, vscode]
     },
     {
         alt: "Goodwood Solicitors",
@@ -73,7 +73,7 @@ export const projects = [
         text: "Mobile-first webpage with menu to sub pages. Contains light color scheme, parallax image, form, and more.",
         title: "Goodwood Solicitors",
         webHref: { href: "https://gitcrackeruk.github.io/Solicitors/", button: "Visit" },
-        stack: [html, css, bootstrap]
+        stack: [html, css, bootstrap, git, vscode]
     }, {
         alt: "ASPARAGO",
         githubHref: "https://github.com/GitcrackerUK/Architect",
@@ -81,6 +81,6 @@ export const projects = [
         text: "Bootstrap restaurant page with menu, carousel, content, location, parallax background images. These modern design with great and easy access to every information makes it very attractive",
         title: "ASPARAGO",
         webHref: { href: "https://gitcrackeruk.github.io/asparago.online/", button: "Visit" },
-        stack: [html, css, bootstrap]
+        stack: [html, css, bootstrap, git, vscode]
     }
 ]
