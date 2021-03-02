@@ -21,8 +21,8 @@ const RowCell = styled.div`
 export const GetRowElement = function (row, index) {
   return (
     <Wrapper>
-      {row[index].map((item) => {
-        return <RowCell>{item}</RowCell>
+      {row[index].map((item, i) => {
+        return <RowCell key={i}>{item}</RowCell>
       })}
     </Wrapper>
   )
