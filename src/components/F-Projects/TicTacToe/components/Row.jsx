@@ -1,5 +1,5 @@
 import React from 'react'
-import { flexCenter } from '../styled'
+import { flexCenter, boxShadow1 } from '../styled'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -14,7 +14,8 @@ const RowCell = styled.div`
   margin: 30px;
   ${flexCenter};
   font-size: 40px;
-  color: #025955;
+  color: black;
+  ${boxShadow1}
 `
 
 export const GetRowElement = function (row, index) {
