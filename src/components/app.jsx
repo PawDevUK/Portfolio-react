@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import TicTacToe from './F-Projects/TicTacToe/TicTacToe'
 import Projects from './F-Projects/projects'
 import Footer from './H-Footer/Footer.jsx'
 import TopIntro from './C-About/top-intro'
@@ -45,6 +46,9 @@ function App() {
         <Switch>
           <Route exact path="/covid">
             <Covid></Covid>
+          </Route>
+          <Route exact path="/TicTacToe">
+            <TicTacToe></TicTacToe>
           </Route>
           <Route exact path="/content">
             <Header></Header>
