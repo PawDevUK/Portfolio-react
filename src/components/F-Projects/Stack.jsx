@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   width: 100%;
 `
 const Thumbnail = styled.img`
-  height: 36px;
+  height: 35px;
   margin: 2px;
   border-radius: 5px;
   ${boxShadow1}
