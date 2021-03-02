@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { boxShadow1 } from 'styled'
 
 const Wrapper = styled.div`
   padding: 3px;
@@ -10,8 +11,10 @@ const Wrapper = styled.div`
   width: 100%;
 `
 const Thumbnail = styled.img`
-  height: 35px;
+  height: 36px;
   margin: 2px;
+  border-radius: 5px;
+  ${boxShadow1}
 `
 export default function Stack({ ...props }) {
   return (
