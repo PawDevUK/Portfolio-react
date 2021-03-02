@@ -1,17 +1,18 @@
 import React from 'react'
-import { GlobalStyle, flexCenter } from './styled'
+import { GlobalStyle, boxShadow6 } from './styled'
 import styled from 'styled-components'
 import { GetRowElement } from 'components/F-Projects/TicTacToe/components/Row'
+import Buttons from 'components/F-Projects/TicTacToe/components/Buttons'
 
 const Wrapper = styled.div`
   background: #cfc5a5;
   border-radius: 5px;
-  /* width: 100px; */
+  ${boxShadow6}
 `
 const Board = [
-  [[1], [2], [3]],
-  [[4], [5], [6]],
-  [[7], [8], [9]],
+  [['X'], [], ['O']],
+  [[], ['X'], ['O']],
+  [[], [], ['X']],
 ]
 
 export default function TicTacToe() {
@@ -21,6 +22,7 @@ export default function TicTacToe() {
       {GetRowElement(Board, 0)}
       {GetRowElement(Board, 1)}
       {GetRowElement(Board, 2)}
+      <Buttons></Buttons>
     </Wrapper>
   )
 }
