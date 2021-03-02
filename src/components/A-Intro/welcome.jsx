@@ -43,7 +43,6 @@ const StLink = styled(Link)`
 function Welcome({ ...props }) {
   function VisitorsRecorder() {
     const visitorCounter = {
-      counter: 1,
       date: CurrentDate(),
       time: CurrentTime(),
     }
