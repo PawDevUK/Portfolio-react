@@ -31,8 +31,10 @@ const CardContent = styled.div`
   margin: 0 5px 10px 5px;
 `
 const StImg = styled.img`
+  display: block;
+  margin: auto;
   height: 200px;
-  width: 100%;
+  width: 80%;
 `
 
 const ButtonWrapper = styled.div`
