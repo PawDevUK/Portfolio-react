@@ -1,7 +1,8 @@
 import Buttons from 'components/F-Projects/TicTacToe/components/Buttons'
-import { Row } from 'components/F-Projects/TicTacToe/components/Row'
+import Header from 'components/F-Projects/TicTacToe/components/Header'
+import Row from 'components/F-Projects/TicTacToe/components/Row'
 import React, { useState, useEffect } from 'react'
-import { GlobalStyle, boxShadow6, flexCenter } from './styled'
+import { boxShadow6, flexCenter } from './styled'
 import styled from 'styled-components'
 
 const Body = styled.div`
@@ -12,6 +13,7 @@ const Body = styled.div`
   ${flexCenter}
 `
 const Wrapper = styled.div`
+  padding: 20px;
   background: #cfc5a5;
   border-radius: 5px;
   ${boxShadow6}
@@ -21,6 +23,7 @@ const RowClickDiv = styled.div``
 export default function TicTacToe() {
   const [cell, setCell] = useState(null)
   const [row, setRow] = useState(null)
+  const [player, setPlayer] = useState(null)
 
   useEffect(() => {
     setValueToBoard(row, cell)
@@ -41,7 +44,7 @@ export default function TicTacToe() {
 
   const setValueToBoard = function (row, cell) {
     if ((row && cell) || (row && cell) === 0) {
-      setBoard((prev) => [...prev], (Board[row][cell] = ['X']))
+      setBoard((prev) => [...prev], (Board[row][cell] = [player]))
     }
     return
   }
@@ -54,9 +57,17 @@ export default function TicTacToe() {
     ])
   }
 
+  function HandlePlayerX(e) {
+    setPlayer('X')
+  }
+  function HandlePlayerO(e) {
+    setPlayer('O')
+  }
+
   return (
     <Body>
       <Wrapper>
+        <Header PlayerX={HandlePlayerX} PlayerO={HandlePlayerO}></Header>
         {Board.map((row, index) => {
           return (
             <RowClickDiv
