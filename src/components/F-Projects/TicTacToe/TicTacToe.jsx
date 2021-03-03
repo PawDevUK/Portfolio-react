@@ -24,6 +24,7 @@ export default function TicTacToe() {
   const [cell, setCell] = useState(null)
   const [row, setRow] = useState(null)
   const [player, setPlayer] = useState(null)
+  const [moveCounter, setMoveCounter] = useState(0)
 
   useEffect(() => {
     setValueToBoard(row, cell)
@@ -39,12 +40,15 @@ export default function TicTacToe() {
     setRow(parseInt(RowIndex))
   }
   const CellClick = function (index) {
+    setMoveCounter((prev) => prev + 1)
     setCell(parseInt(index.target.id))
-    if (player === 'X') {
-      HandlePlayerO()
-    }
-    if (player === 'O') {
-      HandlePlayerX()
+    if (moveCounter > 0) {
+      if (player === 'X') {
+        HandlePlayerO()
+      }
+      if (player === 'O') {
+        HandlePlayerX()
+      }
     }
   }
 
@@ -61,6 +65,7 @@ export default function TicTacToe() {
       [[], [], []],
       [[], [], []],
     ])
+    setMoveCounter(0)
   }
 
   function HandlePlayerX(e) {
