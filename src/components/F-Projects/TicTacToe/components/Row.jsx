@@ -25,7 +25,7 @@ export const Row = function (props) {
         return (
           <Cell
             onClick={(index) => {
-              props.handleCellClick(index)
+              props.CellClick(index)
             }}
             key={i}
             id={i}
