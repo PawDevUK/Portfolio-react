@@ -7,6 +7,7 @@ const Wrapper = styled.div`
 `
 
 const Cell = styled.div`
+  cursor: pointer;
   border-radius: 5px;
   height: 100px;
   width: 100px;
