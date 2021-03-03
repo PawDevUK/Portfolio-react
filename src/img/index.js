@@ -9,6 +9,7 @@ export { default as fitnessApp } from './FitnessApp.png';
 export { default as CovidApp } from './CovidApp.png';
 export { default as MyPhoto } from './MyPhoto.png';
 export { default as BrainBot } from './BrainBot.png';
+export { default as TicTacToe } from './tictactoe.png';
 
 export { default as react } from './React.png'
 export { default as reactSvg } from './react.svg'
