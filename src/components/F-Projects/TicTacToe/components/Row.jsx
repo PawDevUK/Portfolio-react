@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
 `
 
-const RowCell = styled.div`
+const Cell = styled.div`
   border-radius: 5px;
   height: 100px;
   width: 100px;
@@ -23,7 +23,7 @@ export const Row = function (props) {
     <Wrapper id={props.id} onClick={props.handleRowClick}>
       {props.row[props.index].map((item, i) => {
         return (
-          <RowCell
+          <Cell
             onClick={(index) => {
               props.handleCellClick(index)
             }}
@@ -31,7 +31,7 @@ export const Row = function (props) {
             id={i}
           >
             {item}
-          </RowCell>
+          </Cell>
         )
       })}
     </Wrapper>
