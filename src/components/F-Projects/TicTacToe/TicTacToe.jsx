@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import Buttons from 'components/F-Projects/TicTacToe/components/Buttons'
+import { Row } from 'components/F-Projects/TicTacToe/components/Row'
+import React, { useState, useEffect } from 'react'
 import { GlobalStyle, boxShadow6 } from './styled'
 import styled from 'styled-components'
-import { Row } from 'components/F-Projects/TicTacToe/components/Row'
-import Buttons from 'components/F-Projects/TicTacToe/components/Buttons'
 
 const Wrapper = styled.div`
   background: #cfc5a5;
@@ -12,22 +12,34 @@ const Wrapper = styled.div`
 const RowClickDiv = styled.div``
 
 export default function TicTacToe() {
-  const [Board, setBoard] = useState([
-    [['X'], [], ['O']],
-    [[], ['X'], ['O']],
-    [[], [], ['X']],
-  ])
   const [cell, setCell] = useState(null)
   const [row, setRow] = useState(null)
 
-  function handleCellClick(e) {
-    setCell(parseInt(e.target.id))
+  useEffect(() => {
+    setValueToBoard(row, cell)
+  }, [cell, row])
+
+  const [Board, setBoard] = useState([
+    [[], [], []],
+    [[], [], []],
+    [[], [], []],
+  ])
+
+  const RowClick = function (RowIndex) {
+    setRow(parseInt(RowIndex))
   }
-  function handleRowClick(rowIndex) {
-    setRow(rowIndex)
+  const CellClick = function (index) {
+    setCell(parseInt(index.target.id))
   }
+
+  const setValueToBoard = function (row, cell) {
+    if ((row && cell) || (row && cell) === 0) {
+      setBoard((prev) => [...prev], (Board[row][cell] = ['X']))
+    }
+    return
+  }
+
   function handleClear() {
-    console.log('clear')
     setBoard([
       [[], [], []],
       [[], [], []],
@@ -43,11 +55,11 @@ export default function TicTacToe() {
           <RowClickDiv
             key={index}
             onClick={() => {
-              handleRowClick(index)
+              RowClick(index)
             }}
           >
             <Row
-              handleCellClick={handleCellClick}
+              CellClick={CellClick}
               row={Board}
               key={index}
               index={index}
