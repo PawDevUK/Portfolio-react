@@ -16,13 +16,18 @@ const StButton = styled(Button)`
     background-color: #a1cae2 !important;
   }
 `
-export default function Buttons() {
+export default function Buttons(props) {
   return (
     <Wrapper>
       <StButton variant="contained" size="medium" color="primary">
         Play
       </StButton>
-      <StButton variant="contained" size="medium" color="primary">
+      <StButton
+        onClick={props.handleClear}
+        variant="contained"
+        size="medium"
+        color="primary"
+      >
         Clear
       </StButton>
     </Wrapper>
