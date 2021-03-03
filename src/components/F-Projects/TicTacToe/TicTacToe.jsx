@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { GlobalStyle, boxShadow6 } from './styled'
 import styled from 'styled-components'
 import { Row } from 'components/F-Projects/TicTacToe/components/Row'
@@ -9,38 +9,54 @@ const Wrapper = styled.div`
   border-radius: 5px;
   ${boxShadow6}
 `
-const Board = [
-  [['X'], [], ['O']],
-  [[], ['X'], ['O']],
-  [[], [], ['X']],
-]
+const RowClickDiv = styled.div``
 
 export default function TicTacToe() {
+  const [Board, setBoard] = useState([
+    [['X'], [], ['O']],
+    [[], ['X'], ['O']],
+    [[], [], ['X']],
+  ])
+  const [cell, setCell] = useState(null)
+  const [row, setRow] = useState(null)
+
   function handleCellClick(e) {
-    console.log(e.target.id)
-    handleRowClick(e)
+    setCell(parseInt(e.target.id))
+  }
+  function handleRowClick(rowIndex) {
+    setRow(rowIndex)
+  }
+  function handleClear() {
+    console.log('clear')
+    setBoard([
+      [[], [], []],
+      [[], [], []],
+      [[], [], []],
+    ])
   }
 
-  function handleRowClick(e) {
-    console.log(e.target)
-    // handleCellClick(e)
-  }
   return (
     <Wrapper>
       <GlobalStyle></GlobalStyle>
       {Board.map((row, index) => {
         return (
-          <Row
-            handleRowClick={handleRowClick}
-            handleCellClick={handleCellClick}
-            row={Board}
+          <RowClickDiv
             key={index}
-            index={index}
-            id={index}
-          ></Row>
+            onClick={() => {
+              handleRowClick(index)
+            }}
+          >
+            <Row
+              handleCellClick={handleCellClick}
+              row={Board}
+              key={index}
+              index={index}
+              id={index}
+            ></Row>
+          </RowClickDiv>
         )
       })}
-      <Buttons></Buttons>
+      <Buttons handleClear={handleClear}></Buttons>
     </Wrapper>
   )
 }
