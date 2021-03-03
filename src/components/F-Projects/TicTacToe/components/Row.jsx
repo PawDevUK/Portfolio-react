@@ -20,7 +20,7 @@ const Cell = styled.div`
 
 export const Row = function (props) {
   return (
-    <Wrapper id={props.id} onClick={props.handleRowClick}>
+    <Wrapper>
       {props.row[props.index].map((item, i) => {
         return (
           <Cell
