@@ -1,7 +1,7 @@
 import React from 'react'
 import { GlobalStyle, boxShadow6 } from './styled'
 import styled from 'styled-components'
-import { GetRowElement } from 'components/F-Projects/TicTacToe/components/Row'
+import { Row } from 'components/F-Projects/TicTacToe/components/Row'
 import Buttons from 'components/F-Projects/TicTacToe/components/Buttons'
 
 const Wrapper = styled.div`
@@ -16,12 +16,30 @@ const Board = [
 ]
 
 export default function TicTacToe() {
+  function handleCellClick(e) {
+    console.log(e.target.id)
+    handleRowClick(e)
+  }
+
+  function handleRowClick(e) {
+    console.log(e.target)
+    // handleCellClick(e)
+  }
   return (
     <Wrapper>
       <GlobalStyle></GlobalStyle>
-      {GetRowElement(Board, 0)}
-      {GetRowElement(Board, 1)}
-      {GetRowElement(Board, 2)}
+      {Board.map((row, index) => {
+        return (
+          <Row
+            handleRowClick={handleRowClick}
+            handleCellClick={handleCellClick}
+            row={Board}
+            key={index}
+            index={index}
+            id={index}
+          ></Row>
+        )
+      })}
       <Buttons></Buttons>
     </Wrapper>
   )

@@ -18,11 +18,21 @@ const RowCell = styled.div`
   ${boxShadow1}
 `
 
-export const GetRowElement = function (row, index) {
+export const Row = function (props) {
   return (
-    <Wrapper>
-      {row[index].map((item, i) => {
-        return <RowCell key={i}>{item}</RowCell>
+    <Wrapper id={props.id} onClick={props.handleRowClick}>
+      {props.row[props.index].map((item, i) => {
+        return (
+          <RowCell
+            onClick={(index) => {
+              props.handleCellClick(index)
+            }}
+            key={i}
+            id={i}
+          >
+            {item}
+          </RowCell>
+        )
       })}
     </Wrapper>
   )
