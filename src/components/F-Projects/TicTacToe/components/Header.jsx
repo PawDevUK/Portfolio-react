@@ -7,17 +7,29 @@ const Wrapper = styled.div`
   ${flexCenter}
   height: 50px;
 `
-const PlayerX = styled.div``
-const PlayerO = styled.div``
+
 export default function Header(props) {
   return (
     <Wrapper>
-      <PlayerX onClick={props.PlayerX}>
-        <StButton header>X</StButton>
-      </PlayerX>
-      <PlayerO onClick={props.PlayerO}>
-        <StButton header>O</StButton>
-      </PlayerO>
+      <StButton
+        variant="contained"
+        size="medium"
+        color="primary"
+        onClick={props.PlayerX}
+        header
+      >
+        X
+      </StButton>
+
+      <StButton
+        variant="contained"
+        size="medium"
+        color="primary"
+        onClick={props.PlayerO}
+        header
+      >
+        O
+      </StButton>
     </Wrapper>
   )
 }
