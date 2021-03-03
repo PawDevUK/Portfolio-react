@@ -40,6 +40,12 @@ export default function TicTacToe() {
   }
   const CellClick = function (index) {
     setCell(parseInt(index.target.id))
+    if (player === 'X') {
+      HandlePlayerO()
+    }
+    if (player === 'O') {
+      HandlePlayerX()
+    }
   }
 
   const setValueToBoard = function (row, cell) {
