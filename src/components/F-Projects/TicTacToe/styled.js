@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { css } from 'styled-components'
 
 export const flexCenter = css`
 display:flex;
@@ -6,15 +6,7 @@ justify-content:center;
 align-items:center;
 `
 
-export const GlobalStyle = createGlobalStyle`
-body { 
-  height: 100vh;
-font:62.5%/1.4 Arial,Tahoma,Geneva,Helvetica,sans-serif;
-background:#eae3c8;
-color:#333;
-${flexCenter}
-}
-`
+
 
 export const boxShadow1 = css`box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);`
 export const boxShadow3 = css`box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);`
