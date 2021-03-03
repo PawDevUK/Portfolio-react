@@ -18,7 +18,7 @@ const Cell = styled.div`
   ${boxShadow1}
 `
 
-export const Row = function (props) {
+export default function Row(props) {
   return (
     <Wrapper>
       {props.row[props.index].map((item, i) => {
