@@ -12,6 +12,9 @@ export default function Header(props) {
   return (
     <Wrapper>
       <StButton
+        id="X"
+        player={props.Player}
+        disabled={props.Disabled}
         variant="contained"
         size="medium"
         color="primary"
@@ -22,6 +25,9 @@ export default function Header(props) {
       </StButton>
 
       <StButton
+        id="O"
+        player={props.Player}
+        disabled={props.Disabled}
         variant="contained"
         size="medium"
         color="primary"

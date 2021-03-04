@@ -3,6 +3,19 @@ import Button from '@material-ui/core/Button'
 
 
 export const StButton = styled(Button)`
+${(p) => {
+    if (p.player === "X" && p.id === "X") {
+      return css`
+      color:white !important;
+      `
+    }
+    if (p.player === "O" && p.id === "O") {
+      return css`
+      color:white !important;
+      `
+    }
+  }
+  };
 margin: 10px 20px !important;
 width: 80px;
 background-color: #c2b092 !important;

@@ -1,4 +1,4 @@
-import Buttons from 'components/F-Projects/TicTacToe/components/Buttons'
+import BottomButtons from 'components/F-Projects/TicTacToe/components/BottomButtons'
 import Header from 'components/F-Projects/TicTacToe/components/Header'
 import Row from 'components/F-Projects/TicTacToe/components/Row'
 import React, { useState, useEffect } from 'react'
@@ -25,6 +25,7 @@ export default function TicTacToe() {
   const [row, setRow] = useState(null)
   const [player, setPlayer] = useState(null)
   const [moveCounter, setMoveCounter] = useState(0)
+  const [TopButtonsDisabled, setButtonsDisable] = useState(false)
 
   useEffect(() => {
     setValueToBoard(row, cell)
@@ -40,6 +41,8 @@ export default function TicTacToe() {
     setRow(parseInt(RowIndex))
   }
   const CellClick = function (index) {
+    setButtonsDisable(true) //disable buttons on first click
+    DisableTopButtons() //keeps buttons disabled during a game
     setMoveCounter((prev) => prev + 1)
     setCell(parseInt(index.target.id))
     if (moveCounter > 0) {
@@ -66,6 +69,8 @@ export default function TicTacToe() {
       [[], [], []],
     ])
     setMoveCounter(0)
+    setButtonsDisable(false)
+    setPlayer(null)
   }
 
   function HandlePlayerX(e) {
@@ -74,11 +79,20 @@ export default function TicTacToe() {
   function HandlePlayerO(e) {
     setPlayer('O')
   }
-
+  function DisableTopButtons() {
+    if (moveCounter !== 0) {
+      setButtonsDisable(true)
+    }
+  }
   return (
     <Body>
       <Wrapper>
-        <Header PlayerX={HandlePlayerX} PlayerO={HandlePlayerO}></Header>
+        <Header
+          Player={player === 'X' ? 'O' : 'X'}
+          Disabled={TopButtonsDisabled}
+          PlayerX={HandlePlayerX}
+          PlayerO={HandlePlayerO}
+        ></Header>
         {Board.map((row, index) => {
           return (
             <RowClickDiv
@@ -97,7 +111,7 @@ export default function TicTacToe() {
             </RowClickDiv>
           )
         })}
-        <Buttons handleClear={handleClear}></Buttons>
+        <BottomButtons handleClear={handleClear}></BottomButtons>
       </Wrapper>
     </Body>
   )
