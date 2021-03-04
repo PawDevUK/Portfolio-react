@@ -73,10 +73,10 @@ export default function TicTacToe() {
     setPlayer(null)
   }
 
-  function HandlePlayerX(e) {
+  function HandlePlayerX() {
     setPlayer('X')
   }
-  function HandlePlayerO(e) {
+  function HandlePlayerO() {
     setPlayer('O')
   }
   function DisableTopButtons() {
