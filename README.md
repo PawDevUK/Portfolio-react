@@ -27,6 +27,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - added RWD for Contact and Footer
 - changed contact background parallax and widened it to full width of the page.
 - added stack icons to each project card
+- added Tic Tac Toe to projects
 
 ## To Do
 
