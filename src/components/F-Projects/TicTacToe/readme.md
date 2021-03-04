@@ -9,7 +9,7 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English), or X
 
 - functionality to disable header buttons after a game starts
 - functionality to switch buttons as indicator of player move
-- line to cross all same symbols in case of win
+- line to cross all same symbols in case of win. Must be 8 lines, probably svg.
 - list of active players with option to play with
 - backend and mongodb
 - functionality to get list of players
