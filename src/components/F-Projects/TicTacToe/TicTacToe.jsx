@@ -6,11 +6,11 @@ import { boxShadow6, flexCenter } from './styled'
 import styled from 'styled-components'
 
 const Body = styled.div`
-  height: 100vh;
   font: 62.5%/1.4 Arial, Tahoma, Geneva, Helvetica, sans-serif;
   background: #eae3c8;
   color: #333;
   ${flexCenter}
+  height: 100vh;
 `
 const Wrapper = styled.div`
   padding: 20px;
