@@ -102,6 +102,7 @@ export default function TicTacToe() {
               }}
             >
               <Row
+                Disabled={player}
                 CellClick={CellClick}
                 row={Board}
                 key={index}
