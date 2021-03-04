@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components'
 import Button from '@material-ui/core/Button'
 
-
-
 export const StButton = styled(Button)`
 ${(p) => {
     if (p.player === "X" && p.id === "X") {
