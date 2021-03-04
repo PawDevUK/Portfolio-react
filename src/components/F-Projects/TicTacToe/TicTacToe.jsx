@@ -9,6 +9,7 @@ import {
   midTopBottom,
   TopBottom,
 } from './img'
+
 import Header from 'components/F-Projects/TicTacToe/components/Header'
 import Row from 'components/F-Projects/TicTacToe/components/Row'
 import React, { useState, useEffect } from 'react'
@@ -50,6 +51,7 @@ export default function TicTacToe() {
 
   useEffect(() => {
     setValueToBoard(row, cell)
+    checkIfWin()
   }, [cell, row])
 
   const [Board, setBoard] = useState([
@@ -105,6 +107,49 @@ export default function TicTacToe() {
       setButtonsDisable(true)
     }
   }
+
+  function checkIfWin() {
+    const topLbottR = [Board[0][0], Board[1][1], Board[2][2]]
+    const topRbottL = [Board[2][2], Board[1][1], Board[0][0]]
+    const topLR = [Board[0][0], Board[0][1], Board[0][2]]
+    const midLR = [Board[1][0], Board[1][1], Board[1][2]]
+    const bottomLR = [Board[2][0], Board[2][1], Board[2][2]]
+    const leftTopBottom = [Board[0][0], Board[1][0], Board[2][0]]
+    const midTopBottom = [Board[0][1], Board[1][1], Board[2][1]]
+    const rightTopBottom = [Board[0][2], Board[1][2], Board[2][2]]
+
+    const Scenario = [
+      topRbottL,
+      topLbottR,
+      topLR,
+      midLR,
+      bottomLR,
+      leftTopBottom,
+      midTopBottom,
+      rightTopBottom,
+    ]
+
+    function CheckIfRowXorO(scenario) {
+      for (let i = 0; i < scenario.length; i++) {
+        if (
+          scenario[i][0][0] === 'X' &&
+          scenario[i][1][0] === 'X' &&
+          scenario[i][2][0] === 'X'
+        ) {
+          console.log('X wins')
+        }
+        if (
+          scenario[i][0][0] === 'O' &&
+          scenario[i][1][0] === 'O' &&
+          scenario[i][2][0] === 'O'
+        ) {
+          console.log('O wins')
+        }
+      }
+    }
+    CheckIfRowXorO(Scenario)
+  }
+
   return (
     <Body>
       <Wrapper>
