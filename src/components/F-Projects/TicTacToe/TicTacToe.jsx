@@ -7,14 +7,14 @@ import {
   bottomLR,
   leftTopBottom,
   midTopBottom,
-  TopBottom,
+  rightTopBottom,
 } from './img'
 
 import Header from 'components/F-Projects/TicTacToe/components/Header'
 import Row from 'components/F-Projects/TicTacToe/components/Row'
 import React, { useState, useEffect } from 'react'
 import { boxShadow6, flexCenter } from './styled'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Body = styled.div`
   font: 62.5%/1.4 Arial, Tahoma, Geneva, Helvetica, sans-serif;
@@ -31,8 +31,15 @@ const Wrapper = styled.div`
   ${boxShadow6}
 `
 const Cross = styled.div`
-  display: none;
-  background-image: url(${leftTopBottom});
+  ${(p) =>
+    p.img
+      ? css`
+          display: block;
+        `
+      : css`
+          display: none;
+        `}
+  background-image: url(${(p) => p.img});
   position: absolute;
   height: 378px;
   width: 379px;
@@ -48,11 +55,22 @@ export default function TicTacToe() {
   const [player, setPlayer] = useState(null)
   const [moveCounter, setMoveCounter] = useState(0)
   const [TopButtonsDisabled, setButtonsDisable] = useState(false)
-
+  const [WinnerCrossLine, setWinnerCrossLine] = useState(null)
+  const Scenario = [
+    topRbottL,
+    topLbottR,
+    topLR,
+    midLR,
+    bottomLR,
+    leftTopBottom,
+    midTopBottom,
+    rightTopBottom,
+  ]
   useEffect(() => {
     setValueToBoard(row, cell)
     checkIfWin()
-  }, [cell, row])
+    console.log(WinnerCrossLine)
+  }, [cell, row, WinnerCrossLine])
 
   const [Board, setBoard] = useState([
     [[], [], []],
@@ -64,8 +82,8 @@ export default function TicTacToe() {
     setRow(parseInt(RowIndex))
   }
   const CellClick = function (index) {
-    setButtonsDisable(true) //disable buttons on first click
-    DisableTopButtons() //keeps buttons disabled during a game
+    setButtonsDisable(true) // disable top buttons on first click
+    DisableTopButtons() // keeps top buttons disabled during a game
     setMoveCounter((prev) => prev + 1)
     setCell(parseInt(index.target.id))
     if (moveCounter > 0) {
@@ -76,6 +94,7 @@ export default function TicTacToe() {
         HandlePlayerX()
       }
     }
+    console.log(WinnerCrossLine)
   }
 
   const setValueToBoard = function (row, cell) {
@@ -94,6 +113,7 @@ export default function TicTacToe() {
     setMoveCounter(0)
     setButtonsDisable(false)
     setPlayer(null)
+    setWinnerCrossLine(null)
   }
 
   function HandlePlayerX() {
@@ -128,7 +148,6 @@ export default function TicTacToe() {
       midTopBottom,
       rightTopBottom,
     ]
-
     function CheckIfRowXorO(scenario) {
       for (let i = 0; i < scenario.length; i++) {
         if (
@@ -136,14 +155,16 @@ export default function TicTacToe() {
           scenario[i][1][0] === 'X' &&
           scenario[i][2][0] === 'X'
         ) {
-          console.log('X wins')
+          setWinnerCrossLine(i)
+          // console.log(i)
         }
         if (
           scenario[i][0][0] === 'O' &&
           scenario[i][1][0] === 'O' &&
           scenario[i][2][0] === 'O'
         ) {
-          console.log('O wins')
+          setWinnerCrossLine(i)
+          // console.log(i)
         }
       }
     }
@@ -159,7 +180,7 @@ export default function TicTacToe() {
           PlayerX={HandlePlayerX}
           PlayerO={HandlePlayerO}
         ></Header>
-        <Cross></Cross>
+        <Cross img={Scenario[WinnerCrossLine]}></Cross>
         {Board.map((row, index) => {
           return (
             <RowClickDiv
