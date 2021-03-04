@@ -1,4 +1,14 @@
 import BottomButtons from 'components/F-Projects/TicTacToe/components/BottomButtons'
+import {
+  topRbottL,
+  topLbottR,
+  topLR,
+  midLR,
+  bottomLR,
+  leftTopBottom,
+  midTopBottom,
+  TopBottom,
+} from './img'
 import Header from 'components/F-Projects/TicTacToe/components/Header'
 import Row from 'components/F-Projects/TicTacToe/components/Row'
 import React, { useState, useEffect } from 'react'
@@ -13,10 +23,21 @@ const Body = styled.div`
   height: 100vh;
 `
 const Wrapper = styled.div`
+  position: relative;
   padding: 20px;
   background: #cfc5a5;
   border-radius: 5px;
   ${boxShadow6}
+`
+const Cross = styled.div`
+  display: none;
+  background-image: url(${leftTopBottom});
+  position: absolute;
+  height: 378px;
+  width: 379px;
+  z-index: 100;
+  top: 120px;
+  left: 70px;
 `
 const RowClickDiv = styled.div``
 
@@ -93,6 +114,7 @@ export default function TicTacToe() {
           PlayerX={HandlePlayerX}
           PlayerO={HandlePlayerO}
         ></Header>
+        <Cross></Cross>
         {Board.map((row, index) => {
           return (
             <RowClickDiv
