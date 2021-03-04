@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import Button from '@material-ui/core/Button'
 
 
+
 export const StButton = styled(Button)`
 ${(p) => {
     if (p.player === "X" && p.id === "X") {
@@ -27,4 +28,15 @@ font-size: 20px !important;
 ${p => p.header ? css`
 width:200px;
 ` : css``}
+
+${p => (
+    p.cell ? css`
+  height: 100px;
+  width: 100px;
+  margin: 30px !important;
+  font-size: 40px;
+  color: white  !important;
+  `
+      : css``
+  )}
 `
