@@ -5,4 +5,4 @@ export { default as midLR } from './Group4.png';
 export { default as bottomLR } from './Group5.png';
 export { default as leftTopBottom } from './Group7.png';
 export { default as midTopBottom } from './Group8.png';
-export { default as TopBottom } from './Group9.png';
+export { default as rightTopBottom } from './Group9.png';
