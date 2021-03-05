@@ -2,13 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { DataGrid } from '@material-ui/data-grid'
 import Button from '@material-ui/core/Button'
+import { boxShadow3 } from '../styled'
 
 const Wrapper = styled.div`
   border-radius: 10px;
-  background-color: white;
+  background-color: #cfc5a5;
   height: 300px;
   width: 650px;
   margin: 30px;
+  ${boxShadow3}
 `
 
 const columns = [
