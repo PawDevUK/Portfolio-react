@@ -4,7 +4,7 @@ import { DataGrid } from '@material-ui/data-grid'
 import Button from '@material-ui/core/Button'
 
 const Wrapper = styled.div`
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
   height: 300px;
   width: 650px;
@@ -27,7 +27,7 @@ const columns = [
           size="small"
           style={{ marginLeft: 16 }}
         >
-          {params.available ? 'Join' : 'Watch'}
+          {params.row.status === 'Available' ? 'Join' : 'Watch'}
         </Button>
       </strong>
     ),
@@ -36,8 +36,8 @@ const columns = [
 
 const rows = [
   { id: 1, user: 'Pablo', status: 'Available', playingWith: '' },
-  { id: 2, user: 'Tony', status: 'In Game', playingWith: 'Jack' },
-  { id: 3, user: 'Jack', status: 'In Game', playingWith: 'Tony' },
+  { id: 2, user: 'Tony', status: 'In the Game', playingWith: 'Jack' },
+  { id: 3, user: 'Jack', status: 'In the Game', playingWith: 'Tony' },
 ]
 
 export default function PlayerList() {
