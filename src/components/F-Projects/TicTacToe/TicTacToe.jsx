@@ -15,6 +15,7 @@ import {
   midTopBottom,
   rightTopBottom,
 } from './img'
+import { InitialBoard } from './store'
 
 const Body = styled.div`
   font: 62.5%/1.4 Arial, Tahoma, Geneva, Helvetica, sans-serif;
@@ -54,6 +55,7 @@ const Cross = styled.div`
 const RowClickDiv = styled.div``
 
 export default function TicTacToe() {
+  const [Board, setBoard] = useState(InitialBoard())
   const [cell, setCell] = useState(null)
   const [row, setRow] = useState(null)
   const [player, setPlayer] = useState(null)
@@ -74,12 +76,6 @@ export default function TicTacToe() {
     setValueToBoard(row, cell)
     checkIfWin()
   }, [cell, row, WinnerCrossLine])
-
-  const [Board, setBoard] = useState([
-    [[], [], []],
-    [[], [], []],
-    [[], [], []],
-  ])
 
   const RowClick = function (RowIndex) {
     setRow(parseInt(RowIndex))
@@ -107,11 +103,7 @@ export default function TicTacToe() {
   }
 
   function handleClear() {
-    setBoard([
-      [[], [], []],
-      [[], [], []],
-      [[], [], []],
-    ])
+    setBoard(InitialBoard())
     setMoveCounter(0)
     setButtonsDisable(false)
     setPlayer(null)
