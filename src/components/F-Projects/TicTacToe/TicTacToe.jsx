@@ -21,9 +21,12 @@ const Body = styled.div`
   background: #eae3c8;
   color: #333;
   ${flexCenter}
-  height: 100vh;
 `
+const BoardAndDataTableWrapper = styled.div``
+
 const BoardWrapper = styled.div`
+  margin: auto;
+  width: 520px;
   position: relative;
   padding: 20px;
   background: #cfc5a5;
@@ -70,6 +73,7 @@ export default function TicTacToe() {
   useEffect(() => {
     setValueToBoard(row, cell)
     checkIfWin()
+    console.log(WinnerCrossLine)
   }, [cell, row, WinnerCrossLine])
 
   const [Board, setBoard] = useState([
@@ -94,7 +98,6 @@ export default function TicTacToe() {
         HandlePlayerX()
       }
     }
-    console.log(WinnerCrossLine)
   }
 
   const setValueToBoard = function (row, cell) {
@@ -130,7 +133,7 @@ export default function TicTacToe() {
 
   function checkIfWin() {
     const topLbottR = [Board[0][0], Board[1][1], Board[2][2]]
-    const topRbottL = [Board[2][2], Board[1][1], Board[0][0]]
+    const topRbottL = [Board[0][2], Board[1][1], Board[2][0]]
     const topLR = [Board[0][0], Board[0][1], Board[0][2]]
     const midLR = [Board[1][0], Board[1][1], Board[1][2]]
     const bottomLR = [Board[2][0], Board[2][1], Board[2][2]]
@@ -156,6 +159,7 @@ export default function TicTacToe() {
           scenario[i][2][0] === 'X'
         ) {
           setWinnerCrossLine(i)
+          console.log(i)
         }
         if (
           scenario[i][0][0] === 'O' &&
@@ -171,36 +175,38 @@ export default function TicTacToe() {
 
   return (
     <Body>
-      <BoardWrapper>
-        <Header
-          Player={player === 'X' ? 'O' : 'X'}
-          Disabled={TopButtonsDisabled}
-          PlayerX={HandlePlayerX}
-          PlayerO={HandlePlayerO}
-        ></Header>
-        <Cross img={Scenario[WinnerCrossLine]}></Cross>
-        {Board.map((row, index) => {
-          return (
-            <RowClickDiv
-              key={index}
-              onClick={() => {
-                RowClick(index)
-              }}
-            >
-              <Row
-                Disabled={player}
-                CellClick={CellClick}
-                row={Board}
+      <BoardAndDataTableWrapper>
+        <BoardWrapper>
+          <Header
+            Player={player === 'X' ? 'O' : 'X'}
+            Disabled={TopButtonsDisabled}
+            PlayerX={HandlePlayerX}
+            PlayerO={HandlePlayerO}
+          ></Header>
+          <Cross img={Scenario[WinnerCrossLine]}></Cross>
+          {Board.map((row, index) => {
+            return (
+              <RowClickDiv
                 key={index}
-                index={index}
-                id={index}
-              ></Row>
-            </RowClickDiv>
-          )
-        })}
-        <BottomButtons handleClear={handleClear}></BottomButtons>
-      </BoardWrapper>
-      <PlayerList></PlayerList>
+                onClick={() => {
+                  RowClick(index)
+                }}
+              >
+                <Row
+                  Disabled={player}
+                  CellClick={CellClick}
+                  row={Board}
+                  key={index}
+                  index={index}
+                  id={index}
+                ></Row>
+              </RowClickDiv>
+            )
+          })}
+          <BottomButtons handleClear={handleClear}></BottomButtons>
+        </BoardWrapper>
+        <PlayerList></PlayerList>
+      </BoardAndDataTableWrapper>
     </Body>
   )
 }
