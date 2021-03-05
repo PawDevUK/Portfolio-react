@@ -1,6 +1,7 @@
 import BottomButtons from 'components/F-Projects/TicTacToe/components/BottomButtons'
-import Header from 'components/F-Projects/TicTacToe/components/Header'
+import TopButtons from 'components/F-Projects/TicTacToe/components/TopButtons'
 import Row from 'components/F-Projects/TicTacToe/components/Row'
+import Header from './components/Header'
 import React, { useState, useEffect } from 'react'
 import { boxShadow6, flexCenter } from './styled'
 import styled, { css } from 'styled-components'
@@ -18,6 +19,7 @@ import {
 import { InitialBoard } from './store'
 
 const Body = styled.div`
+  padding: 100px;
   font: 62.5%/1.4 Arial, Tahoma, Geneva, Helvetica, sans-serif;
   background: #eae3c8;
   color: #333;
@@ -76,6 +78,12 @@ export default function TicTacToe() {
     setValueToBoard(row, cell)
     checkIfWin()
   }, [cell, row, WinnerCrossLine])
+
+  function HeaderSubmit(event, name) {
+    event.preventDefault()
+    console.log(event)
+    console.log(name)
+  }
 
   const RowClick = function (RowIndex) {
     setRow(parseInt(RowIndex))
@@ -166,13 +174,14 @@ export default function TicTacToe() {
   return (
     <Body>
       <BoardAndDataTableWrapper>
+        <Header Submit={HeaderSubmit}></Header>
         <BoardWrapper>
-          <Header
+          <TopButtons
             Player={player === 'X' ? 'O' : 'X'}
             Disabled={TopButtonsDisabled}
             PlayerX={HandlePlayerX}
             PlayerO={HandlePlayerO}
-          ></Header>
+          ></TopButtons>
           <Cross img={Scenario[WinnerCrossLine]}></Cross>
           {Board.map((row, index) => {
             return (
