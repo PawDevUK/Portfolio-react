@@ -73,7 +73,6 @@ export default function TicTacToe() {
   useEffect(() => {
     setValueToBoard(row, cell)
     checkIfWin()
-    console.log(WinnerCrossLine)
   }, [cell, row, WinnerCrossLine])
 
   const [Board, setBoard] = useState([
@@ -159,7 +158,6 @@ export default function TicTacToe() {
           scenario[i][2][0] === 'X'
         ) {
           setWinnerCrossLine(i)
-          console.log(i)
         }
         if (
           scenario[i][0][0] === 'O' &&
