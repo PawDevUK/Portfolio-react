@@ -23,7 +23,7 @@ const Body = styled.div`
   ${flexCenter}
   height: 100vh;
 `
-const Wrapper = styled.div`
+const BoardWrapper = styled.div`
   position: relative;
   padding: 20px;
   background: #cfc5a5;
@@ -40,13 +40,14 @@ const Cross = styled.div`
           display: none;
         `}
   background-image: url(${(p) => p.img});
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
-  height: 378px;
-  width: 379px;
+  height: 480px;
+  width: 480px;
   z-index: 100;
-  top: 120px;
-  left: 70px;
 `
+
 const RowClickDiv = styled.div``
 
 export default function TicTacToe() {
@@ -170,7 +171,7 @@ export default function TicTacToe() {
 
   return (
     <Body>
-      <Wrapper>
+      <BoardWrapper>
         <Header
           Player={player === 'X' ? 'O' : 'X'}
           Disabled={TopButtonsDisabled}
@@ -198,7 +199,7 @@ export default function TicTacToe() {
           )
         })}
         <BottomButtons handleClear={handleClear}></BottomButtons>
-      </Wrapper>
+      </BoardWrapper>
       <PlayerList></PlayerList>
     </Body>
   )
