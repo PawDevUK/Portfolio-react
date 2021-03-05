@@ -1,11 +1,11 @@
 import BottomButtons from 'components/F-Projects/TicTacToe/components/BottomButtons'
 import TopButtons from 'components/F-Projects/TicTacToe/components/TopButtons'
 import Row from 'components/F-Projects/TicTacToe/components/Row'
-import Header from './components/Header'
 import React, { useState, useEffect } from 'react'
 import { boxShadow6, flexCenter } from './styled'
 import styled, { css } from 'styled-components'
 import PlayerList from './components/PlayerList'
+import Header from './components/Header'
 import {
   topRbottL,
   topLbottR,
@@ -81,8 +81,6 @@ export default function TicTacToe() {
 
   function HeaderSubmit(event, name) {
     event.preventDefault()
-    console.log(event)
-    console.log(name)
   }
 
   const RowClick = function (RowIndex) {

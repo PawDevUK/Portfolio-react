@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import TextField from '@material-ui/core/TextField'
+import { boxShadow6 } from '../styled'
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +20,7 @@ const InputWrapper = styled.form`
 `
 const UsernameWrapper = styled.div`
   margin: auto;
+
   ${(p) =>
     !p.nameSubmit
       ? css`
@@ -27,6 +29,14 @@ const UsernameWrapper = styled.div`
       : css`
           display: block;
         `}
+`
+const H1 = styled.h1`
+  color: #fff;
+  font-weight: bold;
+  background-color: #cfc5a5;
+  border-radius: 5px;
+  padding: 10px;
+  ${boxShadow6};
 `
 
 export default function Header(props) {
@@ -53,7 +63,7 @@ export default function Header(props) {
         />
       </InputWrapper>
       <UsernameWrapper nameSubmit={nameSubmit}>
-        <h1>{name}</h1>
+        <H1>{name.toUpperCase()}</H1>
       </UsernameWrapper>
     </Wrapper>
   )
