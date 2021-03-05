@@ -1,4 +1,9 @@
 import BottomButtons from 'components/F-Projects/TicTacToe/components/BottomButtons'
+import Header from 'components/F-Projects/TicTacToe/components/Header'
+import Row from 'components/F-Projects/TicTacToe/components/Row'
+import React, { useState, useEffect } from 'react'
+import { boxShadow6, flexCenter } from './styled'
+import styled, { css } from 'styled-components'
 import {
   topRbottL,
   topLbottR,
@@ -9,12 +14,6 @@ import {
   midTopBottom,
   rightTopBottom,
 } from './img'
-
-import Header from 'components/F-Projects/TicTacToe/components/Header'
-import Row from 'components/F-Projects/TicTacToe/components/Row'
-import React, { useState, useEffect } from 'react'
-import { boxShadow6, flexCenter } from './styled'
-import styled, { css } from 'styled-components'
 
 const Body = styled.div`
   font: 62.5%/1.4 Arial, Tahoma, Geneva, Helvetica, sans-serif;
@@ -69,7 +68,6 @@ export default function TicTacToe() {
   useEffect(() => {
     setValueToBoard(row, cell)
     checkIfWin()
-    console.log(WinnerCrossLine)
   }, [cell, row, WinnerCrossLine])
 
   const [Board, setBoard] = useState([
@@ -156,7 +154,6 @@ export default function TicTacToe() {
           scenario[i][2][0] === 'X'
         ) {
           setWinnerCrossLine(i)
-          // console.log(i)
         }
         if (
           scenario[i][0][0] === 'O' &&
@@ -164,7 +161,6 @@ export default function TicTacToe() {
           scenario[i][2][0] === 'O'
         ) {
           setWinnerCrossLine(i)
-          // console.log(i)
         }
       }
     }
