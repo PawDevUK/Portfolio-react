@@ -4,6 +4,7 @@ import Row from 'components/F-Projects/TicTacToe/components/Row'
 import React, { useState, useEffect } from 'react'
 import { boxShadow6, flexCenter } from './styled'
 import styled, { css } from 'styled-components'
+import PlayerList from './components/PlayerList'
 import {
   topRbottL,
   topLbottR,
@@ -198,6 +199,7 @@ export default function TicTacToe() {
         })}
         <BottomButtons handleClear={handleClear}></BottomButtons>
       </Wrapper>
+      <PlayerList></PlayerList>
     </Body>
   )
 }
