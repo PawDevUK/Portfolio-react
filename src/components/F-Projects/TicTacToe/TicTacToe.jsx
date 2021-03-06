@@ -16,7 +16,7 @@ import {
   midTopBottom,
   rightTopBottom,
 } from './img'
-import { InitialBoard } from './store'
+import { InitialBoard, Server_URL } from './store'
 
 const Body = styled.div`
   padding: 100px;
@@ -74,6 +74,8 @@ export default function TicTacToe() {
     midTopBottom,
     rightTopBottom,
   ]
+  const [onlineUsers, setOnlineUsers] = useState([])
+
   useEffect(() => {
     setValueToBoard(row, cell)
     checkIfWin()
