@@ -16,7 +16,8 @@ import {
   midTopBottom,
   rightTopBottom,
 } from './img'
-import { InitialBoard, Server_URL } from './store'
+import { InitialBoard } from './store'
+import { getUsers } from './API/routes'
 
 const Body = styled.div`
   padding: 100px;
@@ -77,12 +78,18 @@ export default function TicTacToe() {
   const [onlineUsers, setOnlineUsers] = useState([])
 
   useEffect(() => {
+    getUsersfromDB()
     setValueToBoard(row, cell)
     checkIfWin()
   }, [cell, row, WinnerCrossLine])
 
   function HeaderSubmit(event, name) {
     event.preventDefault()
+  }
+
+  async function getUsersfromDB() {
+    const data = await getUsers
+    setOnlineUsers([await data])
   }
 
   const RowClick = function (RowIndex) {
