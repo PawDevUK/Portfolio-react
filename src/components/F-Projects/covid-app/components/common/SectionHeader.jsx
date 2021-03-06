@@ -38,7 +38,7 @@ const Wrapper = styled.div`
     p.Regular
       ? css`
           margin: 5px auto 0px auto;
-          padding-left: 60px;
+          /* padding-left: 60px; */
           ${shadow6};
           ${h3Light};
           width: 80%;
