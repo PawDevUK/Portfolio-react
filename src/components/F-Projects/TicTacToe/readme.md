@@ -7,14 +7,21 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English), or X
 
 ### To Do
 
-- Functionality to disable header buttons after a game starts
-- Functionality to switch header buttons as indicator of player move. Different box shadow should be fine.
-- Line to cross all same symbols in case of win. Must be 8 lines, probably svg.
-- List of active players with option to play with
-- Backend and mongodb
-- Functionality to get list of players
 - Functionality to start a game and keep it active till either of players win or finish
+  - get id of player on "Join" click
+  - find player by id
+  - send invitation
+  - in case of accepted get opponent board with his/her move
+  - lock session
+  - choose move and post it
 - Functionality to:
   - send changes on a board to a server every move.
   - create "connection" which will send and get players moves every second.
 - Functionality to close a active game in case either player win or end
+
+- <s>Functionality to disable header buttons after a game starts
+- Functionality to switch header buttons as indicator of player move. Different box shadow should be fine.
+- Line to cross all same symbols in case of win. Must be 8 lines, probably svg.
+- List of active players with option to play with
+- Backend and mongodb
+- Functionality to get list of players </s>
