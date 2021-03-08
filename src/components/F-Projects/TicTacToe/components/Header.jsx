@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import TextField from '@material-ui/core/TextField'
-import { boxShadow6, boxShadow3 } from '../styled'
+import { boxShadow3 } from '../styled'
+import { setUserOnEntry } from '../API/routes'
 
 const Wrapper = styled.div`
   position: relative;
@@ -58,6 +59,12 @@ export default function Header(props) {
         nameSubmit={nameSubmit}
         onSubmit={(e) => {
           props.Submit(e, name)
+          setUserOnEntry({
+            user: name,
+            status: 'Available',
+            playingWith: '---',
+            board: [],
+          })
           setSubmit(e.type ? true : false)
         }}
       >
