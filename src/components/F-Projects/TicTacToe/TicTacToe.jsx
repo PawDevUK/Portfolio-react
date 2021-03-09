@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import { boxShadow6, flexCenter } from './styled'
 import styled, { css } from 'styled-components'
 import PlayerList from './components/PlayerList'
+import socketIOClient from 'socket.io-client'
 import Header from './components/Header'
 import {
   topRbottL,
@@ -16,7 +17,7 @@ import {
   midTopBottom,
   rightTopBottom,
 } from './img'
-import { InitialBoard } from './store'
+import { InitialBoard, localhost } from './store'
 
 const Body = styled.div`
   padding: 100px;
@@ -36,6 +37,7 @@ const BoardWrapper = styled.div`
   border-radius: 5px;
   ${boxShadow6}
 `
+
 const Cross = styled.div`
   ${(p) =>
     p.img
@@ -57,6 +59,7 @@ const Cross = styled.div`
 const RowClickDiv = styled.div``
 
 export default function TicTacToe() {
+  const [response, setResponse] = useState('')
   const [Board, setBoard] = useState(InitialBoard())
   const [cell, setCell] = useState(null)
   const [row, setRow] = useState(null)
@@ -64,6 +67,7 @@ export default function TicTacToe() {
   const [moveCounter, setMoveCounter] = useState(0)
   const [TopButtonsDisabled, setButtonsDisable] = useState(false)
   const [WinnerCrossLine, setWinnerCrossLine] = useState(null)
+
   const Scenario = [
     topRbottL,
     topLbottR,
@@ -78,6 +82,11 @@ export default function TicTacToe() {
   useEffect(() => {
     setValueToBoard(row, cell)
     checkIfWin()
+
+    const socket = socketIOClient(localhost)
+    socket.on('FromApi', (data) => {
+      setResponse(data)
+    })
   }, [cell, row, WinnerCrossLine])
 
   function HeaderSubmit(event, name) {
