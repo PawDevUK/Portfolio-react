@@ -21,7 +21,7 @@ export const projects = [
         text: "Application for informational purpose with data related to Covid-19. It is react application created with create-react-app and styled with styled-components.",
         title: "Covid-Data",
         webHref: { href: "/covid", button: "Visit" },
-        stack: [react, router, js, figma, styled, gcloud, nodeJS, npm]
+        stack: [react, js, figma, styled, gcloud, nodeJS, npm]
     },
     {
         alt: "Bot Chat",
