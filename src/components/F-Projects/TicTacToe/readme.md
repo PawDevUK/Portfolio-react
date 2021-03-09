@@ -11,13 +11,14 @@ It is a solved game with a forced draw assuming best play from both players.
 
 #### Description
 
-Application created mainly in JavaScript. Frontend is done in React.Js and backend in Node.Js
+Application created mainly in JavaScript. Frontend is done in React.Js and backend in Node.Js\
 It's SPA and contains at the moment three elements:
 
 Top element is a header with input for username which on submit changes to header with h1 username.\
 Value from header is also send on submit to backend and then to mongodb and sorted in CurrenUser collection.
 
-Middle section is a board with two buttons in the top to choose figure "X" or "O". These button becoming disabled after a game starts and stays disabled during a game. Also during a game buttons indicates players move.
+Middle section is a board with two buttons in the top to choose figure "X" or "O". These button becoming disabled\
+after a game starts and stays disabled during a game. Also during a game buttons indicates players move.\
 Central section of a board is actual the game board and contains 9 button which are initially disabled but after choosing figure\
 they becoming responsive. Player by pressing single button choosing where to put his/her figure and wins if three figures are in row which triggers display of appropriate line to match win combination.
 At the moment functionality of winning lines is in the same file as main app but I will move it to separate component to make it ease to maintain.
