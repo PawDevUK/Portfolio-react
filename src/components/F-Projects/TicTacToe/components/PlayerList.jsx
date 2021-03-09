@@ -13,6 +13,9 @@ const Wrapper = styled.div`
   margin: 30px;
   ${boxShadow3}
 `
+function handleJoin(e, params) {
+  console.log(e, params)
+}
 const columns = [
   { field: 'user', headerName: 'User', width: 100 },
   { field: 'status', headerName: 'Status', width: 130 },
@@ -24,6 +27,13 @@ const columns = [
     renderCell: (params) => (
       <strong>
         <Button
+          onClick={
+            (e) => handleJoin(e, params)
+            // params.row.status === 'Available'
+            // ? (e) =>
+            // params.handleJoin
+            // : (e) => params.handleWtach
+          }
           variant="contained"
           color="primary"
           size="small"
@@ -36,7 +46,7 @@ const columns = [
   },
 ]
 
-export default function PlayerList() {
+export default function PlayerList(params) {
   const [onlineUsers, setOnlineUsers] = useState([])
 
   async function getUsersFromDB() {
@@ -58,6 +68,7 @@ export default function PlayerList() {
   return (
     <Wrapper>
       <DataGrid
+        handleJoin={params.handleJoin}
         rows={onlineUsers ? onlineUsers : []}
         columns={columns}
         pageSize={5}
