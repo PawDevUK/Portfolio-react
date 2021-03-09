@@ -22,7 +22,7 @@ Central section of a board is actual the game board and contains 9 button which 
 they becoming responsive. Player by pressing single button choosing where to put his/her figure and wins if three figures are in row which triggers display of appropriate line to match win combination.
 At the moment functionality of winning lines is in the same file as main app but I will move it to separate component to make it ease to maintain.
 
-Bottom section contain list of players. It's material-ui and at the moment displays collection
+Bottom section contain list of players. It's material-ui and at the moment displays current user MongoDB collection.
 
 ### To Do
 
