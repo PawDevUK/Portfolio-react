@@ -1,8 +1,9 @@
+import TextField from '@material-ui/core/TextField';
 import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
-import TextField from '@material-ui/core/TextField';
-import { boxShadow3 } from '../styled';
 import { setUserOnEntry } from '../API/routes';
+import { Capitalize } from '../factory';
+import { boxShadow3 } from '../styled';
 
 const Wrapper = styled.div`
     position: relative;
@@ -11,22 +12,24 @@ const Wrapper = styled.div`
     width: 100%;
     height: 96px;
 `;
+
 const InputWrapper = styled.form`
     position: absolute;
     left: 230px;
-    ${(p) =>
-        p.nameSubmit
+    ${(p) => {
+        return p.nameSubmit
             ? css`
                   opacity: 0;
                   transition: all 0.5s ease-in;
               `
-            : css``}
+            : css``;
+    }}
 `;
+
 const UsernameWrapper = styled.div`
     margin: auto;
-
-    ${(p) =>
-        !p.nameSubmit
+    ${(p) => {
+        return !p.nameSubmit
             ? css`
                   opacity: 0;
                   transition: all 1s ease-in;
@@ -34,7 +37,8 @@ const UsernameWrapper = styled.div`
             : css`
                   opacity: 1;
                   transition: all 1s ease-in;
-              `}
+              `;
+    }}
 `;
 const H1 = styled.h1`
     color: #fff;
@@ -46,13 +50,11 @@ const H1 = styled.h1`
 `;
 
 export default function Header(props) {
-    const [name, setName] = useState('');
     const [nameSubmit, setSubmit] = useState(false);
+    const [name, setName] = useState('');
+
     useEffect(() => {}, []);
-    const capitalize = (s) => {
-        if (typeof s !== 'string') return '';
-        return s.charAt(0).toUpperCase() + s.slice(1);
-    };
+
     return (
         <Wrapper>
             <InputWrapper
@@ -77,7 +79,7 @@ export default function Header(props) {
                 />
             </InputWrapper>
             <UsernameWrapper nameSubmit={nameSubmit}>
-                <H1>{capitalize(name)}</H1>
+                <H1>{Capitalize(name)}</H1>
             </UsernameWrapper>
         </Wrapper>
     );
