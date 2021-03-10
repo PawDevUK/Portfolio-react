@@ -1,13 +1,10 @@
-import { topRbottL, topLbottR, topLR, midLR, bottomLR, leftTopBottom, midTopBottom, rightTopBottom } from './img';
-import BottomButtons from 'components/F-Projects/TicTacToe/components/BottomButtons';
-import TopButtons from 'components/F-Projects/TicTacToe/components/TopButtons';
-import Row from 'components/F-Projects/TicTacToe/components/Row';
+import { InitialBoard, Scenario } from '../../store';
 import React, { useState, useEffect } from 'react';
-import { boxShadow6, flexCenter } from './styled';
 import styled, { css } from 'styled-components';
-import PlayerList from './components/PlayerList';
-import Header from './components/Header';
-import { InitialBoard } from './store';
+import { boxShadow6 } from '../../styled';
+import BottomButtons from './BottomButtons';
+import TopButtons from './TopButtons';
+import Row from './Row';
 
 const BoardWrapper = styled.div`
     margin: auto;
@@ -16,9 +13,10 @@ const BoardWrapper = styled.div`
     padding: 20px;
     background: #cfc5a5;
     border-radius: 5px;
-    ${boxShadow6}
+    ${boxShadow6};
 `;
 
+const RowClickDiv = styled.div``;
 const Cross = styled.div`
     ${(p) => {
         return p.img
@@ -39,30 +37,23 @@ const Cross = styled.div`
 `;
 
 export default function Board() {
-    const RowClickDiv = styled.div``;
-
-    const [Board, setBoard] = useState(InitialBoard());
-    const [cell, setCell] = useState(null);
-    const [row, setRow] = useState(null);
-    const [player, setPlayer] = useState(null);
-    const [moveCounter, setMoveCounter] = useState(0);
     const [TopButtonsDisabled, setButtonsDisable] = useState(false);
     const [WinnerCrossLine, setWinnerCrossLine] = useState(null);
-    const Scenario = [topRbottL, topLbottR, topLR, midLR, bottomLR, leftTopBottom, midTopBottom, rightTopBottom];
+    const [Board, setBoard] = useState(InitialBoard());
+    const [moveCounter, setMoveCounter] = useState(0);
+    const [player, setPlayer] = useState(null);
+    const [cell, setCell] = useState(null);
+    const [row, setRow] = useState(null);
 
     useEffect(() => {
         setValueToBoard(row, cell);
         checkIfWin();
     }, [cell, row, WinnerCrossLine]);
 
-    function HeaderSubmit(event, name) {
-        event.preventDefault();
-    }
-
-    const RowClick = function (RowIndex) {
+    function RowClick(RowIndex) {
         setRow(parseInt(RowIndex));
-    };
-    const CellClick = function (index) {
+    }
+    function CellClick(index) {
         setButtonsDisable(true); // disables top buttons on first click
         DisableTopButtons(); // keeps top buttons disabled during a game
         setMoveCounter((prev) => prev + 1);
@@ -75,14 +66,14 @@ export default function Board() {
                 HandlePlayerX();
             }
         }
-    };
+    }
 
-    const setValueToBoard = function (row, cell) {
+    function setValueToBoard(row, cell) {
         if ((row && cell) || (row && cell) === 0) {
             setBoard((prev) => [...prev], (Board[row][cell] = [player]));
         }
         return;
-    };
+    }
 
     function handleClear() {
         setBoard(InitialBoard());
@@ -113,8 +104,8 @@ export default function Board() {
         const leftTopBottom = [Board[0][0], Board[1][0], Board[2][0]];
         const midTopBottom = [Board[0][1], Board[1][1], Board[2][1]];
         const rightTopBottom = [Board[0][2], Board[1][2], Board[2][2]];
-
         const Scenario = [topRbottL, topLbottR, topLR, midLR, bottomLR, leftTopBottom, midTopBottom, rightTopBottom];
+
         function CheckIfRowXorO(scenario) {
             for (let i = 0; i < scenario.length; i++) {
                 if (scenario[i][0][0] === 'X' && scenario[i][1][0] === 'X' && scenario[i][2][0] === 'X') {
