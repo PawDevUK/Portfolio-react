@@ -58,7 +58,6 @@ export default function Header(props) {
             <InputWrapper
                 nameSubmit={nameSubmit}
                 onSubmit={(e) => {
-                    props.Submit(e, name);
                     setUserOnEntry({
                         user: name,
                         status: 'Available',
@@ -66,6 +65,7 @@ export default function Header(props) {
                         board: [],
                     });
                     setSubmit(e.type ? true : false);
+                    e.preventDefault();
                 }}>
                 <TextField
                     onChange={(e) => {
