@@ -30,7 +30,7 @@ const BoardWrapper = styled.div`
 
 const Cross = styled.div`
     ${(p) => {
-        p.img
+        return p.img
             ? css`
                   display: block;
               `
