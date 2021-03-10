@@ -14,9 +14,6 @@ const Wrapper = styled.div`
     ${boxShadow3}
 `;
 
-function handleJoin(e, params) {
-    console.log(e, params);
-}
 const columns = [
     { field: 'user', headerName: 'User', width: 100 },
     { field: 'status', headerName: 'Status', width: 130 },
@@ -27,7 +24,7 @@ const columns = [
         width: 130,
         renderCell: (params) => (
             <strong>
-                <Button onClick={(e) => handleJoin(e, params)} variant='contained' color='primary' size='small' style={{ marginLeft: 16 }}>
+                <Button variant='contained' color='primary' size='small' style={{ marginLeft: 16 }}>
                     {params.row.status === 'Available' ? 'Join' : 'Watch'}
                 </Button>
             </strong>
@@ -49,7 +46,6 @@ export default function PlayerList(params) {
             getUsersFromDB();
         }, 5000);
         return () => {
-            console.log('Dismount');
             clearInterval(interval);
         };
     }, []);
