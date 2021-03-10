@@ -1,6 +1,6 @@
-import React from 'react';
 import { StButton } from '../common/Button';
 import styled from 'styled-components';
+import React from 'react';
 
 const Wrapper = styled.div`
     display: flex;

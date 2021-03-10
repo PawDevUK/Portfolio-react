@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { flexCenter } from '../../styled';
 import { StButton } from '../common/Button';
+import { flexCenter } from '../../styled';
+import styled from 'styled-components';
+import React from 'react';
 
 const Wrapper = styled.div`
     ${flexCenter}
