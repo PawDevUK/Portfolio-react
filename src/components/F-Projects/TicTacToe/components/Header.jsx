@@ -1,7 +1,7 @@
 import TextField from '@material-ui/core/TextField';
-import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { setUserOnEntry } from '../API/routes';
+import React, { useState } from 'react';
 import { Capitalize } from '../factory';
 import { boxShadow3 } from '../styled';
 
@@ -52,8 +52,6 @@ const H1 = styled.h1`
 export default function Header(props) {
     const [nameSubmit, setSubmit] = useState(false);
     const [name, setName] = useState('');
-
-    useEffect(() => {}, []);
 
     return (
         <Wrapper>
