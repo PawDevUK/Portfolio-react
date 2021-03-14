@@ -1,5 +1,5 @@
 import { Background } from 'components/F-Projects/covid-app/components/styled';
-import { Header, Main, Footer } from './components';
+import { Header, Main, Footer, News } from './components';
 import styled from 'styled-components';
 import React from 'react';
 
@@ -19,6 +19,7 @@ export default function App() {
         <Container>
             <Header></Header>
             <Main></Main>
+            <News></News>
             <Footer></Footer>
         </Container>
     );
