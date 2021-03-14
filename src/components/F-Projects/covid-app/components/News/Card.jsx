@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { h3Regular, h2Regular, shadow6, Background, GlobalBackground, FlexCenter } from '../styled';
+import { h3Regular, h2Regular, shadow6, Background } from '../styled';
 import React from 'react';
 
 const Wrapper = styled.div`
@@ -23,9 +23,8 @@ const LeftInnerWrapper = styled.div`
 `;
 
 const Thumbnail = styled.img`
-    margin: 100px auto;
+    margin: 80px auto;
     display: block;
-    margin: auto;
     width: 90%;
 `;
 const RightInnerWrapper = styled.div`
