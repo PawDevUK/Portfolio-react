@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { h3Regular, h2Regular, shadow6, Background } from '../styled';
-import { RemoveURLFromString } from '../factory';
+import { RemoveURLFromString, Truncate } from '../factory';
 import React from 'react';
 
 const Wrapper = styled.div`
@@ -70,7 +70,7 @@ export default function Card(props) {
                 <Thumbnail src={props.src}></Thumbnail>
             </LeftInnerWrapper>
             <RightInnerWrapper src={props.src}>
-                <Header>{props.title}</Header>
+                <Header>{Truncate(props.title, 50)}</Header>
                 <Article>
                     <ArticleText>
                         {RemoveURLFromString(props.summary)}
