@@ -18,6 +18,7 @@ const ArticleText = styled.div;
 const More = styled.div``;
 const Here = styled.span``;
 const A = styled.a``;
+const Author = styled.div;
 export default function Card(props) {
     return (
         <Wrapper>
@@ -35,6 +36,7 @@ export default function Card(props) {
                             <Here>Here</Here>
                         </A>
                     </More>
+                    <Author>Author:{props.author}</Author>
                 </Article>
             </RightInnerWrapper>
         </Wrapper>
