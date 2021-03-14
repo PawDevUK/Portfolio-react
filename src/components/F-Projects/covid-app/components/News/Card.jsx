@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { h3Regular, h2Regular, shadow6, Background } from '../styled';
+import { RemoveURLFromString } from '../factory';
 import React from 'react';
 
 const Wrapper = styled.div`
@@ -72,7 +73,7 @@ export default function Card(props) {
                 <Header>{props.title}</Header>
                 <Article>
                     <ArticleText>
-                        {props.summary}
+                        {RemoveURLFromString(props.summary)}
                         ...
                         <A target='_blanc' href={props.link}>
                             <Here>continue reading</Here>
