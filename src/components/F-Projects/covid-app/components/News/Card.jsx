@@ -1,42 +1,72 @@
 import styled from 'styled-components';
-import { h1Light } from '../styled';
+import { h3Regular, h2Regular, shadow6, Background, GlobalBackground, FlexCenter } from '../styled';
 import React from 'react';
 
 const Wrapper = styled.div`
-    width: 730px;
     background-color: #fff;
+    display: flex;
+    margin: 10px auto;
+    width: 730px;
+    ${shadow6};
 `;
-const LeftInnerWrapper = styled.div``;
-const Country = styled.div``;
-const Thumbnail = styled.div``;
-const RightInnerWrapper = styled.div``;
+const LeftInnerWrapper = styled.div`
+    width: 35%;
+`;
+const Country = styled.div`
+    margin: 100px auto 10px auto;
+    ${FlexCenter};
+    width: 80%;
+    height: 33px;
+    ${GlobalBackground}
+`;
+const Thumbnail = styled.img`
+    display: block;
+    margin: auto;
+    width: 90%;
+`;
+const RightInnerWrapper = styled.div`
+    width: 65%;
+    padding: 10px;
+`;
 const Header = styled.div`
-    ${h1Light}
+    ${h2Regular};
+    margin: 21px auto;
 `;
-const Article = styled.div``;
-const ArticleText = styled.div;
-const More = styled.div``;
-const Here = styled.span``;
+const Article = styled.div`
+    margin: auto;
+    ${Background};
+    padding: 20px;
+    margin: auto;
+`;
+const ArticleText = styled.p`
+    ${h3Regular}
+`;
+const Here = styled.span`
+    margin: 0px 5px;
+`;
 const A = styled.a``;
-const Author = styled.div;
+const Author = styled.p`
+    ${h3Regular}
+    margin-top:10px;
+`;
 export default function Card(props) {
     return (
         <Wrapper>
             <LeftInnerWrapper>
                 <Country>{props.country}</Country>
-                <Thumbnail></Thumbnail>
+                <Thumbnail src={props.src}></Thumbnail>
             </LeftInnerWrapper>
             <RightInnerWrapper>
                 <Header>{props.title}</Header>
                 <Article>
-                    <ArticleText>{props.summary}</ArticleText>
-                    <More>
-                        More about this article you can find{' '}
-                        <A>
-                            <Here>Here</Here>
+                    <ArticleText>
+                        {props.summary}
+                        ...
+                        <A target='_blanc' href={props.link}>
+                            <Here>continue reading</Here>
                         </A>
-                    </More>
-                    <Author>Author:{props.author}</Author>
+                    </ArticleText>
+                    <Author>Author: {props.author}</Author>
                 </Article>
             </RightInnerWrapper>
         </Wrapper>
