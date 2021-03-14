@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { h3Regular, h2Regular, shadow6, Background, GlobalBackground, FlexCenter } from '../styled';
 import React from 'react';
 
@@ -8,29 +8,43 @@ const Wrapper = styled.div`
     margin: 10px auto;
     width: 730px;
     ${shadow6};
+    padding: 5px;
 `;
 const LeftInnerWrapper = styled.div`
-    width: 35%;
+    ${(p) => {
+        return p.src
+            ? css`
+                  width: 35%;
+              `
+            : css`
+                  display: none;
+              `;
+    }}
 `;
-const Country = styled.div`
-    margin: 100px auto 10px auto;
-    ${FlexCenter};
-    width: 80%;
-    height: 33px;
-    ${GlobalBackground}
-`;
+
 const Thumbnail = styled.img`
+    margin: 100px auto;
     display: block;
     margin: auto;
     width: 90%;
 `;
 const RightInnerWrapper = styled.div`
-    width: 65%;
     padding: 10px;
+    ${(p) => console.log(p)}
+    ${(p) => {
+        return p.src !== null
+            ? css`
+                  width: 65%;
+              `
+            : css`
+                  width: 100%;
+              `;
+    }}
 `;
 const Header = styled.div`
     ${h2Regular};
     margin: 21px auto;
+    text-align: center;
 `;
 const Article = styled.div`
     margin: auto;
@@ -52,11 +66,10 @@ const Author = styled.p`
 export default function Card(props) {
     return (
         <Wrapper>
-            <LeftInnerWrapper>
-                <Country>{props.country}</Country>
+            <LeftInnerWrapper src={props.src}>
                 <Thumbnail src={props.src}></Thumbnail>
             </LeftInnerWrapper>
-            <RightInnerWrapper>
+            <RightInnerWrapper src={props.src}>
                 <Header>{props.title}</Header>
                 <Article>
                     <ArticleText>
