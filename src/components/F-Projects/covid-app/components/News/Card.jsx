@@ -15,6 +15,9 @@ const Header = styled.div`
 `;
 const Article = styled.div``;
 const ArticleText = styled.div;
+const More = styled.div``;
+const Here = styled.span``;
+const A = styled.a``;
 export default function Card(props) {
     return (
         <Wrapper>
@@ -24,7 +27,15 @@ export default function Card(props) {
             </LeftInnerWrapper>
             <RightInnerWrapper>
                 <Header>{props.title}</Header>
-                <Article></Article>
+                <Article>
+                    <ArticleText>{props.summary}</ArticleText>
+                    <More>
+                        More about this article you can find{' '}
+                        <A>
+                            <Here>Here</Here>
+                        </A>
+                    </More>
+                </Article>
             </RightInnerWrapper>
         </Wrapper>
     );
