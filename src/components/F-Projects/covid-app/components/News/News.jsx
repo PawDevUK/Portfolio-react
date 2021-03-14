@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Card from './Card';
 import { GetNews } from '../../api/News';
 import styled from 'styled-components';
 
