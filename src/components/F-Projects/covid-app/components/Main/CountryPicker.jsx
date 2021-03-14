@@ -16,7 +16,7 @@ const InnerWrapper = styled.div`
     margin:auto;
     width: 80%;
     background-color: #fff;
-    height: 703px;
+    height: 720px;
     ::-webkit-scrollbar {
         width: 15px;
         height: 50px;
