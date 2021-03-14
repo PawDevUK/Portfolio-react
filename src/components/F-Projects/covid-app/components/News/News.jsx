@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Card from './Card';
 import { GetNews } from '../../api/News';
 import styled from 'styled-components';
+import Card from './Card';
 
 const Wrapper = styled.div`
     width: 100%;
+    margin-bottom: 20px;
 `;
 
 export default function News() {
@@ -12,9 +13,15 @@ export default function News() {
     useEffect(() => {
         (async function storeInState() {
             const fetchedData = await GetNews;
-            setNews(fetchedData);
+            setNews(fetchedData.data);
         })();
     }, []);
 
-    return <Wrapper></Wrapper>;
+    return (
+        <Wrapper>
+            {news.map((article) => {
+                return <Card src={article.media} country={article.country} title={article.title} summary={article.summary} author={article.author} link={article.link}></Card>;
+            })}
+        </Wrapper>
+    );
 }
