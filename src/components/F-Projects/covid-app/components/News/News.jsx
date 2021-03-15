@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GetNews } from '../../api/News';
+import { GetNews } from '../API';
 import styled from 'styled-components';
 import Card from './Card';
 
