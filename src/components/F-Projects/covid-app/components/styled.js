@@ -20,7 +20,6 @@ export const SectionHeaders = css`
 export const FootBackGround = css`
     background-color: #c7ced9;
 `;
-//------------------
 
 //fonts------------------------------------------------------------------------------------------------------------------------------
 // weight -extra-light 200
