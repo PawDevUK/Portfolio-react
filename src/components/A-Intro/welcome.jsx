@@ -3,7 +3,7 @@ import { SvgLoader } from 'react-svgmt'
 import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
 import { Link } from 'react-router-dom'
-import { onEnter } from './axiosData'
+import { onEnter, LocalOnEnter } from './axiosData'
 import { CurrentTime, CurrentDate } from 'factory'
 
 const LogoTextWrapper = styled.div`
@@ -46,7 +46,7 @@ function Welcome({ ...props }) {
       date: CurrentDate(),
       time: CurrentTime(),
     }
-    onEnter.post('/', visitorCounter).then((res) => console.log(res.data))
+    onEnter || LocalOnEnter.post('/', visitorCounter).then((res) => console.log(res.data))
   }
 
   return (
