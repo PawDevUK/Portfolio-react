@@ -18,7 +18,7 @@ const Line = styled.div`
 border-radius:20px;
 width:100%;
 height:4px;
-background-color:black;
+background-color:#17293f;
 `
 
 export default function Burger({...props}){
