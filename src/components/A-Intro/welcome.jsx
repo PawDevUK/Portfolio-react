@@ -7,6 +7,12 @@ import { Link } from 'react-router-dom'
 import { onEnter, LocalOnEnter } from './axiosData'
 import { CurrentTime, CurrentDate } from 'factory'
 
+const Wrapper = styled.div`
+  position: relative;
+  height:100%;
+  width: 270px;
+  margin:auto;
+`
 const LogoTextWrapper = styled.div`
   width: 300px;
   position: relative;
@@ -51,6 +57,7 @@ function Welcome({ ...props }) {
   }
 
   return (
+    <Wrapper>
     <LogoTextWrapper>
       <H1>I'm</H1>
       <MobilLogo path={logo}></MobilLogo>
@@ -62,6 +69,7 @@ function Welcome({ ...props }) {
       </StLink>
     </LogoTextWrapper>
       <VisitorCounter counter={4}></VisitorCounter>
+    </Wrapper>
   )
 }
 
