@@ -5,24 +5,26 @@ import Particles from 'react-particles-js'
 import styled from 'styled-components'
 import React from 'react'
 
-const LeftImg = styled.div`
-  background: url(${img});
-  background-size: cover;
-  height: 100vh;
-  width: 50vw;
-`
+
 const Large = styled.div`
   display: flex;
   @media (max-width: 992px) {
     display: none;
   }
 `
+
+const LeftImg = styled.div`
+  background: url(${img});
+  background-size: cover;
+  height: 100vh ;
+  width: 50vw;
+`
 const useStyles = makeStyles({
   root: {
     height: '100vh',
-    width: '100vw',
+    width: '100vw ',
     backgroundColor: '#17293f',
-    position: 'relative',
+    // position: 'relative',
   },
   leftImg: {
     background: `url(${img})`,
@@ -35,8 +37,8 @@ const useStyles = makeStyles({
   Particles: {
     display: 'block',
     position: 'absolute',
-    height: '100%',
-    width: ' 50%',
+    height: '95%',
+    width: ' 49%',
   },
 })
 const RightWrapper = styled.div`
