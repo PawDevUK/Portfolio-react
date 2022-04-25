@@ -60,16 +60,16 @@ function Welcome({ ...props }) {
 
   return (
     <Wrapper>
-    <LogoTextWrapper>
-      <H1>I'm</H1>
-      <MobilLogo path={logo}></MobilLogo>
-      <Text>
-        This is my Portfolio <br /> I hope you will find it interesting.
-      </Text>
-      <StLink to="/content">
-        <StButton onClick={VisitorsRecorder}>Enter</StButton>
-      </StLink>
-    </LogoTextWrapper>
+      <LogoTextWrapper>
+        <H1>I'm</H1>
+        <MobilLogo path={logo}></MobilLogo>
+        <Text>
+          This is my Portfolio <br /> I hope you will find it interesting.
+        </Text>
+        <StLink to="/content">
+          <StButton onClick={VisitorsRecorder}>Enter</StButton>
+        </StLink>
+      </LogoTextWrapper>
       <VisitorCounter counter={4}></VisitorCounter>
     </Wrapper>
   )
