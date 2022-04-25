@@ -112,7 +112,7 @@ function Intro(props) {
               },
             }}
           />
-          <Welcome buttonIntro={true}></Welcome>
+          <Welcome buttonIntro></Welcome>
         </RightWrapper>
       </Large>
       <Mobile>
@@ -140,7 +140,7 @@ function Intro(props) {
               },
             }}
           />
-          <Welcome buttonIntro={true}> </Welcome>
+          <Welcome buttonIntro> </Welcome>
         </BottomWrapper>
       </Mobile>
     </div>
