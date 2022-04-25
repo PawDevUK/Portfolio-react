@@ -4,7 +4,7 @@ import { SvgLoader } from 'react-svgmt'
 import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
 import { Link } from 'react-router-dom'
-import { onEnter, LocalOnEnter } from './axiosData'
+import { LocalOnEnter } from './axiosData'
 import { CurrentTime, CurrentDate } from 'factory'
 
 const Wrapper = styled.div`
