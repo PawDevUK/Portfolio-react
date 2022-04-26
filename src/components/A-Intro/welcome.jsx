@@ -1,5 +1,5 @@
 import Button from 'components/common/Button'
-import VisitorCounter from './VisitorCounter'
+import  React from 'react'
 import { SvgLoader } from 'react-svgmt'
 import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
