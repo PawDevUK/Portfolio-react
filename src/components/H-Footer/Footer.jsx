@@ -72,18 +72,21 @@ const NickHover = css`
 `
 
 const H2 = styled.h2`
+  text-align:center;
+  opacity:80%;
+  font-size:16px ;
   margin: auto;
   cursor: pointer;
   color: #fff;
   display: flex;
-  width: 379px;
+  width: 312px;
   @media (max-width: 400px) {
     display: block;
     width: 300px;
   }
 `
 const Nick = styled.p`
-  margin: 0px 3px;
+  margin: -4px 3px;
   font-size: 20px;
   font-weight: 600;
   ${(p) =>
@@ -97,6 +100,8 @@ const Nick = styled.p`
 `
 const Text = styled.p`
   color: #fff;
+  opacity:80%;
+  font-size:13px ;
 `
 export default function Footer() {
   let [nick, setNick] = useState(false)
