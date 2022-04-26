@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import Particles from 'react-particles-js'
 import { getYear } from 'factory'
 import React, { useState } from 'react'
+import VisitorCounter from 'components/H-Footer/VisitorCounter'
 
 const center = css`
   justify-content: center;
@@ -138,6 +139,7 @@ export default function Footer() {
         <Left></Left>
         <Mid>
           {FooterHeader(nick)}
+          <VisitorCounter counter={4}></VisitorCounter>
         </Mid>
         <Right>
           <ul>

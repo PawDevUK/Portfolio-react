@@ -70,7 +70,6 @@ function Welcome({ ...props }) {
           <StButton onClick={VisitorsRecorder}>Enter</StButton>
         </StLink>
       </LogoTextWrapper>
-      <VisitorCounter counter={4}></VisitorCounter>
     </Wrapper>
   )
 }
