@@ -102,6 +102,14 @@ export default function Footer() {
   function mouseEnterH2() {
     setNick((p) => (nick = !p))
   }
+
+  function FooterHeader(nick){
+    return(
+      <H2>
+        All rights reserved <Nick nick={nick}> pavdev </Nick> London {getYear()}
+      </H2>
+    )
+  }
   return (
     <Wrapper onMouseEnter={mouseEnterH2} onMouseLeave={mouseEnterH2}>
       <StParticles
@@ -129,10 +137,7 @@ export default function Footer() {
       <InnerWrapper>
         <Left></Left>
         <Mid>
-          <H2>
-            All rights reserved <Nick nick={nick}> pavdev </Nick> London
-            {getYear()}
-          </H2>
+          {FooterHeader(nick)}
         </Mid>
         <Right>
           <ul>
@@ -147,10 +152,7 @@ export default function Footer() {
         </Right>
 
         <Mobile>
-          <H2>
-            All rights reserved <Nick nick={nick}> pavdev </Nick> London
-            {` ${getYear()}`}
-          </H2>
+          {FooterHeader(nick)}
           <ul>
             {rightData.map((li, i) => {
               return (
