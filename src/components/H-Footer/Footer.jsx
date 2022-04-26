@@ -157,7 +157,6 @@ export default function Footer() {
             })}
           </ul>
         </Right>
-
         <Mobile>
           {FooterHeader(nick)}
           <ul>
