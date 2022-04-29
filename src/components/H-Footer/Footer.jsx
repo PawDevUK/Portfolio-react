@@ -131,12 +131,12 @@ export default function Footer() {
             autoPlay: true,
 
             opacity: {
-              value: 0.4,
+              value: 0.06,
               random: true,
             },
             links: {
               enable: true,
-              opacity: 0.1,
+              opacity: 0.06,
             },
           },
         }}
