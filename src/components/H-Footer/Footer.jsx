@@ -160,15 +160,6 @@ export default function Footer() {
         </Right>
         <Mobile>
           {FooterHeader(nick)}
-          <ul>
-            {rightData.map((li, i) => {
-              return (
-                <li key={i}>
-                  <Text>{li}</Text>
-                </li>
-              )
-            })}
-          </ul>
         </Mobile>
       </InnerWrapper>
     </Wrapper>
