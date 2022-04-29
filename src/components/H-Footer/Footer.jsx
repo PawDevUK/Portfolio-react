@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 `
 const StParticles = styled(Particles)`
   position: absolute;
-  height: 100%;
+  height: 90%;
   width: 100%;
 `
 const InnerWrapper = styled.div`
