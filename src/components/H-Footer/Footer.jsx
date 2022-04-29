@@ -74,15 +74,16 @@ const NickHover = css`
 const H2 = styled.h2`
   text-align:center;
   opacity:80%;
-  font-size:16px ;
+  font-size:13px ;
   margin: auto;
   cursor: pointer;
   color: #fff;
   display: flex;
-  width: 312px;
+  width: 280px;
+  padding: 0px 0px 10px 0px !important;
   @media (max-width: 400px) {
     display: block;
-    width: 300px;
+    width: 265px;
   }
 `
 const Nick = styled.p`
