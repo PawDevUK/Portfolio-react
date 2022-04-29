@@ -1,5 +1,5 @@
 import React from 'react'
-import { stack } from 'store/stack'
+import { stack } from 'settings/stack'
 import Card from './card.jsx'
 import styled from 'styled-components'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'

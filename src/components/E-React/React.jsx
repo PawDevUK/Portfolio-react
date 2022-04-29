@@ -1,5 +1,5 @@
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
-import { ReactComponentData } from 'store/reactComponent'
+import { ReactComponentData } from 'settings/reactComponent'
 import styled, { keyframes } from 'styled-components'
 import { P } from 'components/common/typography'
 import Pros from 'components/E-React/pros'

@@ -1,6 +1,6 @@
 import  React, { useEffect,useState } from 'react'
 import styled from 'styled-components'
-import { LocalOnEnter } from 'store/VisitorsDataAPI.js'
+import { LocalOnEnter } from 'settings/VisitorsDataAPI.js'
 
 const Wrapper = styled.div`
 position:absolute;
