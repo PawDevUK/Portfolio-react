@@ -17,8 +17,8 @@ export default function VisitorCounter(props) {
 
   useEffect(() => {
     LocalOnEnter.get('/').then((res) => {
-      setVisits(res.data[res.data.length-1].counter)
-    })
+      setVisits(res.data[res.data.length-1].counter);
+    });
   },[]);
 
   return (
