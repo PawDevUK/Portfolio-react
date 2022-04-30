@@ -9,8 +9,8 @@ text-align:center;
 `
 const Text = styled.p`
 color:white;
-font-size:4px !important;
-opacity:60%;
+font-size:12px;
+opacity:80%;
 `
 export default function VisitorCounter(props) {
   const [visits, setVisits] = useState(0)
