@@ -121,8 +121,6 @@ export default function Footer() {
     return(
       <HeaderWrapper>
         <H2> 
-      <H2>
-        <H2> 
           All rights reserved <Nick nick={nick}> pavdev </Nick>
         </H2>
         <H2>
