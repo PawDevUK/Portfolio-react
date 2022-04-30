@@ -24,7 +24,7 @@ const StParticles = styled(Particles)`
   width: 100%;
 `
 const InnerWrapper = styled.div`
-  height: 100px;
+  height: 90px;
   display: flex;
   margin: auto;
   width: 95%;
