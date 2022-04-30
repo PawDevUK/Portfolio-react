@@ -13,7 +13,7 @@ font-size:12px;
 opacity:80%;
 `
 export default function VisitorCounter(props) {
-  const [visits, setVisits] = useState(0)
+  const [visits, setVisits] = useState(props.visits)
 
   useEffect(() => {
     LocalOnEnter.get('/').then((res) => {
