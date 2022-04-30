@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import { LocalOnEnter } from 'settings/VisitorsDataAPI.js'
 
 const Wrapper = styled.div`
-position:absolute;
-bottom:10px ;
-height:20px;
+display:block;
 width:100%;
 text-align:center;
 `
