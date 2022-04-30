@@ -50,7 +50,6 @@ const Mid = styled.div`
   }
 `
 const Mobile = styled.div`
-  margin: auto;
   display: none;
   @media (max-width: 992px) {
     text-align: center;
