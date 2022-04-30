@@ -2,7 +2,7 @@ import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import '../../../node_modules/aos/dist/aos.css'
 import styled from 'styled-components'
 import React, { useEffect } from 'react'
-import { projects } from 'settings/projects'
+import { projects } from 'config/projects'
 import Card from './card'
 import AOS from 'aos'
 

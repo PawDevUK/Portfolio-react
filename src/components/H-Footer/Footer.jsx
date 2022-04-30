@@ -1,4 +1,4 @@
-import { rightData } from 'settings/footer'
+import { rightData } from 'config/footer'
 import { BackgroundBlue } from 'styled'
 import styled, { css } from 'styled-components'
 import Particles from 'react-particles-js'
