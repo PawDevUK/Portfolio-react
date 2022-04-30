@@ -43,6 +43,7 @@ const Left = styled.div`
 
 const Mid = styled.div`
   ${center};
+  flex-direction:column;
   width: 60%;
   @media (max-width: 992px) {
     display: none;
@@ -53,7 +54,7 @@ const Mobile = styled.div`
   display: none;
   @media (max-width: 992px) {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     display: block;
     margin: auto;
   }
@@ -72,19 +73,15 @@ const NickHover = css`
 `
 
 const H2 = styled.h2`
-  text-align:center;
+width:100%;
   opacity:80%;
   font-size:13px ;
-  margin: auto;
   cursor: pointer;
   color: #fff;
-  display: flex;
-  width: 280px;
-  padding: 0px 0px 10px 0px !important;
-  @media (max-width: 400px) {
-    display: block;
-    width: 265px;
-  }
+  padding:0px;
+  margin:5px 0px 0px 0px;
+  display:flex;
+  justify-content:center ;
 `
 const Nick = styled.p`
   margin: -4px 3px;
@@ -111,10 +108,27 @@ export default function Footer() {
   }
 
   function FooterHeader(nick){
+
+    const HeaderWrapper = styled.div`
+    text-align:center;
+    padding: 0px !important;
+    margin:0px auto;
+    width: 280px;
+    @media (max-width: 400px) {
+      width: 265px;
+    }
+    `
     return(
+      <HeaderWrapper>
+        <H2> 
       <H2>
-        All rights reserved <Nick nick={nick}> pavdev </Nick> London {getYear()}
-      </H2>
+        <H2> 
+          All rights reserved <Nick nick={nick}> pavdev </Nick>
+        </H2>
+        <H2>
+          London {getYear()}
+        </H2>
+      </HeaderWrapper> 
     )
   }
   return (
