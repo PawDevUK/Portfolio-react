@@ -6,7 +6,7 @@ import 'react-slidedown/lib/slidedown.css'
 import dropdown from 'img/icon/dropdown.svg'
 import { SvgLoader } from 'react-svgmt'
 import logo from 'img/pavdev.svg'
-import { Menu } from 'config/headerMenu'
+import { Menu } from 'config/headerMenu.config'
 import 'aos/dist/aos.css'
 
 const Wrapper = styled.div``

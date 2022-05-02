@@ -1,6 +1,6 @@
 import  React, { useEffect,useState } from 'react'
 import styled from 'styled-components'
-import { LocalOnEnter } from 'config/VisitorsDataAPI.js'
+import { LocalOnEnter } from 'config/VisitorsAPI.config.js'
 
 const Wrapper = styled.div`
 display:block;

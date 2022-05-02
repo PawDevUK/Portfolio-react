@@ -4,7 +4,7 @@ import 'react-slidedown/lib/slidedown.css'
 import styled from 'styled-components'
 import { SvgLoader } from 'react-svgmt'
 import logo from 'img/pavdev.svg'
-import { Menu } from 'config/headerMenu'
+import { Menu } from 'config/headerMenu.config'
 
 const Wrapper = styled.div`
   display: flex;
