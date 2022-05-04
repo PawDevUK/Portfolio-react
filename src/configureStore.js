@@ -19,4 +19,6 @@ export default function sync_DB_With_Store(){
     });
 }
 
+export function syncConfigWithStore(){
     store.dispatch(AddFooterRightData(rightData))
+}
