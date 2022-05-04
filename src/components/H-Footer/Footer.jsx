@@ -141,6 +141,17 @@ class Footer extends Component{
       </HeaderWrapper> 
     )
   }
+  rightDataMap(){
+    const render = this.props.rightData.map((li, i) => {
+        return (
+          <li key={i}>
+            <Text>{li}</Text>
+          </li>
+        )
+      })
+      
+      return render
+  }
 
   render(){
     return (
@@ -175,13 +186,7 @@ class Footer extends Component{
           </Mid>
           <Right>
             <ul>
-              {rightData.map((li, i) => {
-                return (
-                  <li key={i}>
-                    <Text>{li}</Text>
-                  </li>
-                )
-              })}
+              {this.rightDataMap()}
             </ul>
           </Right>
           <Mobile>
