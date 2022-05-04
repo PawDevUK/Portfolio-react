@@ -5,6 +5,8 @@ import Particles from 'react-particles-js'
 import { getYear } from 'factory'
 import React, { Component } from 'react'
 import VisitorCounter from 'components/H-Footer/VisitorCounter'
+import {getVisitors} from '../../selectors/visitors.selector'
+import { connect } from 'react-redux'
 
 const center = css`
   justify-content: center;
@@ -189,3 +191,12 @@ class Footer extends Component{
     )
   }
 }
+
+const mapStateToProps = (state) =>{
+  return {
+    visitors:getVisitors(state)
+  }
+}
+
+
+export default connect(mapStateToProps)(Footer)
