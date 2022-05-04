@@ -13,7 +13,7 @@ export const store = configureStore({
     reducer:rootReducer()
 })
 
-export default function sync_DB_With_Store(){
+export function sync_DB_With_Store(){
     LocalOnEnter.get('/').then((res) => {
      store.dispatch(addCounter( res.data[res.data.length-1].counter ))
     });
