@@ -1,4 +1,5 @@
 import { rightData } from 'config/footer.config'
+import { getRightFooterData } from 'selectors/footer.selector'
 import { BackgroundBlue } from 'styled'
 import styled, { css } from 'styled-components'
 import Particles from 'react-particles-js'
@@ -194,7 +195,8 @@ class Footer extends Component{
 
 const mapStateToProps = (state) =>{
   return {
-    visitors:getVisitors(state)
+    visitors:getVisitors(state),
+    rightData:getRightFooterData(state)
   }
 }
 
