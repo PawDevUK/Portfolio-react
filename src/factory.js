@@ -26,3 +26,4 @@ export const CurrentDate = () => {
     const date = `${AddZero(day)}.${AddZero(month + 1)}.${year}`
     return date
 }
+export const isPopulatedArray =  (source) => Array.isArray(source) && source.length > 0;
