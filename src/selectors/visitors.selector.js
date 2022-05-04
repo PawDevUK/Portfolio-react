@@ -1,0 +1,1 @@
+export const getVisitors = (state) => state.Visitors.counter
