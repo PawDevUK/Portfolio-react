@@ -2,8 +2,7 @@ import {
     configureStore
 } from '@reduxjs/toolkit'
 import {LocalOnEnter} from './config/VisitorsAPI.config'
-import addCounter from 'actions/addCounter'
-
+import addCounter from 'actions/addCounter.actions'
 import rootReducer from './reducers'
 
 const middleware = []
