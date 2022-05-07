@@ -4,7 +4,8 @@ import 'react-slidedown/lib/slidedown.css'
 import styled from 'styled-components'
 import { SvgLoader } from 'react-svgmt'
 import logo from 'img/pavdev.svg'
-import { Menu } from 'config/headerMenu.config'
+import { connect } from 'react-redux'
+import { getMenu } from 'selectors/pageContent.selector'
 
 const Wrapper = styled.div`
   display: flex;
@@ -53,7 +54,8 @@ const DropdownIcon = styled(SvgLoader)`
   top: 25px;
   left: 50%;
 `
-export default function MainLarge({ ...props }) {
+function MainLarge({ ...props }) {
+
   const [mouseOver, setMouseOver] = useState(false)
   useEffect(() => {})
   function handleMouseHover() {
@@ -63,7 +65,7 @@ export default function MainLarge({ ...props }) {
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
       <InnerMainNav>
-        {Menu.map((item, i) => {
+        {props.menu.map((item, i) => {
           return (
             <Link
               onMouseEnter={item.react ? handleMouseHover : null}
@@ -86,3 +88,11 @@ export default function MainLarge({ ...props }) {
     </Wrapper>
   )
 }
+
+const mapStateToProps = (state) => {
+  return {
+    menu:getMenu(state)
+  }
+}
+
+export default connect(mapStateToProps)(MainLarge)
