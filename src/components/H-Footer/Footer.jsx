@@ -1,4 +1,4 @@
-import { getRightFooterData } from 'selectors/footer.selector'
+import { getRightFooterData } from 'selectors/pageContent.selector'
 import { BackgroundBlue } from 'styled'
 import styled, { css } from 'styled-components'
 import Particles from 'react-particles-js'
