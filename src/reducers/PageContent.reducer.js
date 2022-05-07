@@ -1,4 +1,4 @@
-import { ADD_FOOTER_DATA } from 'actions/footer.actions'
+import { ADD_RIGHT_FOOTER_DATA } from 'actions/pageContent.actions'
 import { isPopulatedArray } from 'factory'
 import { initialState } from 'config/initialState'
 
@@ -8,7 +8,7 @@ export default function PageContent(state = initState, action){
   
     if(isPopulatedArray(action.payload)){
         switch(action.type){
-            case ADD_FOOTER_DATA:
+            case ADD_RIGHT_FOOTER_DATA:
                 return {
                     ...state,
                         footer:{
