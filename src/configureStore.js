@@ -3,7 +3,7 @@ import {
 } from '@reduxjs/toolkit'
 import {LocalOnEnter} from './config/VisitorsAPI.config'
 import addCounter from 'actions/addCounter.actions'
-import AddFooterRightData from 'actions/footer.actions'
+import { AddHeaderMenu, AddProjects, AddReactInfo, AddStack, AddFooterRightData } from 'actions/pageContent.actions'
 import rootReducer from './reducers'
 import { rightData } from 'config/footer.config'
 
@@ -18,5 +18,9 @@ export function sync_DB_With_Store(){
 }
 
 export function syncConfigWithStore(){
+    store.dispatch(AddHeaderMenu())
+    store.dispatch(AddProjects())
+    store.dispatch(AddReactInfo())
+    store.dispatch(AddStack())
     store.dispatch(AddFooterRightData(rightData))
 }
