@@ -7,8 +7,6 @@ import AddFooterRightData from 'actions/footer.actions'
 import rootReducer from './reducers'
 import { rightData } from 'config/footer.config'
 
-const middleware = []
-
 export const store = configureStore({
     reducer:rootReducer()
 })
