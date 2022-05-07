@@ -1,4 +1,3 @@
-import { rightData } from 'config/footer.config'
 import { getRightFooterData } from 'selectors/footer.selector'
 import { BackgroundBlue } from 'styled'
 import styled, { css } from 'styled-components'
