@@ -1,7 +1,7 @@
 export const getFooterData = (state)=>{
-    return state.FooterData
+    return state.PageContent.footer
 }
 
 export const getRightFooterData = (state) =>{
-    return state.FooterData.footerRightData
+    return state.PageContent.footer.rightData
 }
