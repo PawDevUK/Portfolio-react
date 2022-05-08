@@ -7,6 +7,10 @@ import { AddHeaderMenu, AddProjects, AddReactInfo, AddStack, AddFooterRightData 
 import rootReducer from './reducers'
 import { rightData } from 'config/footer.config'
 import { Menu } from 'config/headerMenu.config'
+import { stack } from 'config/stack.config'
+import { projects } from 'config/projects.config'
+import { ReactComponentData } from 'config/reactComponent.config'
+
 export const store = configureStore({
     reducer:rootReducer()
 })
@@ -19,8 +23,8 @@ export function sync_DB_With_Store(){
 
 export function syncConfigWithStore(){
     store.dispatch(AddHeaderMenu(Menu))
-    store.dispatch(AddProjects())
-    store.dispatch(AddReactInfo())
-    store.dispatch(AddStack())
+    store.dispatch(AddStack(stack))
+    store.dispatch(AddReactInfo(ReactComponentData))
+    store.dispatch(AddProjects(projects))
     store.dispatch(AddFooterRightData(rightData))
 }
