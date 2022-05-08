@@ -17,20 +17,19 @@ export default function PageContent(state = initState, action){
                     }
                 };
             case ADD_PROJECTS:
-                return{
+                return {
                     ...state,
-                    projects:[...state.project, action.payload]
+                    projects:[...state.projects, ...action.payload]
                 }
             case ADD_REACT_INFO:
                 return {
                     ...state,
-                    rectInfo:{
-                        ...state.reactInfo,
-                        ...action.payload
-                    }
+                    reactInfo: [
+                        ...state.reactInfo, ...action.payload
+                    ]
                 }
             case ADD_STACK:
-                return{
+                return {
                     ...state,
                     stack:[...state.stack, ...action.payload]
                 }
