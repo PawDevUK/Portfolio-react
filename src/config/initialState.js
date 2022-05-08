@@ -3,7 +3,7 @@ export let initialState = {
             menu:[]
         },
         projects:[],
-        reactInfo:{},
+        reactInfo:[],
         stack:[],
         footer:{
             rightData:[]
