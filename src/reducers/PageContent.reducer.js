@@ -1,12 +1,7 @@
 import { ADD_HEADER_MENU, ADD_PROJECTS, ADD_REACT_INFO, ADD_STACK, ADD_RIGHT_FOOTER_DATA } from 'actions/pageContent.actions'
-import { isPopulatedArray } from 'factory'
 import { initialState } from 'config/initialState'
 
-const initState = initialState
-
-export default function PageContent(state = initState, action){
-  
-    if(isPopulatedArray(action.payload)){
+export default function PageContent(state = initialState, action){
         switch(action.type){
             case ADD_HEADER_MENU:
                 return {
@@ -24,9 +19,9 @@ export default function PageContent(state = initState, action){
             case ADD_REACT_INFO:
                 return {
                     ...state,
-                    reactInfo: [
-                        ...state.reactInfo, ...action.payload
-                    ]
+                    reactInfo: {
+                      ...state.reactInfo, ...action.payload
+                    }
                 }
             case ADD_STACK:
                 return {
@@ -44,8 +39,4 @@ export default function PageContent(state = initState, action){
                 default:
                     return state
         }
-    }
-
-    return state
-    
 }
