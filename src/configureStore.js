@@ -10,9 +10,13 @@ import { Menu } from 'config/headerMenu.config'
 import { stack } from 'config/stack.config'
 import { projects } from 'config/projects.config'
 import { ReactComponentData } from 'config/reactComponent.config'
+import logger from 'redux-logger'
+
+const middleware = [logger]
 
 export const store = configureStore({
-    reducer:rootReducer()
+    reducer: rootReducer(),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware)
 })
 
 export function sync_DB_With_Store(){
