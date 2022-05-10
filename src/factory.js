@@ -1,3 +1,5 @@
+import { v4 as id } from 'uuid'
+
 export function getYear() {
     return new Date().getFullYear()
 };
@@ -38,13 +40,21 @@ export const checkType = (a)=>{
     }
 }
 
-export const addUUID_ToObject = ( state, payload, uuid)  => {
+export const addUUID_ToObject = (payload)  => {
+
    if(checkType(payload)==='Object'){
-       return { ...state, ...payload, uuid }
-   }else if(checkType(payload)==='Array'){
-        return   payload.map((obj)=>{
-                    return { ...obj, uuid : uuid}
-                })
+
+       return {...payload, uuid:id() }
+
+   }else if(isPopulatedArray(payload)){
+
+        return   payload.map((item)=>{
+            if( checkType(item) === 'Object' ){
+            return { ...item, uuid:id() }
+            }
+            return item
+        })
+
    }
     return payload
 }
