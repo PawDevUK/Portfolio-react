@@ -27,3 +27,25 @@ export const CurrentDate = () => {
     return date
 }
 export const isPopulatedArray =  (source) => Array.isArray(source) && source.length > 0;
+
+export const checkType = (a)=>{
+    if(a.constructor === Object){
+        return 'Object'
+    }else if (a.constructor === Array){
+        return 'Array'
+    }else if ( a.constructor === Number){
+        return 'Number'
+    }
+}
+
+export const addUUID_ToObject = ( state, payload, uuid)  => {
+   if(checkType(payload)==='Object'){
+       return { ...state, ...payload, uuid }
+   }else if(checkType(payload)==='Array'){
+        return   payload.map((obj)=>{
+        return { ...obj, uuid : uuid}
+        })
+   }else if(checkType(payload)==='Number'){
+       return payload
+   }
+}
