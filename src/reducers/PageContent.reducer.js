@@ -1,5 +1,7 @@
 import { ADD_HEADER_MENU, ADD_PROJECTS, ADD_REACT_INFO, ADD_STACK, ADD_RIGHT_FOOTER_DATA } from 'actions/pageContent.actions'
 import { initialState } from 'config/initialState'
+import { addUUID_ToObject } from 'factory'
+import { v4 as id } from 'uuid'
 
 export default function PageContent(state = initialState, action){
         switch(action.type){
@@ -8,25 +10,25 @@ export default function PageContent(state = initialState, action){
                     ...state,
                     header:{
                         ...state.header,
-                        menu:[...state.header.menu, ...action.payload]
+                        menu:[...addUUID_ToObject(state.header.menu, action.payload, id())]
                     }
                 };
             case ADD_PROJECTS:
                 return {
                     ...state,
-                    projects:[...state.projects, ...action.payload]
+                    projects:[...addUUID_ToObject(state.projects, action.payload, id())]
                 }
             case ADD_REACT_INFO:
                 return {
                     ...state,
                     reactInfo: {
-                      ...state.reactInfo, ...action.payload
+                      ...addUUID_ToObject(state.reactInfo, action.payload, id()), ...action.payload
                     }
                 }
             case ADD_STACK:
                 return {
                     ...state,
-                    stack:[...state.stack, ...action.payload]
+                    stack:[...addUUID_ToObject(state.stack, action.payload, id())]
                 }
             case ADD_RIGHT_FOOTER_DATA:
                 return {
