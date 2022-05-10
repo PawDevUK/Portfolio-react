@@ -11,6 +11,7 @@ import { stack } from 'config/stack.config'
 import { projects } from 'config/projects.config'
 import { ReactComponentData } from 'config/reactComponent.config'
 import logger from 'redux-logger'
+import { addUUID_ToObject } from 'factory'
 
 const middleware = [logger]
 
@@ -26,9 +27,9 @@ export function sync_DB_With_Store(){
 }
 
 export function syncConfigWithStore(){
-    store.dispatch(AddHeaderMenu(Menu))
-    store.dispatch(AddStack(stack))
-    store.dispatch(AddReactInfo(ReactComponentData))
-    store.dispatch(AddProjects(projects))
+    store.dispatch(AddHeaderMenu(addUUID_ToObject(Menu)))
+    store.dispatch(AddStack(addUUID_ToObject(stack)))
+    store.dispatch(AddReactInfo(addUUID_ToObject(ReactComponentData)))
+    store.dispatch(AddProjects(addUUID_ToObject(projects)))
     store.dispatch(AddFooterRightData(rightData))
 }
