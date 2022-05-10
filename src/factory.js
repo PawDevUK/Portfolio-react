@@ -43,9 +43,8 @@ export const addUUID_ToObject = ( state, payload, uuid)  => {
        return { ...state, ...payload, uuid }
    }else if(checkType(payload)==='Array'){
         return   payload.map((obj)=>{
-        return { ...obj, uuid : uuid}
-        })
-   }else if(checkType(payload)==='Number'){
-       return payload
+                    return { ...obj, uuid : uuid}
+                })
    }
+    return payload
 }
