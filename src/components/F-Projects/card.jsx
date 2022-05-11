@@ -9,6 +9,7 @@ const Header = styled.h5`
   transition: transform 0.5s;
 `
 const Wrapper = styled.div`
+  background-color:#fff;
   border: solid 1px #dbdbdb;
   margin: 20px auto 0px auto;
   border-radius: 10px;
@@ -41,10 +42,11 @@ const ButtonWrapper = styled.div`
   justify-content: space-between;
   margin: 10px auto auto auto;
   display: flex;
-  width: 210px;
+  width: 250px;
 `
 const P = styled.p``
 const A = styled.a`
+  margin:auto;
   :hover {
     text-decoration: none;
   }
