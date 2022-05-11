@@ -21,7 +21,6 @@ const Wrapper = styled.div`
   margin: 0px;
   width: 100%;
   background-color: #17293f;
-  margin-bottom: 10px;
 `
 const ContentWrapper = styled.div`
   display: flex;
