@@ -34,4 +34,4 @@ export { default as ubuntu } from './ubuntu.png'
 
 export { default as SkyScraper } from './skyScrapers.png'
 export { default as ChatButtonLarge1px } from './ChatButtonLarge1px.svg'
-
+export { default as projectsBackground } from  './y-so-serious-white.png'
