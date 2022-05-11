@@ -1,10 +1,17 @@
 import React, { useEffect } from 'react'
 import { SectionHeader, JumboHeader } from './typography'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 const Wrapper = styled.div`
+
+${ p => p.projects ? css` 
+background-color:#fff;
+margin:0px !important;
+width:260px;
+ ` : css`` }
+padding:40px 0px;
 height:60px;
 position:relative;
 margin:5px;
@@ -37,7 +44,7 @@ export default function JumboSectionHeader({ ...props }) {
     useEffect(() => AOS.init({ duration: 1000 }))
 
     return (
-        <Wrapper>
+        <Wrapper {...props}>
             <div>
                 <Jumbo  {...props} data-aos="zoom-in">{props.children}</Jumbo>
                 <Header {...props} >{props.children}</Header>
