@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const Button = styled.div`
+  font-size:16px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.2);
   height: 30px;
@@ -13,7 +14,7 @@ const Button = styled.div`
   @media (max-width: 700px) {
     font-size: 12px;
   }
-  width: 100px;
+  width: 110px;
 
   //light theme
   ${(p) =>
@@ -35,7 +36,6 @@ const Button = styled.div`
     @media (max-width: 700px) {
       width: 90px;
     }
-    width: 110px;
     cursor: pointer;
     text-decoration: none;
     border: 2px solid #fff;
