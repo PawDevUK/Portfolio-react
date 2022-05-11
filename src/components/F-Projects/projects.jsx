@@ -5,11 +5,14 @@ import React, { useEffect } from 'react'
 import { projects } from 'config/projects.config'
 import Card from './card'
 import AOS from 'aos'
+import { projectsBackground }from '../../img/index'
+
 
 const MainWrapper = styled.div`
-  background-color: #fff;
-  margin-bottom: 20px;
+  background-image: url(${projectsBackground});
+  padding: 0px 0px 50px 0px;
 `
+
 const Wrapper = styled.div`
   @media (max-width: 992px) {
     display: block;
@@ -24,7 +27,7 @@ export default function Projects() {
   }, [])
   return (
     <MainWrapper id="projects">
-      <JumboSectionHeader>Projects</JumboSectionHeader>
+      <JumboSectionHeader projects >Projects</JumboSectionHeader>
       <Wrapper>
         {projects.map((item, index) => {
           return <Card stack={item.stack} key={index} item={item}></Card>
