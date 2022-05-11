@@ -76,7 +76,7 @@ const NickHover = css`
 const H2 = styled.h2`
 width:100%;
   opacity:80%;
-  font-size:13px ;
+  font-size:16px ;
   cursor: pointer;
   color: #fff;
   padding:0px;
@@ -100,7 +100,7 @@ const Nick = styled.p`
 const Text = styled.p`
   color: #fff;
   opacity:80%;
-  font-size:13px ;
+  font-size:16px ;
 `
 class Footer extends Component{
 
