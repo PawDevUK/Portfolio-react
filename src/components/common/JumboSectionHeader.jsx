@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 ${ p => p.projects ? css` 
 background-color:#fff;
 margin:0px !important;
-width:260px;
+width:100%;
  ` : css`` }
 padding:40px 0px;
 height:60px;
