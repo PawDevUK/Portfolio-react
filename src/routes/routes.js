@@ -23,6 +23,8 @@ const GlobalStyle = createGlobalStyle`
         width:100%;
         margin:0px;
         padding:0px;
+        font-size:100%;
+        line-height:1; 
     }
 `
 
