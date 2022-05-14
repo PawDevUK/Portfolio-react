@@ -95,6 +95,7 @@ export default function Contact() {
   })
 
   let refName = useRef() 
+
   function handleChange(e) {
     const { name, value } = e.target
     setFormData((prev) => ({
@@ -102,11 +103,15 @@ export default function Contact() {
       [name]: value,
     }))
   }
+
   function handleSubmit() {
     SendFormData.post('/', formData)
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
     handleClear()
+    focusOnName()
+  }
+
   function focusOnName(){
     refName.current.children[1].children[0].focus()
   }
@@ -172,6 +177,7 @@ export default function Contact() {
               required
               id="standard-basic"
               label="First Name"
+              ref={refName}
             />
             <StTextField
               type="text"
