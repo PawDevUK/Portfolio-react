@@ -6,7 +6,7 @@ import { boxShadow12, ImgCover } from 'styled.js'
 import { SendFormData } from 'components/G-Contact/axiosCreate'
 import Button from 'components/common/Button'
 import styled from 'styled-components'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { SkyScraper } from 'img'
 
 const Wrapper = styled.div`
@@ -94,6 +94,7 @@ export default function Contact() {
     Message: '',
   })
 
+  let refName = useRef() 
   function handleChange(e) {
     const { name, value } = e.target
     setFormData((prev) => ({
@@ -106,6 +107,8 @@ export default function Contact() {
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
     handleClear()
+  function focusOnName(){
+    refName.current.children[1].children[0].focus()
   }
 
   function handleClear() {
