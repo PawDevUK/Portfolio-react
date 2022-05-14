@@ -115,6 +115,9 @@ export default function Contact() {
   function focusOnName(){
     refName.current.children[1].children[0].focus()
   }
+  function removeFocusName(){
+    refName.current.children[1].children[0].blur()
+  }
 
   function handleClear() {
     setFormData({
@@ -129,7 +132,7 @@ export default function Contact() {
   }
   return (
     <Wrapper id="contact">
-      <WhiteBox>
+      <WhiteBox onMouseEnter={focusOnName} onMouseLeave={removeFocusName}>
         <InnerWrapper>
           <JumboSectionHeader>Contact</JumboSectionHeader>
           <P>
