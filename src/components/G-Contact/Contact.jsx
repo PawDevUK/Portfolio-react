@@ -94,7 +94,7 @@ export default function Contact() {
     Message: '',
   })
 
-  let refName = useRef() 
+  let refName = useRef()
 
   function handleChange(e) {
     const { name, value } = e.target
@@ -112,13 +112,6 @@ export default function Contact() {
     focusOnName()
   }
 
-  function focusOnName(){
-    refName.current.children[1].children[0].focus()
-  }
-  function removeFocusName(){
-    refName.current.children[1].children[0].blur()
-  }
-
   function handleClear() {
     setFormData({
       FirstName: '',
@@ -130,6 +123,41 @@ export default function Contact() {
       Message: '',
     })
   }
+
+  function checkIsFormatting(){
+
+    let filled = []
+    let empty = []
+
+    Object.keys(formData).map((item, index) => {
+      if( formData[item] !== '' ){
+        filled.push(index)
+      }else{
+        empty.push(index)
+      }
+    })
+
+    if(filled.length > 0 ){
+     return true
+    }if(empty.length === 7){
+      return false
+    }
+
+  }
+
+  function focusOnName(){
+    if(!checkIsFormatting()){
+      refName.current.children[1].children[0].focus()
+    }
+  }
+
+  function removeFocusName(){
+    if(!checkIsFormatting()){
+      refName.current.children[1].children[0].blur()
+    }
+    return
+  }
+
   return (
     <Wrapper id="contact">
       <WhiteBox onMouseEnter={focusOnName} onMouseLeave={removeFocusName}>
