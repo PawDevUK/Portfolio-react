@@ -4,6 +4,10 @@ import MobileMenu from './MobileMenu'
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { BackgroundBlue } from 'styled'
+import { store } from 'configureStore'
+import { chatClose } from 'actions/isChatOpen.actions'
+import { connect } from 'react-redux'
+import { isChatOpen } from 'selectors/isChatOpen.selector'
 
 const Wrapper = styled.div`
 margin:0px;
@@ -31,7 +35,7 @@ padding-top:1px;
 }
 `
 
-export default function Header() {
+function Header( {...props} ) {
     const [width, setWidth] = useState(window.innerWidth);
     const [large,setLarge] = useState(false)
 
@@ -42,9 +46,13 @@ export default function Header() {
         width > 993 ? setLarge(true) : setLarge(false)
     },[width])
 
+    function closeChat(){
+        store.dispatch(chatClose())
+      }
+
 
     return (
-        <Wrapper >
+        <Wrapper onClick={ props.isChatOpen ? closeChat : null }>
            {!large?<MobileMenu></MobileMenu>:null}
             <BigBlue >
                {large?<MainLarge></MainLarge> :null}
@@ -55,3 +63,11 @@ export default function Header() {
         </Wrapper>
     );
 }
+
+const mapStateToProps = (state) => {
+return{
+    isChatOpen:isChatOpen(state)
+}
+}
+
+export default connect(mapStateToProps)(Header)

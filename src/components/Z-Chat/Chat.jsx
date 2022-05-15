@@ -7,6 +7,10 @@ import WhiteMessage from './WhiteMSG'
 import BlueMessage from './BlueMSG'
 import Input from './Input.jsx'
 import axios from 'axios'
+import { chatOpen, chatClose } from 'actions/isChatOpen.actions'
+import { store } from 'configureStore'
+import { connect } from 'react-redux'
+import { isChatOpen } from 'selectors/isChatOpen.selector'
 
 const parseString = require('xml2js').parseString
 
@@ -91,8 +95,7 @@ const HeaderImg = styled.div`
 `
 // <- header
 
-export default function Chat({ ...props }) {
-  const [open, setOpen] = useState(false)
+function Chat({ ...props }) {
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
@@ -105,10 +108,11 @@ export default function Chat({ ...props }) {
   }, [buttonAnimation])
 
   function HandleClick() {
-    setOpen((p) => (p = !p))
-  }
-  function HandleMouseOn() {
-    setOpen(true)
+    if(props.isChatOpen){
+      store.dispatch(chatClose())
+    }else{
+      store.dispatch(chatOpen())
+    }
   }
 
   function toBottom() {
@@ -157,15 +161,15 @@ export default function Chat({ ...props }) {
   }
 
   return (
-    <Wrapper open={open}>
+    <Wrapper open={props.isChatOpen}>
       <Button
-        buttonAnimation={!open ? buttonAnimation : null}
+        buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
         onClick={HandleClick}
-        onMouseEnter={HandleMouseOn}
+        // onMouseEnter={HandleMouseOn}
         path={ChatButtonLarge1px}
       ></Button>
 
-      <Window open={open}>
+      <Window open={props.isChatOpen}>
         <WrapperHeader>
           <Header>
             <SectionHeader>Brain Bot</SectionHeader>
@@ -200,3 +204,11 @@ export default function Chat({ ...props }) {
     </Wrapper>
   )
 }
+
+const mapStateToProps = state => {
+  return {
+    isChatOpen:isChatOpen(state)
+  }
+}
+
+export default connect(mapStateToProps)(Chat)
