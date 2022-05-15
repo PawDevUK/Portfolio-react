@@ -17,7 +17,7 @@ const LogoTextWrapper = styled.div`
   width: 270px;
   height:200px;
   position: relative;
-  top:20%;
+  top:40%;
   margin: auto;
 `
 const MobilLogo = styled(SvgLoader)`
