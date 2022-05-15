@@ -1,3 +1,3 @@
 export const isChatOpen = (state)=>{
-    return state.toggleChat
+    return state.isChatOpen
 }
