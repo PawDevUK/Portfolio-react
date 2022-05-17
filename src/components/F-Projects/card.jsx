@@ -9,6 +9,7 @@ const Header = styled.h5`
   transition: transform 0.5s;
 `
 const Wrapper = styled.div`
+  z-index:1000;
   background-color:#fff;
   border: solid 1px #dbdbdb;
   margin: 20px auto 0px auto;
