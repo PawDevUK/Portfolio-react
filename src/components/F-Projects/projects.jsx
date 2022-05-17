@@ -5,12 +5,17 @@ import React, { useEffect } from 'react'
 import { projects } from 'config/projects.config'
 import Card from './card'
 import AOS from 'aos'
-import { projectsBackground }from '../../img/index'
+import Particles from 'react-particles-js'
 
 
 const MainWrapper = styled.div`
-  background-image: url(${projectsBackground});
   padding: 0px 0px 50px 0px;
+  position: relative;
+`
+const StParticles = styled(Particles)`
+position:absolute;
+height:100%;
+z-index:1;
 `
 
 const Wrapper = styled.div`
@@ -26,7 +31,35 @@ export default function Projects() {
     AOS.init({ duration: 1000 })
   }, [])
   return (
-    <MainWrapper id="projects">
+    <MainWrapper id="projects" >
+      <StParticles
+            params={{
+              particles: {
+                color:{
+                  value:'black'
+                },
+                number: {
+                  value: 530,
+                },
+                size: {
+                  value: 1,
+                },
+                autoPlay: true,
+
+                opacity: {
+                  value: 0.6,
+                  random: true,
+                },
+                links: {
+                  enable: true,
+                  opacity: 0.2,
+                  color: {
+                    value:'black'
+                  }
+                },
+              },
+            }}
+          />
       <JumboSectionHeader projects >Projects</JumboSectionHeader>
       <Wrapper>
         {projects.map((item, index) => {
