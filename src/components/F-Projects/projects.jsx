@@ -36,10 +36,10 @@ export default function Projects() {
             params={{
               particles: {
                 color:{
-                  value:'black'
+                  value:'#17293f'
                 },
                 number: {
-                  value: 530,
+                  value: 330,
                 },
                 size: {
                   value: 1,
@@ -47,16 +47,18 @@ export default function Projects() {
                 autoPlay: true,
 
                 opacity: {
-                  value: 0.6,
+                  value: 0.5,
                   random: true,
                 },
-                links: {
+                line_linked: {
                   enable: true,
-                  opacity: 0.2,
+                  distance: 150,
                   color: {
-                    value:'black'
-                  }
-                },
+                    value:'#17293f'
+                  },
+                  opacity: 0.15,
+                  width: 1
+                }
               },
             }}
           />
