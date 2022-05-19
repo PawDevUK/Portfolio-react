@@ -1,6 +1,7 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
+import {PolskaFlaga} from 'img/index'
 
 const Toggler = withStyles((theme) => ({
   root: {
@@ -10,20 +11,22 @@ const Toggler = withStyles((theme) => ({
     margin: theme.spacing(1),
   },
   switchBase: {
+    height: 26,
     padding: 1,
+    color: '#17293f',
     '&$checked': {
-      transform: 'translateX(16px)',
-      color: theme.palette.common.white,
+    color: '#17293f',
+    transform: 'translateX(16px)',
       '& + $track': {
-        backgroundColor: '#52d869',
+        backgroundColor:'#fff',
+        backgroundImage: `url(${PolskaFlaga})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         opacity: 1,
         border: 'none',
       },
     },
-    '&$focusVisible $thumb': {
-      color: '#52d869',
-      border: '6px solid #fff',
-    },
+
   },
   thumb: {
     width: 24,
@@ -31,14 +34,18 @@ const Toggler = withStyles((theme) => ({
   },
   track: {
     borderRadius: 26 / 2,
-    border: `1px solid ${theme.palette.grey[400]}`,
-    backgroundColor: theme.palette.grey[50],
+    backgroundImage: `url(${PolskaFlaga})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
     opacity: 1,
     transition: theme.transitions.create(['background-color', 'border']),
   },
-  checked: {},
-  focusVisible: {},
+  checked: {
+  },
+  focusVisible: {
+  },
 }))(({ classes, ...props }) => {
+  console.log(PolskaFlaga);
   return (
     <Switch
       focusVisibleClassName={classes.focusVisible}
