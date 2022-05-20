@@ -33,6 +33,7 @@ const Toggler = withStyles((theme) => ({
     width: 24,
     height: 24,
   },
+  
   track: {
     borderRadius: 26 / 2,
     backgroundImage: `url(${EnglishFlag})`,
