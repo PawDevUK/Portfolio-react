@@ -30,6 +30,7 @@ export { default as vscode } from './vscode.png'
 export { default as npm } from './npm.png'
 export { default as ubuntu } from './ubuntu.png'
 export { default as PolskaFlaga } from './poland.png'
+export { default as EnglishFlag } from './united-kingdom.png'
 
 
 
