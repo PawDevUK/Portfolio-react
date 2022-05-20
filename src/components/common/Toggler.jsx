@@ -27,13 +27,11 @@ const Toggler = withStyles((theme) => ({
         border: 'none',
       },
     },
-
   },
   thumb: {
     width: 24,
     height: 24,
   },
-  
   track: {
     borderRadius: 26 / 2,
     backgroundImage: `url(${EnglishFlag})`,
@@ -45,11 +43,12 @@ const Toggler = withStyles((theme) => ({
   checked: {
   },
   focusVisible: {
-  },
+  }
 }))(({ classes, ...props }) => {
-  console.log(PolskaFlaga);
   return (
     <Switch
+      onChange={props.toggle}
+      checked={props.checked}
       focusVisibleClassName={classes.focusVisible}
       disableRipple
       classes={{
