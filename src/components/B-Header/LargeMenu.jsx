@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   width: 100%;
 `
 const InnerMainNav = styled.div`
+  position:relative;
   display: flex;
   margin: 43px 0px 0px auto;
   width: 600px;
@@ -65,8 +66,8 @@ function MainLarge({ ...props }) {
   return (
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
-      <LangSwitch></LangSwitch>
       <InnerMainNav>
+        <LangSwitch></LangSwitch>
         {props.menu.map((item, i) => {
           return (
             <Link
