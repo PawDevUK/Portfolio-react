@@ -2,6 +2,7 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import {PolskaFlaga} from 'img/index'
+import {EnglishFlag} from 'img/index'
 
 const Toggler = withStyles((theme) => ({
   root: {
@@ -34,7 +35,7 @@ const Toggler = withStyles((theme) => ({
   },
   track: {
     borderRadius: 26 / 2,
-    backgroundImage: `url(${PolskaFlaga})`,
+    backgroundImage: `url(${EnglishFlag})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     opacity: 1,
