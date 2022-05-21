@@ -20,7 +20,7 @@ export const Menu = [
             style: "Blue",
             disabled: false,
             PolishLang:{
-                title:"Dlaczego używam React"
+                title:"Dlaczego używam React ?"
             }
         }
     },
