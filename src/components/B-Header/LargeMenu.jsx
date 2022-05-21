@@ -63,6 +63,11 @@ function MainLarge({ ...props }) {
   function handleMouseHover() {
     setMouseOver((mouseOver) => !mouseOver)
   }
+  function getLangMenu(obj){
+    let PolishTitle = obj.PolishLang ? obj.PolishLang.title : obj.title
+    return  props.EngLang ? obj.title : PolishTitle
+  }
+
   return (
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
@@ -77,7 +82,7 @@ function MainLarge({ ...props }) {
               key={i}
               href={item.href}
             >
-              {item.title}
+              {getLangMenu(item)}
               {mouseOver ? (
                 <DropDown href={item.href}>
                   {item.react ? item.react.title : null}
@@ -95,7 +100,8 @@ function MainLarge({ ...props }) {
 
 const mapStateToProps = (state) => {
   return {
-    menu:getMenu(state)
+    menu:getMenu(state),
+    EngLang:getLang(state),
   }
 }
 
