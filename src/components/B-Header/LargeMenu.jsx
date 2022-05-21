@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { SvgLoader } from 'react-svgmt'
 import logo from 'img/pavdev.svg'
 import { connect } from 'react-redux'
-import { getMenu } from 'selectors/pageContent.selector'
+import { getMenu, getLang } from 'selectors/pageContent.selector'
 import LangSwitch from 'components/B-Header/LangSwitch'
 
 const Wrapper = styled.div`
