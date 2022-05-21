@@ -24,7 +24,6 @@ export default class LangSwitch extends Component {
   onChange(){
     this.setState( {checked:!this.state.checked })
     store.dispatch(toggleLang(this.state.checked))
-    console.log(this.state.checked)
   }
 
   render() {
