@@ -7,7 +7,7 @@ import {toggleLang} from 'actions/toggleLang.actions'
 const Wrapper = styled.div`
 position: absolute;
 top:-40px;
-right:136px;
+left:0;
 `
 
 
