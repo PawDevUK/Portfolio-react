@@ -3,6 +3,8 @@ import Toggler from 'components/common/Toggler'
 import styled from 'styled-components'
 import {store} from 'configureStore'
 import {toggleLang} from 'actions/toggleLang.actions'
+import {PolskaFlaga} from 'img/index'
+import {EnglishFlag} from 'img/index'
 
 const Wrapper = styled.div`
 position: absolute;
@@ -29,7 +31,7 @@ export default class LangSwitch extends Component {
   render() {
     return (
         <Wrapper>
-            <Toggler toggle={this.onChange} checked={this.state.checked} ></Toggler>
+            <Toggler checkedImg={EnglishFlag} uncheckedImg={PolskaFlaga} toggle={this.onChange} checked={this.state.checked} ></Toggler>
         </Wrapper>
     )
   }
