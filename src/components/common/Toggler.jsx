@@ -2,7 +2,6 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import {PolskaFlaga} from 'img/index'
-import {EnglishFlag} from 'img/index'
 
 const Toggler = withStyles((theme) => ({
   root: {
@@ -34,7 +33,7 @@ const Toggler = withStyles((theme) => ({
   },
   track: {
     borderRadius: 26 / 2,
-    backgroundImage: `url(${EnglishFlag})`,
+    backgroundImage: (props)=> `url(${props.checkedImg})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     opacity: 1,
@@ -47,6 +46,8 @@ const Toggler = withStyles((theme) => ({
 }))(({ classes, ...props }) => {
   return (
     <Switch
+      checkedImg={props.checkedImg}
+      uncheckedImg={props.uncheckedImg}
       onChange={props.toggle}
       checked={props.checked}
       focusVisibleClassName={classes.focusVisible}
