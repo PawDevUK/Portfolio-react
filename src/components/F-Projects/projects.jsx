@@ -16,6 +16,9 @@ const StParticles = styled(Particles)`
 position:absolute;
 height:100%;
 z-index:1;
+@media (max-width: 992px) {
+    display: none;
+  }
 `
 
 const Wrapper = styled.div`
