@@ -17,7 +17,7 @@ const InnerMainNav = styled.div`
   position:relative;
   display: flex;
   margin: 43px 0px 0px auto;
-  width: 600px;
+  width: 680px;
 `
 const MainLogo = styled(SvgLoader)`
   display: inline-block;
