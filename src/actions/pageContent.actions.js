@@ -4,7 +4,6 @@ export const ADD_REACT_INFO = 'ADD_REACT_INFO';
 export const ADD_STACK = 'ADD_STACK';
 export const ADD_RIGHT_FOOTER_DATA = 'ADD_RIGHT_FOOTER_DATA'
 
-
 export function AddHeaderMenu(data) {
     return {
         type:ADD_HEADER_MENU,
