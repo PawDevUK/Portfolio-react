@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { SvgLoader } from 'react-svgmt'
 import logo from 'img/pavdev.svg'
 import { connect } from 'react-redux'
-import { getMenu } from 'selectors/pageContent.selector'
+import { getMenu, getLang } from 'selectors/pageContent.selector'
 import LangSwitch from 'components/B-Header/LangSwitch'
 
 const Wrapper = styled.div`
@@ -17,7 +17,7 @@ const InnerMainNav = styled.div`
   position:relative;
   display: flex;
   margin: 43px 0px 0px auto;
-  width: 600px;
+  width: 680px;
 `
 const MainLogo = styled(SvgLoader)`
   display: inline-block;
@@ -63,6 +63,11 @@ function MainLarge({ ...props }) {
   function handleMouseHover() {
     setMouseOver((mouseOver) => !mouseOver)
   }
+  function getLangMenu(obj){
+    let PolishTitle = obj.PolishLang ? obj.PolishLang.title : obj.title
+    return  props.EngLang ? obj.title : PolishTitle
+  }
+
   return (
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
@@ -77,7 +82,7 @@ function MainLarge({ ...props }) {
               key={i}
               href={item.href}
             >
-              {item.title}
+              {getLangMenu(item)}
               {mouseOver ? (
                 <DropDown href={item.href}>
                   {item.react ? item.react.title : null}
@@ -95,7 +100,8 @@ function MainLarge({ ...props }) {
 
 const mapStateToProps = (state) => {
   return {
-    menu:getMenu(state)
+    menu:getMenu(state),
+    EngLang:getLang(state),
   }
 }
 

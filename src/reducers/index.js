@@ -3,7 +3,7 @@ import Visitors from 'reducers/counterReducer'
 import PageContent from 'reducers/PageContent.reducer'
 import Users from 'reducers/users'
 import isChatOpen from 'reducers/chat.reducer'
-import EnglishLanguage from 'reducers/toggleLang.reducer'
+import EngLang from 'reducers/toggleLang.reducer'
 
 export default function rootReducer(){
     return combineReducers({
@@ -11,6 +11,6 @@ export default function rootReducer(){
         Users,
         PageContent,
         isChatOpen,
-        EnglishLanguage,
+        EngLang,
     })
 }
