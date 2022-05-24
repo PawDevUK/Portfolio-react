@@ -41,7 +41,7 @@ const Container = styled.div`
     padding: 0px;
 `
     return(
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Wrapper>
           <GlobalStyle />
           <Switch>
