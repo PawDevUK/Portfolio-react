@@ -1,13 +1,13 @@
 import JumboMainText from './JumboText';
 import MainLarge from './LargeMenu'
 import MobileMenu from './MobileMenu'
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
-import { BackgroundBlue } from 'styled'
-import { store } from 'configureStore'
-import { chatClose } from 'actions/isChatOpen.actions'
-import { connect } from 'react-redux'
-import { isChatOpen } from 'selectors/isChatOpen.selector'
+import {BackgroundBlue} from 'styled'
+import {store} from 'configureStore'
+import {chatClose} from 'actions/isChatOpen.actions'
+import {connect} from 'react-redux'
+import {isChatOpen} from 'selectors/isChatOpen.selector'
 
 const Wrapper = styled.div`
 margin:0px;

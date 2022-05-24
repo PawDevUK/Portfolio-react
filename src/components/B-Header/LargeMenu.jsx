@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import dropdown from 'img/icon/dropdown.svg'
 import 'react-slidedown/lib/slidedown.css'
 import styled from 'styled-components'
-import { SvgLoader } from 'react-svgmt'
+import {SvgLoader} from 'react-svgmt'
 import logo from 'img/pavdev.svg'
-import { connect } from 'react-redux'
-import { getMenu, getLang } from 'selectors/pageContent.selector'
+import {connect} from 'react-redux'
+import {getMenu, getLang} from 'selectors/pageContent.selector'
 import LangSwitch from 'components/B-Header/LangSwitch'
 
 const Wrapper = styled.div`
