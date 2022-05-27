@@ -45,13 +45,13 @@ const Container = styled.div`
         <Wrapper>
           <GlobalStyle />
           <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/covid`}>
+            <Route exact path="/covid">
               <Covid></Covid>
             </Route>
-            <Route exact path={`${process.env.PUBLIC_URL}/TicTacToe`}>
+            <Route exact path="/TicTacToe">
               <TicTacToe></TicTacToe>
             </Route>
-            <Route exact path={`${process.env.PUBLIC_URL}/content`}>
+            <Route exact path="/content">
               <Header></Header>
               <Chat></Chat>
               <Container>
@@ -65,7 +65,7 @@ const Container = styled.div`
               <Contact></Contact>
               <Footer></Footer>
             </Route>
-            <Route exact path={`${process.env.PUBLIC_URL}/cv`} >
+            <Route exact path='/cv' >
               <CV></CV>
             </Route>
             <Route exact path="/">
@@ -76,5 +76,3 @@ const Container = styled.div`
       </BrowserRouter>
     )
 }
-
-// https://gitcrackeruk.github.io/Portfolio-react/#/Portfolio-react/cv
