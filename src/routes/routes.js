@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter as BrowserRouter, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import TicTacToe from '../components/F-Projects/TicTacToe/TicTacToe'
 import Projects from '../components/F-Projects/projects'
@@ -45,13 +45,13 @@ const Container = styled.div`
         <Wrapper>
           <GlobalStyle />
           <Switch>
-            <Route exact path="/covid">
+            <Route exact path={`${process.env.PUBLIC_URL}/covid`}>
               <Covid></Covid>
             </Route>
-            <Route exact path="/TicTacToe">
+            <Route exact path={`${process.env.PUBLIC_URL}/TicTacToe`}>
               <TicTacToe></TicTacToe>
             </Route>
-            <Route exact path="/content">
+            <Route exact path={`${process.env.PUBLIC_URL}/content`}>
               <Header></Header>
               <Chat></Chat>
               <Container>
@@ -65,7 +65,7 @@ const Container = styled.div`
               <Contact></Contact>
               <Footer></Footer>
             </Route>
-            <Route exact path="/cv">
+            <Route exact path={`${process.env.PUBLIC_URL}/cv`} >
               <CV></CV>
             </Route>
             <Route exact path="/">
@@ -76,3 +76,5 @@ const Container = styled.div`
       </BrowserRouter>
     )
 }
+
+// https://gitcrackeruk.github.io/Portfolio-react/#/Portfolio-react/cv
