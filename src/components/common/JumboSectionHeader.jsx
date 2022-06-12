@@ -48,7 +48,7 @@ export default function JumboSectionHeader({ ...props }) {
         <Wrapper {...props}>
             <div>
                 <Jumbo  {...props} data-aos="zoom-in">{props.children}</Jumbo>
-                <Header {...props} >{props.children}</Header>
+                <Header {...props}>{props.children}</Header>
             </div>
         </Wrapper>
 
