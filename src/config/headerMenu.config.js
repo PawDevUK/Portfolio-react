@@ -39,7 +39,7 @@ export const Menu = [
         disabled: false,
         target: "_blank",
         PolishLang:{
-            title:"Mój Github"
+            title:"Mój GitHub"
         }
     },
     {
