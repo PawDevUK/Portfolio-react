@@ -51,9 +51,7 @@ export default function TopIntro() {
           on a regular basis. Code editor of my choice is{' '}
           <Bold>Visual Studio Code</Bold>. Also I know how to build a backend
           for simple communication(express.js) with frontend(Axios) and
-          database. <br />
-          The next step for me will be <Bold>MERN</Bold> stack which I am
-          planning to master in the nearest future.
+          database.
         </StP>
       </Card>
     </Wrapper>
