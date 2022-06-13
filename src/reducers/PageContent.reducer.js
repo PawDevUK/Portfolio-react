@@ -1,4 +1,4 @@
-import { ADD_HEADER_MENU, ADD_PROJECTS, ADD_REACT_INFO, ADD_STACK, ADD_RIGHT_FOOTER_DATA } from 'actions/pageContent.actions'
+import { ADD_BUTTONS, ADD_HEADER_MENU, ADD_PROJECTS, ADD_REACT_INFO, ADD_STACK, ADD_RIGHT_FOOTER_DATA, ADD_HEADER_JUMBO_TEXT } from 'actions/pageContent.actions'
 import { initialState } from 'config/initialState'
 
 export default function PageContent(state = initialState, action){
@@ -34,6 +34,21 @@ export default function PageContent(state = initialState, action){
                         footer:{
                             ...state.footer,
                             rightData:[ ...state.footer.rightData, ...action.payload]
+                        }
+                };
+            case ADD_HEADER_JUMBO_TEXT:
+                return {
+                    ...state,
+                        header:{
+                            ...state.header,
+                            jumboText:{ ...state.header.jumboText, ...action.payload }
+                        }
+                };
+            case ADD_BUTTONS:
+                return {
+                    ...state,
+                        buttons:{
+                            ...state.buttons, ...action.payload 
                         }
                 };
                 default:

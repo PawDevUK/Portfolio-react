@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Button from 'components/common/Button'
 import React from 'react';
+import { connect } from 'react-redux';
+import { getJumboTextHeader, getJumboP, getGithubButton } from 'selectors/pageContent.selector'
 
 const JumboTextWrapper = styled.div`
 text-align:center;
@@ -68,17 +70,28 @@ margin-top:30px;
 }
 `
 
-export default function JumboMainText({ ...props }) {
+export function JumboMainText({ ...props }) {
+
     return (
         <JumboTextWrapper>
             <JumboHeaderWrapper>
-                <JumboHeader>"Talk is cheap, <br /> show me the code."</JumboHeader>
+                <JumboHeader>{props.header}</JumboHeader>
                 <Quote>Linus Torvalds</Quote>
             </JumboHeaderWrapper>
-            <JumboText>If you wish, You can check my GitHub repositories.</JumboText>
+            <JumboText>{props.p}</JumboText>
             <Anchor href="https://github.com/GitcrackerUK" target="_blank">
-                <Button mobile={props.mobile} style={{ margin: "auto" }}>My GitHub</Button>
+                <Button mobile={props.mobile} style={{ margin: "auto" }}>{props.button}</Button>
             </Anchor>
         </JumboTextWrapper>
     )
 }
+
+function mapStateToProps(state){
+    return {
+        header: getJumboTextHeader(state),
+        p: getJumboP(state),
+        button: getGithubButton(state)
+    }
+}
+
+export default connect(mapStateToProps)(JumboMainText)

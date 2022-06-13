@@ -1,6 +1,7 @@
 export let initialState = {
         header:{
-            menu:[]
+            menu:[],
+            jumboText:{}
         },
         projects:[],
         reactInfo:{},

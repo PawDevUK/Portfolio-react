@@ -3,6 +3,8 @@ export const ADD_PROJECTS = 'ADD_PROJECTS';
 export const ADD_REACT_INFO = 'ADD_REACT_INFO';
 export const ADD_STACK = 'ADD_STACK';
 export const ADD_RIGHT_FOOTER_DATA = 'ADD_RIGHT_FOOTER_DATA'
+export const ADD_HEADER_JUMBO_TEXT = 'ADD_HEADER_JUMBO_TEXT'
+export const ADD_BUTTONS = 'ADD_BUTTONS'
 
 export function AddHeaderMenu(data) {
     return {
@@ -31,6 +33,18 @@ export function AddStack(data){
 export  function AddFooterRightData(data){
     return {
         type:ADD_RIGHT_FOOTER_DATA,
+        payload:data
+    }
+}
+export  function AddHeaderJumboText(data){
+    return {
+        type:ADD_HEADER_JUMBO_TEXT,
+        payload:data
+    }
+}
+export  function AddButtons(data){
+    return {
+        type:ADD_BUTTONS,
         payload:data
     }
 }
