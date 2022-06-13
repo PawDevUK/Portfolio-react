@@ -1,6 +1,6 @@
 export const headerJumboText = {   
     quote:{
-        header: "Talk is cheap, <br/> show me the code.",
+        header: "Talk is cheap, <br> show me the code.",
         author: "Linus Torvalds",
         PolishLang:{
             header:"Gatka jest tania, <br/> pokaż mi kod",
@@ -11,7 +11,7 @@ export const headerJumboText = {
         href:"https://github.com/GitcrackerUK",
         p:"My GitHub",
         PolishLang:{
-            header:"Jeśli chcesz to przejrzyj moje repozytoria na GitHub",
+            header:"Jeśli chcesz, to przeżyj moje repozytoria na GitHub",
             p:"Mój GitHub"
         }
     }
