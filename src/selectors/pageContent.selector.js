@@ -31,7 +31,7 @@ export const getJumboTextHeader = (state) => {
 }
 
 export const getJumboTextAuth = (state) =>{
-    return state.PageContent.header.jumboText.quote.author
+    return state.PageContent.header?.jumboText.quote?.author
 }
 
 export const getJumboP = (state) =>{
@@ -54,3 +54,13 @@ export const getGithubButton = (state) =>{
 
     return EngLang ? buttonE : buttonPL
 }
+
+export const getAboutIntro = (state) =>{
+    if(state.PageContent?.aboutIntro?.text){
+        return parse(state.PageContent.aboutIntro.text)
+        }
+}
+ export const getHeader = (state) =>{
+     return state.PageContent?.aboutIntro?.header
+ }
+    
