@@ -28,6 +28,7 @@ function TopIntro(props) {
     </Wrapper>
   )
 }
+
 const mapStateToProps = (state) =>{
   return {
     header : getHeader(state),
