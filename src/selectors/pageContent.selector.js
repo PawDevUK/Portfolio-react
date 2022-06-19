@@ -30,6 +30,10 @@ export const getJumboTextHeader = (state) => {
 
 }
 
+export const getJumboTextAuth = (state) =>{
+    return state.PageContent.header.jumboText.quote.author
+}
+
 export const getJumboP = (state) =>{
     let EngLang = state.EngLang
     let header = state.PageContent.header?.jumboText

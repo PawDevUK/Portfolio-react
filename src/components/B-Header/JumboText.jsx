@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Button from 'components/common/Button'
 import React from 'react';
 import { connect } from 'react-redux';
-import { getJumboTextHeader, getJumboP, getGithubButton } from 'selectors/pageContent.selector'
+import { getJumboTextHeader, getJumboP, getGithubButton, getJumboTextAuth } from 'selectors/pageContent.selector'
 
 const JumboTextWrapper = styled.div`
 text-align:center;
@@ -71,12 +71,13 @@ margin-top:30px;
 `
 
 export function JumboMainText({ ...props }) {
+    console.log(props)
 
     return (
         <JumboTextWrapper>
             <JumboHeaderWrapper>
                 <JumboHeader>{props.header}</JumboHeader>
-                <Quote>Linus Torvalds</Quote>
+                <Quote>{props.author}</Quote>
             </JumboHeaderWrapper>
             <JumboText>{props.p}</JumboText>
             <Anchor href="https://github.com/GitcrackerUK" target="_blank">
@@ -89,6 +90,7 @@ export function JumboMainText({ ...props }) {
 function mapStateToProps(state){
     return {
         header: getJumboTextHeader(state),
+        author: getJumboTextAuth(state),
         p: getJumboP(state),
         button: getGithubButton(state)
     }
