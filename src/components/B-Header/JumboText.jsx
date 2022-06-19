@@ -71,8 +71,6 @@ margin-top:30px;
 `
 
 export function JumboMainText({ ...props }) {
-    console.log(props)
-
     return (
         <JumboTextWrapper>
             <JumboHeaderWrapper>
