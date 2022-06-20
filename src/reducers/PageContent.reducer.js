@@ -26,7 +26,7 @@ export default function PageContent(state = initialState, action){
             case ADD_STACK:
                 return {
                     ...state,
-                    stack:[...state.stack, ...action.payload]
+                    stack:{...state.stack, ...action.payload}
                 }
             case ADD_RIGHT_FOOTER_DATA:
                 return {
@@ -47,8 +47,8 @@ export default function PageContent(state = initialState, action){
             case ADD_ABOUT_INTRO:
                 return{
                     ...state,
-                    aboutIntro:{...action.payload}
-                }
+                    aboutIntro:{ ...action.payload }
+                };
             case ADD_BUTTONS:
                 return {
                     ...state,

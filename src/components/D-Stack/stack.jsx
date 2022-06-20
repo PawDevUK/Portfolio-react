@@ -1,8 +1,9 @@
 import React from 'react'
-import { stack } from 'config/stack.config'
+import {connect} from 'react-redux'
 import Card from './card.jsx'
 import styled from 'styled-components'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
+import { getStack, getStackHeader } from 'selectors/pageContent.selector'
 
 const Wrapper = styled.div`
   background: #fff;
@@ -20,12 +21,13 @@ const Thumbnails = styled.div`
   }
 `
 
-export default function Stack() {
+function Stack(props) {
+  console.log(props)
   return (
     <Wrapper id="use">
-      <JumboSectionHeader>What I use</JumboSectionHeader>
+      <JumboSectionHeader>{props.header}</JumboSectionHeader>
       <Thumbnails>
-        {stack.map((item, i) => {
+        {props.tools.map((item, i) => {
           return (
             <Card
               key={i}
@@ -41,3 +43,12 @@ export default function Stack() {
     </Wrapper>
   )
 }
+
+const mapStateToProps = (state)=>{
+  return {
+    header:getStackHeader(state),
+    tools:getStack(state)
+  }
+}
+
+export default connect(mapStateToProps)(Stack)

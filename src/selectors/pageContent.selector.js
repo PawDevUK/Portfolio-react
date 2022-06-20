@@ -1,7 +1,23 @@
 import parse from 'html-react-parser';
 
-export const getMenu = (state, obj) => {
+export const getMenu = (state) => {
     return state.PageContent.header.menu
+}
+
+export const getStack = (state) => {
+    if(state.PageContent.stack.tools){
+        return state.PageContent.stack.tools
+    }
+    return [{},{}]   
+}
+
+export const getStackHeader = (state) => {
+    const EngLang = state?.EngLang
+
+    if(!EngLang){
+        return state.PageContent?.stack?.PolishLang?.header
+    }
+    return state.PageContent?.stack?.header
 }
 
 export const getLang = (state) => {
