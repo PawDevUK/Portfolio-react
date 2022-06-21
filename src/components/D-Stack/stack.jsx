@@ -22,7 +22,6 @@ const Thumbnails = styled.div`
 `
 
 function Stack(props) {
-  console.log(props)
   return (
     <Wrapper id="use">
       <JumboSectionHeader>{props.header}</JumboSectionHeader>

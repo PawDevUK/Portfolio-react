@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
 import { Link } from 'react-router-dom'
 // import { LocalOnEnter } from 'store/VisitorsDataAPI'
-import { CurrentTime, CurrentDate } from 'factory'
+// import { CurrentTime, CurrentDate } from 'factory'
 
 const Wrapper = styled.div`
   position: relative;
@@ -51,10 +51,10 @@ const StLink = styled(Link)`
 `
 function Welcome({ ...props }) {
   function VisitorsRecorder() {
-    const visitorCounter = {
-      date: CurrentDate(),
-      time: CurrentTime(),
-    }
+    // const visitorCounter = {
+    //   date: CurrentDate(),
+    //   time: CurrentTime(),
+    // }
 
     // LocalOnEnter.get('/', visitorCounter).then((res) => console.log(res.data))
     

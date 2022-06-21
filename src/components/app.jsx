@@ -14,7 +14,7 @@ import 'styles/styles.css'
 function App() {
 
   useEffect(()=>{
-    sync_DB_With_Store();
+    // sync_DB_With_Store();
     syncConfigWithStore();
   })
     

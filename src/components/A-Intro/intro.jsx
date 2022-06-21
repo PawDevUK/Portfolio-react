@@ -24,7 +24,6 @@ const useStyles = makeStyles({
     height: '100vh',
     width: '100vw ',
     backgroundColor: '#17293f',
-    // position: 'relative',
   },
   leftImg: {
     background: `url(${img})`,

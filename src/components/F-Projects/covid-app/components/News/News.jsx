@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GetNews } from '../API';
+// import { GetNews } from '../API';
 import styled from 'styled-components';
 import Card from './Card';
 
@@ -10,12 +10,12 @@ const Wrapper = styled.div`
 
 export default function News() {
     const [news, setNews] = useState([]);
-    useEffect(() => {
-        (async function storeInState() {
-            const fetchedData = await GetNews;
-            setNews(fetchedData.data);
-        })();
-    }, []);
+    // useEffect(() => {
+    //     (async function storeInState() {
+    //         const fetchedData = await GetNews;
+    //         setNews(fetchedData.data);
+    //     })();
+    // }, []);
 
     return (
         <Wrapper>

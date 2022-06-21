@@ -95,7 +95,7 @@ const HeaderImg = styled.div`
 `
 // <- header
 
-function Chat({ ...props }) {
+function Chat(props) {
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
@@ -165,10 +165,8 @@ function Chat({ ...props }) {
       <Button
         buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
         onClick={HandleClick}
-        // onMouseEnter={HandleMouseOn}
         path={ChatButtonLarge1px}
       ></Button>
-
       <Window open={props.isChatOpen}>
         <WrapperHeader>
           <Header>
