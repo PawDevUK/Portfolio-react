@@ -1,5 +1,9 @@
 export const intro = {
   header:'About Me',
+  PolLang:{
+    header:'Trochę o mnie',
+    text:'<div class=styledP>Jestem developerem z Reading Uk....</div>'
+  },
   text:`
   <div class=styledP>
   I am a <span class="bold">React</span> developer from Reading, UK. I create React
@@ -10,9 +14,9 @@ export const intro = {
 <div class=styledP>
   I design and create, modern looking websites and web applications with
   functionality including <span class="bold">APIs</span>. I use <span class="bold">Figma</span> to
-  design a modern looking layout with the use of number of popular
+  to design a modern looking layout with the use of number of popular
   design patterns. Currently, most of the internet users browse Web on
-  mobile devices therefor <span class="bold">RWD</span> is quite important that is
+  mobile devices therefore <span class="bold">RWD</span> is quite important that is
   why I am implementing it in my websites and applications.
 </div>
 <div class=styledP>
