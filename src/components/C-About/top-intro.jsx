@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import {connect} from 'react-redux'
-import { getAboutIntro, getHeader } from 'selectors/pageContent.selector'
+import { getAboutText, getAboutHeader } from 'selectors/pageContent.selector'
 
 const Wrapper = styled.div`
   padding: 10px 0px;
@@ -18,7 +18,7 @@ const Card = styled.div`
 
 function TopIntro(props) {
   useEffect(() => AOS.init({ duration: 1000 }))
-
+  console.log(props)
   return (
     <Wrapper id="about">
       <Card data-aos="fade-right">
@@ -31,8 +31,8 @@ function TopIntro(props) {
 
 const mapStateToProps = (state) =>{
   return {
-    header : getHeader(state),
-    about : getAboutIntro(state)
+    header : getAboutHeader(state),
+    about : getAboutText(state)
   }
 }
 export default connect(mapStateToProps)(TopIntro)
