@@ -11,6 +11,11 @@ export default function PageContent(state = initialState, action){
                         menu:[...state.header.menu, ...action.payload]
                     }
                 };
+            case ADD_ABOUT_INTRO:
+                return{
+                    ...state,
+                    aboutIntro:{ ...action.payload }
+                };
             case ADD_PROJECTS:
                 return {
                     ...state,
@@ -43,11 +48,6 @@ export default function PageContent(state = initialState, action){
                             ...state.header,
                             jumboText:{ ...state.header.jumboText, ...action.payload }
                         }
-                };
-            case ADD_ABOUT_INTRO:
-                return{
-                    ...state,
-                    aboutIntro:{ ...action.payload }
                 };
             case ADD_BUTTONS:
                 return {
