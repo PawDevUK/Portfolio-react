@@ -71,12 +71,22 @@ export const getGithubButton = (state) =>{
     return EngLang ? buttonE : buttonPL
 }
 
-export const getAboutIntro = (state) =>{
-    if(state.PageContent?.aboutIntro?.text){
-        return parse(state.PageContent.aboutIntro.text)
-        }
+export const getAboutHeader = (state) =>{
+    let aboutIntro = state.PageContent.aboutIntro
+
+    const EngLang = state.EngLang
+    let pol = aboutIntro?.PolLang.header
+    let eng = aboutIntro?.header
+
+    return EngLang ? eng : pol
 }
- export const getHeader = (state) =>{
-     return state.PageContent?.aboutIntro?.header
- }
+
+export const getAboutText = (state) =>{
+    let aboutIntro = state.PageContent.aboutIntro;
+    let EngLang = state.EngLang
+
+    let pol = aboutIntro?.PolLang.text
+    let eng = aboutIntro?.text
     
+    return EngLang && eng ? parse(eng) : parse(pol)
+}  
