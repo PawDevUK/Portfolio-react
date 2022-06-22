@@ -13,7 +13,9 @@ export let initialState = {
         },
         projects:[],
         reactInfo:{},
-        stack:[],
+        stack:{
+            header:'',
+            tools:[]},
         footer:{
             rightData:[]
         },
