@@ -4,47 +4,27 @@ import { createSelector } from '@reduxjs/toolkit'
 export const getPageContent = (state) => {
     return state.PageContent
 }
-export const getAboutIntro = (state) =>{
-        return getPageContent(state).aboutIntro
-}
-
-export const getMenu = (state) => {
-    return state.PageContent.header.menu
-}
-
-export const getStack = (state) => {
-    if(state.PageContent.stack.tools){
-        return state.PageContent.stack.tools
-    }
-    return [{},{}]   
-}
-
-export const getStackHeader = (state) => {
-    const EngLang = state?.EngLang
-
-    if(!EngLang){
-        return state.PageContent?.stack?.PolishLang?.header
-    }
-    return state.PageContent?.stack?.header
-}
 
 export const getLang = (state) => {
     return state.EngLang
 }
 
-export const getFooterData = (state)=>{
-    return state.PageContent.footer
-}
+export const getMenu = createSelector(
+    getPageContent,
+    (PageContent) => {
+    return PageContent.header.menu
+})
 
-export const getRightFooterData = (state) =>{
-    return state.PageContent.footer.rightData
-}
-export const getJumboTextHeader = (state) => {
-    let EngLang = state.EngLang
-    let header = state.PageContent.header?.jumboText
 
-    let engHeader = header.quote?.header
-    let polHeader = header.quote?.PolishLang.header
+export const getJumboTextHeader = createSelector(
+    getLang,
+    getPageContent,
+    (EngLang, PageContent) => {
+
+    let jumboText = PageContent.header.jumboText
+
+    let engHeader = jumboText.quote.header
+    let polHeader = jumboText.quote.PolishLang.header
 
     let langHeader = EngLang ? engHeader : polHeader
 
@@ -52,7 +32,7 @@ export const getJumboTextHeader = (state) => {
         return parse(langHeader)
     }   
 
-}
+})
 
 export const getJumboTextAuth = (state) =>{
     return state.PageContent.header?.jumboText.quote?.author
@@ -69,6 +49,42 @@ export const getJumboP = (state) =>{
 
     return langP
 }
+
+export const getAboutIntro = createSelector(
+    getPageContent,
+    (PageContent) =>{
+        return PageContent.aboutIntro
+})
+
+export const getStack = createSelector(
+    getPageContent,
+    (PageContent) => {
+    return PageContent.stack.tools
+})
+
+export const getStackHeader = createSelector(
+    getLang,
+    getPageContent, 
+    (EngLang, PageContent) => {
+
+    if(!EngLang){
+        return PageContent.stack.PolishLang.header
+    }
+    return PageContent.stack.header
+}
+)
+
+export const getFooterData = createSelector(
+    getPageContent,
+    (PageContent)=>{
+    return PageContent.footer
+})
+
+export const getRightFooterData = createSelector(
+    getPageContent,
+    (PageContent) =>{
+    return PageContent.footer.rightData
+})
 
 export const getGithubButton = (state) =>{
     const EngLang = state.EngLang
