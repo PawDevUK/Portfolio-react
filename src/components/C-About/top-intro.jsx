@@ -31,8 +31,8 @@ function TopIntro(props) {
 
 const mapStateToProps = (state) =>{
   return {
-    header : getAboutHeader(state),
-    about : getAboutText(state)
+    header:getAboutHeader(state),
+    about:getAboutText(state)
   }
 }
 export default connect(mapStateToProps)(TopIntro)
