@@ -1,4 +1,12 @@
 import parse from 'html-react-parser';
+import { createSelector } from '@reduxjs/toolkit'
+
+export const getPageContent = (state) => {
+    return state.PageContent
+}
+export const getAboutIntro = (state) =>{
+        return getPageContent(state).aboutIntro
+}
 
 export const getMenu = (state) => {
     return state.PageContent.header.menu
@@ -71,22 +79,24 @@ export const getGithubButton = (state) =>{
     return EngLang ? buttonE : buttonPL
 }
 
-export const getAboutHeader = (state) =>{
-    let aboutIntro = state.PageContent.aboutIntro
-
-    const EngLang = state.EngLang
+export const getAboutHeader = createSelector(
+    getAboutIntro, 
+    getLang, 
+    (aboutIntro, EngLang) =>{
+    
     let pol = aboutIntro?.PolLang.header
     let eng = aboutIntro?.header
 
     return EngLang ? eng : pol
-}
+})
 
-export const getAboutText = (state) =>{
-    let aboutIntro = state.PageContent.aboutIntro;
-    let EngLang = state.EngLang
+export const getAboutText = createSelector(
+    getAboutIntro,
+    getLang, 
+    (aboutIntro, EngLang) => {
 
-    let pol = aboutIntro?.PolLang.text
-    let eng = aboutIntro?.text
+    let pol = aboutIntro.PolLang.text
+    let eng = aboutIntro.text
     
     return EngLang && eng ? parse(eng) : parse(pol)
-}  
+})
