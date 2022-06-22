@@ -1,7 +1,13 @@
 export let initialState = {
         header:{
             menu:[],
-            jumboText:{}
+            jumboText:'',
+            quote:{
+                header:'',
+                PolishLang:{
+                    header:''
+                }
+            }
         },
         aboutIntro:{
             header:'',
@@ -11,11 +17,13 @@ export let initialState = {
                 text:'initial'
             }
         },
-        projects:[],
-        reactInfo:{},
         stack:{
             header:'',
-            tools:[]},
+            tools:[]
+        },
+        projects:[],
+        reactInfo:{},
+        
         footer:{
             rightData:[]
         },
