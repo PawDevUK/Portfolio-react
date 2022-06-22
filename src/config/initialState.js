@@ -3,6 +3,14 @@ export let initialState = {
             menu:[],
             jumboText:{}
         },
+        aboutIntro:{
+            header:'',
+            text:'',
+            PolLang:{
+                header:'',
+                text:'initial'
+            }
+        },
         projects:[],
         reactInfo:{},
         stack:[],
