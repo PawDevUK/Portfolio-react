@@ -18,7 +18,6 @@ const Card = styled.div`
 
 function TopIntro(props) {
   useEffect(() => AOS.init({ duration: 1000 }))
-  console.log(props)
   return (
     <Wrapper id="about">
       <Card data-aos="fade-right">
