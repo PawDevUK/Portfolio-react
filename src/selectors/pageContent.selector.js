@@ -74,11 +74,7 @@ export const getStackHeader = createSelector(
     getLang,
     getPageContent, 
     (EngLang, PageContent) => {
-
-    if(!EngLang){
-        return PageContent.stack.PolishLang.header
-    }
-    return PageContent.stack.header
+    return EngLang ? PageContent.stack.header : PageContent.stack.PolishLang.header
 }
 )
 
@@ -89,19 +85,21 @@ export const getFooterData = createSelector(
 })
 
 export const getRightFooterData = createSelector(
-    getPageContent,
-    (PageContent) =>{
-    return PageContent.footer.rightData
+    getFooterData,
+    (footerData) =>{
+    return footerData.rightData
 })
 
-export const getGithubButton = (state) =>{
-    const EngLang = state.EngLang
-    let button = state.PageContent.buttons?.github
-    const buttonE = button?.eng
-    const buttonPL = button?.pl
+export const getGithubButton = createSelector(
+    getLang,
+    getPageContent,
+    (EngLang,pageContent) =>{
+    let button = pageContent.buttons.github
+    const buttonE = button.eng
+    const buttonPL = button.pl
 
     return EngLang ? buttonE : buttonPL
-}
+})
 
 export const getAboutHeader = createSelector(
     getAboutIntro, 
