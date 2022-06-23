@@ -95,10 +95,8 @@ export const getGithubButton = createSelector(
     getPageContent,
     (EngLang,pageContent) =>{
     let button = pageContent.buttons.github
-    const buttonE = button.eng
-    const buttonPL = button.pl
 
-    return EngLang ? buttonE : buttonPL
+    return EngLang ? button.eng : button.pl
 })
 
 export const getAboutHeader = createSelector(
