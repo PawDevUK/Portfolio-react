@@ -1,13 +1,22 @@
 export let initialState = {
         header:{
             menu:[],
-            jumboText:'',
-            quote:{
-                header:'',
-                PolishLang:{
-                    header:''
+            jumboText:{
+                quote:{
+                    header:'',
+                    author:'',
+                    PolishLang:{
+                        header:''
+                    }
+                },
+                a:{
+                    header:'',
+                    href:'',
+                    PolishLang:{
+                        header:''
+                    }
                 }
-            }
+            },
         },
         aboutIntro:{
             header:'',
