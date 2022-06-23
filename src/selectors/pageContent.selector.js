@@ -9,34 +9,41 @@ export const getLang = (state) => {
     return state.EngLang
 }
 
+export const getMianHeader = createSelector(getPageContent, (pageContent)=>{
+    return pageContent.header
+})
+
 export const getMenu = createSelector(
-    getPageContent,
-    (PageContent) => {
-    return PageContent.header.menu
+    getMianHeader,
+    (mianHeder) => {
+    return mianHeder.menu
+})
+
+export const getMainJumboText = createSelector(
+    getMianHeader,
+    (mianHeder)=>{
+    return mianHeder.jumboText
 })
 
 
 export const getJumboTextHeader = createSelector(
     getLang,
-    getPageContent,
-    (EngLang, PageContent) => {
-
-    let jumboText = PageContent.header.jumboText
-
-    let engHeader = jumboText.quote.header
-    let polHeader = jumboText.quote.PolishLang.header
+    getMainJumboText,
+    (EngLang, mainJumbo) => {
+        
+    let engHeader = mainJumbo.quote.header
+    let polHeader = mainJumbo.quote.PolishLang.header
 
     let langHeader = EngLang ? engHeader : polHeader
 
-    if(langHeader){
-        return parse(langHeader)
-    }   
-
+    return parse(langHeader)
 })
 
-export const getJumboTextAuth = (state) =>{
-    return state.PageContent.header?.jumboText.quote?.author
-}
+export const getJumboTextAuth = createSelector(getMainJumboText, (mainJumbo) =>{
+    return mainJumbo.quote.author
+})
+
+
 
 export const getJumboP = (state) =>{
     let EngLang = state.EngLang
