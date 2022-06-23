@@ -38,24 +38,25 @@ export const getJumboTextHeader = createSelector(
 
     return parse(langHeader)
 })
-
-export const getJumboTextAuth = createSelector(getMainJumboText, (mainJumbo) =>{
+     
+export const getJumboTextAuth = createSelector(
+    getMainJumboText,
+    (mainJumbo) =>{
     return mainJumbo.quote.author
 })
 
 
 
-export const getJumboP = (state) =>{
-    let EngLang = state.EngLang
-    let header = state.PageContent.header?.jumboText
+export const getJumboP = createSelector(
+    getLang,
+    getMainJumboText,
+    (EngLang,jumboText) =>{
 
-    let engP = header.a?.header
-    let polP = header.a?.PolishLang.header
+    let engP = jumboText.a.header
+    let polP = jumboText.a.PolishLang.header
 
-    let langP = EngLang ? engP : polP
-
-    return langP
-}
+    return EngLang ? engP : polP
+})
 
 export const getAboutIntro = createSelector(
     getPageContent,
