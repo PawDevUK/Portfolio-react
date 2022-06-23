@@ -36,4 +36,10 @@ export let initialState = {
         footer:{
             rightData:[]
         },
+        buttons:{
+            github:{
+                eng:'',
+                pl:''
+            }
+        }
     }
