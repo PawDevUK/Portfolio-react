@@ -255,7 +255,6 @@ export default function Contact() {
               name="Message"
               aria-label="minimum height"
               rowsMin={4}
-              id="outlined-basic"
               placeholder="Message"
               variant="outlined"
               required
