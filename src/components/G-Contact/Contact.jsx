@@ -206,23 +206,20 @@ export default function Contact() {
               name="FirstName"
               onChange={handleChange}
               required
-              id="standard-basic"
               label="First Name"
               ref={refName}
             />
             <StTextField
               type="text"
               value={formData.LastName}
-              name="LastName"
-              id="standard-basic"
+              name="LastName"           
               label="Last Name"
               onChange={handleChange}
             />
             <StTextField
               type="email"
               value={formData.Email}
-              name="Email"
-              id="standard-basic"
+              name="Email"              
               label="Email"
               required
               onChange={handleChange}
@@ -230,24 +227,21 @@ export default function Contact() {
             <StTextField
               type="number"
               value={formData.Phone}
-              name="Phone"
-              id="standard-basic"
+              name="Phone"              
               label="Phone"
               onChange={handleChange}
             />
             <StTextField
               type="text"
               value={formData.Website}
-              name="Website"
-              id="standard-basic"
+              name="Website"              
               label="Website"
               onChange={handleChange}
             />
             <StTextField
               type="text"
               value={formData.Company}
-              name="Company"
-              id="standard-basic"
+              name="Company"              
               label="Company"
               onChange={handleChange}
             />
