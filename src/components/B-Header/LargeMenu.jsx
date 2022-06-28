@@ -31,7 +31,7 @@ const MainLogo = styled(SvgLoader)`
 
 const Link = styled.a`
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   color: #cdcdcd;
   text-transform: capitalize;
   margin-right: 32px;
