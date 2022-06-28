@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     0px 5px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 10px;
-  padding: 0px;
+  padding: 1px;
 `
 const Text = styled.p`
   margin: 10px auto 8px auto;
