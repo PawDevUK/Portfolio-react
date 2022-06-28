@@ -33,6 +33,7 @@ const WhiteBox = styled.div`
   }
 `
 const InnerWrapper = styled.div`
+  font-size:16px;
   width: 540px;
   margin: auto;
   @media (max-width: 992px) {
@@ -76,6 +77,9 @@ const StTextField = styled(TextField)`
   width: 250px;
   @media (max-width: 992px) {
     width: 90%;
+  }
+  > label{
+    font-size: 16px;
   }
 `
 const StTextareaAutosize = styled(TextareaAutosize)`
