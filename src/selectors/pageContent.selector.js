@@ -45,8 +45,6 @@ export const getJumboTextAuth = createSelector(
     return mainJumbo.quote.author
 })
 
-
-
 export const getJumboP = createSelector(
     getLang,
     getMainJumboText,
@@ -62,41 +60,6 @@ export const getAboutIntro = createSelector(
     getPageContent,
     (PageContent) =>{
         return PageContent.aboutIntro
-})
-
-export const getStack = createSelector(
-    getPageContent,
-    (PageContent) => {
-    return PageContent.stack.tools
-})
-
-export const getStackHeader = createSelector(
-    getLang,
-    getPageContent, 
-    (EngLang, PageContent) => {
-    return EngLang ? PageContent.stack.header : PageContent.stack.PolishLang.header
-}
-)
-
-export const getFooterData = createSelector(
-    getPageContent,
-    (PageContent)=>{
-    return PageContent.footer
-})
-
-export const getRightFooterData = createSelector(
-    getFooterData,
-    (footerData) =>{
-    return footerData.rightData
-})
-
-export const getGithubButton = createSelector(
-    getLang,
-    getPageContent,
-    (EngLang,pageContent) =>{
-    let button = pageContent.buttons.github
-
-    return EngLang ? button.eng : button.pl
 })
 
 export const getAboutHeader = createSelector(
@@ -120,3 +83,40 @@ export const getAboutText = createSelector(
     
     return EngLang && eng ? parse(eng) : parse(pol)
 })
+
+export const getStackHeader = createSelector(
+    getLang,
+    getPageContent, 
+    (EngLang, PageContent) => {
+    return EngLang ? PageContent.stack.header : PageContent.stack.PolishLang.header
+}
+)
+
+export const getStack = createSelector(
+    getPageContent,
+    (PageContent) => {
+    return PageContent.stack.tools
+})
+
+
+export const getFooterData = createSelector(
+    getPageContent,
+    (PageContent)=>{
+    return PageContent.footer
+})
+
+export const getRightFooterData = createSelector(
+    getFooterData,
+    (footerData) =>{
+    return footerData.rightData
+})
+
+export const getGithubButton = createSelector(
+    getLang,
+    getPageContent,
+    (EngLang,pageContent) =>{
+    let button = pageContent.buttons.github
+
+    return EngLang ? button.eng : button.pl
+})
+
