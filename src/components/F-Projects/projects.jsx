@@ -42,7 +42,7 @@ export default function Projects() {
                   value:'#17293f'
                 },
                 number: {
-                  value: 330,
+                  value: 230,
                 },
                 size: {
                   value: 1,
