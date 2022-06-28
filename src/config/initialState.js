@@ -23,7 +23,7 @@ export let initialState = {
             text:'',
             PolLang:{
                 header:'',
-                text:'initial'
+                text:''
             }
         },
         stack:{
