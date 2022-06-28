@@ -12,9 +12,7 @@ const Header = styled.h5`
 const Wrapper = styled.div`
   z-index:1000;
   background-color:#fff;
-  border: solid 1px #dbdbdb;
-  margin: 20px auto 0px auto;
-  border-radius: 10px;
+  padding:4px;
   ${boxShadow12};
   width: 60%;
   @media (max-width: 600px) {
