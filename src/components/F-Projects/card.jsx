@@ -6,6 +6,7 @@ import React from 'react'
 import Stack from './Stack'
 
 const Header = styled.h5`
+  font-size: 18px;
   transition: transform 0.5s;
 `
 const Wrapper = styled.div`
@@ -45,7 +46,9 @@ const ButtonWrapper = styled.div`
   display: flex;
   width: 250px;
 `
-const P = styled.p``
+const P = styled.p`
+font-size:16px;
+`
 const A = styled.a`
   margin:auto;
   :hover {
@@ -59,7 +62,7 @@ export default function Card({ ...props }) {
       <StImg src={props.item.src} alt={props.item.alt}></StImg>
       <CardContent>
         <Header className="card-title">{props.item.title}</Header>
-        <P className="card-text">{LimitText(props.item.text, 120)}</P>
+        <P className="card-text">{LimitText(props.item.text, 150)}</P>
 
         <ButtonWrapper>
           <A href={props.item.webHref.href} target="_blank">
