@@ -17,7 +17,7 @@ const InnerMainNav = styled.div`
   position:relative;
   display: flex;
   margin: 43px 0px 0px auto;
-  width: 680px;
+  width:${p=>p.EngLang?585:700}px;
 `
 const MainLogo = styled(SvgLoader)`
   display: inline-block;
@@ -28,7 +28,6 @@ const MainLogo = styled(SvgLoader)`
     fill: #fff;
   }
 `
-
 const Link = styled.a`
   position: relative;
   font-size: 18px;
@@ -72,7 +71,7 @@ function MainLarge({ ...props }) {
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
       <LangSwitch></LangSwitch>
-      <InnerMainNav>
+      <InnerMainNav EngLang={props.EngLang}>
         <LangSwitch></LangSwitch>
         {props.menu.map((item, i) => {
           return (
