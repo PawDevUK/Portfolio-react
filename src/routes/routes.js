@@ -1,4 +1,4 @@
-import { HashRouter as BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import TicTacToe from '../components/F-Projects/TicTacToe/TicTacToe'
 import Projects from '../components/F-Projects/projects'
@@ -41,7 +41,7 @@ const Container = styled.div`
     padding: 0px;
 `
     return(
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter>
         <Wrapper>
           <GlobalStyle />
           <Switch>
