@@ -8,9 +8,6 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import Router from '../routes/routes'
 import 'styles/styles.css'
 
-
-
-
 function App() {
 
   useEffect(()=>{
