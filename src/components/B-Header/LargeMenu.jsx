@@ -80,6 +80,7 @@ function MainLarge({ ...props }) {
               onMouseLeave={item.react ? handleMouseHover : null}
               key={i}
               href={item.href}
+              target={item.target ? item.target : ""}
             >
               {getLangMenu(item)}
               {mouseOver ? (
