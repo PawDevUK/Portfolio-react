@@ -6,6 +6,7 @@ export const ADD_RIGHT_FOOTER_DATA = 'ADD_RIGHT_FOOTER_DATA'
 export const ADD_HEADER_JUMBO_TEXT = 'ADD_HEADER_JUMBO_TEXT'
 export const ADD_BUTTONS = 'ADD_BUTTONS'
 export const ADD_ABOUT_INTRO = 'ADD_ABOUT_INTRO'
+export const ADD_FONTS = 'ADD_FONTS'
 
 export function AddHeaderMenu(data) {
     return {
@@ -52,8 +53,15 @@ export  function AddButtons(data){
 
 export function AddAboutIntro(data){
     return {
-        type: ADD_ABOUT_INTRO,
+        type:ADD_ABOUT_INTRO,
         payload: data
+    }
+}
+
+export function AddFonts(data){
+    return{
+        type:ADD_FONTS,
+        payload:data
     }
 }
 
