@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   position: absolute;
   top:-40px;
   left:0;
-  animation: ${appear} 0.6s linear;
+  animation: ${appear} 1s ease-out;
 `
 
 export default class LangSwitch extends Component {
