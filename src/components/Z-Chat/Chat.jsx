@@ -24,24 +24,23 @@ const Button = styled(SvgLoader)`
       : css``}
 
   padding: 0px;
+  margin-top:242px;
 `
 const Wrapper = styled.div`
-  display: flex;
+  position: absolute;
+  padding-top:1px;
+  height: 94%;
+  top: 280px;
+  right: 0px;
   @media (max-width: 1000px) {
     display: none;
   }
-  ${(p) =>
-    p.open
-      ? css`
-          position: absolute;
-          top: 280px;
-          right: 0px;
-        `
-      : css`
-          position: absolute;
-          top: 280px;
-          right: 0px;
-        `}
+  z-index:2000;
+`
+const InnerWrapper = styled.div`
+  display: flex;
+  position: sticky;
+  top: ${p=>p.scrollPosition}px;
 `
 
 const Window = styled.div`
@@ -55,7 +54,7 @@ const Window = styled.div`
           display: none;
         `};
   width: 250px;
-  height: 400px;
+  height: 301px;
   background-color: white;
   position: relative;
 `
@@ -94,9 +93,11 @@ const HeaderImg = styled.div`
 // <- header
 
 function Chat(props) {
+
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
+  let [scrollPosition, setScrollPosition] =  useState(280)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -104,6 +105,28 @@ function Chat(props) {
     }, 500)
     return () => clearTimeout(timeout)
   }, [buttonAnimation])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  },[scrollPosition]);
+
+  const handleScroll = () => {
+
+    const min = 280;
+    const max = 545;
+    const scroll = window.pageYOffset / 7
+
+    setScrollPosition(min)
+    if( scroll >= min && scroll <= max){
+       setScrollPosition(scroll)
+    }else if(scroll > max ){
+      setScrollPosition(max)
+      }
+};
 
   function HandleClick() {
     if(props.isChatOpen){
@@ -159,7 +182,8 @@ function Chat(props) {
   }
 
   return (
-    <Wrapper open={props.isChatOpen}>
+    <Wrapper open={props.isChatOpen} >
+      <InnerWrapper open={props.open} scrollPosition={scrollPosition}>
       <Button
         buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
         onClick={HandleClick}
@@ -197,6 +221,7 @@ function Chat(props) {
           ></Input>
         </form>
       </Window>
+      </InnerWrapper>
     </Wrapper>
   )
 }
