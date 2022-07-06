@@ -1,4 +1,4 @@
-import { HashRouter as BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import TicTacToe from '../components/F-Projects/TicTacToe/TicTacToe'
 import Projects from '../components/F-Projects/projects'
@@ -32,6 +32,7 @@ const Wrapper = styled.div`
     position: relative;
     width: 100%;
 `
+
 const Container = styled.div`
     width: 80%;
     @media (min-width: 992px) {
@@ -41,9 +42,9 @@ const Container = styled.div`
     padding: 0px;
 `
     return(
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename='/'>
         <Wrapper>
-          <GlobalStyle />
+          <GlobalStyle/>
           <Switch>
             <Route exact path="/covid">
               <Covid></Covid>
