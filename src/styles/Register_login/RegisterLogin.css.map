@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,KAAK,EAAC,GAAG;EACT,WAAW,EAAE,OAAO;CACrB;;AACD,AAAA,MAAM,CAAA;EACJ,KAAK,EAAC,SAAS;EACf,WAAW,EAAE,OAAO;CACrB;;AACD,AAAA,KAAK,CAAA;EACH,OAAO,EAAC,IAAI;CACb;;AACD,AAAA,UAAU,CAAA;EACR,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAC,OAAO;CACb",
+    "sources": [
+        "RegisterLogin.scss"
+    ],
+    "names": [],
+    "file": "RegisterLogin.css"
+}
