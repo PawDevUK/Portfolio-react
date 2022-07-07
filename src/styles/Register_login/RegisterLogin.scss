@@ -1,15 +1,37 @@
 .invalid{
     color:red;
     margin-left: 0.25rem;
-  }
-  .valid{
+}
+.valid{
     color:limegreen;
     margin-left: 0.25rem;
-  }
-  .hide{
+}
+.hide{
     display:none;
-  }
-  .offscreen{
+}
+.offscreen{
     position: absolute;
     left:-9999px;
-  }
+}
+section{
+    width:100%;
+    max-width: 420px;
+    min-height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    padding:1rem;
+    background-color: rgb(29, 59, 140);
+}
+.RegisterWrapper{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 1rem 0.5rem;
+}
+.RegisterHeader{
+    color: #fff;
+}
