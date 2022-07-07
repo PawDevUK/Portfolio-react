@@ -10,9 +10,9 @@ export default function Register() {
     const userRef = useRef()
     const errRef = useRef()
 
-    const [user, setuser] = useState('')
-    const [validate, setValidate] = useState(false)
-    const [userFocus, setuserFocus] = useState(false)
+    const [user, setUser] = useState('')
+    const [validName, setValidName] = useState(false)
+    const [userFocus, setUserFocus] = useState(false)
 
     const [pwd, setPwd] = useState('')
     const [validPwd, setValidPwd] = useState(false)
