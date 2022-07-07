@@ -50,6 +50,29 @@ export default function Register() {
     },[user, pwd, matchPwd])
 
     return (
-        <div>Register</div>
+        <section>
+            <p ref={errRef} className={errMsg?"errmsg":"offscreen"} aria-live="assertive">{errMsg}</p>
+            <h1>Register</h1>
+            <form>
+                <label htmlFor="username">
+                    Username:
+                </label>
+                <input 
+                    type="text"
+                    id="username" 
+                    ref={userRef}
+                    autoComplete="off"
+                    onChange={(e)=>{setUser(e.target.value)}}
+                    required
+                    aria-invalid={validName? "false" : "true"}
+                    aria-describedby="uidnote"
+                    onFocus={()=>{setUserFocus(true)}}
+                    onBlur={()=>{setUserFocus(false)}}
+                />
+            </form>
+            
+            <input type="text" placeholder="password" />
+            <input type="text" placeholder="Confirm Password"/>
+        </section>
     )
 }
