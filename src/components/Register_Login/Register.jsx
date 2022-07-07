@@ -83,7 +83,7 @@ export default function Register() {
                         type="password"
                         id="password"
                         autoComplete="off"
-
+                        onChange={(e)=>{setPwd(e.target.value)}}
                     />
 
                 </form>
