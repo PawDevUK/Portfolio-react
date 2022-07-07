@@ -28,6 +28,27 @@ export default function Register() {
     useEffect(()=>{
         userRef.current.focus();
     },[])
+
+    useEffect(()=>{
+        const result = USER_REGEX.test(user)
+        console.log(result);
+        console.log(user);
+        setValidName(result)
+    },[user])
+
+    useEffect(()=>{
+        const result = PASSWORD_REGEX.test(pwd)
+        console.log(result);
+        console.log(pwd);
+        setValidPwd(result)
+        const match = pwd === matchPwd
+        setMatchPwd(match)
+    },[pwd, matchPwd])
+
+    useEffect(()=>{
+        setErrMsg('')
+    },[user, pwd, matchPwd])
+
     return (
         <div>Register</div>
     )
