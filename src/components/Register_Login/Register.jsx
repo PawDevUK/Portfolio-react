@@ -23,7 +23,7 @@ export default function Register() {
     const [matchFocusPwd, setMatchFocus] = useState(false)
 
     const [errMsg, setErrMsg] = useState('')
-    const [successMsg, setSuccessMsg] = useState('')
+    const [success, setSuccess] = useState(false)
 
     useEffect(()=>{
         userRef.current.focus();
@@ -74,8 +74,19 @@ export default function Register() {
                         onFocus={()=>{setUserFocus(true)}}
                         onBlur={()=>{setUserFocus(false)}}
                     />
+                    <label htmlFor="password">
+                        Password:
+                        <span ></span>
+                    </label>
+                    <input 
+                        type="text"
+                        id="password"
+                        autoComplete="off"
+
+                    />
+
                 </form>
-                <input type="text" placeholder="password" />
+                
                 <input type="text" placeholder="Confirm Password"/>
             </section>
         </div>
