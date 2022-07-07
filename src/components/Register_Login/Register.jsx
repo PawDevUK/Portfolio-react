@@ -76,7 +76,8 @@ export default function Register() {
                     />
                     <label htmlFor="password">
                         Password:
-                        <span ></span>
+                        <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? "hide" : "invalid"}></FontAwesomeIcon>
                     </label>
                     <input 
                         type="text"
