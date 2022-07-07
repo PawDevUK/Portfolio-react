@@ -57,10 +57,8 @@ export default function Register() {
                 <form>
                     <label htmlFor="username">
                         Username:
-                        <span>
-                            <FontAwesomeIcon icon={faCheck} className={validName?"valid":"hide"}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide":"invalid"}></FontAwesomeIcon>
-                        </span>
+                        <FontAwesomeIcon icon={faCheck} className={validName?"valid":"hide"}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide":"invalid"}></FontAwesomeIcon>
                     </label>
                     <input
                         type="text"
