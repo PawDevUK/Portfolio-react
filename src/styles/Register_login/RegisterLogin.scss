@@ -1,0 +1,37 @@
+.invalid{
+    color:red;
+    margin-left: 0.25rem;
+}
+.valid{
+    color:limegreen;
+    margin-left: 0.25rem;
+}
+.hide{
+    display:none;
+}
+.offscreen{
+    position: absolute;
+    left:-9999px;
+}
+section{
+    width:100%;
+    max-width: 420px;
+    min-height:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    padding:1rem;
+    background-color:#17293f;
+}
+.RegisterWrapper{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 1rem 0.5rem;
+}
+.RegisterHeader{
+    color: #fff;
+}

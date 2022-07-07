@@ -1,4 +1,8 @@
 export let initialState = {
+        fonts:{
+            size:{},
+            family:{}
+        },
         header:{
             menu:[],
             jumboText:{

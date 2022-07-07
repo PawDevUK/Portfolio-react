@@ -3,7 +3,7 @@ import {
 } from '@reduxjs/toolkit'
 // import {LocalOnEnter} from './config/VisitorsAPI.config'
 import addCounter from 'actions/addCounter.actions'
-import { AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro } from 'actions/pageContent.actions'
+import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro } from 'actions/pageContent.actions'
 import rootReducer from './reducers'
 import { rightData } from 'config/footer.config'
 import { Menu } from 'config/headerMenu.config'
@@ -15,6 +15,7 @@ import { addUUID_ToObject } from 'factory'
 import { headerJumboText } from 'config/headerJumboText.config'
 import { buttons } from 'config/common.config'
 import { intro } from 'config/topIntro.config'
+import { fonts } from 'config/fonts.config'
 
 const middleware = [logger]
 
@@ -38,4 +39,5 @@ export function syncConfigWithStore(){
     store.dispatch(AddHeaderJumboText(addUUID_ToObject(headerJumboText)))
     store.dispatch(AddButtons(addUUID_ToObject(buttons)))
     store.dispatch(AddAboutIntro(addUUID_ToObject(intro)))
+    store.dispatch(AddFonts(addUUID_ToObject(fonts)))
 }

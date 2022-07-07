@@ -1,17 +1,29 @@
 import React, { Component } from 'react'
 import Toggler from 'components/common/Toggler'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import {store} from 'configureStore'
 import {toggleLang} from 'actions/toggleLang.actions'
 import {PolskaFlaga} from 'img/index'
 import {EnglishFlag} from 'img/index'
 
-const Wrapper = styled.div`
-position: absolute;
-top:-40px;
-left:0;
-`
+const appear = keyframes`
+  0% {
+        display: none;
+        opacity: 0;
+    }
 
+    100% {
+        display: block;
+        opacity: 1;
+    }
+`;
+
+const Wrapper = styled.div`
+  position: absolute;
+  top:-40px;
+  left:0;
+  animation: ${appear} 1s ease-out;
+`
 
 export default class LangSwitch extends Component {
   
