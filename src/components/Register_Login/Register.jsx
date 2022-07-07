@@ -80,7 +80,7 @@ export default function Register() {
                         <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? "hide" : "invalid"}></FontAwesomeIcon>
                     </label>
                     <input 
-                        type="text"
+                        type="password"
                         id="password"
                         autoComplete="off"
 
