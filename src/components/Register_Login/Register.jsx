@@ -23,7 +23,7 @@ export default function Register() {
     const [matchFocusPwd, setMatchFocus] = useState(false)
 
     const [errMsg, setErrMsg] = useState('')
-    const [successMsg, setSuccessMsg] = useState('')
+    const [success, setSuccess] = useState(false)
 
     useEffect(()=>{
         userRef.current.focus();
@@ -57,10 +57,8 @@ export default function Register() {
                 <form>
                     <label htmlFor="username">
                         Username:
-                        <span>
-                            <FontAwesomeIcon icon={faCheck} className={validName?"valid":"hide"}></FontAwesomeIcon>
-                            <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide":"invalid"}></FontAwesomeIcon>
-                        </span>
+                        <FontAwesomeIcon icon={faCheck} className={validName?"valid":"hide"}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide":"invalid"}></FontAwesomeIcon>
                     </label>
                     <input
                         type="text"
@@ -74,8 +72,20 @@ export default function Register() {
                         onFocus={()=>{setUserFocus(true)}}
                         onBlur={()=>{setUserFocus(false)}}
                     />
+                    <label htmlFor="password">
+                        Password:
+                        <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? "hide" : "invalid"}></FontAwesomeIcon>
+                    </label>
+                    <input 
+                        type="password"
+                        id="password"
+                        autoComplete="off"
+                        onChange={(e)=>{setPwd(e.target.value)}}
+                    />
+
                 </form>
-                <input type="text" placeholder="password" />
+                
                 <input type="text" placeholder="Confirm Password"/>
             </section>
         </div>
