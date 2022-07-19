@@ -185,14 +185,21 @@ function Chat(props) {
     document.getElementById('field').reset()
     toBottom()
   }
-  
+
   function handleChange(e) {
     setInput(e.target.value)
   }
 
   return (
-    <Wrapper open={props.isChatOpen} >
-      <InnerWrapper open={props.open} scrollPosition={scrollPosition}>
+    <Wrapper 
+      id='chat' 
+      top={scrollPosition} 
+      open={props.isChatOpen} 
+    >
+      <InnerWrapper 
+        id='chatInnerWrapper' 
+        open={props.open} 
+        scrollPosition={scrollPosition}>
       <Button
         buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
         onClick={HandleClick}
