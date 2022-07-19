@@ -129,7 +129,7 @@ function Chat(props) {
 
     setScrollPosition(min)
     if( scroll >= min && scroll <= max){
-       setScrollPosition(scroll)
+       setScrollPosition(Math.floor(scroll))
     }else if(scroll > max ){
       setScrollPosition(max)
       }
