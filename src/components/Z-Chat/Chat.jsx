@@ -122,10 +122,9 @@ function Chat(props) {
     };
   },[scrollPosition]);
 
-  const handleScroll = () => {
-
-    const min = 280;
-    const max = 545;
+  function handleScroll(){
+    let min = 280;
+    let max = 545;
     const scroll = window.pageYOffset / 7
 
     setScrollPosition(min)
