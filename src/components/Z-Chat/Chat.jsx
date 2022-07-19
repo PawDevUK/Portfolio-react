@@ -26,17 +26,19 @@ const Button = styled(SvgLoader)`
   padding: 0px;
   margin-top:242px;
 `
+
 const Wrapper = styled.div`
   position: absolute;
   padding-top:1px;
-  height: 94%;
-  top: 280px;
+  height:100%;
+  top: 0px;
   right: 0px;
   @media (max-width: 1000px) {
     display: none;
   }
   z-index:2000;
 `
+
 const InnerWrapper = styled.div`
   display: flex;
   position: sticky;
