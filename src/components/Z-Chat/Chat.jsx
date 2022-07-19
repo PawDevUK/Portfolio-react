@@ -136,17 +136,14 @@ function Chat(props) {
       return parseInt(window.getComputedStyle(selectedElement).height)
     }
 
-    const chatWindow = getHeightOfElement('chatWindow')
     const footerHeight = getHeightOfElement('FooterWrapper')
-
-    console.log(chatWindow);
 
     const screenHeight = window.screen.availHeight
     const chatToBottom = screenHeight - 400 // 400 is a height of a chat window
     const chatAboveFooter = chatToBottom - footerHeight 
 
     let min = 280;
-    let max = chatAboveFooter;
+    let max = chatAboveFooter - 5;
     const scroll = window.pageYOffset / 3
 
     setScrollPosition(min)
