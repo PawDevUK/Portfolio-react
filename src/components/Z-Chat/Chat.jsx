@@ -100,7 +100,10 @@ function Chat(props) {
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
   const [scrollPosition, setScrollPosition] = useState(280)
-
+  
+  /**
+   * applies animation to chat button
+   */
   useEffect(() => {
     const timeout = setTimeout(() => {
       setButtonAnimation((p) => !p)
@@ -108,6 +111,9 @@ function Chat(props) {
     return () => clearTimeout(timeout)
   }, [buttonAnimation])
 
+  /**
+   * Checks scroll movement and changes position of the chat in reference to view port max top or max bottom
+   */
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
 
