@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
 width:250px;
-height:70px;
+height:60px;
 margin:auto;
 /* border-radius:0 0 0 5px; */
 `
@@ -36,8 +36,8 @@ margin: 3px 0px 0px 16px;
 export default function Input({red, label, placeholder, underText, }) {
     return (
         <>
-            <Wrapper >
-                <Inner >
+            <Wrapper>
+                <Inner>
                     <Label>{label}</Label>
                     <Inp placeholder={placeholder}></Inp>
                 </Inner>

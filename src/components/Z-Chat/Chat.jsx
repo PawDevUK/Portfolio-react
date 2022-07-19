@@ -29,7 +29,7 @@ const Button = styled(SvgLoader)`
 
 const Wrapper = styled.div`
   position: absolute;
-  padding-top:1px;
+  padding-top:0px;
   height:100%;
   top: 0px;
   right: 0px;
@@ -65,7 +65,6 @@ const ChatWrapper = styled.div`
   overflow-y: auto;
   height: 242px;
   width: 100%;
-  padding-top: 7px;
 `
 //header
 const WrapperHeader = styled.div`
@@ -93,6 +92,10 @@ const HeaderImg = styled.div`
   background-image: url(${BrainBot});
 `
 // <- header
+
+const Form = styled.form`
+  height:60px;
+`
 
 function Chat(props) {
 
@@ -123,9 +126,28 @@ function Chat(props) {
   },[scrollPosition]);
 
   function handleScroll(){
+
+    function getHeightOfElement(element){
+      if(element==='body'){
+       return parseInt(window.getComputedStyle(document.body).height)
+      }
+
+      const selectedElement =  document.getElementById(`${element}`)
+      return parseInt(window.getComputedStyle(selectedElement).height)
+    }
+
+    const chatWindow = getHeightOfElement('chatWindow')
+    const footerHeight = getHeightOfElement('FooterWrapper')
+
+    console.log(chatWindow);
+
+    const screenHeight = window.screen.availHeight
+    const chatToBottom = screenHeight - 352 // 352 is a height of a chat window
+    const chatAboveFooter = chatToBottom - footerHeight - 50
+
     let min = 280;
-    let max = 545;
-    const scroll = window.pageYOffset / 7
+    let max = chatAboveFooter;
+    const scroll = window.pageYOffset
 
     setScrollPosition(min)
     if( scroll >= min && scroll <= max){
@@ -144,7 +166,7 @@ function Chat(props) {
   }
 
   function toBottom() {
-    const wrapper = document.getElementById('wrapper')
+    const wrapper = document.getElementById('chatWrapper')
     if (wrapper.scrollHeight !== null) {
       return (wrapper.scrollTop = wrapper.scrollHeight - wrapper.clientHeight)
     } else {
@@ -200,43 +222,43 @@ function Chat(props) {
         id='chatInnerWrapper' 
         open={props.open} 
         scrollPosition={scrollPosition}>
-      <Button
-        buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
-        onClick={HandleClick}
-        path={ChatButtonLarge1px}
-      ></Button>
-      <Window open={props.isChatOpen}>
-        <WrapperHeader>
-          <Header>
-            <SectionHeader>Brain Bot</SectionHeader>
-          </Header>
-          <HeaderImg></HeaderImg>
-        </WrapperHeader>
+        <Button
+          buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
+          onClick={HandleClick}
+          path={ChatButtonLarge1px}
+        ></Button>
+        <Window open={props.isChatOpen} id='chatWindow'>
+          <WrapperHeader >
+            <Header>
+              <SectionHeader>Brain Bot</SectionHeader>
+            </Header>
+            <HeaderImg></HeaderImg>
+          </WrapperHeader>
 
-        <ChatWrapper id="wrapper">
-          {chat.map((p) => {
-            return p.user ? (
-              <WhiteMessage>{p.text}</WhiteMessage>
-            ) : (
-              <BlueMessage>{p.text}</BlueMessage>
-            )
-          })}
-        </ChatWrapper>
+          <ChatWrapper id="chatWrapper">
+            {chat.map((p) => {
+              return p.user ? (
+                <WhiteMessage>{p.text}</WhiteMessage>
+              ) : (
+                <BlueMessage>{p.text}</BlueMessage>
+              )
+            })}
+          </ChatWrapper>
 
-        <form
-          id="field"
-          onSubmit={(e) => {
-            Submit(e)
-          }}
-          onChange={(e) => handleChange(e)}
-        >
-          <Input
-            label="Chat"
-            placeholder="Input text"
-            underText="Type in whatever you like"
-          ></Input>
-        </form>
-      </Window>
+          <Form
+            id="field"
+            onSubmit={(e) => {
+              Submit(e)
+            }}
+            onChange={(e) => handleChange(e)}
+          >
+            <Input
+              label="Chat"
+              placeholder="Input text"
+              underText="Type in whatever you like"
+            ></Input>
+          </Form>
+        </Window>
       </InnerWrapper>
     </Wrapper>
   )

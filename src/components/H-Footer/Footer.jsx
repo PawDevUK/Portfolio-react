@@ -154,7 +154,10 @@ class Footer extends Component{
 
   render(){
     return (
-      <Wrapper onMouseEnter={this.mouseEnterH2} onMouseLeave={this.mouseEnterH2}>
+      <Wrapper 
+        onMouseEnter={this.mouseEnterH2} 
+        onMouseLeave={this.mouseEnterH2}
+        id='FooterWrapper'>
         <StParticles
           params={{
             particles: {
