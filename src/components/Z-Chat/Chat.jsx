@@ -142,19 +142,12 @@ function Chat(props) {
     console.log(chatWindow);
 
     const screenHeight = window.screen.availHeight
-    const chatToBottom = screenHeight - 352 // 352 is a height of a chat window
-    const chatAboveFooter = chatToBottom - footerHeight - 50
+    const chatToBottom = screenHeight - 400 // 400 is a height of a chat window
+    const chatAboveFooter = chatToBottom - footerHeight 
 
     let min = 280;
-<<<<<<< HEAD
     let max = chatAboveFooter;
-    const scroll = window.pageYOffset
-=======
-    let max = 545;
-    const scroll = window.pageYOffset / 
-
-    console.log(window.screen.availHeight);
->>>>>>> 6b06f05ce7998c41f84ac816749a89261f4dd06b
+    const scroll = window.pageYOffset / 3
 
     setScrollPosition(min)
     if( scroll >= min && scroll <= max){
