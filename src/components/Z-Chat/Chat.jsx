@@ -132,8 +132,8 @@ function Chat(props) {
        setScrollPosition(Math.floor(scroll))
     }else if(scroll > max ){
       setScrollPosition(max)
-      }
-};
+    }
+  };
 
   function HandleClick() {
     if(props.isChatOpen){
