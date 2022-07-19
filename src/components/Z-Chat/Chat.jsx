@@ -151,6 +151,7 @@ function Chat(props) {
       return
     }
   }
+
   function Submit(e) {
     e.preventDefault()
     setChat((prevState) => {
@@ -184,6 +185,7 @@ function Chat(props) {
     document.getElementById('field').reset()
     toBottom()
   }
+  
   function handleChange(e) {
     setInput(e.target.value)
   }
