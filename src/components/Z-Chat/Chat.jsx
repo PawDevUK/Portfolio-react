@@ -125,7 +125,9 @@ function Chat(props) {
   function handleScroll(){
     let min = 280;
     let max = 545;
-    const scroll = window.pageYOffset / 7
+    const scroll = window.pageYOffset / 
+
+    console.log(window.screen.availHeight);
 
     setScrollPosition(min)
     if( scroll >= min && scroll <= max){
