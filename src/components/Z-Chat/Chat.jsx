@@ -1,16 +1,16 @@
+import { chatOpen, chatClose } from 'actions/isChatOpen.actions'
 import { SectionHeader } from 'components/common/typography'
+import { isChatOpen } from 'selectors/isChatOpen.selector'
 import React, { useState, useEffect } from 'react'
 import { ChatButtonLarge1px, BrainBot } from 'img'
 import styled, { css } from 'styled-components'
 import { SvgLoader } from 'react-svgmt'
+import { store } from 'configureStore'
+import { connect } from 'react-redux'
 import WhiteMessage from './WhiteMSG'
 import BlueMessage from './BlueMSG'
 import Input from './Input.jsx'
 import axios from 'axios'
-import { chatOpen, chatClose } from 'actions/isChatOpen.actions'
-import { store } from 'configureStore'
-import { connect } from 'react-redux'
-import { isChatOpen } from 'selectors/isChatOpen.selector'
 
 const parseString = require('xml2js').parseString
 
