@@ -99,7 +99,7 @@ function Chat(props) {
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
-  let [scrollPosition, setScrollPosition] =  useState(280)
+  const [scrollPosition, setScrollPosition] = useState(280)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
