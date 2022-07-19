@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 const InnerWrapper = styled.div`
   display: flex;
   position: sticky;
-  top: 350px;
+  top: ${p=>p.chatPosition}px;
 `
 
 const Window = styled.div`
@@ -102,6 +102,7 @@ function Chat(props) {
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
+  const [chatPosition, setChatPosition] = useState(400)
   
   /**
    * applies animation to chat button
@@ -111,8 +112,12 @@ function Chat(props) {
       setButtonAnimation((p) => !p)
     }, 500)
     return () => clearTimeout(timeout)
-  }, [buttonAnimation])
+  }, [buttonAnimation]);
 
+  useEffect(()=>{
+    const screenHeight = document.documentElement.clientHeight ;
+    setChatPosition(screenHeight / 2 )
+  },[chatPosition])
 
   function HandleClick() {
     if(props.isChatOpen){
@@ -177,6 +182,7 @@ function Chat(props) {
       <InnerWrapper 
         id='chatInnerWrapper' 
         open={props.open}
+        chatPosition={chatPosition}
       >
         <Button
           buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
