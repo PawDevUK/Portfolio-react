@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 const InnerWrapper = styled.div`
   display: flex;
   position: sticky;
-  top: ${p=>p.scrollPosition}px;
+  top: 350px;
 `
 
 const Window = styled.div`
@@ -102,7 +102,6 @@ function Chat(props) {
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
-  const [scrollPosition, setScrollPosition] = useState(280)
   
   /**
    * applies animation to chat button
@@ -114,45 +113,6 @@ function Chat(props) {
     return () => clearTimeout(timeout)
   }, [buttonAnimation])
 
-  /**
-   * Checks scroll movement and changes position of the chat in reference to view port max top or max bottom
-   */
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-  },[scrollPosition]);
-
-  function handleScroll(){
-
-    function getHeightOfElement(element){
-      if(element==='body'){
-       return parseInt(window.getComputedStyle(document.body).height)
-      }
-
-      const selectedElement =  document.getElementById(`${element}`)
-      return parseInt(window.getComputedStyle(selectedElement).height)
-    }
-
-    const footerHeight = getHeightOfElement('FooterWrapper')
-
-    const screenHeight = window.screen.availHeight
-    const chatToBottom = screenHeight - 400 // 400 is a height of a chat window
-    const chatAboveFooter = chatToBottom - footerHeight 
-
-    let min = 280;
-    let max = chatAboveFooter - 5;
-    const scroll = window.pageYOffset / 3
-
-    setScrollPosition(min)
-    if( scroll >= min && scroll <= max){
-       setScrollPosition(Math.floor(scroll))
-    }else if(scroll > max ){
-      setScrollPosition(max)
-    }
-  };
 
   function HandleClick() {
     if(props.isChatOpen){
@@ -212,13 +172,12 @@ function Chat(props) {
   return (
     <Wrapper 
       id='chat' 
-      top={scrollPosition} 
       open={props.isChatOpen} 
     >
       <InnerWrapper 
         id='chatInnerWrapper' 
-        open={props.open} 
-        scrollPosition={scrollPosition}>
+        open={props.open}
+      >
         <Button
           buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
           onClick={HandleClick}
