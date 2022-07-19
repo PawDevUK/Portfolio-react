@@ -22,6 +22,7 @@ font-size:14px;
 `
 const Inp = styled.input`
 margin-left:0px;
+width:231px;
 height:24px;
 outline: none;
 border:none;
