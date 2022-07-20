@@ -48,16 +48,18 @@ const Window = styled.div`
   ${(p) =>
     p.open
       ? css`
-      transition:display 0.4s
-          display: block;
+          transition:display 0.4s;
+          display: flex;
         `
       : css`
           display: none;
         `};
+  flex-direction: column;
   width: 250px;
-  height: 301px;
-  background-color: white;
+  height: 361px;
   position: relative;
+  border:1px solid #17293f40;
+  border-radius: 5px 5px 0px 0px;
 `
 const ChatBody = styled.div`
   background-color: white;
