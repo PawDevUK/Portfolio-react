@@ -78,15 +78,11 @@ const HeaderWrapper = styled.div`
   height:60px;
 `
 const Header = styled.div`
-  z-index: 1;
-  left: -100px;
-  position: absolute;
-  background-color: #fff;
   border-radius: 5px 0px 0px 5px;
   width: 109px;
   height: 30px;
-  display: flex;
   padding: 3px 5px;
+  margin: auto 0px auto 50px;
 `
 const HeaderImg = styled.div`
   z-index: 100;
