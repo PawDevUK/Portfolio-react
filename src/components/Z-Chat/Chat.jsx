@@ -21,10 +21,9 @@ const Button = styled(SvgLoader)`
           transition: margin-right 0.4s;
           margin-right: 5px;
         `
-      : css``}
-
-  padding: 0px;
-  margin-top:242px;
+      : css``};
+  padding:0px;
+  margin-top:324px;
 `
 
 const Wrapper = styled.div`
