@@ -67,12 +67,12 @@ const ChatWrapper = styled.div`
   width: 100%;
 `
 //header
-const WrapperHeader = styled.div`
-  position: absolute;
-  align-items: center;
-  top: -50px;
-  right: 10px;
+const HeaderWrapper = styled.div`
+  border-bottom:1px solid #17293f40;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #fff;
   display: flex;
+  height:60px;
 `
 const Header = styled.div`
   z-index: 1;
@@ -190,12 +190,12 @@ function Chat(props) {
           path={ChatButtonLarge1px}
         ></Button>
         <Window open={props.isChatOpen} id='chatWindow'>
-          <WrapperHeader >
+          <HeaderWrapper>
             <Header>
               <SectionHeader>Brain Bot</SectionHeader>
             </Header>
             <HeaderImg></HeaderImg>
-          </WrapperHeader>
+          </HeaderWrapper>
 
           <ChatWrapper id="chatWrapper">
             {chat.map((p) => {
