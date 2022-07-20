@@ -59,7 +59,9 @@ const Window = styled.div`
   background-color: white;
   position: relative;
 `
-
+const ChatBody = styled.div`
+  background-color: white;
+`
 const ChatWrapper = styled.div`
   overflow-y: auto;
   height: 242px;
@@ -195,30 +197,30 @@ function Chat(props) {
             </Header>
             <HeaderImg></HeaderImg>
           </HeaderWrapper>
-
-          <ChatWrapper id="chatWrapper">
-            {chat.map((p) => {
-              return p.user ? (
-                <WhiteMessage>{p.text}</WhiteMessage>
-              ) : (
-                <BlueMessage>{p.text}</BlueMessage>
-              )
-            })}
-          </ChatWrapper>
-
-          <Form
-            id="field"
-            onSubmit={(e) => {
-              Submit(e)
-            }}
-            onChange={(e) => handleChange(e)}
-          >
-            <Input
-              label="Chat"
-              placeholder="Input text"
-              underText="Type in whatever you like"
-            ></Input>
-          </Form>
+          <ChatBody>
+            <ChatWrapper id="chatWrapper">
+              {chat.map((p) => {
+                return p.user ? (
+                  <WhiteMessage>{p.text}</WhiteMessage>
+                ) : (
+                  <BlueMessage>{p.text}</BlueMessage>
+                )
+              })}
+            </ChatWrapper>
+            <Form
+              id="field"
+              onSubmit={(e) => {
+                Submit(e)
+              }}
+              onChange={(e) => handleChange(e)}
+            >
+              <Input
+                label="Chat"
+                placeholder="Input text"
+                underText="Type in whatever you like"
+              ></Input>
+            </Form>
+          </ChatBody>
         </Window>
       </InnerWrapper>
     </Wrapper>
