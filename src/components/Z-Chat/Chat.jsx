@@ -117,7 +117,7 @@ function Chat(props) {
 
   useEffect(()=>{
     const screenHeight = document.documentElement.clientHeight ;
-    setChatPosition(screenHeight / 2 )
+    setChatPosition( screenHeight / 2 )
   },[chatPosition])
 
   function HandleClick() {
