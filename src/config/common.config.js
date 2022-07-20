@@ -4,3 +4,7 @@ export const buttons = {
         pl:'Mój GitHub'
     }
 }
+
+export const theme = {
+    mian_blue:'#17293F'
+}
