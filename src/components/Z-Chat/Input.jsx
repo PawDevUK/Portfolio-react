@@ -12,8 +12,8 @@ const Inner = styled.div`
 background-color:rgba(33, 33, 33, 0.08);
 border-radius: 4px 4px 0px 0px;
 height:60px;
-padding: 8px 0px 0px 16px;
-border-bottom:1px solid rgba(1, 87, 155, 1);
+padding: 15px 0px 0px 16px;
+/* border-bottom:1px solid rgba(1, 87, 155, 1); */
 `
 const Label = styled.div`
 margin-left:3px;
