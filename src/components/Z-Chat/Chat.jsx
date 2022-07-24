@@ -102,8 +102,9 @@ function Chat(props) {
   const [formInput, setInput] = useState('')
   const [chat, setChat] = useState([])
   const [buttonAnimation, setButtonAnimation] = useState(false)
-  const [chatPosition, setChatPosition] = useState(400)
-  
+  const [clientHeight, setClientHeight] = useState(0)
+  const [footerHeight, setFooterHeight] = useState(90)
+ 
   /**
    * applies animation to chat button
    */
@@ -115,9 +116,14 @@ function Chat(props) {
   }, [buttonAnimation]);
 
   useEffect(()=>{
-    const screenHeight = document.documentElement.clientHeight ;
-    setChatPosition( screenHeight / 2 )
-  },[chatPosition])
+
+    const clientHeight = document.documentElement.clientHeight;
+    const footer = document.getElementById('FooterWrapper').clientHeight;
+
+    setClientHeight( clientHeight );
+    setFooterHeight(footer)
+    
+  },[clientHeight, footerHeight])
 
   function HandleClick() {
     if(props.isChatOpen){
@@ -182,7 +188,7 @@ function Chat(props) {
       <InnerWrapper 
         id='chatInnerWrapper' 
         open={props.open}
-        chatPosition={chatPosition}
+        chatPosition={clientHeight - 360 - footerHeight}
       >
         <Button
           buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
