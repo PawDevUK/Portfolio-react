@@ -7,10 +7,8 @@ import '../styles/themes.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import Router from '../routes/routes'
 import 'styles/styles.css'
-import 'styles/Register_login/RegisterLogin.css'
 
 function App() {
-
   useEffect(()=>{
     // sync_DB_With_Store();
     syncConfigWithStore();
