@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import styled, { createGlobalStyle } from 'styled-components'
 import TicTacToe from '../components/F-Projects/TicTacToe/TicTacToe'
-import Register from 'components/Register_Login/Register'
 import Projects from '../components/F-Projects/projects'
 import Footer from '../components/H-Footer/Footer.jsx'
 import TopIntro from '../components/C-About/top-intro'
@@ -70,9 +69,6 @@ const Container = styled.div`
             </Route>
             <Route exact path='/cv' >
               <CV></CV>
-            </Route>
-            <Route exact path='/register' >
-              <Register></Register>
             </Route>
             <Route exact path="/">
               <Intro></Intro>
