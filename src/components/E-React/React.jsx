@@ -23,6 +23,7 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: #17293f;
 `
+
 const ContentWrapper = styled.div`
   display: flex;
   @media (max-width: 1000px) {
@@ -45,6 +46,7 @@ const ProsWrapper = styled.div`
   flex-wrap: wrap;
   margin-bottom: 10px;
 `
+
 const ReactIcon = styled(SvgLoader)`
   animation: ${rotate} 30s infinite linear;
   display: flex;
@@ -57,6 +59,7 @@ const ReactIcon = styled(SvgLoader)`
     fill: #17293f;
   }
 `
+
 const RightWrapper = styled.div`
   @media (max-width: 992px) {
     display: none;
@@ -67,6 +70,7 @@ const RightWrapper = styled.div`
   align-items: center;
   height: ${height};
 `
+
 const StP = styled(P)`
   line-height: ${p=>p.p_line_height}px;
   @media (min-width: 1000px) {
