@@ -1,13 +1,13 @@
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import { ReactComponentData } from 'config/reactComponent.config'
+import { getPLineHight } from 'selectors/pageContent.selector'
 import styled, { keyframes } from 'styled-components'
 import { P } from 'components/common/typography'
 import Pros from 'components/E-React/pros'
 import { SvgLoader } from 'react-svgmt'
+import { connect } from 'react-redux'
 import Reacticon from 'img/react.svg'
 import React from 'react'
-import { getPLineHight } from 'selectors/pageContent.selector'
-import { connect } from 'react-redux'
 
 const height = '350px'
 const rotate = keyframes`
@@ -17,7 +17,6 @@ const rotate = keyframes`
   to {
     transform: rotate(359deg);
   }
-
 `
 const Wrapper = styled.div`
   margin: 0px;
@@ -75,6 +74,7 @@ const StP = styled(P)`
   }
   margin-bottom: 15px;
 `
+
 function ReactSection(props) {
   return (
     <Wrapper id="react">
