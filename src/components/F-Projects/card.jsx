@@ -42,7 +42,6 @@ const StImg = styled.img`
   height:200px;
   width:80%;
 `
-
 const ButtonWrapper = styled.div`
   justify-content:space-between;
   margin:10px auto auto auto;

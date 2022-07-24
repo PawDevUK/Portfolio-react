@@ -132,4 +132,3 @@ export const getPLineHight = createSelector(
         return fonts.paragraph_line_height
     }
 )
-
