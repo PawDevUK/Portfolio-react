@@ -6,6 +6,8 @@ import Pros from 'components/E-React/pros'
 import { SvgLoader } from 'react-svgmt'
 import Reacticon from 'img/react.svg'
 import React from 'react'
+import { getPLineHight } from 'selectors/pageContent.selector'
+import { connect } from 'react-redux'
 
 const height = '350px'
 const rotate = keyframes`
@@ -67,13 +69,13 @@ const RightWrapper = styled.div`
   height: ${height};
 `
 const StP = styled(P)`
-  line-height: 22px;
+  line-height: ${p=>p.p_line_height}px;
   @media (min-width: 1000px) {
     margin-top: 17px;
   }
   margin-bottom: 15px;
 `
-export default function ReactSection() {
+function ReactSection(props) {
   return (
     <Wrapper id="react">
       <ContentWrapper>
@@ -82,7 +84,7 @@ export default function ReactSection() {
             {ReactComponentData.Header}
           </JumboSectionHeader>
 
-          <StP dark>{ReactComponentData.MainText}</StP>
+          <StP p_line_height={props.pLineHeight} dark>{ReactComponentData.MainText}</StP>
 
           <ProsWrapper>
             {ReactComponentData.Pros.map((pro, i) => {
@@ -101,3 +103,9 @@ export default function ReactSection() {
     </Wrapper>
   )
 }
+
+const mapStateToProps = (state)=>{
+ return { pLineHeight: getPLineHight(state) }
+}
+
+export default connect(mapStateToProps)(ReactSection)

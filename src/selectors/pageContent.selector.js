@@ -120,3 +120,16 @@ export const getGithubButton = createSelector(
     return EngLang ? button.eng : button.pl
 })
 
+export const getFonts = createSelector(
+    getPageContent,
+    (pageContent)=>{
+        return pageContent.fonts
+    }
+)
+export const getPLineHight = createSelector(
+    getFonts,
+    (fonts)=>{
+        return fonts.paragraph_line_height
+    }
+)
+

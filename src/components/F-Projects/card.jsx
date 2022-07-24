@@ -1,6 +1,8 @@
+import { getPLineHight } from 'selectors/pageContent.selector'
 import Button from 'components/common/Button'
 import styled from 'styled-components'
 import { boxShadow12 } from 'styled.js'
+import { connect } from 'react-redux'
 import { LimitText } from 'factory'
 import React from 'react'
 import Stack from './Stack'
@@ -48,7 +50,8 @@ const ButtonWrapper = styled.div`
   width:250px;
 `
 const P = styled.p`
-font-size:16px;
+  line-height: ${p=>p.p_line_height}px;
+  font-size:16px;
 `
 const A = styled.a`
   margin:auto;
@@ -56,19 +59,29 @@ const A = styled.a`
     text-decoration: none;
   }
 `
-export default function Card({ ...props }) {
+ function Card({ ...props }) {
   return (
     <Wrapper>
       <Stack stack={props.stack}></Stack>
-      <StImg src={props.item.src} alt={props.item.alt}></StImg>
+      <StImg 
+        src={props.item.src} 
+        alt={props.item.alt}></StImg>
       <CardContent>
         <Header className="card-title">{props.item.title}</Header>
-        <P className="card-text">{LimitText(props.item.text, 150)}</P>
+        <P 
+          p_line_height={props.p_line_height} 
+          className="card-text">
+            {LimitText(props.item.text, 150)}
+        </P>
         <ButtonWrapper>
-          <A href={props.item.webHref.href} target="_blank">
+          <A 
+            href={props.item.webHref.href} 
+            target="_blank">
             <Button light>{props.item.webHref.button}</Button>
           </A>
-          <A href={props.item.githubHref} target="_blank">
+          <A 
+            href={props.item.githubHref} 
+            target="_blank">
             <Button light>Github Repo</Button>
           </A>
         </ButtonWrapper>
@@ -76,3 +89,10 @@ export default function Card({ ...props }) {
     </Wrapper>
   )
 }
+const mapStateToProps = (state)=>{
+  return {
+    p_line_height:getPLineHight(state)
+  }
+}
+
+export default connect(mapStateToProps)(Card)
