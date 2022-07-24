@@ -1,13 +1,13 @@
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import { ReactComponentData } from 'config/reactComponent.config'
+import { getPLineHight } from 'selectors/pageContent.selector'
 import styled, { keyframes } from 'styled-components'
 import { P } from 'components/common/typography'
 import Pros from 'components/E-React/pros'
 import { SvgLoader } from 'react-svgmt'
+import { connect } from 'react-redux'
 import Reacticon from 'img/react.svg'
 import React from 'react'
-import { getPLineHight } from 'selectors/pageContent.selector'
-import { connect } from 'react-redux'
 
 const height = '350px'
 const rotate = keyframes`
@@ -17,13 +17,13 @@ const rotate = keyframes`
   to {
     transform: rotate(359deg);
   }
-
 `
 const Wrapper = styled.div`
   margin: 0px;
   width: 100%;
   background-color: #17293f;
 `
+
 const ContentWrapper = styled.div`
   display: flex;
   @media (max-width: 1000px) {
@@ -46,6 +46,7 @@ const ProsWrapper = styled.div`
   flex-wrap: wrap;
   margin-bottom: 10px;
 `
+
 const ReactIcon = styled(SvgLoader)`
   animation: ${rotate} 30s infinite linear;
   display: flex;
@@ -58,6 +59,7 @@ const ReactIcon = styled(SvgLoader)`
     fill: #17293f;
   }
 `
+
 const RightWrapper = styled.div`
   @media (max-width: 992px) {
     display: none;
@@ -68,6 +70,7 @@ const RightWrapper = styled.div`
   align-items: center;
   height: ${height};
 `
+
 const StP = styled(P)`
   line-height: ${p=>p.p_line_height}px;
   @media (min-width: 1000px) {
@@ -75,6 +78,7 @@ const StP = styled(P)`
   }
   margin-bottom: 15px;
 `
+
 function ReactSection(props) {
   return (
     <Wrapper id="react">
