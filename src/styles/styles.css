@@ -1,3 +1,10 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: #f5f5f5;
+}
+
 .styledP {
   font-size: 16px;
   line-height: 20px;
