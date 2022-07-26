@@ -50,19 +50,19 @@ export default function Register() {
     },[user, pwd, matchPwd])
 
     return (
-        <div className="RegisterWrapper">
-            <section>
-                <p ref={errRef} className={errMsg?"errmsg":"offscreen"} aria-live="assertive">{errMsg}</p>
-                <h1 className="RegisterHeader">Register</h1>
+        <div className={s.RegisterWrapper}>
+            <section className={s.section}>
+                <p ref={errRef} className={errMsg?s.errmsg:s.offscreen} aria-live="assertive">{errMsg}</p>
+                <h1 className={s.RegisterHeader}>Register</h1>
                 <form>
                     <label htmlFor="username">
                         Username:
-                        <FontAwesomeIcon icon={faCheck} className={validName?"valid":"hide"}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide":"invalid"}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
                     </label>
                     <input
                         type="text"
-                        id="username"
+                        id={s.username}
                         ref={userRef}
                         autoComplete="off"
                         onChange={(e)=>{setUser(e.target.value)}}
@@ -74,8 +74,8 @@ export default function Register() {
                     />
                     <label htmlFor="password">
                         Password:
-                        <FontAwesomeIcon icon={faCheck} className={validPwd ? "valid" : "hide"}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? "hide" : "invalid"}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
                     </label>
                     <input 
                         type="password"
