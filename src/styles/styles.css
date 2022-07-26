@@ -1,3 +1,61 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: #f5f5f5;
+}
+
+h2 {
+  font-size: 20px;
+  padding-bottom: 15px;
+  margin: 0px;
+  text-transform: capitalize;
+  padding: 10px 0px 0px 0px;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  padding-top: 10px;
+  margin: 0px;
+  font-size: 20px;
+  color: #007297;
+  text-transform: capitalize;
+}
+
+h5 {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 19px;
+  margin: 20px 0px 5px 0px;
+}
+
+p {
+  color: #585858;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #007297;
+}
+
+article {
+  padding: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #D3D3D3;
+}
+
+time {
+  font-weight: normal;
+  float: right;
+}
+
 .styledP {
   font-size: 16px;
   line-height: 20px;
