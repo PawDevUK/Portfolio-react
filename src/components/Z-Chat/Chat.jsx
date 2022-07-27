@@ -116,13 +116,10 @@ function Chat(props) {
   }, [buttonAnimation]);
 
   useEffect(()=>{
-
     const clientHeight = document.documentElement.clientHeight;
     const footer = document.getElementById('FooterWrapper').clientHeight;
-
     setClientHeight( clientHeight );
     setFooterHeight(footer)
-    
   },[clientHeight, footerHeight])
 
   function HandleClick() {
