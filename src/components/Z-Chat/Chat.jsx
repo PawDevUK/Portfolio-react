@@ -105,10 +105,12 @@ function Chat(props) {
   const [clientHeight, setClientHeight] = useState(0)
   const [footerHeight, setFooterHeight] = useState(90)
  
-  /**
-   * applies animation to chat button
-   */
+
   useEffect(() => {
+  /**
+   * @timeout
+   * applies animation to the chat button
+  */
     const timeout = setTimeout(() => {
       setButtonAnimation((p) => !p)
     }, 500)
