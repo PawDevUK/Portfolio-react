@@ -118,6 +118,9 @@ function Chat(props) {
   }, [buttonAnimation]);
 
   useEffect(()=>{
+    /**
+     * adds heights of the viewport and footer height to the state for the chat
+     */
     const clientHeight = document.documentElement.clientHeight;
     const footer = document.getElementById('FooterWrapper').clientHeight;
     setClientHeight( clientHeight );
