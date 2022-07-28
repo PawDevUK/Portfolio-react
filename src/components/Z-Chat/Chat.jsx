@@ -113,7 +113,7 @@ function Chat(props) {
   */
     const timeout = setTimeout(() => {
       setButtonAnimation((p) => !p)
-    }, 500)
+    }, 500);
     return () => clearTimeout(timeout)
   }, [buttonAnimation]);
 
@@ -135,6 +135,10 @@ function Chat(props) {
     }
   }
 
+  /**
+   * @toBottom
+   * scrolls down chat while user chats therefore keeps last message of the chat in the viewport
+   */
   function toBottom() {
     const wrapper = document.getElementById('chatWrapper')
     if (wrapper.scrollHeight !== null) {
