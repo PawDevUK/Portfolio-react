@@ -54,6 +54,19 @@ export default function Register() {
         setShowPass(!showPass)
     }
 
+    async function handleSubmit(e){
+        e.preventDefault();
+        if(!user || !matchPwd ){
+            setErrMsg('Invalid Entry')
+            return;
+        }
+        try{
+
+        }
+        catch{
+
+        }
+    }
 
     return (
         <div className={s.RegisterWrapper}>
