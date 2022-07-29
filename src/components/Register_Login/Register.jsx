@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faTimes, faInfoCircle, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import s from './styles/RegisterLogin.module.css'
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
@@ -17,6 +17,7 @@ export default function Register() {
     const [pwd, setPwd] = useState('')
     const [validPwd, setValidPwd] = useState(false)
     const [pwdFocus, setPwdFocus] = useState(false)
+    const [showPass, setShowPass] = useState(false)
 
     const [matchPwd, setMatchPwd] = useState('')
     const [validMatchPwd, setValidMatchPwd] = useState(false)
@@ -47,7 +48,12 @@ export default function Register() {
 
     useEffect(()=>{
         setErrMsg('')
-    },[user, pwd, matchPwd])
+    },[user, pwd, matchPwd]);
+
+    function showPassOnClick(){
+        setShowPass(!showPass)
+    }
+
 
     return (
         <div className={s.RegisterWrapper}>
@@ -77,16 +83,28 @@ export default function Register() {
                         <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
                         <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
                     </label>
-                    <input 
-                        type="password"
-                        id="password"
-                        autoComplete="off"
-                        onChange={(e)=>{setPwd(e.target.value)}}
-                    />
+                    <div className={s.passWrapper}>
+                        <input 
+                            type={showPass?"text":"password"}
+                            id="password"
+                            autoComplete="off"
+                            onChange={(e)=>{setPwd(e.target.value)}}
+                        />
+                        {!showPass ? 
+                        <FontAwesomeIcon onClick={showPassOnClick}icon={faEye} />
+                        :
+                        <FontAwesomeIcon onClick={showPassOnClick} icon={faEyeSlash}/>
+                        }
+                    </div>
 
+                    <input 
+                        type={showPass?"text":"password"} 
+                        placeholder="Confirm Password"
+                    />
+                    <button onClick={handleSubmit}>Submit</button>
                 </form>
                 
-                <input type="text" placeholder="Confirm Password"/>
+                
             </section>
         </div>
     )
