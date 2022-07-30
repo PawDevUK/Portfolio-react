@@ -124,7 +124,7 @@ export default function Register() {
                         placeholder="Confirm Password"
                         onChange={e=>setMatchPwd(e.target.value)}
                     />
-                    <button onClick={handleSubmit}>Submit</button>
+                    <button disabled={!validName||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
                 </form>
                 
                 
