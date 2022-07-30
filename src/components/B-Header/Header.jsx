@@ -49,8 +49,6 @@ function Header( {...props} ) {
     function closeChat(){
         store.dispatch(chatClose())
       }
-
-
     return (
         <Wrapper onClick={ props.isChatOpen ? closeChat : null }>
            {!large?<MobileMenu></MobileMenu>:null}
