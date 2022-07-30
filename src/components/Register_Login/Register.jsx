@@ -88,6 +88,7 @@ export default function Register() {
                 </p>
                 <h1 className={s.RegisterHeader}>Register</h1>
                 <form>
+                    <div className={s.fieldSection}>
                     <label 
                         htmlFor="username" 
                         className={s.label}
@@ -109,6 +110,8 @@ export default function Register() {
                         onFocus={()=>{setUserFocus(true)}}
                         onBlur={()=>{setUserFocus(false)}}
                     />
+                    </div>
+                    <div className={s.fieldSection}>
                     <label 
                         htmlFor="password"
                         className={s.label}
@@ -132,9 +135,8 @@ export default function Register() {
                         <FontAwesomeIcon onClick={showPassOnClick} icon={faEyeSlash}/>
                         }
                     </div>
-                    <label htmlFor="confirm_pwd">
-                        
-                    </label>
+                    </div>
+                    <div className={s.fieldSection}>
                     <input 
                         required
                         className={s.input}
@@ -142,7 +144,7 @@ export default function Register() {
                         placeholder="Confirm Password"
                         onChange={e=>setMatchPwd(e.target.value)}
                     />
-                    <button disabled={!validName||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
+                    </div>
                 </form>            
             </section>}
         </div>
