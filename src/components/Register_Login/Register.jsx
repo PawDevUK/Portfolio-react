@@ -75,6 +75,9 @@ export default function Register() {
                 <p>
                     <a href="/signIn">Sign In</a>
                 </p>
+                <p>
+                    <a href="/register">Register</a>
+                </p>
             </section>
             :
             <section className={s.section}>
