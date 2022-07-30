@@ -52,6 +52,7 @@ export default function Register() {
     return (
         <div className={s.RegisterWrapper}>
             <section className={s.section}>
+                <p 
                     ref={errRef} 
                     className={errMsg?s.errMsg:s.offscreen} 
                     aria-live="assertive">{errMsg}
