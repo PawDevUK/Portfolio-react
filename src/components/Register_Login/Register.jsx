@@ -55,6 +55,10 @@ export default function Register() {
             setErrMsg('Invalid Entry')
             return;
         }
+        if(validName && matchPwd){
+            setSuccess(true)
+            return
+        }
         try{
 
         }
