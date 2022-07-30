@@ -40,10 +40,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -56,5 +52,54 @@
 
 .RegisterHeader {
   color: #fff;
+}
+
+.passWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.fieldSection {
+  margin-top: 20px;
+}
+
+.label {
+  font-size: large;
+}
+
+.input {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.passEye {
+  position: absolute;
+  right: 0px;
+  color: #17293f;
+  height: 100%;
+  margin-right: 5px;
+}
+
+#submitWrapper {
+  width: 100%;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#submit {
+  border-radius: 5px;
+  width: 60%;
+  height: 35px;
 }
 /*# sourceMappingURL=RegisterLogin.module.css.map */
