@@ -1,3 +1,4 @@
+
 .invalid{
     color:red;
     margin-left: 0.25rem;
@@ -19,14 +20,16 @@
     min-height:400px;
     display:flex;
     flex-direction:column;
-    justify-content: flex-start;
+    justify-content:flex-start;
     padding:1rem;
     background-color:#17293f;
 }
 .RegisterWrapper{
+    // background-image: url('../../../img/pexels-krivec-ales-547114.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
     color: #fff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
@@ -38,4 +41,33 @@
 .passWrapper{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.fieldSection{
+    margin-top:20px;
+}
+.label{
+   font-size: large;
+}
+.input{
+    width: 100%;
+    border-radius: 5px;
+}
+.passEye{
+    position: absolute;
+    right: 0px;
+    color: #17293f;
+    height: 100%;
+    margin-right: 5px;
+}
+#submitWrapper{
+    width: 100%;
+    margin-top: 25px;
+    display:flex;
+    justify-content: center;
+}
+#submit{
+    border-radius: 5px;
+    width: 60%;
+    height: 35px;
 }

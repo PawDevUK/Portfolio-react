@@ -76,60 +76,89 @@ export default function Register() {
                 <p>
                     <a href="/signIn">Sign In</a>
                 </p>
+                <p>
+                    <a href="/register">Register</a>
+                </p>
             </section>
             :
             <section className={s.section}>
-                <p ref={errRef} className={errMsg?s.errmsg:s.offscreen} aria-live="assertive">{errMsg}</p>
+                <p 
+                    ref={errRef} 
+                    className={errMsg?s.errMsg:s.offscreen} 
+                    aria-live="assertive">{errMsg}
+                </p>
                 <h1 className={s.RegisterHeader}>Register</h1>
                 <form>
-                    <label htmlFor="username">
-                        Username:
-                        <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
-                    </label>
-                    <input
-                        type="text"
-                        id={s.username}
-                        ref={userRef}
-                        autoComplete="off"
-                        onChange={(e)=>{setUser(e.target.value)}}
-                        required
-                        aria-invalid={validName? "false" : "true"}
-                        aria-describedby="uidnote"
-                        onFocus={()=>{setUserFocus(true)}}
-                        onBlur={()=>{setUserFocus(false)}}
-                    />
-                    <label htmlFor="password">
-                        Password:
-                        <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
-                    </label>
-                    <div className={s.passWrapper}>
-                        <input 
-                            required
-                            type={showPass?"text":"password"}
-                            id="password"
+                    <div className={s.fieldSection}>
+                        <label 
+                            htmlFor="username" 
+                            className={s.label}
+                        >
+                            Username:
+                            <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
+                        </label>
+                        <input
+                            className={s.input}
+                            type="text"
+                            id={s.username}
+                            ref={userRef}
                             autoComplete="off"
-                            onChange={(e)=>{setPwd(e.target.value)}}
-                        />
-                        {!showPass ? 
-                        <FontAwesomeIcon onClick={showPassOnClick}icon={faEye} />
-                        :
-                        <FontAwesomeIcon onClick={showPassOnClick} icon={faEyeSlash}/>
-                        }
+                            onChange={(e)=>{setUser(e.target.value)}}
+                            required
+                            aria-invalid={validName? "false" : "true"}
+                            aria-describedby="uidnote"
+                            onFocus={()=>{setUserFocus(true)}}
+                            onBlur={()=>{setUserFocus(false)}}
+                        />                                   
                     </div>
-
-                    <input 
-                        required
-                        type={showPass?"text":"password"} 
-                        placeholder="Confirm Password"
-                        onChange={e=>setMatchPwd(e.target.value)}
-                    />
-                    <button disabled={!validName||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
-                </form>
-                
-                
-            </section>}
+                    <div className={s.fieldSection}>
+                        <label 
+                            htmlFor="password"
+                            className={s.label}
+                            >
+                            Password:
+                            <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
+                        </label>
+                        <div className={s.passWrapper}>
+                            <input 
+                                required
+                                className={s.input}
+                                type={showPass?"text":"password"}
+                                id="password"
+                                autoComplete="off"
+                                onChange={(e)=>{setPwd(e.target.value)}}
+                            />
+                            {!showPass ? 
+                            <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick}icon={faEye} />
+                            :
+                            <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick} icon={faEyeSlash}/>
+                            }
+                        </div>
+                    </div>
+                    <div className={s.fieldSection}>
+                        <label 
+                            htmlFor="confirm_pwd"
+                            className={s.label}
+                        >
+                            Confirm Password:
+                        </label>
+                        <div className={s.passWrapper}> 
+                            <input 
+                                required
+                                className={s.input}
+                                type={showPass?"text":"password"}
+                                onChange={e=>setMatchPwd(e.target.value)}
+                            />
+                        </div>
+                    </div>
+                    <div id={s.submitWrapper}>   
+                        <button id={s.submit} disabled={!validName||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
+                    </div>
+                </form>            
+            </section>
+            }
         </div>
     )
 }
