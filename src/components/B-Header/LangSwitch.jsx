@@ -19,9 +19,10 @@ const appear = keyframes`
 `;
 
 const Wrapper = styled.div`
+  z-index: 2500;
   position: absolute;
   top:-40px;
-  left:0;
+  right:23px;
   animation: ${appear} 1s ease-out;
 `
 
