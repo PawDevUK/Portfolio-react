@@ -52,7 +52,10 @@ export default function Register() {
     return (
         <div className={s.RegisterWrapper}>
             <section className={s.section}>
-                <p ref={errRef} className={errMsg?s.errmsg:s.offscreen} aria-live="assertive">{errMsg}</p>
+                    ref={errRef} 
+                    className={errMsg?s.errMsg:s.offscreen} 
+                    aria-live="assertive">{errMsg}
+                </p>
                 <h1 className={s.RegisterHeader}>Register</h1>
                 <form>
                     <label htmlFor="username">
