@@ -137,6 +137,12 @@ export default function Register() {
                     </div>
                     </div>
                     <div className={s.fieldSection}>
+                        <label 
+                            htmlFor="confirm_pwd"
+                            className={s.label}
+                        >
+                            Confirm Password:
+                        </label>
                     <input 
                         required
                         className={s.input}
