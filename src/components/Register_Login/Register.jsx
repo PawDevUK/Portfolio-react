@@ -95,10 +95,16 @@ export default function Register() {
                         autoComplete="off"
                         onChange={(e)=>{setPwd(e.target.value)}}
                     />
+                    <label htmlFor="confirm_pwd">
+                        
+                    </label>
+                    <input
+                        className={s.input}
+                        type="text" 
+                        placeholder="Confirm Password"
+                    />
 
                 </form>
-                
-                <input type="text" placeholder="Confirm Password"/>
             </section>
         </div>
     )
