@@ -146,9 +146,10 @@ export default function Register() {
                     <input 
                         required
                         className={s.input}
+                                type={showPass?"text":"password"}
                         type={showPass?"text":"password"} 
-                        placeholder="Confirm Password"
-                        onChange={e=>setMatchPwd(e.target.value)}
+                                type={showPass?"text":"password"}
+                                onChange={e=>setMatchPwd(e.target.value)}
                     />
                     </div>
                 </form>            
