@@ -32,18 +32,12 @@ export default function Register() {
 
     useEffect(()=>{
         const result = USER_REGEX.test(user)
-        console.log(result);
-        console.log(user);
         setValidName(result)
     },[user])
 
     useEffect(()=>{
-        const result = PASSWORD_REGEX.test(pwd)
-        console.log(result);
-        console.log(pwd);
-        setValidPwd(result)
-        const match = pwd === matchPwd
-        setMatchPwd(match)
+        setValidPwd(PASSWORD_REGEX.test(pwd))
+        setValidMatchPwd(pwd === matchPwd)
     },[pwd, matchPwd])
 
     useEffect(()=>{
