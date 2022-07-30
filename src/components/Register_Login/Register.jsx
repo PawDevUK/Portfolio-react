@@ -69,6 +69,14 @@ export default function Register() {
 
     return (
         <div className={s.RegisterWrapper}>
+            {success ? 
+            <section className={s.section}>
+                <h1>Success</h1>
+                <p>
+                    <a href="/signIn">Sign In</a>
+                </p>
+            </section>
+            :
             <section className={s.section}>
                 <p ref={errRef} className={errMsg?s.errmsg:s.offscreen} aria-live="assertive">{errMsg}</p>
                 <h1 className={s.RegisterHeader}>Register</h1>
@@ -117,7 +125,7 @@ export default function Register() {
                 </form>
                 
                 
-            </section>
+            </section>}
         </div>
     )
 }
