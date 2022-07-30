@@ -122,6 +122,7 @@ export default function Register() {
                         required
                         type={showPass?"text":"password"} 
                         placeholder="Confirm Password"
+                        onChange={e=>setMatchPwd(e.target.value)}
                     />
                     <button onClick={handleSubmit}>Submit</button>
                 </form>
