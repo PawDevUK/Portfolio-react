@@ -19,6 +19,12 @@ const InnerMainNav = styled.div`
   margin: 43px 0px 0px auto;
   width:${p=>p.EngLang?574:671}px;
 `
+const LangRegWrapper = styled.div`
+  z-index: 2500;
+  position: absolute;
+  top:-40px;
+  right:23px;
+`
 const MainLogo = styled(SvgLoader)`
   display: inline-block;
   margin: 30px auto auto 30px;
@@ -71,27 +77,29 @@ function MainLarge({ ...props }) {
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
       <InnerMainNav EngLang={props.EngLang}>
-        <LangSwitch></LangSwitch>
-        {props.menu.map((item, i) => {
-          return (
-            <Link
-              onMouseEnter={item.react ? handleMouseHover : null}
-              onMouseLeave={item.react ? handleMouseHover : null}
-              key={i}
-              href={item.href}
-              target={item.target ? item.target : ""}
-            >
-              {getLangMenu(item)}
-              {mouseOver ? (
-                <DropDown href={item.href}>
-                  {item.react ? item.react.title : null}
-                </DropDown>
-              ) : item.react ? (
-                <DropdownIcon path={dropdown}></DropdownIcon>
-              ) : null}
-            </Link>
-          )
-        })}
+        <LangRegWrapper>
+          <LangSwitch></LangSwitch>
+        </LangRegWrapper> 
+          {props.menu.map((item, i) => {
+            return (
+              <Link
+                onMouseEnter={item.react ? handleMouseHover : null}
+                onMouseLeave={item.react ? handleMouseHover : null}
+                key={i}
+                href={item.href}
+                target={item.target ? item.target : ""}
+              >
+                {getLangMenu(item)}
+                {mouseOver ? (
+                  <DropDown href={item.href}>
+                    {item.react ? item.react.title : null}
+                  </DropDown>
+                ) : item.react ? (
+                  <DropdownIcon path={dropdown}></DropdownIcon>
+                ) : null}
+              </Link>
+            )
+          })}
       </InnerMainNav>
     </Wrapper>
   )
