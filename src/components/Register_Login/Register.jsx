@@ -105,6 +105,7 @@ export default function Register() {
                     </label>
                     <div className={s.passWrapper}>
                         <input 
+                            required
                             type={showPass?"text":"password"}
                             id="password"
                             autoComplete="off"
@@ -118,6 +119,7 @@ export default function Register() {
                     </div>
 
                     <input 
+                        required
                         type={showPass?"text":"password"} 
                         placeholder="Confirm Password"
                     />
