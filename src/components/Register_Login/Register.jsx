@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faTimes, faInfoCircle, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import s from './styles/RegisterLogin.module.css'
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
@@ -17,6 +17,7 @@ export default function Register() {
     const [pwd, setPwd] = useState('')
     const [validPwd, setValidPwd] = useState(false)
     const [pwdFocus, setPwdFocus] = useState(false)
+    const [showPass, setShowPass] = useState(false)
 
     const [matchPwd, setMatchPwd] = useState('')
     const [validMatchPwd, setValidMatchPwd] = useState(false)
@@ -31,26 +32,51 @@ export default function Register() {
 
     useEffect(()=>{
         const result = USER_REGEX.test(user)
-        console.log(result);
-        console.log(user);
         setValidName(result)
     },[user])
 
     useEffect(()=>{
-        const result = PASSWORD_REGEX.test(pwd)
-        console.log(result);
-        console.log(pwd);
-        setValidPwd(result)
-        const match = pwd === matchPwd
-        setMatchPwd(match)
+        setValidPwd(PASSWORD_REGEX.test(pwd))
+        setValidMatchPwd(pwd === matchPwd)
     },[pwd, matchPwd])
 
     useEffect(()=>{
         setErrMsg('')
-    },[user, pwd, matchPwd])
+    },[user, pwd, matchPwd]);
+
+    function showPassOnClick(){
+        setShowPass(!showPass)
+    }
+
+    async function handleSubmit(e){
+        e.preventDefault();
+        if(!user || !matchPwd ){
+            console.log('match',matchPwd);
+            setErrMsg('Invalid Entry')
+            return;
+        }
+        if(validName && matchPwd){
+            setSuccess(true)
+            return
+        }
+        try{
+
+        }
+        catch{
+
+        }
+    }
 
     return (
         <div className={s.RegisterWrapper}>
+            {success ? 
+            <section className={s.section}>
+                <h1>Success</h1>
+                <p>
+                    <a href="/signIn">Sign In</a>
+                </p>
+            </section>
+            :
             <section className={s.section}>
                 <p 
                     ref={errRef} 
@@ -88,24 +114,34 @@ export default function Register() {
                         <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
                         <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
                     </label>
-                    <input
-                        className={s.input}
-                        type="password"
-                        id="password"
-                        autoComplete="off"
-                        onChange={(e)=>{setPwd(e.target.value)}}
-                    />
+                    <div className={s.passWrapper}>
+                        <input 
+                            required
+                            className={s.input}
+                            type={showPass?"text":"password"}
+                            id="password"
+                            autoComplete="off"
+                            onChange={(e)=>{setPwd(e.target.value)}}
+                        />
+                        {!showPass ? 
+                        <FontAwesomeIcon onClick={showPassOnClick}icon={faEye} />
+                        :
+                        <FontAwesomeIcon onClick={showPassOnClick} icon={faEyeSlash}/>
+                        }
+                    </div>
                     <label htmlFor="confirm_pwd">
                         
                     </label>
-                    <input
+                    <input 
+                        required
                         className={s.input}
-                        type="text" 
+                        type={showPass?"text":"password"} 
                         placeholder="Confirm Password"
+                        onChange={e=>setMatchPwd(e.target.value)}
                     />
-
-                </form>
-            </section>
+                    <button disabled={!validName||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
+                </form>            
+            </section>}
         </div>
     )
 }
