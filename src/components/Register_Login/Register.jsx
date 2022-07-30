@@ -89,52 +89,52 @@ export default function Register() {
                 <h1 className={s.RegisterHeader}>Register</h1>
                 <form>
                     <div className={s.fieldSection}>
-                    <label 
-                        htmlFor="username" 
-                        className={s.label}
-                    >
-                        Username:
-                        <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
-                    </label>
-                    <input
-                        className={s.input}
-                        type="text"
-                        id={s.username}
-                        ref={userRef}
-                        autoComplete="off"
-                        onChange={(e)=>{setUser(e.target.value)}}
-                        required
-                        aria-invalid={validName? "false" : "true"}
-                        aria-describedby="uidnote"
-                        onFocus={()=>{setUserFocus(true)}}
-                        onBlur={()=>{setUserFocus(false)}}
-                    />
+                        <label 
+                            htmlFor="username" 
+                            className={s.label}
+                        >
+                            Username:
+                            <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
+                        </label>
+                        <input
+                            className={s.input}
+                            type="text"
+                            id={s.username}
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e)=>{setUser(e.target.value)}}
+                            required
+                            aria-invalid={validName? "false" : "true"}
+                            aria-describedby="uidnote"
+                            onFocus={()=>{setUserFocus(true)}}
+                            onBlur={()=>{setUserFocus(false)}}
+                        />                                   
                     </div>
                     <div className={s.fieldSection}>
-                    <label 
-                        htmlFor="password"
-                        className={s.label}
-                        >
-                        Password:
-                        <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
-                        <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
-                    </label>
-                    <div className={s.passWrapper}>
-                        <input 
-                            required
-                            className={s.input}
-                            type={showPass?"text":"password"}
-                            id="password"
-                            autoComplete="off"
-                            onChange={(e)=>{setPwd(e.target.value)}}
-                        />
-                        {!showPass ? 
-                        <FontAwesomeIcon onClick={showPassOnClick}icon={faEye} />
-                        :
-                        <FontAwesomeIcon onClick={showPassOnClick} icon={faEyeSlash}/>
-                        }
-                    </div>
+                        <label 
+                            htmlFor="password"
+                            className={s.label}
+                            >
+                            Password:
+                            <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
+                        </label>
+                        <div className={s.passWrapper}>
+                            <input 
+                                required
+                                className={s.input}
+                                type={showPass?"text":"password"}
+                                id="password"
+                                autoComplete="off"
+                                onChange={(e)=>{setPwd(e.target.value)}}
+                            />
+                            {!showPass ? 
+                            <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick}icon={faEye} />
+                            :
+                            <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick} icon={faEyeSlash}/>
+                            }
+                        </div>
                     </div>
                     <div className={s.fieldSection}>
                         <label 
@@ -143,17 +143,21 @@ export default function Register() {
                         >
                             Confirm Password:
                         </label>
-                    <input 
-                        required
-                        className={s.input}
-                                type={showPass?"text":"password"}
-                        type={showPass?"text":"password"} 
+                        <div className={s.passWrapper}> 
+                            <input 
+                                required
+                                className={s.input}
                                 type={showPass?"text":"password"}
                                 onChange={e=>setMatchPwd(e.target.value)}
-                    />
+                            />
+                        </div>
+                    </div>
+                    <div id={s.submitWrapper}>   
+                        <button id={s.submit} disabled={!validName||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
                     </div>
                 </form>            
-            </section>}
+            </section>
+            }
         </div>
     )
 }
