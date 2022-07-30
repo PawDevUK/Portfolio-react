@@ -58,12 +58,16 @@ export default function Register() {
                 </p>
                 <h1 className={s.RegisterHeader}>Register</h1>
                 <form>
-                    <label htmlFor="username">
+                    <label 
+                        htmlFor="username" 
+                        className={s.label}
+                    >
                         Username:
                         <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
                         <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
                     </label>
                     <input
+                        className={s.input}
                         type="text"
                         id={s.username}
                         ref={userRef}
@@ -75,12 +79,16 @@ export default function Register() {
                         onFocus={()=>{setUserFocus(true)}}
                         onBlur={()=>{setUserFocus(false)}}
                     />
-                    <label htmlFor="password">
+                    <label 
+                        htmlFor="password"
+                        className={s.label}
+                        >
                         Password:
                         <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
                         <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
                     </label>
-                    <input 
+                    <input
+                        className={s.input}
                         type="password"
                         id="password"
                         autoComplete="off"
