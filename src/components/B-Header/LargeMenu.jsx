@@ -70,7 +70,6 @@ function MainLarge({ ...props }) {
   return (
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
-      <LangSwitch></LangSwitch>
       <InnerMainNav EngLang={props.EngLang}>
         <LangSwitch></LangSwitch>
         {props.menu.map((item, i) => {
