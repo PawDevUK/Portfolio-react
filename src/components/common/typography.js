@@ -10,6 +10,7 @@ ${p=>p.dark?css`color:rgba(41, 87, 111, 0.46);`:css``}
 `
 
 export const P = styled.p`
+${p=>p.styleP?css`p.styleP`:css``};
 font-size: 16px ;
 color: rgba(0, 0, 0, 0.6);
 ${p=>p.dark?css`
