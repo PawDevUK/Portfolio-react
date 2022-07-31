@@ -17,13 +17,14 @@ const Wrapper = styled.div`
 const InnerMainNav = styled.div`
   position:relative;
   display: flex;
-  margin: 43px 0px 0px auto;
+  margin: 55px 0px 0px auto;
   width:${p=>p.EngLang?574:671}px;
 `
 const LangRegWrapper = styled.div`
+  display: flex;
   z-index: 2500;
   position: absolute;
-  top:-40px;
+  top:-50px;
   right:23px;
 `
 const MainLogo = styled(SvgLoader)`
