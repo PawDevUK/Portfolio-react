@@ -143,6 +143,7 @@ article {
 
 #cont-art {
     margin-top: 0px;
+    line-height: 24px;
 }
 
 #cont-art #left {
@@ -151,6 +152,7 @@ article {
 }
 
 #cont-art #right, ul {
+    font-size: 20px;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
