@@ -39,13 +39,14 @@ const MainLogo = styled(SvgLoader)`
 const Link = styled.a`
   position: relative;
   font-size: 18px;
-  color: #cdcdcd;
+  color: 
+  #fff;
   text-transform: capitalize;
   margin-right: 32px;
   font-weight: 700;
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: #cdcdcd;
   }
 `
 const DropDown = styled(Link)`
