@@ -10,7 +10,6 @@ text-align:center;
 const Text = styled.p`
 color:white;
 font-size:16px;
-opacity:80%;
 `
 export default function VisitorCounter(props) {
   const [visits, setVisits] = useState(props.visits)
