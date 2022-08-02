@@ -7,6 +7,7 @@ import logo from 'img/pavdev.svg'
 import {connect} from 'react-redux'
 import {getMenu, getLang} from 'selectors/pageContent.selector'
 import LangSwitch from 'components/B-Header/LangSwitch'
+import LogReg from './LogReg'
 
 const Wrapper = styled.div`
   display: flex;
@@ -16,8 +17,15 @@ const Wrapper = styled.div`
 const InnerMainNav = styled.div`
   position:relative;
   display: flex;
-  margin: 43px 0px 0px auto;
-  width:${p=>p.EngLang?585:700}px;
+  margin: 55px 0px 0px auto;
+  width:${p=>p.EngLang?574:671}px;
+`
+const LangRegWrapper = styled.div`
+  display: flex;
+  z-index: 2500;
+  position: absolute;
+  top:-50px;
+  right:23px;
 `
 const MainLogo = styled(SvgLoader)`
   display: inline-block;
@@ -31,13 +39,14 @@ const MainLogo = styled(SvgLoader)`
 const Link = styled.a`
   position: relative;
   font-size: 18px;
-  color: #cdcdcd;
+  color: 
+  #fff;
   text-transform: capitalize;
   margin-right: 32px;
   font-weight: 700;
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: #cdcdcd;
   }
 `
 const DropDown = styled(Link)`
@@ -70,29 +79,31 @@ function MainLarge({ ...props }) {
   return (
     <Wrapper>
       <MainLogo path={logo}></MainLogo>
-      <LangSwitch></LangSwitch>
       <InnerMainNav EngLang={props.EngLang}>
-        <LangSwitch></LangSwitch>
-        {props.menu.map((item, i) => {
-          return (
-            <Link
-              onMouseEnter={item.react ? handleMouseHover : null}
-              onMouseLeave={item.react ? handleMouseHover : null}
-              key={i}
-              href={item.href}
-              target={item.target ? item.target : ""}
-            >
-              {getLangMenu(item)}
-              {mouseOver ? (
-                <DropDown href={item.href}>
-                  {item.react ? item.react.title : null}
-                </DropDown>
-              ) : item.react ? (
-                <DropdownIcon path={dropdown}></DropdownIcon>
-              ) : null}
-            </Link>
-          )
-        })}
+        <LangRegWrapper>
+          <LogReg></LogReg>
+          <LangSwitch></LangSwitch>
+        </LangRegWrapper> 
+          {props.menu.map((item, i) => {
+            return (
+              <Link
+                onMouseEnter={item.react ? handleMouseHover : null}
+                onMouseLeave={item.react ? handleMouseHover : null}
+                key={i}
+                href={item.href}
+                target={item.target ? item.target : ""}
+              >
+                {getLangMenu(item)}
+                {mouseOver ? (
+                  <DropDown href={item.href}>
+                    {item.react ? item.react.title : null}
+                  </DropDown>
+                ) : item.react ? (
+                  <DropdownIcon path={dropdown}></DropdownIcon>
+                ) : null}
+              </Link>
+            )
+          })}
       </InnerMainNav>
     </Wrapper>
   )

@@ -19,9 +19,6 @@ const appear = keyframes`
 `;
 
 const Wrapper = styled.div`
-  position: absolute;
-  top:-40px;
-  left:0;
   animation: ${appear} 1s ease-out;
 `
 
@@ -43,7 +40,7 @@ export default class LangSwitch extends Component {
   render() {
     return (
         <Wrapper>
-            <Toggler checkedImg={EnglishFlag} uncheckedImg={PolskaFlaga} toggle={this.onChange} checked={this.state.checked} ></Toggler>
+            <Toggler checkedImg={EnglishFlag} uncheckedImg={PolskaFlaga} toggle={this.onChange} checked={this.state.checked}></Toggler>
         </Wrapper>
     )
   }

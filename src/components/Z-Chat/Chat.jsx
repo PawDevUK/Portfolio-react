@@ -105,24 +105,26 @@ function Chat(props) {
   const [clientHeight, setClientHeight] = useState(0)
   const [footerHeight, setFooterHeight] = useState(90)
  
-  /**
-   * applies animation to chat button
-   */
+
   useEffect(() => {
+  /**
+   * @timeout
+   * applies animation to the chat button
+  */
     const timeout = setTimeout(() => {
       setButtonAnimation((p) => !p)
-    }, 500)
+    }, 500);
     return () => clearTimeout(timeout)
   }, [buttonAnimation]);
 
   useEffect(()=>{
-
+    /**
+     * adds heights of the viewport and footer height to the state for the chat
+     */
     const clientHeight = document.documentElement.clientHeight;
     const footer = document.getElementById('FooterWrapper').clientHeight;
-
     setClientHeight( clientHeight );
     setFooterHeight(footer)
-    
   },[clientHeight, footerHeight])
 
   function HandleClick() {
@@ -133,6 +135,10 @@ function Chat(props) {
     }
   }
 
+  /**
+   * @toBottom
+   * scrolls down chat while user chats therefore keeps last message of the chat in the viewport
+   */
   function toBottom() {
     const wrapper = document.getElementById('chatWrapper')
     if (wrapper.scrollHeight !== null) {
