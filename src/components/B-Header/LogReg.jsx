@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 import Button from '../common/Button';
 import {P} from '../common/typography'
@@ -10,20 +11,27 @@ const Wrapper = styled.div`
 `
 
 export default function LogReg() {
-    const styleB = {
+    const style_B = {
         margin:'10px',
         height:'25px',
         width:'75px'
     }
-    const styleP = {
+    const style_P = {
         color:'#fff',
         margin:'auto'
     }
+    const Style_Link = {
+        'text-decoration':'none'
+    }
     return (
         <Wrapper>
-            <Button style={styleB}>Login</Button>
-            <P style={styleP}>or</P> 
-            <Button style={styleB} >Register</Button>
+            <Link to="login" style={Style_Link}>
+                <Button style={style_B}>Login</Button>
+            </Link>
+            <P style={style_P}>or</P>
+            <Link to="register" style={Style_Link}>
+                <Button style={style_B}>Register</Button>
+            </Link>
         </Wrapper>
   )
 }
