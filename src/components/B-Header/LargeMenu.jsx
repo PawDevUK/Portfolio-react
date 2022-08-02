@@ -7,7 +7,7 @@ import logo from 'img/pavdev.svg'
 import {connect} from 'react-redux'
 import {getMenu, getLang} from 'selectors/pageContent.selector'
 import LangSwitch from 'components/B-Header/LangSwitch'
-import LogReg from './LogReg'
+// import LogReg from './LogReg'
 
 const Wrapper = styled.div`
   display: flex;
@@ -81,7 +81,7 @@ function MainLarge({ ...props }) {
       <MainLogo path={logo}></MainLogo>
       <InnerMainNav EngLang={props.EngLang}>
         <LangRegWrapper>
-          <LogReg></LogReg>
+          {/* <LogReg></LogReg> */}
           <LangSwitch></LangSwitch>
         </LangRegWrapper> 
           {props.menu.map((item, i) => {
