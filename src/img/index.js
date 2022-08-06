@@ -1,5 +1,6 @@
 export { default as asparago } from './asparago.png';
 export { default as login } from './login1.png';
+export { default as register } from './Register.png';
 export { default as bot } from './bot.png';
 export { default as nasa } from './nasa.png';
 export { default as royal } from './royal.png';
@@ -22,6 +23,7 @@ export { default as bootstrap } from './bootstrap.png'
 export { default as figma } from './figma.png'
 export { default as html } from './html.png'
 export { default as css } from './css.jpeg'
+export { default as scss } from './scss.png'
 export { default as styled } from './styled.jpeg'
 export { default as router } from './ReactRouter.png'
 export { default as js } from './JavaScript.png'
