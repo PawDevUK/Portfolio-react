@@ -23,8 +23,8 @@
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
-  max-width: 420px;
-  min-height: 400px;
+  height: 545.797px;
+  width: 420px;
   border-radius: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -36,7 +36,7 @@
   background-color: #17293f;
 }
 
-.RegisterWrapper {
+.Wrapper {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,5 +103,43 @@
   border-radius: 5px;
   width: 60%;
   height: 35px;
+}
+
+#orSeparator {
+  font-weight: 500;
+  margin-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.landingWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.InnerWrapper {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #17293F;
+  height: 545.797px;
+  width: 420px;
 }
 /*# sourceMappingURL=RegisterLogin.module.css.map */

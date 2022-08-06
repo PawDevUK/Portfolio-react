@@ -18,17 +18,14 @@
     width:100%;
     display:flex;
     padding:1rem;
-    max-width: 420px;
-    min-height:400px;
+    height: 545.797px;
+    width:420px;
     border-radius: 5px;
     flex-direction:column;
     justify-content:flex-start;
     background-color:#17293f;
 }
-.RegisterWrapper{
-    // background-image: url('../../../img/pexels-krivec-ales-547114.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
+.Wrapper{   
     color: #fff;
     display: flex;
     justify-content: center;
@@ -72,4 +69,27 @@
     border-radius: 5px;
     width: 60%;
     height: 35px;
+}
+#orSeparator{
+    font-weight: 500;
+    margin-top: 20px;
+    color:#fff;
+    text-transform:uppercase;
+    text-align: center;
+}
+.landingWrapper{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+}
+.InnerWrapper{
+    border-radius: 5px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color:#17293F;
+    height: 545.797px;
+    width:420px;
 }
