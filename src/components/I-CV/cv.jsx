@@ -14,7 +14,7 @@ function Cv() {
       <div id="cv" className="page">
         <header className="grid-plus " id="header">
           <div id="header-info">
-            <h1>pawel siwek</h1>
+            <h1 id='header'>pawel siwek</h1>
             <h2>React Developer</h2>
           </div>
           <div id="socials">

@@ -33,6 +33,9 @@ font-weight:400;
 width:100%;
 display:block;
 color:white;
+font-size: 35px;
+text-transform: capitalize;
+
 @media(max-width:992px){
     font-size:26px;
 }

@@ -9,7 +9,6 @@ import Router from '../routes/routes'
 import 'styles/styles.css'
 
 function App() {
-
   useEffect(()=>{
     // sync_DB_With_Store();
     syncConfigWithStore();

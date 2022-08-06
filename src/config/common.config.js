@@ -6,5 +6,5 @@ export const buttons = {
 }
 
 export const theme = {
-    mian_blue:'#17293F'
+    main_blue:'#17293F'
 }

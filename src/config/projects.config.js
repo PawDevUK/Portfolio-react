@@ -1,5 +1,5 @@
-import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, login, TicTacToe } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, } from 'img'
+import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe } from 'img';
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm } from 'img'
 
 export const projects = [
     {
@@ -46,15 +46,15 @@ export const projects = [
         webHref: { href: "https://gitcrackeruk.github.io/NASA/", button: "Visit" },
         stack: [js, html, css, bootstrap, git, vscode]
     },
-    // {
-    //     alt: "Login",
-    //     githubHref: "https://github.com/GitcrackerUK/Login",
-    //     src: login,
-    //     text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
-    //     title: "Login Page",
-    //     webHref: { href: "https://loadin.ew.r.appspot.com", button: "Visit" },
-    //     stack: [react, html, css, styled, vscode, git, gcloud]
-    // },
+    {
+        alt: "Register",
+        githubHref: "https://github.com/GitcrackerUK/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
+        src: register,
+        text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
+        title: "Register/Sign in Page",
+        webHref: { href: "/RegisterSignIn", button: "Visit" },
+        stack: [react, scss, html, css, vscode, git]
+    },
     {
         alt: "Royal Oak Architects",
         githubHref: "https://github.com/GitcrackerUK/Architect",
