@@ -1,5 +1,5 @@
 import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm } from 'img'
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, jwt, vscode, npm } from 'img'
 
 export const projects = [
     {
@@ -54,15 +54,6 @@ export const projects = [
         title: "Nasa",
         webHref: { href: "https://gitcrackeruk.github.io/NASA/", button: "Visit" },
         stack: [js, html, css, bootstrap, git, vscode]
-    },
-    {
-        alt: "Register",
-        githubHref: "https://github.com/GitcrackerUK/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
-        src: register,
-        text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
-        title: "Register/Sign in Page",
-        webHref: { href: "/RegisterSignIn", button: "Visit" },
-        stack: [react, scss, html, css, vscode, git]
     },
     {
         alt: "Royal Oak Architects",
