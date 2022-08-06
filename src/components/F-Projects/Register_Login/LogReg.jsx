@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import styled from 'styled-components';
-import Button from '../common/Button';
-import {P} from '../common/typography'
+import Button from '../../common/Button';
+import {P} from '../../common/typography'
 
 const Wrapper = styled.div`
     color: #fff;
@@ -25,7 +25,7 @@ export default function LogReg() {
     }
     return (
         <Wrapper>
-            <Link to="login" style={Style_Link}>
+            <Link to="signIn" style={Style_Link}>
                 <Button style={style_B}>Login</Button>
             </Link>
             <P style={style_P}>or</P>
