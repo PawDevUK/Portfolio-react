@@ -3,6 +3,15 @@ import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, j
 
 export const projects = [
     {
+        alt: "Register",
+        githubHref: "https://github.com/GitcrackerUK/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
+        src: register,
+        text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
+        title: "Register/Sign in Page",
+        webHref: { href: "/RegisterSignIn", button: "Visit" },
+        stack: [react, js, scss, jwt, vscode, git]
+    },
+    {
         alt: "TicTacToe",
         githubHref: "https://github.com/GitcrackerUK/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",
         src: TicTacToe,
