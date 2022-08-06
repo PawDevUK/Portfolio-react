@@ -1,5 +1,5 @@
-import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, login, TicTacToe } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, } from 'img'
+import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe } from 'img';
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm } from 'img'
 
 export const projects = [
     {
