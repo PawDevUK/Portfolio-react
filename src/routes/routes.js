@@ -5,7 +5,9 @@ import Projects from '../components/F-Projects/projects'
 import Footer from '../components/H-Footer/Footer.jsx'
 import TopIntro from '../components/C-About/top-intro'
 import ReactSection from '../components/E-React/React'
-import Register from '../components/Register_Login/Register'
+import Register from '../components/F-Projects/Register_Login/Register'
+import Login from '../components/F-Projects/Register_Login/Login'
+import RegisterSignIn from '../components/F-Projects/Register_Login/RegisterSignIn'
 import Contact from '../components/G-Contact/Contact'
 import Stack from '../components/D-Stack/stack.jsx'
 import Header from '../components/B-Header/Header'
@@ -73,6 +75,12 @@ const Container = styled.div`
             </Route>
             <Route exact path='/register' >
               <Register></Register>
+            </Route>
+            <Route exact path='/RegisterSignIn' >
+              <RegisterSignIn></RegisterSignIn>
+            </Route>
+            <Route exact path='/signIn' >
+              <Login></Login>
             </Route>
             <Route exact path="/">
               <Intro></Intro>
