@@ -84,7 +84,7 @@ const H2 = styled.h2`
   justify-content:center ;
 `
 const Nick = styled.p`
-  margin: -4px 3px;
+  margin: -1px 3px;
   font-size: 20px;
   font-weight: 600;
   ${(p) =>
