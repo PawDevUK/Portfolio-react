@@ -54,6 +54,10 @@
     "deploy": "gh-pages -d build",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.5.0"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
