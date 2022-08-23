@@ -8,7 +8,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 <hr>
 
 ## Updates
--   added Redux state managment with default page content
+
+-   deployed app to heroku
+-   added Redux state management with default page content
 -   added Node.js to skills
 -   card component
     -   added text reducer to card text
