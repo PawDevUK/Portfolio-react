@@ -74,7 +74,7 @@ const NickHover = css`
 `
 
 const H2 = styled.h2`
-width:100%;
+  width:100%;
   font-size:16px ;
   cursor: pointer;
   color: #fff;
@@ -84,7 +84,7 @@ width:100%;
   justify-content:center ;
 `
 const Nick = styled.p`
-  margin: -4px 3px;
+  margin: -1px 3px;
   font-size: 20px;
   font-weight: 600;
   ${(p) =>
@@ -182,7 +182,7 @@ class Footer extends Component{
           <Left></Left>
           <Mid>
             {this.FooterHeader(this.state.nick)}
-            <VisitorCounter visitors={this.props.visitors} ></VisitorCounter>
+            <VisitorCounter h2={H2} visitors={this.props.visitors} ></VisitorCounter>
           </Mid>
           <Right>
             <ul>

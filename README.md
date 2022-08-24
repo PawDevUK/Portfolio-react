@@ -8,7 +8,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 <hr>
 
 ## Updates
--   added Redux state managment with default page content
+
+-   deployed app to heroku
+-   added Redux state management with default page content
 -   added Node.js to skills
 -   card component
     -   added text reducer to card text
@@ -33,6 +35,13 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+-   add custom domain 'pawelsiwek.co.uk' to heroku app
+-   fix env var issue on heroku for portfolio server
+-   connect client to server
+-   add Register/Login content
+-   finish lang support for Polish
+-   update 'about me'
+-   update cv
 -   add personal image to "About" component
 -   refactor Code
 -   run lighthouse test

@@ -33,12 +33,15 @@ h5 {
 
 p {
   color: #585858;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
-  line-height: 24px;
   margin: 0px;
 }
-
+.styledP{
+  color: rgba(0, 0, 0, 0.6);
+  margin: 10px;
+}
 a {
   text-decoration: none;
   color: #007297;
@@ -52,12 +55,6 @@ time {
   font-weight: normal;
   float: right;
 }
-.styledP{
-    font-size: 16px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, 0.6);
-    margin: 10px;
-  }
 .bold{
     font-weight:600;
 }
