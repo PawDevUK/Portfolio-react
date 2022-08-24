@@ -35,6 +35,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+-   remove particles from projects background as it affects performance and add static img with particles
 -   deploy app to GCP client/server
 -   connect client to server
 -   add Register/Login content
