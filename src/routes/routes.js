@@ -16,6 +16,7 @@ import Intro from '../components/A-Intro/intro'
 import Chat from '../components/Z-Chat/Chat'
 import CV from '../components/I-CV/cv'
 import React from 'react'
+import WorkTracker from 'components/F-Projects/Work_Tracker/Work_Tracker'
 
 
 export default function Router(){
@@ -69,6 +70,9 @@ const Container = styled.div`
               </Container>
               <Contact></Contact>
               <Footer></Footer>
+            </Route>
+            <Route path='/workTracker'>
+              <WorkTracker></WorkTracker>
             </Route>
             <Route exact path='/cv' >
               <CV></CV>
