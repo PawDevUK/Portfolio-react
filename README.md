@@ -35,8 +35,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
--   due to problems with performance and assigning custom domanin to app I have decided to deploy application to GCP <s> -add custom domain 'pawelsiwek.co.uk' to heroku app
--   fix env var issue on heroku for portfolio server</s>
+-   deploy app to GCP client/server
 -   connect client to server
 -   add Register/Login content
 -   finish lang support for Polish
@@ -49,6 +48,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 -   add heart/like to project card (implement db to store global counter for all hearts/likes).
 -   add db to store cookie
 -   create stats component to display visitors
+
+-  due to problems with performance on Heroku and assigning custom domanin to app deployed to Heroku I have decided to deploy application to GCP <s> -add custom domain 'pawelsiwek.co.uk' to heroku app
+-   fix env var issue on heroku for portfolio server</s>
 -   <s>add stack icons to project cards.</s>
 -   <s> create cookie to get info of visitors (date,time) </s>
 -   <s> sort out problem with axios instance for intro. Path function sends empty obj.</s> problem was with axios.create({method:post})
