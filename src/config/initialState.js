@@ -36,7 +36,6 @@ export let initialState = {
         },
         projects:[],
         reactInfo:{},
-        
         footer:{
             rightData:[]
         },
@@ -45,5 +44,5 @@ export let initialState = {
                 eng:'',
                 pl:''
             }
-        }
+        },
     }
