@@ -35,8 +35,8 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
--   add custom domain 'pawelsiwek.co.uk' to heroku app
--   fix env var issue on heroku for portfolio server
+-   due to problems with performance and assigning custom domanin to app I have decided to deploy application to GCP <s> -add custom domain 'pawelsiwek.co.uk' to heroku app
+-   fix env var issue on heroku for portfolio server</s>
 -   connect client to server
 -   add Register/Login content
 -   finish lang support for Polish
