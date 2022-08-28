@@ -1,1 +1,1 @@
-export const getVisitors = (state) => state.Visitors.counter
+export const getVisitors = (state) => state.Visitors
