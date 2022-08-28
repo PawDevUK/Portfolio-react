@@ -1,7 +1,7 @@
 import {
     configureStore
 } from '@reduxjs/toolkit'
-// import {LocalOnEnter} from './config/VisitorsAPI.config'
+import {LocalOnEnter} from './config/VisitorsAPI.config'
 import addCounter from 'actions/addCounter.actions'
 import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro } from 'actions/pageContent.actions'
 import rootReducer from './reducers'
@@ -23,11 +23,11 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware)
 })
 
-// export function sync_DB_With_Store(){
-//     LocalOnEnter.get('/').then((res) => {
-//      store.dispatch(addCounter( res.data[res.data.length-1].counter ))
-//     });
-// }
+export function sync_DB_With_Store(){
+    LocalOnEnter.get('/').then((res) => {
+     store.dispatch(addCounter( res.data[res.data.length-1].counter ))
+    });
+}
 
 export function syncConfigWithStore(){
     store.dispatch(AddHeaderMenu(addUUID_ToObject(Menu)))
