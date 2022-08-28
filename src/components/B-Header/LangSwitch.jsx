@@ -40,7 +40,7 @@ export default class LangSwitch extends Component {
   render() {
     return (
         <Wrapper>
-            <Toggler checkedImg={EnglishFlag} uncheckedImg={PolskaFlaga} toggle={this.onChange} checked={this.state.checked}></Toggler>
+            <Toggler checkedImg={EnglishFlag} uncheckedImg={PolskaFlaga} onChange={this.onChange} checked={this.state.checked}></Toggler>
         </Wrapper>
     )
   }

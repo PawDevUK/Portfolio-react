@@ -48,7 +48,7 @@ const Toggler = withStyles((theme) => ({
     <Switch
       checkedImg={props.checkedImg}
       uncheckedImg={props.uncheckedImg}
-      onChange={props.toggle}
+      onChange={props.onChange}
       checked={props.checked}
       focusVisibleClassName={classes.focusVisible}
       disableRipple
