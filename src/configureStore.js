@@ -10,14 +10,13 @@ import { Menu } from 'config/headerMenu.config'
 import { stack } from 'config/stack.config'
 import { projects } from 'config/projects.config'
 import { ReactComponentData } from 'config/reactComponent.config'
-import logger from 'redux-logger'
 import { addUUID_ToObject } from 'factory'
 import { headerJumboText } from 'config/headerJumboText.config'
 import { buttons } from 'config/common.config'
 import { intro } from 'config/topIntro.config'
 import { fonts } from 'config/fonts.config'
 
-const middleware = [logger]
+const middleware = []
 
 export const store = configureStore({
     reducer: rootReducer(),
