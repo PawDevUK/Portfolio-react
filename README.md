@@ -40,6 +40,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 -   add custom domain 'pawelsiwek.co.uk' to application
 -   improve application performance
 -   update 'about me'
+-   update all application text content
 -   update cv
 -   add personal image to "About" component
 -   refactor Code
@@ -80,7 +81,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 -   <s>design modern looking interface, not too big and not too fancy\
     Simple with basic functionally and matching color schemes.</s>
 
-#### To Do Covid-App
+#### Covid-App
 
 -   create component to display latest news related to covid
 -   create axios instance to get data from backend
