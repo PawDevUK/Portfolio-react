@@ -37,6 +37,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 -   finish Register/Login
 -   finish lang support for Polish
+-   add custom domain 'pawelsiwek.co.uk' to application
 -   improve application performance
 -   update 'about me'
 -   update cv
