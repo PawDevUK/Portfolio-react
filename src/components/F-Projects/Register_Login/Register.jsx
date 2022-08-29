@@ -175,6 +175,8 @@ export default function Register() {
                                 className={s.label}
                             >
                                 Confirm Password:
+                                <span className={validMatchPwd && matchPwd ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
+                                <span className={validMatchPwd || !matchPwd ? s.hide : s.invalid}><FontAwesomeIcon icon={faTimes}></FontAwesomeIcon></span>          
                             </label>
                             <div className={s.passWrapper}> 
                                 <input 
