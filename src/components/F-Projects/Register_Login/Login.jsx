@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState, useEffect } from "react";
 import s from './styles/RegisterLogin.module.css'
 import Base from "./Base";
+import NavButtons from "./NavButtons";
 
 
 export default function SignIn() {
@@ -118,12 +119,9 @@ export default function SignIn() {
                         <div id={s.submitWrapper}>   
                             <button id={s.submit} onClick={handleSubmit}>Submit</button>
                         </div>
-                        <p>
-                            <a href="/register">Register</a>
-                        </p>
-                        <p>
-                            <a href="/RegisterSignIn">Back</a>
-                        </p>  
+                        <div className={s.linksWrapper}>
+                            <NavButtons left='register' textL='Register' right='RegisterSignIn' textR='Back'></NavButtons>
+                        </div>
                     </form>         
                 </>
             }
