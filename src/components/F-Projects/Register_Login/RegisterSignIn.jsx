@@ -8,7 +8,7 @@ export default class RegisterSignIn extends Component {
     return (
       <>
         <Base>
-          <LogReg></LogReg> 
+          <LogReg left='SignIn' textL='Login' right='Register' textR='Register'></LogReg> 
         </Base>
       </>
     )
