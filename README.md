@@ -35,11 +35,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
--   remove particles from projects background as it affects performance and add static img with particles
--   deploy app to GCP client/server
--   connect client to server
--   add Register/Login content
+-   finish Register/Login
 -   finish lang support for Polish
+-   improve application performance
 -   update 'about me'
 -   update cv
 -   add personal image to "About" component
@@ -49,7 +47,10 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 -   add heart/like to project card (implement db to store global counter for all hearts/likes).
 -   add db to store cookie
 -   create stats component to display visitors
-
+- <s>remove particles from projects background as it affects performance and add static img with particles
+-   deploy app to GCP client/server
+-   connect client to server
+-   add Register/Login content </s>
 -  due to problems with performance on Heroku and assigning custom domanin to app deployed to Heroku I have decided to deploy application to GCP <s> -add custom domain 'pawelsiwek.co.uk' to heroku app
 -   fix env var issue on heroku for portfolio server</s>
 -   <s>add stack icons to project cards.</s>
