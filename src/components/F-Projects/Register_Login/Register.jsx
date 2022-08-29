@@ -105,13 +105,13 @@ export default function Register() {
                                 className={s.label}
                             >
                                 Username:
-                                <FontAwesomeIcon icon={faCheck} className={validName ? s.valid : s.hide}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faTimes} className={validName || !user ? s.hide:s.invalid}></FontAwesomeIcon>
+                                <span className={validName ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
+                                <span className={validName || !user ? s.hide:s.invalid}><FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon></span>
                             </label>
                             <input
                                 className={s.input}
                                 type="text"
-                                id={s.username}
+                                id='username'
                                 ref={userRef}
                                 autoComplete="off"
                                 onChange={(e)=>{setUser(e.target.value)}}
@@ -128,13 +128,13 @@ export default function Register() {
                                 className={s.label}
                             >
                                 Email:
-                                <FontAwesomeIcon icon={faCheck} className={validEmail ? s.valid : s.hide}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faTimes} className={validEmail || !email ? s.hide:s.invalid}></FontAwesomeIcon>
+                                <span className={validEmail ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
+                                <span className={validEmail || !email ? s.hide:s.invalid}><FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon></span>
                             </label>
                             <input
                                 className={s.input}
                                 type="text"
-                                id={s.email}
+                                id='email'
                                 autoComplete="off"
                                 onChange={(e)=>{setEmail(e.target.value)}}
                                 required
@@ -150,8 +150,8 @@ export default function Register() {
                                 className={s.label}
                                 >
                                 Password:
-                                <FontAwesomeIcon icon={faCheck} className={validPwd ? s.valid : s.hide}></FontAwesomeIcon>
-                                <FontAwesomeIcon icon={faTimes} className={ validPwd || !pwd ? s.hide : s.invalid}></FontAwesomeIcon>
+                                <span className={validPwd ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
+                                <span className={ validPwd || !pwd ? s.hide : s.invalid}><FontAwesomeIcon icon={faTimes}></FontAwesomeIcon></span>
                             </label>
                             <div className={s.passWrapper}>
                                 <input 
@@ -163,9 +163,9 @@ export default function Register() {
                                     onChange={(e)=>{setPwd(e.target.value)}}
                                 />
                                 {!showPass ? 
-                                <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick}icon={faEye} />
+                                <span className={s.passEye}><FontAwesomeIcon  onClick={showPassOnClick}icon={faEye} /></span>
                                 :
-                                <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick} icon={faEyeSlash}/>
+                                <span className={s.passEye}><FontAwesomeIcon  onClick={showPassOnClick} icon={faEyeSlash}/></span>
                                 }
                             </div>
                         </div>
