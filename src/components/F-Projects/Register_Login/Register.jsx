@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useRef, useState, useEffect } from "react";
 import s from './styles/RegisterLogin.module.css'
 import Base from "./Base";
-import LogReg from "./LogReg";
+import NavButtons from "./NavButtons";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -193,7 +193,7 @@ export default function Register() {
                         </div>
                     </form>
                     <div className={s.linksWrapper}>
-                        <LogReg left='signIn' right='RegisterSignIn' textL='Login' textR='Back'></LogReg>
+                        <NavButtons left='signIn' right='RegisterSignIn' textL='Login' textR='Back'></NavButtons>
                     </div> 
                 </>
             }

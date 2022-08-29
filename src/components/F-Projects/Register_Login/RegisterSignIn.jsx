@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import LogReg from 'components/F-Projects/Register_Login/LogReg'
+import NanButtons from 'components/F-Projects/Register_Login/NavButtons'
 import Base from './Base'
 
 export default class RegisterSignIn extends Component {
@@ -8,7 +8,7 @@ export default class RegisterSignIn extends Component {
     return (
       <>
         <Base>
-          <LogReg left='SignIn' textL='Login' right='Register' textR='Register'></LogReg> 
+          <NanButtons left='SignIn' textL='Login' right='Register' textR='Register'></NanButtons> 
         </Base>
       </>
     )

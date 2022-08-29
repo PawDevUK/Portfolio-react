@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     justify-content: center;
 `
 
-export default function LogReg(props) {
+export default function NavButtons(props) {
     const style_B = {
         margin:'10px',
         height:'25px',
