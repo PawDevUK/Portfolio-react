@@ -188,14 +188,10 @@ export default function Register() {
                         <div id={s.submitWrapper}>   
                             <button id={s.submit} disabled={!validName||!validEmail||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
                         </div>
-                    </form> 
-                    <p>
-                        <a href="/signIn">Sign In</a>
-                    </p>   
-                    <p>
-                        <a href="/RegisterSignIn">Back</a>
-                    </p>
-                    
+                    </form>
+                    <div className={s.linksWrapper}>
+                        <LogReg left='signIn' right='RegisterSignIn' textL='Login' textR='Back'></LogReg>
+                    </div> 
                 </>
             }
         </Base>
