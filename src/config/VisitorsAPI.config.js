@@ -4,5 +4,5 @@ export const onEnter = axios.create({
     baseURL: '',
 })
 export const LocalOnEnter = axios.create({
-    baseURL: 'http://portfolio-server22.nw.r.appspot.com/visitor',
+    baseURL: 'https://portfolio-server-pavdev.herokuapp.com/visitor',
 })
