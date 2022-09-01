@@ -5,9 +5,11 @@ import Button from '../../common/Button';
 import {P} from '../../common/typography'
 
 const Wrapper = styled.div`
+    margin: auto;
     color: #fff;
     display:flex;
     justify-content: center;
+    width:245px ;
 `
 
 export default function NavButtons(props) {
