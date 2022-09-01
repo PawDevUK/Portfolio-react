@@ -106,8 +106,12 @@ export default function Register() {
                                 className={s.label}
                             >
                                 Username:
-                                <span className={validName ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
-                                <span className={validName || !user ? s.hide:s.invalid}><FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon></span>
+                                <span className={validName ? s.valid : s.hide}>
+                                    <FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon>
+                                </span>
+                                <span className={validName || !user ? s.hide:s.invalid}>
+                                    <FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon>
+                                </span>
                             </label>
                             <input
                                 className={s.input}
@@ -129,8 +133,12 @@ export default function Register() {
                                 className={s.label}
                             >
                                 Email:
-                                <span className={validEmail ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
-                                <span className={validEmail || !email ? s.hide:s.invalid}><FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon></span>
+                                <span className={validEmail ? s.valid : s.hide}>
+                                    <FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon>
+                                </span>
+                                <span className={validEmail || !email ? s.hide:s.invalid}>
+                                    <FontAwesomeIcon icon={faTimes} ></FontAwesomeIcon>
+                                </span>
                             </label>
                             <input
                                 className={s.input}
@@ -151,8 +159,12 @@ export default function Register() {
                                 className={s.label}
                                 >
                                 Password:
-                                <span className={validPwd ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
-                                <span className={ validPwd || !pwd ? s.hide : s.invalid}><FontAwesomeIcon icon={faTimes}></FontAwesomeIcon></span>
+                                <span className={validPwd ? s.valid : s.hide}>
+                                    <FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon>
+                                </span>
+                                <span className={ validPwd || !pwd ? s.hide : s.invalid}>
+                                    <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                                </span>
                             </label>
                             <div className={s.passWrapper}>
                                 <input 
@@ -164,9 +176,13 @@ export default function Register() {
                                     onChange={(e)=>{setPwd(e.target.value)}}
                                 />
                                 {!showPass ? 
-                                <span className={s.passEye}><FontAwesomeIcon  onClick={showPassOnClick}icon={faEye} /></span>
+                                <span className={s.passEye}>
+                                    <FontAwesomeIcon  onClick={showPassOnClick}icon={faEye} />
+                                </span>
                                 :
-                                <span className={s.passEye}><FontAwesomeIcon  onClick={showPassOnClick} icon={faEyeSlash}/></span>
+                                <span className={s.passEye}>
+                                    <FontAwesomeIcon  onClick={showPassOnClick} icon={faEyeSlash}/>
+                                </span>
                                 }
                             </div>
                         </div>
@@ -176,8 +192,12 @@ export default function Register() {
                                 className={s.label}
                             >
                                 Confirm Password:
-                                <span className={validMatchPwd && matchPwd ? s.valid : s.hide}><FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon></span>
-                                <span className={validMatchPwd || !matchPwd ? s.hide : s.invalid}><FontAwesomeIcon icon={faTimes}></FontAwesomeIcon></span>          
+                                <span className={validMatchPwd && matchPwd ? s.valid : s.hide}>
+                                    <FontAwesomeIcon icon={faCheck} ></FontAwesomeIcon>
+                                </span>
+                                <span className={validMatchPwd || !matchPwd ? s.hide : s.invalid}>
+                                    <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+                                </span>          
                             </label>
                             <div className={s.passWrapper}> 
                                 <input 
