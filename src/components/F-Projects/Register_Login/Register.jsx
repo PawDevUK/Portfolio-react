@@ -153,7 +153,7 @@ export default function Register() {
                                 autoComplete="off"
                                 onChange={(e)=>{setEmail(e.target.value)}}
                                 required
-                                aria-invalid={validName? "false" : "true"}
+                                aria-invalid={validEmail? "false" : "true"}
                                 aria-describedby="emailnote"
                                 onFocus={()=>{setEmailFocus(true)}}
                                 onBlur={()=>{setEmailFocus(false)}}
