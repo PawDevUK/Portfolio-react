@@ -17,13 +17,24 @@
   left: -9999px;
 }
 
+.instructions {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.fontInfoPopUp {
+  margin: 0px 5px;
+}
+
 .section {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
-  height: 545.797px;
+  min-height: 545.797px;
   width: 420px;
   border-radius: 5px;
   -webkit-box-orient: vertical;
@@ -34,6 +45,8 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   background-color: #17293f;
+  -webkit-box-shadow: 5px 10px #59555536;
+          box-shadow: 5px 10px #59555536;
 }
 
 .Wrapper {
@@ -145,5 +158,6 @@
 
 .linksWrapper {
   width: 100%;
+  margin: 20px 0px;
 }
 /*# sourceMappingURL=RegisterLogin.module.css.map */

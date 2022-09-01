@@ -14,16 +14,26 @@
     position: absolute;
     left:-9999px;
 }
+.instructions{
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding:5px;
+}
+.fontInfoPopUp{
+    margin: 0px 5px;
+}
 .section{
     width:100%;
     display:flex;
     padding:1rem;
-    height: 545.797px;
+    min-height: 545.797px;
     width:420px;
     border-radius: 5px;
     flex-direction:column;
     justify-content:flex-start;
     background-color:#17293f;
+    box-shadow: 5px 10px #59555536
 }
 .Wrapper{   
     color: #fff;
@@ -96,4 +106,5 @@
 
 .linksWrapper{
     width: 100%;
+    margin: 20px 0px;
 }
