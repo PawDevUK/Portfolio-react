@@ -110,9 +110,13 @@ export default function SignIn() {
                                     onChange={(e)=>{setPwd(e.target.value)}}
                                 />
                                 {!showPass ? 
-                                <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick}icon={faEye} />
+                                <span className={s.passEyeSpan}>
+                                    <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick} icon={faEye}/>
+                                </span>
                                 :
-                                <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick} icon={faEyeSlash}/>
+                                <span className={s.passEyeSpan}>
+                                    <FontAwesomeIcon  className={s.passEye} onClick={showPassOnClick} icon={faEyeSlash}/>
+                                </span>
                                 }
                             </div>
                         </div>

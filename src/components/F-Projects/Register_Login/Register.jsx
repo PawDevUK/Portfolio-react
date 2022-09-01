@@ -191,12 +191,12 @@ export default function Register() {
                                     onBlur={()=>{setPwdFocus(false)}}
                                 />
                                 {!showPass ? 
-                                <span className={s.passEye}>
-                                    <FontAwesomeIcon  onClick={showPassOnClick}icon={faEye} />
+                                <span className={s.passEyeSpan}>
+                                    <FontAwesomeIcon className={s.passEye} onClick={showPassOnClick} icon={faEye}/>
                                 </span>
                                 :
-                                <span className={s.passEye}>
-                                    <FontAwesomeIcon  onClick={showPassOnClick} icon={faEyeSlash}/>
+                                <span className={s.passEyeSpan}>
+                                    <FontAwesomeIcon  className={s.passEye} onClick={showPassOnClick} icon={faEyeSlash}/>
                                 </span>
                                 }
                             </div>
