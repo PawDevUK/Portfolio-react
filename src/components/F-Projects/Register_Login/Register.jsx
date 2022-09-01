@@ -154,11 +154,11 @@ export default function Register() {
                                 onChange={(e)=>{setEmail(e.target.value)}}
                                 required
                                 aria-invalid={validName? "false" : "true"}
-                                aria-describedby="uidnote"
+                                aria-describedby="emailnote"
                                 onFocus={()=>{setEmailFocus(true)}}
                                 onBlur={()=>{setEmailFocus(false)}}
-                            />                                   
-                            <p id='uidnote' className={email&&!validEmail&&emailFocus?s.instructions:s.offscreen}>
+                            />
+                            <p id='emailnote' className={email&&!validEmail&&emailFocus?s.instructions:s.offscreen}>
                                 <FontAwesomeIcon icon={faInfoCircle} className={s.fontInfoPopUp}></FontAwesomeIcon>
                                 Must be a valid email. <br/>
                                 Letters, numbers, @ are allowed.
