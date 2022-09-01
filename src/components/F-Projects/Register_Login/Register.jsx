@@ -185,6 +185,10 @@ export default function Register() {
                                     id="password"
                                     autoComplete="off"
                                     onChange={(e)=>{setPwd(e.target.value)}}
+                                    aria-invalid={validPwd?true:false}
+                                    aria-describedby='pwdnote'
+                                    onFocus={()=>{setPwdFocus(true)}}
+                                    onBlur={()=>{setPwdFocus(false)}}
                                 />
                                 {!showPass ? 
                                 <span className={s.passEye}>
