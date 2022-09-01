@@ -125,7 +125,13 @@ export default function Register() {
                                 aria-describedby="uidnote"
                                 onFocus={()=>{setUserFocus(true)}}
                                 onBlur={()=>{setUserFocus(false)}}
-                            />                                   
+                            /> 
+                            <p id='uidnote' className={userFocus&&user&&!validName?s.instructions:s.offscreen}>
+                                <FontAwesomeIcon icon={faInfoCircle} className={s.fontInfoPopUp}></FontAwesomeIcon>
+                                4 to 24 characters. <br></br>
+                                Must begins with letter. <br></br>
+                                Letters, numbers, underscore are allowed.
+                            </p>                                  
                         </div>
                         <div className={s.fieldSection}>
                             <label 
@@ -152,6 +158,11 @@ export default function Register() {
                                 onFocus={()=>{setEmailFocus(true)}}
                                 onBlur={()=>{setEmailFocus(false)}}
                             />                                   
+                            <p id='uidnote' className={email&&!validEmail&&emailFocus?s.instructions:s.offscreen}>
+                                <FontAwesomeIcon icon={faInfoCircle} className={s.fontInfoPopUp}></FontAwesomeIcon>
+                                Must be a valid email. <br/>
+                                Letters, numbers, @ are allowed.
+                            </p>                                   
                         </div>
                         <div className={s.fieldSection}>
                             <label 
@@ -185,6 +196,12 @@ export default function Register() {
                                 </span>
                                 }
                             </div>
+                            <p id="pwdnote" className={pwd&&pwdFocus&&!validPwd?s.instructions:s.offscreen} >
+                                <FontAwesomeIcon icon={faInfoCircle} className={s.fontInfoPopUp}></FontAwesomeIcon>
+                                8-24 characters <br />
+                                Need contain lower, upper case and number.
+                                Special letters are allowed.
+                            </p>
                         </div>
                         <div className={s.fieldSection}>
                             <label 
