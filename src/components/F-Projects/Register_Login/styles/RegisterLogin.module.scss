@@ -61,16 +61,19 @@
 .input{
     width: 100%;
     border-radius: 5px;
+    height:36px;
 }
 .passEyeSpan{
     position: absolute;
     right: 0px;
+    height: 36px;
+    width: 36px;
 }
 .passEye{
     color: #17293f;
-    height: 36px;
-    width: 36px;
-    margin: 0px 5px;
+    height: 100%;
+    width: 100%;
+    margin: auto 5px;
 }
 #submitWrapper{
     width: 100%;
