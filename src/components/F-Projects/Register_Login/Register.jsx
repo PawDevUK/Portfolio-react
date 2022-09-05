@@ -223,11 +223,20 @@ export default function Register() {
                             <div className={s.passWrapper}> 
                                 <input 
                                     required
+                                    id='confirm_pwd'
                                     className={s.input}
                                     type={showPass?"text":"password"}
                                     onChange={e=>setMatchPwd(e.target.value)}
+                                    aria-invalid={validMatchPwd?'false':'true'}
+                                    aria-describedby='validpwdnote'
+                                    onFocus={()=>{setMatchFocus(true)}}
+                                    onBlur={()=>{setMatchFocus(false)}}
                                 />
                             </div>
+                            <p id="validpwdnote" className={matchPwd&&!validMatchPwd&&matchFocusPwd?s.instructions:s.offscreen} >
+                                <FontAwesomeIcon icon={faInfoCircle} className={s.fontInfoPopUp}></FontAwesomeIcon>
+                                Must match the first password input field. <br />
+                            </p>
                         </div>
                         <div id={s.submitWrapper}>   
                             <button id={s.submit} disabled={!validName||!validEmail||!validPwd||!validMatchPwd?true:false} onClick={handleSubmit}>Submit</button>
