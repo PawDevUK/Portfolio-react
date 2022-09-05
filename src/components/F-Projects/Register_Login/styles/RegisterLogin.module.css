@@ -93,12 +93,20 @@
   border-radius: 5px;
 }
 
-.passEye {
+.passEyeSpan {
   position: absolute;
   right: 0px;
+}
+
+.passEye {
   color: #17293f;
-  height: 100%;
-  margin: 5px 5px 0px 0px;
+  height: 36px;
+  width: 36px;
+  margin: 0px 5px;
+}
+
+.passEyeWrapper {
+  margin: auto 0px;
 }
 
 #submitWrapper {
