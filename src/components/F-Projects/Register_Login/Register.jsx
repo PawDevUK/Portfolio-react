@@ -4,6 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import s from './styles/RegisterLogin.module.css'
 import Base from "./Base";
 import NavButtons from "./NavButtons";
+import { registerLogin_API } from "api/registerLogin";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
