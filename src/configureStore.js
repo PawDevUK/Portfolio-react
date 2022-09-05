@@ -1,7 +1,7 @@
 import {
     configureStore
 } from '@reduxjs/toolkit'
-import {LocalOnEnter} from './config/VisitorsAPI.config'
+import {LocalOnEnter} from './api/VisitorsAPI.config'
 import addCounter from 'actions/addCounter.actions'
 import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro } from 'actions/pageContent.actions'
 import rootReducer from './reducers'
