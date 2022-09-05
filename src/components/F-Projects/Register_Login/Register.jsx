@@ -67,8 +67,23 @@ export default function Register() {
         if(!user || !pwd || !matchPwd ){
             setErrMsg('Invalid Entry');
             return;
-        }
-        if(validName && matchPwd){
+        }else if(validName && validEmail && matchPwd){
+            try{
+                const response = await registerLogin_API.post(
+                    '',
+                    {  user, email, pwd },
+                    {
+                        header:{
+                            'Content-Type': 'application/json'
+                        },
+                        // withCredentials:true
+                    }
+                    )
+                    console.log(response.data);
+
+            }catch{
+
+            }
             setSuccess(true)
             return
         }
