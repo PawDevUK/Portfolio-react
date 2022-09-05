@@ -64,8 +64,8 @@ export default function Register() {
 
     async function handleSubmit(e){
         e.preventDefault();
-        if(!user || !matchPwd ){
-            setErrMsg('Invalid Entry')
+        if(!user || !pwd || !matchPwd ){
+            setErrMsg('Invalid Entry');
             return;
         }
         if(validName && matchPwd){
