@@ -1,0 +1,16 @@
+import React, { Component } from 'react';
+import s from '../style/style.module.css';
+import Eclipse from './Eclipse';
+
+export default class DayTime extends Component {
+    render() {
+        return (
+            <div id={s.TL_Wrapper}>
+                <div id={s.main}></div>
+                <div id={s.right}>
+                    <Eclipse></Eclipse>
+                </div>
+            </div>
+        );
+    }
+}
