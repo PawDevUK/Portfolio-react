@@ -1,0 +1,49 @@
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgba(245, 245, 245, 1);
+}
+#TL_Wrapper{
+    display: flex;
+    height:254px;
+    width:1000px;
+    background-color: #fff;
+    margin:auto;
+}
+#main{
+    width:70%;
+    height: 100%;
+
+}
+#right{
+    width:30%;
+    height: 100%;
+    
+}
+#circleWrapper{
+    margin: 55px auto;
+    position: relative;
+    height:144px;
+    width:144px;
+}
+#outerCircle{
+    background-color:#E0E281;
+    height:144px;
+    width:144px;
+    border-radius: 50%;
+    z-index: 1;
+}
+#innerCircle{
+    position: absolute;
+    border-radius: 50%;
+    top: 22px;
+    right: 22px;
+    height:100px;
+    width:100px;
+    z-index: 100;
+    background-color: #fff;
+}
+#text{
+    
+    color: black;
+}
