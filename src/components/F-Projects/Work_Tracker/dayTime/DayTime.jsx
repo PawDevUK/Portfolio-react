@@ -8,7 +8,7 @@ export default class DayTime extends Component {
             <div id={s.TL_Wrapper}>
                 <div id={s.main}></div>
                 <div id={s.right}>
-                    <Eclipse></Eclipse>
+                    <Eclipse basic={100} overTime={100}></Eclipse>
                 </div>
             </div>
         );
