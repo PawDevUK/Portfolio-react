@@ -1,49 +1,50 @@
-#wrapper{
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@500;700&display=swap');
+
+#wrapper {
     height: 100vh;
     width: 100vw;
-    background-color:rgba(245, 245, 245, 1);
+    background-color: rgba(245, 245, 245, 1);
 }
-#TL_Wrapper{
+#TL_Wrapper {
     display: flex;
-    height:254px;
-    width:1000px;
+    height: 254px;
+    width: 1000px;
     background-color: #fff;
-    margin:auto;
+    margin: auto;
 }
-#main{
-    width:70%;
+.main {
+    width: 70%;
     height: 100%;
-
 }
-#right{
-    width:30%;
+#right {
+    width: 30%;
     height: 100%;
-    
 }
-#circleWrapper{
+#circleWrapper {
     margin: 55px auto;
     position: relative;
-    height:144px;
-    width:144px;
+    height: 144px;
+    width: 144px;
 }
-#outerCircle{
-    background-color:#E0E281;
-    height:144px;
-    width:144px;
-    border-radius: 50%;
-    z-index: 1;
+.SCWrapper{
+    transform: scaleX(-1);
 }
-#innerCircle{
+#innerCircle {
     position: absolute;
     border-radius: 50%;
     top: 22px;
     right: 22px;
-    height:100px;
-    width:100px;
+    height: 100px;
+    width: 100px;
     z-index: 100;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#text{
-    
-    color: black;
+#text {
+    font-weight: Bold;
+    color: #413a3a;
+    font-size: 26px;
+    font-family:'Lato', 'Roboto', 'Arial';
 }
