@@ -13,13 +13,13 @@ probably it will be either Mongo DB or MySQL.
 
 #### ToDo
 
-- [] menu
-- [] calendar tab
-- [] calendar to specify days off
-- [] component to select same repeated days in the week
-- [] time line tab
-- [] time line with division for hours
-- [] progres circle to visually show profit for the day
+- [ ] menu
+- [ ] calendar tab
+- [ ] calendar to specify days off
+- [ ] component to select same repeated days in the week
+- [ ] time line tab
+- [ ] time line with division for hours
+- [ ] progres circle to visually show profit for the day
 
 
 
