@@ -11,13 +11,14 @@
     width: 1000px;
     background-color: #fff;
     margin: auto;
+    padding:20px;
 }
 .main {
-    width: 70%;
+    width: 80%;
     height: 100%;
 }
 #right {
-    width: 30%;
+    width: 20%;
     height: 100%;
 }
 #circleWrapper {
@@ -26,7 +27,7 @@
     height: 144px;
     width: 144px;
 }
-.SCWrapper{
+.SCWrapper {
     transform: scaleX(-1);
 }
 #innerCircle {
@@ -46,23 +47,86 @@
     font-weight: Bold;
     color: #413a3a;
     font-size: 26px;
-    font-family:'Lato', 'Roboto', 'Arial';
+    font-family: 'Lato', 'Roboto', 'Arial';
 }
 
-.mainTop{
+.mainTop {
     height: 50%;
     width: 100%;
 }
-.mainBottom{
+.mainBottom {
     height: 50%;
     width: 100%;
+    margin: auto;
+    display: flex;
 }
-
-.TimeLineWrapper{
-    margin:auto;
+.HourWrapper{
+    position: relative;
+    height:25px;
+    width: 47px;
 }
-.T_Line{
-    height:2px;
+.TimeLineWrapper {
+    height: 21px;
+    margin: auto;
+    position: relative;
+}
+.T_Line,
+.H_Divider,
+.H_Divider::after,
+.HH_Divider,
+.QH_Divider,
+.QH_Divider::after {
     background-color: #413a3a;
+    position: absolute;
+    width: 2px;
+    content: '';
+}
+.T_Line {
+    height: 1px;
     width: 48px;
+    top: 10px;
+}
+//Hour divider
+.H_Divider,
+.H_Divider::after {
+    height: 21px;
+}
+.H_Divider::after {
+    margin-left: 47px;
+}
+//Half Hour divider
+.HH_Divider {
+    height: 15px;
+    margin: 3px 0px 3px 24px;
+}
+//Quarter Hour dividers
+.QH_Divider,
+.QH_Divider::after {
+    width: 1px;
+    height: 15px;
+}
+.QH_Divider {
+    margin: 3px 0px 3px 12px;
+}
+.QH_Divider::after {
+    margin-left: 24px;
+}
+//
+// Timer text
+.Timer {
+    top: -20px;
+    left: -21px;
+    position: absolute;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 15px;
+    display: flex;
+    width: 90px;
+}
+//
+
+.TL_Wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
