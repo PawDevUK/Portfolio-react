@@ -1,5 +1,3 @@
-
-
 export default function Users(state = [], action){
     switch(action.type){
         case 'ADD_USER':
