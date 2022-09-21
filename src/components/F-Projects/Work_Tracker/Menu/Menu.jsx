@@ -50,7 +50,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
-    ...theme.mixins.toolbar,Menu
+    ...theme.mixins.toolbar,
+    Menu,
 }));
 
 const AppBar = styled(MuiAppBar, {
@@ -89,6 +90,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function Menu(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [link, setRoute] = React.useState('calendar');
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -96,6 +98,41 @@ export default function Menu(props) {
 
     const handleDrawerClose = () => {
         setOpen(false);
+    };
+
+    const handleRoute = (route) => {
+        setRoute(route);
+        console.log(link);
+    };
+
+    const ReturnList = (arr) => {
+        return arr.map((text, index) => {
+            return (
+                <List>
+                    <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+                        <ListItemButton
+                            onClick={() => {
+                                handleRoute(text);
+                            }}
+                            sx={{
+                                minHeight: 48,
+                                justifyContent: open ? 'initial' : 'center',
+                                px: 2.5,
+                            }}>
+                            <ListItemIcon
+                                sx={{
+                                    minWidth: 0,
+                                    mr: open ? 3 : 'auto',
+                                    justifyContent: 'center',
+                                }}>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                        </ListItemButton>
+                    </ListItem>
+                </List>
+            );
+        });
     };
 
     return (
@@ -121,57 +158,17 @@ export default function Menu(props) {
             </AppBar>
             <Drawer variant='permanent' open={open}>
                 <DrawerHeader>
-                    <IconButton onClick={handleDrawerClose}>{theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
+                    <IconButton onClick={handleDrawerClose}> {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
                 </DrawerHeader>
                 <Divider />
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-                            <ListItemButton
-                                sx={{
-                                    minHeight: 48,
-                                    justifyContent: open ? 'initial' : 'center',
-                                    px: 2.5,
-                                }}>
-                                <ListItemIcon
-                                    sx={{
-                                        minWidth: 0,
-                                        mr: open ? 3 : 'auto',
-                                        justifyContent: 'center',
-                                    }}>
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                </ListItemIcon>
-                                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
+                {ReturnList(['Calendar'])}
                 <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-                            <ListItemButton
-                                sx={{
-                                    minHeight: 48,
-                                    justifyContent: open ? 'initial' : 'center',
-                                    px: 2.5,
-                                }}>
-                                <ListItemIcon
-                                    sx={{
-                                        minWidth: 0,
-                                        mr: open ? 3 : 'auto',
-                                        justifyContent: 'center',
-                                    }}>
-                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                                </ListItemIcon>
-                                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-                            </ListItemButton>
-                        </ListItem>
-                    ))}
-                </List>
+                {ReturnList(['Day Tracker', 'Week Tracker', 'Month Tracker'])}
+                <Divider></Divider>
+                {ReturnList(['All mail', 'Trash', 'Spam'])}
             </Drawer>
             <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
-               {props.children}
+                {props.children}
             </Box>
         </Box>
     );
