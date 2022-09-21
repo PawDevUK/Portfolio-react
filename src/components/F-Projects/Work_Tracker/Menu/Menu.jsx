@@ -50,7 +50,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
+    ...theme.mixins.toolbar,Menu
 }));
 
 const AppBar = styled(MuiAppBar, {
@@ -86,7 +86,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 }));
 
-export default function MiniDrawer(props) {
+export default function Menu(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -115,7 +115,7 @@ export default function MiniDrawer(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant='h6' noWrap component='div'>
-                        Mini variant drawer
+                        Tesco Work Tracker
                     </Typography>
                 </Toolbar>
             </AppBar>
