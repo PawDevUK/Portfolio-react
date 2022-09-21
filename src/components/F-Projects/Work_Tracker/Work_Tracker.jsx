@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import s from './style/style.module.css'
-import DayTime from './dayTime/DayTime.jsx'
+
+import DayTime from './DayTime/DayTime.jsx';
+import Menu from './Menu/Menu';
+import s from './style/style.module.css';
 
 export default class WorkTracker extends Component {
     render() {
         return (
             <div id={s.wrapper}>
-                <h1>Work Tracker</h1>
-                <DayTime></DayTime>
+                <Menu>
+                    <DayTime></DayTime>
+                </Menu>
             </div>
         );
     }
