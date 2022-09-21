@@ -20,6 +20,8 @@ import MuiAppBar from '@mui/material/AppBar';
 import MuiDrawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import  WT_Route from '../../../../actions/addWT_Route.action'
+import {store} from '../../../../configureStore.js'
 
 const drawerWidth = 240;
 
@@ -90,7 +92,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function Menu(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    const [link, setRoute] = React.useState('calendar');
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -101,8 +102,7 @@ export default function Menu(props) {
     };
 
     const handleRoute = (route) => {
-        setRoute(route);
-        console.log(link);
+        store.dispatch(WT_Route(route))
     };
 
     const ReturnList = (arr) => {
