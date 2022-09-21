@@ -34,7 +34,7 @@ export default class DayTime extends Component {
                 <div className={s.main}>
                     <div className={s.mainTop}></div>
                     <div className={s.mainBottom}>
-                        <DayTimeLine></DayTimeLine>
+                        <div className={s.TL_Wrapper}>{this.createShift(this.state.arr)}</div>
                     </div>
                    
                 </div>
