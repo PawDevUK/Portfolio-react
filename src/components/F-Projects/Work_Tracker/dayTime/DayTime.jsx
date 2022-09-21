@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import s from '../style/style.module.css';
-import DayTimeLine from './DayTimeLine';
+import Hour from './Hour';
 import Eclipse from './Eclipse';
 
 export default class DayTime extends Component {
