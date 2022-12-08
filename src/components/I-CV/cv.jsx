@@ -1,6 +1,7 @@
+import './cv.css'
+
 import React from 'react'
 import styled from 'styled-components'
-import './cv.css'
 
 const A = styled.a`
   &:hover {
@@ -59,7 +60,7 @@ function Cv() {
           <header></header>
           <article>
             <p className="mx-1">
-              A React developer from Reading, UK. Creates React web apps based
+              A Junior React developer from Reading, UK. I have good understanding of back-end as well Creates React web apps based
               on components styled in styled-components. Uses mainly JavaScript
               for front-end and has experience in Node.Js for back-end and
               MongoDB. <br />
