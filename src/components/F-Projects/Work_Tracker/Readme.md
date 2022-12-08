@@ -18,7 +18,9 @@ probably it will be either Mongo DB or MySQL.
 - [ ] component to select same repeated days in the week
 - [ ] time line tab
 - [ ] time line with division for hours
-- [ ] progres circle to visually show profit for the day
+- [ ] colored progress bar on the top of the time line. I should indicate basic H and overtime H
+- [ ] sumary of the worked hours, located above the time line with colored squares accordingly to basic H or overtime H
+- [ ] progres circle to visually show profit for a day
 - [x] menu
 
 
