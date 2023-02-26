@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import { getGithubButton, getJumboP, getJumboTextAuth, getJumboTextHeader } from 'selectors/pageContent.selector'
+
 import Button from 'components/common/Button'
 import React from 'react';
 import { connect } from 'react-redux';
-import { getJumboTextHeader, getJumboP, getGithubButton, getJumboTextAuth } from 'selectors/pageContent.selector'
+import styled from 'styled-components';
 
 const JumboTextWrapper = styled.div`
 text-align:center;
@@ -28,7 +29,6 @@ width:250px;
 }
 `
 const JumboHeader = styled.h1`
-font-family:'Nunito Sans', sans-serif;
 font-weight:400;
 width:100%;
 display:block;
@@ -58,7 +58,6 @@ display:none;
 @media(min-width:992px){
     margin-top:10px;
     display:block;
-    font-family:'Nunito Sans', sans-serif;
     color:#fff;
     font-size:20px;
     font-weight:200;

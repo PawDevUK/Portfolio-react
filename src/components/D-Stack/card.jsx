@@ -1,8 +1,10 @@
 import '../../../node_modules/aos/dist/aos.css'
-import { AnimationWrapper } from 'react-hover-animation'
+
 import React, { useEffect } from 'react'
 import styled, { css } from 'styled-components'
+
 import AOS from 'aos'
+import { AnimationWrapper } from 'react-hover-animation'
 
 const Wrapper = styled.div`
   @media (max-width: 700px) {
@@ -22,7 +24,6 @@ const Wrapper = styled.div`
 const Text = styled.p`
   margin: 10px auto 8px auto;
   font-size: 16px;
-  font-family: 'Nunito Sans';
 `
 const Img = styled.img`
   @media (max-width: 700px) {
