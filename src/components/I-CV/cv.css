@@ -6,6 +6,17 @@
     box-shadow: 1px 0px 25px rgba(50, 50, 50, 0.75);
 }
 
+.cv-h5{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 19px;
+    margin: 20px 0px 5px 0px;
+}
+
+.info {
+    font-size: 18px;
+}
+
 @media (min-width: 900px) {
     .page {
         margin-top: 30px;
@@ -32,7 +43,12 @@
 }
 .Skills{
     margin: 0px 0px 0px 20px;
+    font-size: 18px;
 }
+.Skills ul li {
+    line-height: 24px;
+}
+
 a:hover {
     color: #0faee1;
 }
@@ -101,7 +117,6 @@ a:hover {
 }
 
 #cont-art #right, ul {
-    font-size: 20px;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
