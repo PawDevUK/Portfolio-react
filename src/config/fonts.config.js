@@ -9,5 +9,5 @@ export const fonts = {
     family:{
         main:''
     },
-    paragraph_line_height:'20'
+    paragraph_line_height:'24'
 }
