@@ -1,9 +1,10 @@
 import Button from 'components/common/Button'
+import { Link } from 'react-router-dom'
 import  React from 'react'
 import { SvgLoader } from 'react-svgmt'
-import styled from 'styled-components'
 import logo from 'img/pavdev.svg'
-import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
 // import { LocalOnEnter } from 'store/VisitorsDataAPI'
 // import { CurrentTime, CurrentDate } from 'factory'
 
@@ -35,11 +36,9 @@ const H1 = styled.h5`
   color: #fff;
   font-size: 20px;
 `
-const Text = styled.p`
-  font-family: 'Nunito Sans', sans-serif;
+const Text = styled.h5`
   margin: 0px;
   color: #fff;
-  line-height: 1.25;
 `
 const StButton = styled(Button)`
   margin: 40px auto auto auto;
