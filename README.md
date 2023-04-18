@@ -48,6 +48,8 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 #### Portfolio
 
 -   Add downloaded fonts to the project
+-   Improve text in on all website
+-   Improve card design.
 -   At the moment page has to many repeated styles around and it need to be reduced to/
     minimum. Also fonts size and line height is small ish. Probably line height should be/ 24px and font size should be 16px but it looks a bit small so 18px might be better for/  current font family. Also main page style is mixed with cv style and it should be tidied up.
 -   finish Register/Login
