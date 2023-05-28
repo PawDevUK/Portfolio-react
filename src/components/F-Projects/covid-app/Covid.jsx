@@ -1,3 +1,4 @@
+import React, {lazy} from 'react';
 import { Background } from 'components/F-Projects/covid-app/components/styled';
 import { Header, Main, Footer, News } from './components';
 import styled from 'styled-components';
