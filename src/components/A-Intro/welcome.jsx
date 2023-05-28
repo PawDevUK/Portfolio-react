@@ -65,7 +65,7 @@ function Welcome({ ...props }) {
         <H1>I'm</H1>
         <MobilLogo path={logo}></MobilLogo>
         <Text>
-          This is my Portfolio <br /> I hope you will find it interesting.
+          This is my Portfolio <br />
         </Text>
         <StLink to="/content">
           <StButton onClick={VisitorsRecorder}>Enter</StButton>
