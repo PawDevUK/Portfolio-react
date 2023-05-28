@@ -4,7 +4,8 @@ import React, { useEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 import AOS from 'aos'
-import { AnimationWrapper } from 'react-hover-animation'
+
+// import { AnimationWrapper } from 'react-hover-animation'
 
 const Wrapper = styled.div`
   @media (max-width: 700px) {
@@ -55,12 +56,12 @@ export default function CardSection(props) {
 
   return (
     <Link href={props.href} target="_blank" data-aos="fade">
-      <AnimationWrapper>
+      {/* <AnimationWrapper> */}
         <Wrapper>
           <Text>{props.title}</Text>
           <Img styled={props.styled} src={props.image}></Img>
         </Wrapper>
-      </AnimationWrapper>
+      {/* </AnimationWrapper> */}
     </Link>
   )
 }
