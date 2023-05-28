@@ -7,7 +7,7 @@ export const fonts = {
         jumbo:'22px'
     },
     family:{
-        main:''
+        main:'Nunito Sans , sans-serif'
     },
     paragraph_line_height:'24'
 }
