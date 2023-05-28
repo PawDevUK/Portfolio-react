@@ -9,6 +9,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 ## Updates
 
+-   removed particles.js as it is deprecated.
+-   installed react-tsparticles as it is fully supported.
+-   removed react-hover-animation as it was not compatible with react 17
 -   added custom domain 'pawelsiwek.co.uk' to application
 -   deployed app to GCP
 -   added Redux state management with default page content
@@ -36,6 +39,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+-   lazy loading to improve performance.   
 -   finish Register/Login
 -   finish lang support for Polish
 -   add 'kill-switch' to server project
@@ -94,6 +98,15 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 -   <s>implement live api with fall back to store in case of 404 </s>
 -   <s> fix maxValue bug by implementing CheckMax </s>
 -   <s>create footer </s>
+
+
+## Issues 
+
+- Too many styles types what is a bit confusing. It is good to show familiaritty\ 
+with the technology but it doesn't look good. I need decide to use one of the\ 
+style type and stick to it. It will be hard to convert everything from style 
+components to scss but there should not be a problem to convert scss into styled\
+components.
 
 ## Directory
 
