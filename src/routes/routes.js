@@ -24,7 +24,6 @@ export default function Router(){
 const GlobalStyle = createGlobalStyle`
     body{
         background-color:#fff;
-        font-family:'Nunito Sans', sans-serif;
         width:100%;
         margin:0px;
         padding:0px;
