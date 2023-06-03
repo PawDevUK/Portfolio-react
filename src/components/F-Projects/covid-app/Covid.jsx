@@ -1,8 +1,7 @@
-import React, {lazy} from 'react';
+import React from 'react';
 import { Background } from 'components/F-Projects/covid-app/components/styled';
 import { Header, Main, Footer, News } from './components';
 import styled from 'styled-components';
-import React from 'react';
 
 export const Container = styled.div`
     font-family: 'Lato', sans-serif;
