@@ -105,7 +105,6 @@ function Chat(props) {
   const [clientHeight, setClientHeight] = useState(0)
   const [footerHeight, setFooterHeight] = useState(90)
  
-
   useEffect(() => {
   /**
    * @timeout
