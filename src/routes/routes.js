@@ -1,23 +1,26 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React, { lazy, Suspense } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
-import TicTacToe from '../components/F-Projects/TicTacToe/TicTacToe'
-import Projects from '../components/F-Projects/projects'
-import Footer from '../components/H-Footer/Footer.jsx'
-import TopIntro from '../components/C-About/top-intro'
-import ReactSection from '../components/E-React/React'
-import Register from '../components/F-Projects/Register_Login/Register'
-import Login from '../components/F-Projects/Register_Login/Login'
-import RegisterSignIn from '../components/F-Projects/Register_Login/RegisterSignIn'
-import Contact from '../components/G-Contact/Contact'
-import Stack from '../components/D-Stack/stack.jsx'
-import Header from '../components/B-Header/Header'
-import Covid from '../components/F-Projects/covid-app/Covid'
-import Intro from '../components/A-Intro/intro'
-import Chat from '../components/Z-Chat/Chat'
-import CV from '../components/I-CV/cv'
-import React from 'react'
-import WorkTracker from 'components/F-Projects/Work_Tracker/Work_Tracker'
 
+import Intro from '../components/A-Intro/intro'
+import Header from '../components/B-Header/Header'
+import TopIntro from '../components/C-About/top-intro'
+
+import Stack from '../components/D-Stack/stack.jsx'
+import ReactSection from '../components/E-React/React'
+import Projects from '../components/F-Projects/projects'
+import Contact from '../components/G-Contact/Contact'
+import Footer from '../components/H-Footer/Footer.jsx'
+
+const WorkTracker = lazy( ()=>import('components/F-Projects/Work_Tracker/Work_Tracker') )
+const TicTacToe = lazy( ()=>import('../components/F-Projects/TicTacToe/TicTacToe') )
+const Login = lazy( ()=>import('../components/F-Projects/Register_Login/Login') )
+const Register = lazy( ()=>import('../components/F-Projects/Register_Login/Register') )
+const RegisterSignIn = lazy( ()=>import('../components/F-Projects/Register_Login/RegisterSignIn') )
+const Covid = lazy( ()=>import('../components/F-Projects/covid-app/Covid') )
+
+const CV = lazy( ()=>import('../components/I-CV/cv') )
+const Chat = lazy( ()=>import('../components/Z-Chat/Chat') )
 
 export default function Router(){
     
@@ -47,6 +50,7 @@ const Container = styled.div`
 `
     return(
         <BrowserRouter basename='/'>
+        <Suspense fallback={<div></div>}>
         <Wrapper>
           <GlobalStyle/>
           <Switch>
@@ -90,6 +94,7 @@ const Container = styled.div`
             </Route>
           </Switch>
         </Wrapper>
+        </Suspense>
       </BrowserRouter>
     )
 }
