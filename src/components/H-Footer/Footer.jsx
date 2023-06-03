@@ -1,7 +1,7 @@
 import { getRightFooterData } from 'selectors/pageContent.selector'
 import { BackgroundBlue } from 'styled'
 import styled, { css } from 'styled-components'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 import { getYear } from 'factory'
 import React, { Component } from 'react'
 import VisitorCounter from 'components/H-Footer/VisitorCounter'
