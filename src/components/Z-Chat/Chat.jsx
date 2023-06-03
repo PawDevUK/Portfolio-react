@@ -193,7 +193,7 @@ function Chat(props) {
       <InnerWrapper 
         id='chatInnerWrapper' 
         open={props.open}
-        chatPosition={clientHeight - 360 - footerHeight}
+        chatPosition={clientHeight - 360 - (footerHeight + 60)}
       >
         <Button
           buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
