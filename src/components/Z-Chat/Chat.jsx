@@ -121,10 +121,9 @@ function Chat(props) {
     /**
      * adds heights of the viewport and footer height to the state for the chat
      */
-    const clientHeight = document.documentElement.clientHeight;
-    const footer = document.getElementById('FooterWrapper').clientHeight;
-    setClientHeight( clientHeight );
-    setFooterHeight(footer)
+    setClientHeight(document.documentElement.clientHeight);
+    setFooterHeight(document.getElementById('FooterWrapper').clientHeight)
+
   },[clientHeight, footerHeight])
 
   function HandleClick() {
