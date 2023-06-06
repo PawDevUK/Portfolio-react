@@ -11,7 +11,8 @@ const BoardWrapper = styled.div`
     width: 520px;
     position: relative;
     padding: 20px;
-    background: #cfc5a5;
+    background: #575a5f47;
+    border: 2px solid #00000052;
     border-radius: 5px;
     ${boxShadow6};
 `;

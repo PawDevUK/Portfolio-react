@@ -6,7 +6,7 @@ import { boxShadow3 } from '../styled';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    background-color: #cfc5a5;
+    background-color: #575a5f47;
     border-radius: 10px;
     height: 300px;
     width: 650px;

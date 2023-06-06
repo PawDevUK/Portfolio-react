@@ -16,7 +16,7 @@ export const StButton = styled(Button)`
     }};
     margin: 10px 20px !important;
     width: 80px;
-    background-color: #c2b092 !important;
+    background: #575a5f47 !important;
     font-size: 20px !important;
     :active {
         border: none !important;
