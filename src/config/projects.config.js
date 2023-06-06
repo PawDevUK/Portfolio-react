@@ -21,11 +21,11 @@ export const projects = [
         stack: [react, js, figma, styled, gcloud, nodeJS, npm]
     },
     {
-        alt: "Bot Chat",
+        alt: "Chat Bot",
         githubHref: "https://github.com/GitcrackerUK/Messenger ",
         src: bot,
-        text: "Bot Chat is a simple app allowing any one to have conversation with AI. It’s simple and fun. At the moment app contains only chat but will be added chat history in MERN stack",
-        title: "Bot Chat",
+        text: "Bot Chat is a simple app allowing any one to have conversation with AI. It’s simple and fun. At the moment app contains only chat but will be added chat history in MERN stack.",
+        title: "Chat Bot",
         webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
         stack: [react, router, js, figma, styled, gcloud, git, npm]
     }, {
@@ -64,11 +64,11 @@ export const projects = [
         webHref: { href: "https://gitcrackeruk.github.io/Architect/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     }, {
-        alt: "GENTLEMAN BARBER",
+        alt: "Gentlemen Barber",
         githubHref: "https://github.com/GitcrackerUK/Barber",
         src: barber,
         text: "Simple bootstrap barber website. It's informative in very friendly tone aimed for every age range customers. ",
-        title: "GENTLEMAN BARBER",
+        title: "Gentlemen Barber",
         webHref: { href: "https://gitcrackeruk.github.io/Barber/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     },
@@ -81,11 +81,11 @@ export const projects = [
         webHref: { href: "https://gitcrackeruk.github.io/Solicitors/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     }, {
-        alt: "ASPARAGO",
+        alt: "Asparago",
         githubHref: "https://github.com/GitcrackerUK/Architect",
         src: asparago,
         text: "Bootstrap restaurant page with menu, carousel, content, location, parallax background images. These modern design with great and easy access to every information makes it very attractive",
-        title: "ASPARAGO",
+        title: "Asparago",
         webHref: { href: "https://gitcrackeruk.github.io/asparago.online/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
     }
