@@ -33,10 +33,6 @@ const Button = styled.div`
 
   //hover transition for transform and background-color
 &:hover {
-    transition: width 0.3s;
-    @media (max-width: 700px) {
-      width: 90px;
-    }
     cursor: pointer;
     text-decoration: none;
     border: 2px solid #fff;
