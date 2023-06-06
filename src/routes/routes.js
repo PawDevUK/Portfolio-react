@@ -6,10 +6,10 @@ import Intro from '../components/A-Intro/intro'
 import Header from '../components/B-Header/Header'
 import TopIntro from '../components/C-About/top-intro'
 
+import Contact from '../components/G-Contact/Contact'
 import Stack from '../components/D-Stack/stack.jsx'
 import ReactSection from '../components/E-React/React'
 import Projects from '../components/F-Projects/projects'
-import Contact from '../components/G-Contact/Contact'
 import Footer from '../components/H-Footer/Footer.jsx'
 
 const WorkTracker = lazy( ()=>import('components/F-Projects/Work_Tracker/Work_Tracker') )
