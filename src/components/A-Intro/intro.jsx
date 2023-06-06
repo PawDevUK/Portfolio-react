@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles'
 import Welcome from 'components/A-Intro/welcome'
 import img from 'img/computer-2982270_1920.jpg'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 import styled from 'styled-components'
 import React from 'react'
 
