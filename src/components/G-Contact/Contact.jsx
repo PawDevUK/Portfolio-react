@@ -84,6 +84,7 @@ const StTextField = styled(TextField)`
 `
 const StTextareaAutosize = styled(TextareaAutosize)`
   display: block;
+  height:74px !important;
   width: 90%;
   margin: 20px auto !important;
 `
@@ -250,11 +251,11 @@ export default function Contact() {
               onChange={handleChange}
             />
             <StTextareaAutosize
+              minRows={4}
               type="text"
               value={formData.Message}
               name="Message"
               aria-label="minimum height"
-              rowsMin={4}
               placeholder="Message"
               variant="outlined"
               required
