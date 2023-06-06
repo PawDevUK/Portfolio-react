@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 
 const InputWrapper = styled.form`
     position: absolute;
-    left: 230px;
+    left: 250px;
     ${(p) => {
         return p.nameSubmit
             ? css`
@@ -43,7 +43,7 @@ const UsernameWrapper = styled.div`
 const H1 = styled.h1`
     color: #fff;
     font-weight: bold;
-    background-color: #cfc5a5;
+    background-color: #575a5f47;
     border-radius: 5px;
     padding: 10px;
     ${boxShadow3};
