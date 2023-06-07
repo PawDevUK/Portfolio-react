@@ -87,7 +87,7 @@ const Header = styled.div`
   width: 109px;
   height: 30px;
   padding: 3px 5px;
-  margin: auto 0px auto 50px;
+  margin: auto 0px auto 35px;
 `
 const HeaderImg = styled.div`
   margin:auto 0px; 
