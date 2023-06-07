@@ -89,6 +89,7 @@ const A = styled.a`
         </Header>
         <P 
           p_line_height={props.p_line_height} 
+        >
             {LimitText(props.item.text, 130)}
         </P>
         <ButtonWrapper>
