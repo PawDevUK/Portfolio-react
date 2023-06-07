@@ -197,7 +197,7 @@ function Chat(props) {
       <InnerWrapper 
         id='chatInnerWrapper' 
         open={props.open}
-        chatPosition={clientHeight - 360 - (footerHeight + 60)}
+        chatPosition={clientHeight - 360 - (footerHeight - 2)}
       >
         <Button alt='chat icon' open={props.isChatOpen} onClick={HandleClick}> </Button>
         <Window open={props.isChatOpen} id='chatWindow'>
