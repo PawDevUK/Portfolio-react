@@ -40,8 +40,8 @@ const Wrapper = styled.div`
     height:430px;
     width:40%;
   }
-  &:hover ${Header} {
-    transform: scale(1.2);
+  &:hover ${Underline}{
+    opacity:1;
   }
 `
 const CardContent = styled.div`
