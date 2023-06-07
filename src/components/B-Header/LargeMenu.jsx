@@ -41,7 +41,7 @@ const Link = styled.a`
   color: 
   #fff;
   text-transform: capitalize;
-  margin-right: 32px;
+  margin-right: 25px;
   font-weight: 700;
   &:hover {
     text-decoration: none;
