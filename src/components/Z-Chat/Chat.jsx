@@ -77,6 +77,12 @@ const HeaderWrapper = styled.div`
   display: flex;
   height:60px;
 `
+const CloseIcon = styled.div`
+  margin: 6px 0px 0px 6px;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+`
 const Header = styled.div`
   border-radius: 5px 0px 0px 5px;
   width: 109px;
@@ -201,6 +207,7 @@ function Chat(props) {
         ></Button>
         <Window open={props.isChatOpen} id='chatWindow'>
           <HeaderWrapper>
+            <CloseIcon onClick={HandleClick}>X</CloseIcon>
             <Header>
               <SectionHeader>Brain Bot</SectionHeader>
             </Header>
