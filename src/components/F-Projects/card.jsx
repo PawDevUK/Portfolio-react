@@ -89,8 +89,7 @@ const A = styled.a`
         </Header>
         <P 
           p_line_height={props.p_line_height} 
-          className="card-text">
-            {LimitText(props.item.text, 150)}
+            {LimitText(props.item.text, 130)}
         </P>
         <ButtonWrapper>
           <A 
