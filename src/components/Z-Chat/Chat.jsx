@@ -14,18 +14,18 @@ import axios from 'axios'
 
 const parseString = require('xml2js').parseString
 
-const Button = styled(SvgLoader)`
-  ${(p) =>
-    p.buttonAnimation
-      ? css`
-          transition: margin-right 0.4s;
-          margin-right: 5px;
-        `
-      : css``};
+const Button = styled.div`
+  background-image: url(${chat});
+  background-size: cover; 
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height:50px;
+  width:60px;
   padding:0px;
-  margin-top:324px;
+  margin-top:300px;
+  ${p=> p.open ? css`display:none;`:css``}
 `
-
 const Wrapper = styled.div`
   position: absolute;
   padding-top:0px;
@@ -200,11 +200,7 @@ function Chat(props) {
         open={props.open}
         chatPosition={clientHeight - 360 - (footerHeight + 60)}
       >
-        <Button
-          buttonAnimation={!props.isChatOpen ? buttonAnimation : null}
-          onClick={HandleClick}
-          path={ChatButtonLarge1px}
-        ></Button>
+        <Button alt='chat icon' open={props.isChatOpen} onClick={HandleClick}> </Button>
         <Window open={props.isChatOpen} id='chatWindow'>
           <HeaderWrapper>
             <CloseIcon onClick={HandleClick}>X</CloseIcon>
