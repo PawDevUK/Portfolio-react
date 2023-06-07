@@ -9,6 +9,10 @@ import Stack from './Stack'
 
 const Header = styled.h5`
   font-size:18px;
+  margin:8px 0px 4px 0px;
+  position:relative;
+  display:inline-block;
+`
 const Underline = styled.div`
   position: absolute;
   height:3px;
