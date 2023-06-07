@@ -31,6 +31,7 @@ const Wrapper = styled.div`
   margin:20px auto 0px auto;
   padding:4px;
   border-radius:10px;
+  cursor: pointer;
   ${boxShadow12};
   width:65%;
   @media (max-width:600px) {
