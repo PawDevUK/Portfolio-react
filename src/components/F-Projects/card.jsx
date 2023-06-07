@@ -9,7 +9,16 @@ import Stack from './Stack'
 
 const Header = styled.h5`
   font-size:18px;
-  transition:transform 0.5s;
+const Underline = styled.div`
+  position: absolute;
+  height:3px;
+  width:100%;
+  opacity:0;
+  background:#00000070;
+  border-radius:5px;
+  left:0px;
+  bottom:-1px;
+  transition: opacity 0.3s ease
 `
 const Wrapper = styled.div`
   z-index:1000;
