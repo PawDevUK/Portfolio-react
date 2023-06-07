@@ -32,13 +32,13 @@ const Wrapper = styled.div`
   padding:4px;
   border-radius:10px;
   ${boxShadow12};
-  width:60%;
+  width:65%;
   @media (max-width:600px) {
-    width:100%;
+    width:60%;
   }
   @media (min-width:992px) {
     height:430px;
-    width:40%;
+    width:45%;
   }
   &:hover ${Underline}{
     opacity:1;
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
 const CardContent = styled.div`
   z-index:10000;
   text-align:center;
-  margin:0 5px 10px 5px;
+  margin:0 10px 10px 10px;
 `
 const StImg = styled.img`
   display:block;
@@ -60,13 +60,17 @@ const ButtonWrapper = styled.div`
   margin:10px auto auto auto;
   display:flex;
   width:250px;
+  @media (max-width:600px){
+    flex-direction:column;
+    width:120px;
+  }
 `
 const P = styled.p`
   line-height: ${p=>p.p_line_height}px;
   font-size:16px;
 `
 const A = styled.a`
-  margin:auto;
+  margin:5px auto;
   :hover {
     text-decoration: none;
   }
