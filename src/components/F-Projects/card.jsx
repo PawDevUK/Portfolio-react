@@ -83,7 +83,10 @@ const A = styled.a`
         src={props.item.src} 
         alt={props.item.alt}></StImg>
       <CardContent>
-        <Header className="card-title">{props.item.title}</Header>
+        <Header> 
+          {props.item.title}
+          <Underline></Underline>
+        </Header>
         <P 
           p_line_height={props.p_line_height} 
           className="card-text">
