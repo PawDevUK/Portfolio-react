@@ -10,7 +10,7 @@ export { default as fitnessApp } from './FitnessApp.webp';
 export { default as CovidApp } from './CovidApp.webp';
 export { default as MyPhoto } from './MyPhoto.png';
 export { default as BrainBot } from './BrainBot.png';
-export { default as TicTacToe } from './tictactoe.png';
+export { default as TicTacToe } from './tictactoe.webp';
 
 export { default as react } from './React.png'
 export { default as reactSvg } from './react.svg'
@@ -36,6 +36,7 @@ export { default as EnglishFlag } from './united-kingdom.png'
 
 
 
+export { default as chat } from './chat24.png'
 export { default as SkyScraper } from './skyScrapers.png'
 export { default as ChatButtonLarge1px } from './ChatButtonLarge1px.svg'
 export { default as projectsBackground } from  './y-so-serious-white.png'
