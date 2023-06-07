@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   padding-top:0px;
   height:100%;
   top: 0px;
-  right:${p=> p.open ? 30 : 0}px;
+  right:20px;
   @media (max-width: 1000px) {
     display: none;
   }
