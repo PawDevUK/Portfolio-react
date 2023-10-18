@@ -13,7 +13,7 @@ export default function Row(props) {
                 return (
                     <StButton
                         disabled={!props.Disabled}
-                        cell
+                        cell='true'
                         onClick={(index) => {
                             props.CellClick(index);
                         }}

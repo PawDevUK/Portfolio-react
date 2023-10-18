@@ -11,11 +11,11 @@ const Wrapper = styled.div`
 export default function TopButtons(props) {
     return (
         <Wrapper>
-            <StButton id='X' player={props.Player} disabled={props.Disabled} variant='contained' size='medium' color='primary' onClick={props.PlayerX} header>
+            <StButton id='X' player={props.Player} disabled={props.Disabled} variant='contained' size='medium' color='primary' onClick={props.PlayerX} header='true'>
                 X
             </StButton>
 
-            <StButton id='O' player={props.Player} disabled={props.Disabled} variant='contained' size='medium' color='primary' onClick={props.PlayerO} header>
+            <StButton id='O' player={props.Player} disabled={props.Disabled} variant='contained' size='medium' color='primary' onClick={props.PlayerO} header='true'>
                 O
             </StButton>
         </Wrapper>
