@@ -36,7 +36,7 @@ export default function PlayerList(params) {
     const [onlineUsers, setOnlineUsers] = useState([]);
 
     async function getUsersFromDB() {
-        const onlineUsers = await getUsers();
+        // const onlineUsers = await getUsers();
         setOnlineUsers(onlineUsers);
     }
 
