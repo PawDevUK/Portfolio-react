@@ -37,6 +37,7 @@ export { default as EnglishFlag } from './united-kingdom.png'
 
 
 export { default as chat } from './chat24.png'
+export { default as expand } from './expand-23.png'
 export { default as SkyScraper } from './skyScrapers.png'
 export { default as ChatButtonLarge1px } from './ChatButtonLarge1px.svg'
 export { default as projectsBackground } from  './y-so-serious-white.png'
