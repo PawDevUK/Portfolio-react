@@ -78,6 +78,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 -   add Register/Login content </s>
 -  due to problems with performance on Heroku and assigning custom domanin to app       deployed to Heroku I have decided to deploy application to GCP <s> -add custom domain 'pawelsiwek.co.uk' to heroku app
 -   fix env var issue on heroku for portfolio server</s>
+-   <s>Add functionality to remove tools on mobile devices.</s>
 -   <s>add stack icons to project cards.</s>
 -   <s> create cookie to get info of visitors (date,time) </s>
 -   <s> sort out problem with axios instance for intro. Path function sends empty obj.</s> problem was with axios.create({method:post})
