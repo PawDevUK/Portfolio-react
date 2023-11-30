@@ -12,6 +12,16 @@ export function LimitText(str, length) {
     return str
 }
 
+export function cardTextLength(width) {
+    if (width > 993) {
+        return 150;
+    } else if (width < 993 && width > 600) {
+        return 100;
+    } else {
+        return 80;
+    }
+}
+
 const AddZero = (param) => {
     return param < 10 ? `0${param}` : param
 }
