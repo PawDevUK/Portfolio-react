@@ -110,7 +110,7 @@ export default function MobileMenu() {
               >
                 {item.title}
                 <SlideDown>
-                  {' '}
+                  
                   {mouseOver ? (
                     <DropDown href={item.href}>
                       {item.react ? item.react.title : null}
