@@ -58,6 +58,7 @@ const MobileLink = styled.a`
     text-decoration: none;
     opacity: 0.7;
   }
+  margin: 5px 0px;
   position: relative;
   color: #353535;
   display: block;
@@ -100,8 +101,7 @@ export default function MobileMenu() {
       <MobilNav toggle={toggle}>
         <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
         <LinkContainer>
-          {Menu.map((item, i) => {
-            return (
+          {Menu.map((item, i) => (
               <MobileLink
                 onMouseEnter={item.react ? handleMouseHover : null}
                 onMouseLeave={item.react ? handleMouseHover : null}
@@ -110,7 +110,6 @@ export default function MobileMenu() {
               >
                 {item.title}
                 <SlideDown>
-                  
                   {mouseOver ? (
                     <DropDown href={item.href}>
                       {item.react ? item.react.title : null}
@@ -121,7 +120,7 @@ export default function MobileMenu() {
                 </SlideDown>
               </MobileLink>
             )
-          })}
+          )}
         </LinkContainer>
       </MobilNav>
     </Wrapper>
