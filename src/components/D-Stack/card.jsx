@@ -10,8 +10,8 @@ import AOS from 'aos'
 const Wrapper = styled.div`
   @media (max-width: 700px) {
     margin: 10px;
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 130px;
   }
   margin: 5px;
   height: 150px;
