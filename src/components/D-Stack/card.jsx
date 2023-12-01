@@ -5,8 +5,6 @@ import styled, { css } from 'styled-components'
 
 import AOS from 'aos'
 
-// import { AnimationWrapper } from 'react-hover-animation'
-
 const Wrapper = styled.div`
   @media (max-width: 700px) {
     margin: 10px;
@@ -16,7 +14,9 @@ const Wrapper = styled.div`
   margin: 5px;
   height: 150px;
   width: 150px;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12),
+  box-shadow: 
+    0px 8px 10px rgba(0, 0, 0, 0.14),
+    0px 3px 14px rgba(0, 0, 0, 0.12),
     0px 5px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 10px;
@@ -49,19 +49,17 @@ const Link = styled.a`
   }
 `
 
-export default function CardSection(props) {
+export default function MiniCard(props) {
   useEffect(() => {
-    AOS.init({ duration: 1000 })
-  })
+    AOS.init({ duration: 1000 });
+  },[]);
 
   return (
     <Link href={props.href} target="_blank" data-aos="fade">
-      {/* <AnimationWrapper> */}
         <Wrapper>
           <Text>{props.title}</Text>
           <Img styled={props.styled} src={props.image}></Img>
         </Wrapper>
-      {/* </AnimationWrapper> */}
     </Link>
   )
 }

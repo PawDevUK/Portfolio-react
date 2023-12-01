@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import Card from './card.jsx'
+import MiniCard from './card.jsx'
 import styled from 'styled-components'
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import { getStack, getStackHeader } from 'selectors/pageContent.selector'
@@ -28,14 +28,14 @@ function Stack(props) {
       <Thumbnails>
         {props.tools.map((item, i) => {
           return (
-            <Card
+            <MiniCard
               key={i}
               styled={item.styled}
               image={item.img}
               title={item.title}
               text={item.text}
               href={item.webHref}
-            ></Card>
+            ></MiniCard>
           )
         })}
       </Thumbnails>
