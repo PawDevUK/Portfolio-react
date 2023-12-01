@@ -1,11 +1,11 @@
-export { default as asparago } from './asparago.avif';
+export { default as asparago } from './asparago.webp';
 export { default as login } from './login1.png';
 export { default as register } from './Register.webp';
 export { default as bot } from './bot.webp';
-export { default as nasa } from './nasa.avif';
+export { default as nasa } from './nasa.webp';
 export { default as royal } from './royal.webp';
-export { default as barber } from './barber.avif';
-export { default as solicitors } from './solicitors.avif';
+export { default as barber } from './barber.webp';
+export { default as solicitors } from './solicitors.webp';
 export { default as fitnessApp } from './FitnessApp.webp';
 export { default as CovidApp } from './CovidApp.webp';
 export { default as MyPhoto } from './MyPhoto.png';
