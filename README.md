@@ -1,13 +1,12 @@
 # Portfolio
 
-Website to present my projects and skills to whom it may concern.\
-It's react app, created with create-react-app and styled with styled-components.\
-Source code is hosted on Gcloud.\
+This website showcases my projects and skills. It's a React app created with create-react-app and styled using styled-components. The source code is hosted on Google Cloud Platform (GCP).
+
 Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 <hr>
 
-## Specification of the page
+## Specification of the Page
 - h1 
 - h2
 - h3
@@ -18,112 +17,113 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - font family: 'Nunito Sans', sans-serif,
 - line-height: 24px
 
+---
+
 ## Updates
 
--   removed particles.js as it is deprecated.
--   installed react-tsparticles as it is fully supported.
--   removed react-hover-animation as it was not compatible with react 17
--   added custom domain 'pawelsiwek.co.uk' to application
--   deployed app to GCP
--   added Redux state management with default page content
--   added Node.js to skills
--   card component
-    -   added text reducer to card text
-    -   removed bootstrap
-    -   added styled Button with "light" theme
--   removed width passed as props and used for rwd.
--   added css media and styled rwd based on media queries
--   added Bot Chat which slides out from the right on click.
--   created "Contact" section with basic info and parallax background
--   merged with Covid-app
--   added backend in node.js
--   added component Contact with form to send me email directly.
--   animated chat button and chat header "Brain bot"
--   added visitor counter on every intro button click
--   added email notification on every visitor
--   added RWD for Contact and Footer
--   changed contact background parallax and widened it to full width of the page.
--   added stack icons to each project card
--   added Tic Tac Toe to projects
+- Removed particles.js as it is deprecated.
+- Installed react-tsparticles as it is fully supported.
+- Removed react-hover-animation as it was not compatible with React 17.
+- Added a custom domain 'pawelsiwek.co.uk' to the application.
+- Deployed the app to GCP.
+- Added Redux state management with default page content.
+- Added Node.js to skills.
+- Card component:
+  - Added text reducer to card text.
+  - Removed Bootstrap.
+  - Added a styled Button with "light" theme.
+- Removed width passed as props and used for responsive web design (RWD).
+- Added CSS media queries and styled RWD based on media queries.
+- Added Bot Chat that slides out from the right on click.
+- Created a "Contact" section with basic info and parallax background.
+- Merged with Covid-app.
+- Added backend in Node.js.
+- Added a Contact component with a form to send me an email directly.
+- Animated chat button and chat header "Brain bot".
+- Added a visitor counter on every intro button click.
+- Added email notification on every visitor.
+- Added RWD for Contact and Footer.
+- Changed contact background parallax and widened it to the full width of the page.
+- Added stack icons to each project card.
+- Added Tic Tac Toe to projects.
+
+---
 
 ## To Do
 
 #### Portfolio
 
--   lazy loading to improve performance.   
--   Add downloaded fonts to the project
--   Improve text in on all website
--   Improve card design.
--   At the moment page has to many repeated styles around and it need to be reduced to/
-    minimum. Also fonts size and line height is small ish. Probably line height should be/ 24px and font size should be 16px but it looks a bit small so 18px might be better for/  current font family. Also main page style is mixed with cv style and it should be tidied up.
--   finish Register/Login
--   finish lang support for Polish
--   add 'kill-switch' to server project
--   improve application performance
--   update 'about me'
--   update all application text content
--   update cv
--   add personal image to "About" component
--   refactor Code
--   run lighthouse test
-    -   consider implement sections with lighthouse reports for each of projects
--   add heart/like to project card (implement db to store global counter for all hearts/likes).
--   add db to store cookie
--   create stats component to display visitors
--   <s>add custom domain 'pawelsiwek.co.uk' to application</s>
--   <s>remove particles from projects background as it affects performance and add static img with particles
--   deploy app to GCP client
--   deploy app to Heroku server
--   connect client to server
--   add Register/Login content </s>
--  due to problems with performance on Heroku and assigning custom domanin to app       deployed to Heroku I have decided to deploy application to GCP <s> -add custom domain 'pawelsiwek.co.uk' to heroku app
--   fix env var issue on heroku for portfolio server</s>
--   <s>Add functionality to remove tools on mobile devices.</s>
--   <s>add stack icons to project cards.</s>
--   <s> create cookie to get info of visitors (date,time) </s>
--   <s> sort out problem with axios instance for intro. Path function sends empty obj.</s> problem was with axios.create({method:post})
--   <s> add automatic response on submission of Contact form </s>
--   <s>fix showing up square bug on reload next to bot chat window.</s>
--   <s> create backend </s>
--   <s> design and implement footer.</s>
--   <s> Add intro in readme.md to explain some details about this project </s>
--   <s>design and implement "contact me" with details to reach me and form to message me directly(back-end required).</s>
--   <s>implement responsive "main layout" for components.</s>
--   <s>reduce chat window width</s>
--   <s>fix not visible chat icon on entry (need to be reloaded to show up)</s>
--   <s>find better way to display directory tree in readme.md</s>
--   <s>move text and pros out of React.jsx component to store and export it back, then map it out.</s>
--   <s>reduce text line height in "Why React" component</s>
--   <s>reduce "Tick" svg in "Why React"</s>
--   <s>change login project img on content centered.</s>
--   <s>reduce "why react" component height on mobile devices</s>
--   <s> Implement Bot-Chat To Main Page. </s>
--   <s>create backend for chat and maybe even chat history</s>
--   <s>add "Talk to Brian Bot" banner to message window of Bot Chat</s>
--   <s>add send message "hi" on chat open and "writing"</s>
--   <s>get access token for unlimited requests. At the moment 150 per day</s>
--   <s>design modern looking interface, not too big and not too fancy\
-    Simple with basic functionally and matching color schemes.</s>
+- Add downloaded fonts to the project.
+- Improve text on the entire website.
+- Improve card design.
+- Simplify and reduce repeated styles throughout the page.
+- Finish Register/Login functionality.
+- Finish language support for Polish.
+- Add a 'kill-switch' to the server project.
+- Improve application performance.
+- Update 'About Me' section.
+- Update all application text content.
+- Update CV.
+- Add a personal image to the "About" component.
+- Refactor code.
+- Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
+- Create a stats component to display visitors.
+- <s>Run Lighthouse test.</s>
+- <s>Fix image issues for mobile projects in cards (Nasa/Gentlemen Barber/Goodwood Solicitors/Asparagus).</s>
+- <s>Implement lazy loading to improve performance.</s>
+- <s>Add a custom domain 'pawelsiwek.co.uk' to the application.</s>
+- <s>Remove particles from project backgrounds, as it affects performance, and add a static image with particles.</s>
+- <s>Deploy the app to GCP.</s>
+- <s>Deploy the app to Heroku server.</s>
+- <s>Connect the client to the server.</s>
+- <s>Add Register/Login content.</s>
+- <s>Add functionality to remove tools on mobile devices.</s>
+- <s>Add stack icons to project cards.</s>
+- <s>Create a cookie to get information about visitors (date, time).</s>
+- <s>Sort out the problem with the axios instance for intro. Path function sends an empty object.</s>
+- <s>Add an automatic response on submission of the Contact form.</s>
+- <s>Fix the issue of a square not showing up on reload next to the bot chat window.</s>
+- <s>Create a backend.</s>
+- <s>Design and implement a footer.</s>
+- <s>Add an intro in readme.md to explain some details about this project.</s>
+- <s>Design and implement "Contact Me" with details to reach me and a form to message me directly (back-end required).</s>
+- <s>Implement responsive "main layout" for components.</s>
+- <s>Reduce chat window width.</s>
+- <s>Fix the not visible chat icon on entry (needs to be reloaded to show up).</s>
+- <s>Find a better way to display the directory tree in readme.md.</s>
+- <s>Move text and pros out of React.jsx component to store and export it back, then map it out.</s>
+- <s>Reduce text line height in the "Why React" component.</s>
+- <s>Reduce "Tick" SVG in "Why React".</s>
+- <s>Change the login project image on content-centered.</s>
+- <s>Reduce "Why React" component height on mobile devices.</s>
+- <s>Implement Bot-Chat on the main page.</s>
+- <s>Create a backend for chat and maybe even chat history.</s>
+- <s>Add a "Talk to Brian Bot" banner to the message window of Bot Chat.</s>
+- <s>Add sending a message "hi" on chat open and "writing".</s>
+- <s>Get an access token for unlimited requests. At the moment, it's limited to 150 per day.</s>
+- <s>Design a modern-looking interface, not too big and not too fancy, simple with basic functionality and matching color schemes.</s>
 
-#### Covid-App
+### Covid-App
 
--   create component to display latest news related to covid
--   create axios instance to get data from backend
--   consider use of different chart library than nivo
--   create rwd for app
--   fix country picker scroll bug
--   <s>implement live api with fall back to store in case of 404 </s>
--   <s> fix maxValue bug by implementing CheckMax </s>
--   <s>create footer </s>
+- Create a component to display the latest news related to COVID.
+- Create an Axios instance to get data from the backend.
+- Consider using a different chart library than nivo.
+- Create RWD for the app.
+- Fix the country picker scroll bug.
+- <s>Implement live API with fallback to store in case of a 404.</s>
+- <s>Fix maxValue bug by implementing CheckMax.</s>
+- <s>Create a footer.</s>
 
+---
 
 ## Issues 
 
-- Too many styles types what is a bit confusing. It is good to show familiaritty\ 
-with the technology but it doesn't look good. I need decide to use one of the\ 
-style type and stick to it. It will be hard to convert everything from style 
-components to scss but there should not be a problem to convert scss into styled\
-components.
+- Too many styles types, which is a bit confusing. It's good to show familiarity\ 
+with the technology, but it doesn't look good. I need to decide to use one of the\ 
+style types and stick to it. It will be hard to convert everything from style 
+components to SCSS, but there should not be a problem converting SCSS into styled\
+components.\
+
 
 ## Directory
 
