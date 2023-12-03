@@ -68,7 +68,9 @@ function Welcome({ ...props }) {
           This is my Portfolio <br />
         </Text>
         <StLink to="/content">
-          <StButton onClick={VisitorsRecorder}>Enter</StButton>
+          <StButton 
+          // onClick={VisitorsRecorder}
+          >Enter</StButton>
         </StLink>
       </LogoTextWrapper>
     </Wrapper>
