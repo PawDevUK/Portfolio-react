@@ -53,13 +53,14 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+- Add all not working projects to Portfolio to make them accessible.
+- Add initial data to LocalStorage in the TicTacToe so the stats window has some dumy data to display.
 - Add downloaded fonts to the project.
 - Improve text on the entire website.
 - Improve card design.
 - Simplify and reduce repeated styles throughout the page.
 - Finish Register/Login functionality.
 - Finish language support for Polish.
-- Add a 'kill-switch' to the server project.
 - Improve application performance.
 - Update 'About Me' section.
 - Update all application text content.
@@ -68,6 +69,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - Refactor code.
 - Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - Create a stats component to display visitors.
+- <s>Add a 'kill-switch' to the server project.</s>
 - <s>Run Lighthouse test.</s>
 - <s>Fix image issues for mobile projects in cards (Nasa/Gentlemen Barber/Goodwood Solicitors/Asparagus).</s>
 - <s>Implement lazy loading to improve performance.</s>
