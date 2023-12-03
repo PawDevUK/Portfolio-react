@@ -4,9 +4,9 @@ import Button from 'components/common/Button'
 import styled from 'styled-components'
 import { boxShadow12 } from 'styled.js'
 import { connect } from 'react-redux'
-import { LimitText } from 'factory'
+import { LimitText } from 'factory/factory'
 import React, { useEffect, useState} from 'react'
-import { cardTextLength } from 'factory'
+import { cardTextLength } from 'factory/factory'
 import Stack from './Stack'
 
 const Underline = styled.div`
