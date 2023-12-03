@@ -1,56 +1,42 @@
+
 function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomName(gender) {
+  const maleNames = ['Jack', 'John', 'Tom', 'Chris', 'Alex'];
+  const femaleNames = ['Emily', 'Emma', 'Olivia', 'Sophia', 'Ava'];
+  const names = gender === 'male' ? maleNames : femaleNames;
+  const randomIndex = Math.floor(Math.random() * names.length);
+  return names[randomIndex] + getRandomNumber(1, 99);
+}
+
+function shuffleArray(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+const users = Array.from({ length: 30 }, (_, index) => ({
+  id: getRandomNumber(100, 999),
+  name: getRandomName(index % 2 === 0 ? 'male' : 'female'),
+  status: Math.random() < 0.5 ? 'online' : 'offline',
+  playingWith: null, 
+  playedGames: getRandomNumber(1, 1500),
+  wonGames: 0,
+  lostGames: 0, 
+  ranking: 0, 
+}));
+
+users.forEach((user) => {
+  const onlineUsers = users.filter((u) => u.status === 'online' && u.name !== user.name);
+  const shuffledOnlineUsers = shuffleArray(onlineUsers);
+  const playingWithUser = shuffledOnlineUsers[0];
   
-  function generateRandomName(gender) {
-    const maleNames = ['John', 'James', 'David', 'Michael', 'Robert'];
-    const femaleNames = ['Mary', 'Lisa', 'Susan', 'Karen', 'Jennifer'];
+  user.playingWith = user.status === 'online' ? playingWithUser.name : null;
+  user.wonGames = getRandomNumber(1,user.playedGames)
+  user.lostGames = user.playedGames - user.wonGames;
   
-    const names = gender === 'male' ? maleNames : femaleNames;
-    const randomName = names[getRandomNumber(0, names.length - 1)];
-    const randomNumber = getRandomNumber(1, 99);
-  
-    return randomName + randomNumber;
-  }
-  
-  function generateUsers() {
-    const genders = ['male', 'female'];
-    const users = [];
-  
-    for (let i = 0; i < 30; i++) {
-      const gender = genders[getRandomNumber(0, 1)];
-      const name = generateRandomName(gender);
-  
-      const status = getRandomNumber(0, 1) ? 'online' : 'offline';
-  
-      let playingWith = null;
-      if (status === 'online') {
-        do {
-          playingWith = generateRandomName(gender === 'male' ? 'female' : 'male');
-        } while (playingWith === name); // Ensure playingWith is not the same as the current user
-      }
-  
-      const playedGames = getRandomNumber(1, 1500);
-      const wonGames = getRandomNumber(1, playedGames);
-      const lostGames = playedGames - wonGames;
-  
-      const ranking = getRandomNumber(1, 30);
-  
-      users.push({
-        name,
-        status,
-        playingWith,
-        playedGames,
-        wonGames,
-        lostGames,
-        ranking,
-      });
-    }
-  
-    return users;
-  }
-  
-  const users = generateUsers();
-  console.log(JSON.stringify(users, null, 2));
-  
-  
+  const sortedUsers = users.slice().sort((a, b) => b.wonGames - a.wonGames);
+  user.ranking = sortedUsers.findIndex((u) => u.name === user.name) + 1;
+});
+
+console.log(users);
