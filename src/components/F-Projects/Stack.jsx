@@ -4,7 +4,7 @@ import { boxShadow1 } from 'styled'
 
 const Wrapper = styled.div`
   padding: 3px;
-  margin: 8px auto;
+  margin: 0px auto 5px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
