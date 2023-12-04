@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { boxShadow3 } from '../styled';
 import styled from 'styled-components';
-import {users} from 'config/TicTacToe.config'
 
 const Wrapper = styled.div`
     background-color: #575a5f47;
@@ -30,7 +29,7 @@ export default function PlayerList(params) {
     //Create check if local storage has data with users/players 
     //If there is no users data in the local storage create it, add it to redux and use it to fill up DataGrid.
     //If there is data with users add it to redux and use it to fill up DataGrid.
-    
+
     useEffect(()=>{
         setOnlineUsers(createUsers());
     },[])
