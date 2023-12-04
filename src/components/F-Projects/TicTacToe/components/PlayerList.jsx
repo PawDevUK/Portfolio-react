@@ -1,7 +1,8 @@
+import { getUsers } from '../API/routes';
+import Button from '@material-ui/core/Button';
+import { createUsers } from 'factory/tictactoe';
 import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
-import Button from '@material-ui/core/Button';
-import { getUsers } from '../API/routes';
 import { boxShadow3 } from '../styled';
 import styled from 'styled-components';
 import {users} from 'config/TicTacToe.config'
@@ -24,30 +25,19 @@ const columns = [
 ];
 
 export default function PlayerList(params) {
-    const [onlineUsers, setOnlineUsers] = useState([]);
+    const [Users, setOnlineUsers] = useState([]);
 
-    async function getUsersFromDB() {
-        // const onlineUsers = await getUsers();
-        setOnlineUsers(onlineUsers);
-    }
-
-    // useEffect(() => {
-    //     getUsersFromDB();
-    //     const interval = setInterval(() => {
-    //         getUsersFromDB();
-    //     }, 5000);
-    //     return () => {
-    //         clearInterval(interval);
-    //     };
-    // }, []);
-
+    //Create check if local storage has data with users/players 
+    //If there is no users data in the local storage create it, add it to redux and use it to fill up DataGrid.
+    //If there is data with users add it to redux and use it to fill up DataGrid.
+    
     useEffect(()=>{
-        setOnlineUsers(users);
+        setOnlineUsers(createUsers());
     },[])
 
     return (
         <Wrapper>
-            <DataGrid handleJoin={params.handleJoin} rows={onlineUsers ? onlineUsers : []} columns={columns} pageSize={5} checkboxSelection />
+            <DataGrid handleJoin={params.handleJoin} rows={Users ? Users : []} columns={columns} pageSize={15} checkboxSelection />
         </Wrapper>
     );
 }
