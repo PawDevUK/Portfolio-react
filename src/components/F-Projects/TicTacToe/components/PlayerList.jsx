@@ -28,13 +28,26 @@ const columns = [
 export default function PlayerList(params) {
     const [Users, setOnlineUsers] = useState([]);
 
-    //Create check if local storage has data with users/players 
+    //Create check if local storage has data with users/players
     //If there is no users data in the local storage create it, add it to redux and use it to fill up DataGrid.
     //If there is data with users add it to redux and use it to fill up DataGrid.
 
-    useEffect(()=>{
-        setOnlineUsers(createUsers());
-    },[])
+    useEffect(() => {
+        if(JSON.parse(localStorage.users).length>1){
+            console.log('Loaded from local storage.');
+            setOnlineUsers(JSON.parse(localStorage.users));
+        }else{
+            console.log('Initialized local storage.');
+            const users = createUsers()
+            setOnlineUsers(users)
+            localStorage.setItem('users', JSON.stringify(users))
+        }
+        localStorage.setItem('lala','1985')
+        localStorage.forEach((item,i)=>{
+            console.log(item);
+
+        })
+    }, []);
 
     return (
         <Wrapper>
