@@ -4,6 +4,8 @@ import { setUserOnEntry } from '../API/routes';
 import React, { useState } from 'react';
 import { Capitalize } from '../factory';
 import { boxShadow3 } from '../styled';
+import {StButton} from 'components/F-Projects/TicTacToe/components/common/Button';
+import { AddNewUser, removeUser, clLocalStorage } from 'components/F-Projects/TicTacToe/factory';
 
 const Wrapper = styled.div`
     position: relative;
@@ -16,6 +18,8 @@ const Wrapper = styled.div`
 const InputWrapper = styled.form`
     position: absolute;
     left: 250px;
+    display: flex;
+    flex-direction: row;
     ${(p) => {
         return p.nameSubmit
             ? css`
@@ -64,7 +68,7 @@ export default function Header(props) {
                         playingWith: '---',
                         board: [],
                     });
-                    setSubmit(e.type ? true : false);
+                    setSubmit(e.type ? true : false); 
                     e.preventDefault();
                 }}>
                 <TextField
@@ -75,6 +79,9 @@ export default function Header(props) {
                     label='Username'
                     variant='outlined'
                 />
+                <StButton onClick={()=>AddNewUser(name)} variant='contained' size='small' color='primary'>Submit</StButton>
+                <StButton onClick={()=>removeUser(name)} variant='contained' size='small' color='primary'>Delete</StButton>
+                <StButton onClick={()=>clLocalStorage(name)} variant='contained' size='small' color='primary'>Show LS</StButton>
             </InputWrapper>
             <UsernameWrapper nameSubmit={nameSubmit}>
                 <H1>{Capitalize(name)}</H1>
