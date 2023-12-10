@@ -100,4 +100,15 @@ export function removeUser(name){
 
 export function clLocalStorage(){
     console.log(JSON.parse(localStorage.users));
-}
+};
+
+export function updateRanking(){
+    let users = JSON.parse(localStorage.users);
+    const sortedUsers = users.slice().sort((a, b) => b.wonGames - a.wonGames);
+
+    sortedUsers.forEach((u, i) => {
+        u.ranking = i + 1;
+    });
+
+    localStorage.users = JSON.stringify(users)
+};
