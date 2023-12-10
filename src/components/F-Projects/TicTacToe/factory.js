@@ -78,8 +78,10 @@ export function AddNewUser(name){
         } 
     }
     if(name===''){
-        console.log('Please provide name');
+        console.log('Please provide name !!!');
+        return;
     }
+    return;
 }
 
 export function removeUser(name){
