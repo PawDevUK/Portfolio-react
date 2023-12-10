@@ -1,6 +1,4 @@
-import { getUsers } from '../API/routes';
-import Button from '@material-ui/core/Button';
-import { createUsers } from 'factory/tictactoe';
+import { createUsers } from 'components/F-Projects/TicTacToe/factory';
 import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import { boxShadow3 } from '../styled';
@@ -42,11 +40,6 @@ export default function PlayerList(params) {
             setOnlineUsers(users)
             localStorage.setItem('users', JSON.stringify(users))
         }
-        localStorage.setItem('lala','1985')
-        localStorage.forEach((item,i)=>{
-            console.log(item);
-
-        })
     }, []);
 
     return (
