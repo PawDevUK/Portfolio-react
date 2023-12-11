@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { Capitalize } from '../factory';
 import { boxShadow3 } from '../styled';
 import {StButton} from 'components/F-Projects/TicTacToe/components/common/Button';
-import { AddNewUser, removeUser, clLocalStorage } from 'components/F-Projects/TicTacToe/factory';
+import { AddNewUser, removeUser, clLocalStorage, updateRanking } from 'components/F-Projects/TicTacToe/factory';
 
 const Wrapper = styled.div`
     position: relative;
@@ -79,7 +79,7 @@ export default function Header(props) {
                     label='Username'
                     variant='outlined'
                 />
-                <StButton onClick={()=>AddNewUser(name)} variant='contained' size='small' color='primary'>Submit</StButton>
+                <StButton onClick={()=>{AddNewUser(name);updateRanking()}} variant='contained' size='small' color='primary'>Submit</StButton>
                 <StButton onClick={()=>removeUser(name)} variant='contained' size='small' color='primary'>Delete</StButton>
                 <StButton onClick={()=>clLocalStorage(name)} variant='contained' size='small' color='primary'>Show LS</StButton>
             </InputWrapper>
