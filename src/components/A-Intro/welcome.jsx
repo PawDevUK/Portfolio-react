@@ -10,16 +10,15 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   position: relative;
-  height:100%;
-  width: 270px;
+  width: 170px;
+  height:200px;
   margin:auto;
 `
 const LogoTextWrapper = styled.div`
-  width: 270px;
-  height:200px;
   position: relative;
-  top:40%;
+  padding:5px;
   margin: auto;
+  top:30%;
 `
 const MobilLogo = styled(SvgLoader)`
   display: block;
