@@ -47,28 +47,24 @@ const RightWrapper = styled.div`
   top: 0px;
   left: 50vw;
 `
-
 //mobile
 const Mobile = styled.div`
   display: none;
   @media (max-width: 992px) {
     display: block;
-    height: 500px;
+    height:100%
   }
 `
 const TopImg = styled.div`
   z-index: 1000;
   background: url(${img});
   background-size: cover;
-  height: 50vh;
+  height: 50%;
   width: 100vw;
 `
 const BottomWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 50vh;
+  height: 50%;
   width: 100%;
-  position: relative;
 `
 const ParticlesBottom = styled(Particles)`
   * {
