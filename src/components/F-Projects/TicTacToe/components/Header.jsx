@@ -82,7 +82,6 @@ export default function Header(props) {
                 />
                 <StButton onClick={()=>{AddNewUser(name);updateRanking()}} variant='contained' size='small' color='primary'>Submit</StButton>
                 <StButton onClick={()=>removeUser(name)} variant='contained' size='small' color='primary'>Delete</StButton>
-                <StButton onClick={()=>clLocalStorage(name)} variant='contained' size='small' color='primary'>Show LS</StButton>
             </InputWrapper>
             <UsernameWrapper nameSubmit={nameSubmit}>
                 <H1>{Capitalize(name)}</H1>
