@@ -39,10 +39,13 @@ const Text = styled.h5`
   margin: 0px;
   color: #fff;
 `
-const StButton = styled(Button)`
-  margin: 40px auto auto auto;
+const LinkWrapper = styled.div`
+  margin:70px;
+  display: flex;
+  justify-content: center;
 `
 const StLink = styled(Link)`
+margin-top:10px;
   &:hover {
     text-decoration: none;
   }
@@ -56,12 +59,12 @@ function Welcome({ ...props }) {
         <Text>
           This is my Portfolio <br />
         </Text>
-        <StLink to="/content">
-          <StButton 
-          // onClick={VisitorsRecorder}
-          >Enter</StButton>
-        </StLink>
       </LogoTextWrapper>
+      <LinkWrapper>
+        <StLink to="/content">
+          <Button>Enter</Button>
+        </StLink>
+      </LinkWrapper>
     </Wrapper>
   )
 }
