@@ -80,7 +80,7 @@ export default function Header(props) {
                     label='Username'
                     variant='outlined'
                 />
-                <StButton onClick={()=>{AddNewUser(name);updateRanking()}} variant='contained' size='small' color='primary'>Submit</StButton>
+                <StButton onClick={()=>{AddNewUser(name);updateRanking()}} variant='contained' size='small' color='primary'>Start</StButton>
                 <StButton onClick={()=>removeUser(name)} variant='contained' size='small' color='primary'>Delete</StButton>
             </InputWrapper>
             <UsernameWrapper nameSubmit={nameSubmit}>
