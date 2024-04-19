@@ -5,26 +5,7 @@ import Particles from 'react-tsparticles'
 import styled from 'styled-components'
 import React from 'react'
 
-
-const Large = styled.div`
-  display: flex;
-  @media (max-width: 992px) {
-    display: none;
-  }
-`
-
-const LeftImg = styled.div`
-  background: url(${img});
-  background-size: cover;
-  height: 100vh ;
-  width: 50vw;
-`
 const useStyles = makeStyles({
-  root: {
-    height: '100vh',
-    width: '100vw ',
-    backgroundColor: '#17293f',
-  },
   leftImg: {
     background: `url(${img})`,
     backgroundSize: 'cover',
@@ -40,6 +21,25 @@ const useStyles = makeStyles({
     width: ' 49%',
   },
 })
+
+const MainWrapper = styled.div`
+    height: 100vh;
+    width: 100vw;
+    background-color: #17293f;
+`
+
+const Large = styled.div`
+  display: flex;
+  @media (max-width: 992px) {
+    display: none;
+  }
+`
+const LeftImg = styled.div`
+  background: url(${img});
+  background-size: cover;
+  height: 100vh ;
+  width: 50vw;
+`
 const RightWrapper = styled.div`
   display: flex;
   height: 100vh;
