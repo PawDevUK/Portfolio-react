@@ -14,10 +14,10 @@ export const StButton = styled(Button)`
             `;
         }
     }};
-    margin: 10px 20px !important;
+    margin: 10px 10px !important;
     width: 80px;
     background: #575a5f47 !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     :active {
         border: none !important;
         background-color: #a1cae2 !important;
