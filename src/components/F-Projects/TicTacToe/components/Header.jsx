@@ -20,6 +20,7 @@ const InputWrapper = styled.form`
     left: 250px;
     display: flex;
     flex-direction: row;
+    z-index: 1000;
     ${(p) => {
         return p.nameSubmit
             ? css`
