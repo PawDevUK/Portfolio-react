@@ -84,7 +84,7 @@ function Intro(props) {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <MainWrapper>
       <Large>
         <LeftImg></LeftImg>
         <RightWrapper>
@@ -120,7 +120,7 @@ function Intro(props) {
           <Welcome buttonIntro></Welcome>
         </BottomWrapper>
       </Mobile>
-    </div>
+    </MainWrapper>
   )
 }
 
