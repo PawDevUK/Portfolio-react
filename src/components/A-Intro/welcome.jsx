@@ -48,16 +48,6 @@ const StLink = styled(Link)`
   }
 `
 function Welcome({ ...props }) {
-  function VisitorsRecorder() {
-    // const visitorCounter = {
-    //   date: CurrentDate(),
-    //   time: CurrentTime(),
-    // }
-
-    // LocalOnEnter.get('/', visitorCounter).then((res) => console.log(res.data))
-    
-  }
-
   return (
     <Wrapper>
       <LogoTextWrapper>
