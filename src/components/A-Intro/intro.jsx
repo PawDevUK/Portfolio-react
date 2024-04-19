@@ -117,29 +117,7 @@ function Intro(props) {
       <Mobile>
         <TopImg></TopImg>
         <BottomWrapper>
-          <ParticlesBottom
-            params={{
-              particles: {
-                number: {
-                  value: 30,
-                },
-                size: {
-                  value: 1,
-                },
-                autoPlay: true,
-
-                opacity: {
-                  value: 0.6,
-                  random: true,
-                },
-                links: {
-                  enable: true,
-                  opacity: 0.2,
-                },
-              },
-            }}
-          />
-          <Welcome buttonIntro> </Welcome>
+          <Welcome buttonIntro></Welcome>
         </BottomWrapper>
       </Mobile>
     </div>
