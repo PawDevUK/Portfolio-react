@@ -72,6 +72,27 @@ const ButtonWrapper = styled.div`
     width: 100px;
   }
 `
+const TextWrapper = styled.div`
+  margin: 33px 0px 0px 10px !important;
+  width: 90%;
+`
+const TextAreaHeader = styled.div`
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-feature-settings: normal;
+  font-kerning :auto;
+  font-optical-sizing :auto;
+  font-size :16px;
+  font-stretch :100%;
+  font-style :normal;
+  font-variant-alternates :normal;
+  font-variant-caps :normal;
+  font-variant-east-asian :normal;
+  font-variant-ligatures :normal;
+  font-variant-numeric :normal;
+  font-variant-position :normal;
+  font-variation-settings :normal;
+`;
 const StTextField = styled(TextField)`
   margin: 5px 10px !important;
   width: 250px;
@@ -250,17 +271,22 @@ export default function Contact() {
               label="Company"
               onChange={handleChange}
             />
+            <TextWrapper>
+              <TextAreaHeader>
+                Message
+              </TextAreaHeader>
             <StTextareaAutosize
               minRows={4}
               type="text"
               value={formData.Message}
               name="Message"
               aria-label="minimum height"
-              placeholder="Message"
+              placeholder=""
               variant="outlined"
               required
               onChange={handleChange}
-            />
+              />
+            </TextWrapper>
             <ButtonWrapper>
               <Button contact onClick={handleSubmit} value="Send">
                 Send
