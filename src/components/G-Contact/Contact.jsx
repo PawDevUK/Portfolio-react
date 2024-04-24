@@ -106,8 +106,8 @@ const StTextField = styled(TextField)`
 const StTextareaAutosize = styled(TextareaAutosize)`
   display: block;
   height:74px !important;
-  width: 90%;
-  margin: 50px 0px 0px 10px !important
+  width: 100%;
+  
 `
 export default function Contact() {
   let [formData, setFormData] = useState({
