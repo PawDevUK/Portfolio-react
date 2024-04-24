@@ -63,12 +63,6 @@ export default function Header(props) {
             <InputWrapper
                 nameSubmit={nameSubmit}
                 onSubmit={(e) => {
-                    // setUserOnEntry({
-                    //     user: name,
-                    //     status: 'Available',
-                    //     playingWith: '---',
-                    //     board: [],
-                    // });
                     setSubmit(e.type ? true : false); 
                     e.preventDefault();
                 }}>
