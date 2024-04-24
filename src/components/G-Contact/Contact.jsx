@@ -1,9 +1,9 @@
 import JumboSectionHeader from 'components/common/JumboSectionHeader'
 import TextareaAutosize from '@material-ui/core/TextareaAutosize'
+import { SendFormData } from 'components/G-Contact/axiosCreate'
 import TextField from '@material-ui/core/TextField'
 import { P, Bold } from 'components/common/typography'
 import { boxShadow12, ImgCover } from 'styled.js'
-import { SendFormData } from 'components/G-Contact/axiosCreate'
 import Button from 'components/common/Button'
 import styled from 'styled-components'
 import React, { useState, useRef } from 'react'
@@ -11,12 +11,12 @@ import { SkyScraper } from 'img'
 
 const Wrapper = styled.div`
   background-image: url(${SkyScraper});
-  ${ImgCover} // properties for parallax background
+  ${ImgCover};// properties for parallax background
   width:100%;
   padding: 1px;
   @media (max-width: 400px) {
     background-attachment: scroll;
-  }
+  };
 `
 const WhiteBox = styled.div`
   background-color: #fff;
