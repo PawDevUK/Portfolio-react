@@ -1,6 +1,5 @@
 import TextField from '@material-ui/core/TextField';
 import styled, { css } from 'styled-components';
-import { setUserOnEntry } from '../API/routes';
 import React, { useState } from 'react';
 import { Capitalize } from '../factory';
 import { boxShadow3 } from '../styled';
