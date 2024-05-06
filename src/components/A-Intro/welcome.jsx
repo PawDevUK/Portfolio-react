@@ -5,9 +5,6 @@ import { SvgLoader } from 'react-svgmt'
 import logo from 'img/pavdev.svg'
 import styled from 'styled-components'
 
-// import { LocalOnEnter } from 'store/VisitorsDataAPI'
-// import { CurrentTime, CurrentDate } from 'factory'
-
 const Wrapper = styled.div`
   position: relative;
   width: 170px;
