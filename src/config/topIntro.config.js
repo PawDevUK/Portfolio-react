@@ -1,37 +1,29 @@
 export const intro = {
-  header:'About Me',
-  PolLang:{
-    header:'Trochę o mnie',
-    text:'<div class=styledP>Jestem developerem z Reading Uk....</div>'
+  header: 'About Me',
+  PolLang: {
+    header: 'Trochę o mnie',
+    text: '<div class=styledP>Jestem developerem z Reading Uk....</div>'
   },
-  text:`
+  text: `
   <p class=styledP>
-  I am a <span class="bold">React</span> developer from Reading, UK. I create React
-  web apps based on components styled in <br />
-  <span class="bold">styled-components</span>. I use mainly JavaScript for front-end
-  and have some knowledge of Node.Js for back-end and MongoDB.
+  I am a <span class="bold">React</span> developer from Reading, UK.
+  I create React web apps based on components styled with <span class="bold">styled-components</span>.
+  I mainly use JavaScript for front-end development and have some knowledge
+  of Node.js for back-end development and <span class="bold">MongoDB</span> as document database.
 </p>
 <p class=styledP>
-  I design and create, modern looking websites and web applications with
-  functionality including <span class="bold">APIs</span>. I use <span class="bold">Figma</span> to
-  to design a modern looking layout with the use of number of popular
-  design patterns. Currently, most of the internet users browse Web on
-  mobile devices therefore <span class="bold">RWD</span> is quite important that is
-  why I am implementing it in my websites and applications.
+I design and create modern-looking websites and web applications with functionality,
+including <span class="bold">APIs</span>. I use <span class="bold">Figma</span> to design modern layouts utilizing various popular design patterns.
+Since most internet users browse the web on mobile devices, responsive web design (RWD) is quite important.
+Therefore, I implement <span class="bold">RWD</span> in my websites and applications.
 </p>
 <p class=styledP>
-  I use <span class="bold">React</span> which requires good knowledge of number of
-  technologies like <span class="bold">JavaScript ES6</span>, HTML, CSS, Package
-  Manager, WebPack, Babel and many more. Most of my work is kept via Git
-  CLI on <span class="bold">GitHub</span> so I branch, commit, push, pull and merge
-  fairly often.
+I use <span class="bold">React</span>, which requires a good knowledge of several technologies like <span class="bold">JavaScript ES6</span>, HTML, CSS, package managers, Webpack, Babel, and many more. Most of my work is managed via Git CLI on <span class="bold">GitHub</span>, so I branch, commit, push, pull, and merge fairly often.
+
 </p>
 <p class=styledP>
-  All my work is done on <span class="bold">Linux</span> machine so Terminal is used
-  on a regular basis. Code editor of my choice is
-  <span class="bold">Visual Studio Code</span>. Also I know how to build a backend
-  for simple communication(express.js) with frontend(Axios) and
-  database.
+My work is done on a <span class="bold">Macbook, Windows, Linux</span> machine. My code editor of choice is<span class="bold">Visual Studio Code</span>. Additionally, I know how to build a back end for simple communication (Express.js) with the front end (Axios) and the database.
+
 </p>
 `
 }
