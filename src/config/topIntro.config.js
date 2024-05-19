@@ -1,29 +1,8 @@
 export const intro = {
-  header: 'About Me',
-  PolLang: {
-    header: 'Trochę o mnie',
-    text: '<div class=styledP>Jestem developerem z Reading Uk....</div>'
+  "header": "About Me",
+  "PolLang": {
+    "header": "Trochę o mnie",
+    "text": "<p class=\"styledP\">Jestem deweloperem<span class=\"bold\">React</span> z Reading, Wielka Brytania. Tworzę aplikacje internetowe React oparte na komponentach stylizowanych za pomocą<span class=\"bold\">styled-components</span>. Głównie używam JavaScript do front-endu i mam pewną wiedzę na temat Node.js do back-endu oraz <span class=\"bold\">MongoDB</span> jako bazy danych dokumentów.</p><p class=\"styledP\">Projektuję i tworzę nowoczesne strony internetowe oraz aplikacje webowe z funkcjonalnościami, w tym <span class=\"bold\">API</span>. Używam <span class=\"bold\">Figma</span> do projektowania nowoczesnych układów z wykorzystaniem różnych popularnych wzorców projektowych. Ponieważ większość użytkowników internetu przegląda sieć na urządzeniach mobilnych, responsywny web design (RWD) jest bardzo ważny. Dlatego implementuję <span class=\"bold\">RWD</span> w moich stronach i aplikacjach.</p><p class=\"styledP\">Używam <span class=\"bold\">React</span>, co wymaga dobrej znajomości kilku technologii, takich jak <span class=\"bold\">JavaScript ES6</span>, HTML, CSS, menedżery pakietów, Webpack, Babel i wiele innych. Większość mojej pracy jest zarządzana za pomocą Git CLI na <span class=\"bold\">GitHub</span>, więc często tworzę gałęzie, dokonuję commitów, pushów, pullów i merge'ów.</p><p class=\"styledP\">Pracuję na maszynach <span class=\"bold\">Macbook</span>, <span class=\"bold\">Windows</span> oraz <span class=\"bold\">Linux</span>. Moim ulubionym edytorem kodu jest <span class=\"bold\">Visual Studio Code</span>. Dodatkowo wiem, jak zbudować back-end do prostego komunikowania się (Express.js) z front-endem (Axios) i bazą danych.</p>"
   },
-  text: `
-  <p class=styledP>
-  I am a <span class="bold">React</span> developer from Reading, UK.
-  I create React web apps based on components styled with <span class="bold">styled-components</span>.
-  I mainly use JavaScript for front-end development and have some knowledge
-  of Node.js for back-end development and <span class="bold">MongoDB</span> as document database.
-</p>
-<p class=styledP>
-I design and create modern-looking websites and web applications with functionality,
-including <span class="bold">APIs</span>. I use <span class="bold">Figma</span> to design modern layouts utilizing various popular design patterns.
-Since most internet users browse the web on mobile devices, responsive web design (RWD) is quite important.
-Therefore, I implement <span class="bold">RWD</span> in my websites and applications.
-</p>
-<p class=styledP>
-I use <span class="bold">React</span>, which requires a good knowledge of several technologies like <span class="bold">JavaScript ES6</span>, HTML, CSS, package managers, Webpack, Babel, and many more. Most of my work is managed via Git CLI on <span class="bold">GitHub</span>, so I branch, commit, push, pull, and merge fairly often.
-
-</p>
-<p class=styledP>
-My work is done on a <span class="bold">Macbook, Windows, Linux</span> machine. My code editor of choice is<span class="bold">Visual Studio Code</span>. Additionally, I know how to build a back end for simple communication (Express.js) with the front end (Axios) and the database.
-
-</p>
-`
+  "text": "<p class=\"styledP\">I am a <span class=\"bold\">React</span> developer from Reading, UK. I create React web apps based on components styled with <span class=\"bold\">styled-components</span>. I mainly use JavaScript for front-end development and have some knowledge of Node.js for back-end development and <span class=\"bold\">MongoDB</span> as a document database.</p><p class=\"styledP\">I design and create modern-looking websites and web applications with functionality, including <span class=\"bold\">APIs</span>. I use <span class=\"bold\">Figma</span> to design modern layouts utilizing various popular design patterns. Since most internet users browse the web on mobile devices, responsive web design (RWD) is quite important. Therefore, I implement <span class=\"bold\">RWD</span> in my websites and applications.</p><p class=\"styledP\">I use <span class=\"bold\">React</span>, which requires a good knowledge of several technologies like <span class=\"bold\">JavaScript ES6</span>, HTML, CSS, package managers, Webpack, Babel, and many more. Most of my work is managed via Git CLI on <span class=\"bold\">GitHub</span>, so I branch, commit, push, pull, and merge fairly often.</p><p class=\"styledP\">My work is done on <span class=\"bold\">Macbook</span>, <span class=\"bold\">Windows</span>, and <span class=\"bold\">Linux</span> machines. My code editor of choice is <span class=\"bold\">Visual Studio Code</span>. Additionally, I know how to build a back end for simple communication (Express.js) with the front end (Axios) and the database.</p>"
 }
