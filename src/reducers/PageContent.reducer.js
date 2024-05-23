@@ -1,4 +1,4 @@
-import { ADD_BUTTONS, ADD_HEADER_MENU, ADD_PROJECTS, ADD_REACT_INFO, ADD_STACK, ADD_RIGHT_FOOTER_DATA, ADD_HEADER_JUMBO_TEXT, ADD_ABOUT_INTRO, ADD_FONTS } from 'actions/pageContent.actions'
+import { ADD_BUTTONS, ADD_HEADER_MENU, ADD_PROJECTS, ADD_REACT_INFO, ADD_STACK, ADD_RIGHT_FOOTER_DATA, ADD_HEADER_JUMBO_TEXT, ADD_ABOUT_INTRO, ADD_FONTS } from 'actions/pageContent.actions';
 import { initialState } from 'config/initialState'
 
 export default function PageContent(state = initialState, action){
@@ -25,7 +25,7 @@ export default function PageContent(state = initialState, action){
                 return {
                     ...state,
                     reactInfo: {
-                      ...state.reactInfo, ...action.payload, ...action.payload
+                      ...state.reactInfo, ...action.payload
                     }
                 }
             case ADD_STACK:
@@ -62,9 +62,9 @@ export default function PageContent(state = initialState, action){
                     fonts:{
                         ...state.fonts, ...action.payload
                     }
-                }
+                };
 
                 default:
-                    return state
+                    return state;
         }
 }
