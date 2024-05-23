@@ -17,12 +17,18 @@ const useStyles = makeStyles({
     position: 'absolute',
     top: '0px',
   },
-  Particles: {
+  ParticlesRight: {
     display: 'block',
-    position: 'absolute',
+    position:'absolute',
     height: '95%',
     width: ' 49%',
   },
+  ParticlesBottom:{
+    display: 'block',
+    position:'absolute',
+    height: '49%',
+    width: ' 100',
+  }
 })
 
 const MainWrapper = styled.div`
@@ -96,7 +102,7 @@ function Intro(props) {
         <LeftImg></LeftImg>
         <RightWrapper>
           <Particles
-            className={classes.Particles}
+            className={classes.ParticlesRight}
             id="tsparticles"
             options={particlesOptions}
           />
@@ -106,7 +112,12 @@ function Intro(props) {
       <Mobile>
         <TopImg></TopImg>
         <BottomWrapper>
-          <Welcome buttonIntro></Welcome>
+        <Particles
+        className={classes.ParticlesBottom}
+        id="tsparticles1"
+        options={particlesOptions}
+        />
+        <Welcome buttonIntro></Welcome>
         </BottomWrapper>
       </Mobile>
     </MainWrapper>
