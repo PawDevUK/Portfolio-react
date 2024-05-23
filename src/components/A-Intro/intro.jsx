@@ -81,13 +81,10 @@ const ParticlesBottom = styled(Particles)`
 `
 function Intro(props) {
   const classes = useStyles()
-  const [ init, setInit ] = useState(false);
 
   useEffect(()=>{
     initParticlesEngine(async(engine)=>{
       await loadSlim(engine)
-    }).then(()=>{
-      setInit(true);
     })
   },[]);
 
