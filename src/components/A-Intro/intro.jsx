@@ -1,9 +1,12 @@
+import Particles, { initParticlesEngine } from '@tsparticles/react'
+import {ParticlesOptions} from 'selectors/particlesOptions.selector'
+import { useSelector } from 'react-redux'
+import React,{ useCallback, useEffect, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Welcome from 'components/A-Intro/welcome'
 import img from 'img/computer-2982270_1920.jpg'
-import Particles from 'react-tsparticles'
+import {loadSlim}from '@tsparticles/slim'
 import styled from 'styled-components'
-import React from 'react'
 
 const useStyles = makeStyles({
   leftImg: {
@@ -78,6 +81,17 @@ const ParticlesBottom = styled(Particles)`
 `
 function Intro(props) {
   const classes = useStyles()
+  const [ init, setInit ] = useState(false);
+
+  useEffect(()=>{
+    initParticlesEngine(async(engine)=>{
+      await loadSlim(engine)
+    }).then(()=>{
+      setInit(true);
+    })
+  },[]);
+
+  const particlesOptions = useSelector((state)=> state.ParticlesOptions)
 
   return (
     <MainWrapper>
@@ -86,26 +100,8 @@ function Intro(props) {
         <RightWrapper>
           <Particles
             className={classes.Particles}
-            params={{
-              particles: {
-                number: {
-                  value: 30,
-                },
-                size: {
-                  value: 1,
-                },
-                autoPlay: true,
-
-                opacity: {
-                  value: 0.6,
-                  random: true,
-                },
-                links: {
-                  enable: true,
-                  opacity: 0.2,
-                },
-              },
-            }}
+            id="tsparticles"
+            options={particlesOptions}
           />
           <Welcome buttonIntro></Welcome>
         </RightWrapper>
