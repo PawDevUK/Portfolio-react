@@ -1,16 +1,19 @@
 import {
     configureStore
 } from '@reduxjs/toolkit'
-import {LocalOnEnter} from './api/VisitorsAPI.config'
-import addCounter from 'actions/addCounter.actions'
-import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro } from 'actions/pageContent.actions'
 import rootReducer from './reducers'
+import { addUUID_ToObject } from 'factory/factory'
+
+import addCounter from 'actions/addCounter.actions'
+import { AddParticlesOptions } from 'actions/addParticlesOptions.actions'
+import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro, } from 'actions/pageContent.actions'
+import {LocalOnEnter} from './api/VisitorsAPI.config'
 import { rightData } from 'config/footer.config'
 import { Menu } from 'config/headerMenu.config'
 import { stack } from 'config/stack.config'
 import { projects } from 'config/projects.config'
+import { particlesOptions } from 'config/particles.config'
 import { ReactComponentData } from 'config/reactComponent.config'
-import { addUUID_ToObject } from 'factory/factory'
 import { headerJumboText } from 'config/headerJumboText.config'
 import { buttons } from 'config/common.config'
 import { intro } from 'config/topIntro.config'
@@ -39,4 +42,5 @@ export function syncConfigWithStore(){
     store.dispatch(AddButtons(addUUID_ToObject(buttons)))
     store.dispatch(AddAboutIntro(addUUID_ToObject(intro)))
     store.dispatch(AddFonts(addUUID_ToObject(fonts)))
+    store.dispatch(AddParticlesOptions(addUUID_ToObject(particlesOptions)))
 }
