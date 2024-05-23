@@ -1,4 +1,5 @@
 export const particlesOptions = {
+    fullScreen:false,
     fpsLimit: 60,
     interactivity: {
         events: {
@@ -28,10 +29,10 @@ export const particlesOptions = {
         },
         links: {
             color: "#ffffff",
-            distance: 100,
+            distance: 80,
             enable: true,
-            opacity: 0.5,
-            width: 0.2,
+            opacity: 0.9,
+            width: 0.1,
         },
         collisions: {
             enable: true,
@@ -49,17 +50,17 @@ export const particlesOptions = {
                 enable: true,
                 area: 800,
             },
-            value: 120,
+            value: 300,
         },
         opacity: {
-            value: 0.6,
+            value: 0.8,
         },
         shape: {
             type: "circle",
         },
         size: {
             random: true,
-            value: 2,
+            value: 1,
         },
     },
     detectRetina: true,
