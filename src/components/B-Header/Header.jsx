@@ -53,7 +53,7 @@ function Header( {...props} ) {
         <Wrapper onClick={ props.isChatOpen ? closeChat : null }>
            {!large?<MobileMenu></MobileMenu>:null}
             <BigBlue >
-               {large?<MainLarge></MainLarge> :null}
+               {large?<MainLarge scroll={props.scroll}></MainLarge> :null}
                 <JumboTextWrapper>
                   <JumboMainText ></JumboMainText>
                 </JumboTextWrapper>

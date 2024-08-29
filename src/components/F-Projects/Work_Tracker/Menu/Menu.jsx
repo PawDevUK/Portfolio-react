@@ -23,6 +23,10 @@ import Typography from '@mui/material/Typography';
 import  WT_Route from '../../../../actions/addWT_Route.action'
 import {store} from '../../../../configureStore.js'
 
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
+import DateRangeIcon from '@mui/icons-material/DateRange';
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -105,6 +109,24 @@ export default function Menu(props) {
         store.dispatch(WT_Route(route))
     };
 
+    const AddIconToTab = (text) =>{
+       let payload = ''
+            switch(text) {
+                case "Rota Picker":
+                  payload =  <DateRangeIcon></DateRangeIcon>
+                  break;
+                case "Calendar":
+                  payload =  <CalendarMonthIcon></CalendarMonthIcon>
+                  break;
+                case "Day Tracker":
+                  payload =  <InsertInvitationIcon></InsertInvitationIcon>
+                  break;
+                default:
+                  // code block
+              }
+              return payload
+    }
+
     const ReturnList = (arr) => {
         return arr.map((text, index) => {
             return (
@@ -125,7 +147,7 @@ export default function Menu(props) {
                                     mr: open ? 3 : 'auto',
                                     justifyContent: 'center',
                                 }}>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                {AddIconToTab(text)}
                             </ListItemIcon>
                             <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
                         </ListItemButton>
@@ -161,11 +183,8 @@ export default function Menu(props) {
                     <IconButton onClick={handleDrawerClose}> {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
                 </DrawerHeader>
                 <Divider />
-                {ReturnList(['Calendar'])}
+                {ReturnList(['Rota Picker','Calendar','Day Tracker'])}
                 <Divider />
-                {ReturnList(['Day Tracker', 'Week Tracker', 'Month Tracker'])}
-                <Divider></Divider>
-                {ReturnList(['All mail', 'Trash', 'Spam'])}
             </Drawer>
             <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
                 {props.children}

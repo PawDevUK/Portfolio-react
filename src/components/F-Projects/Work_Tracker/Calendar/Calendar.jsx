@@ -1,9 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-export default class Calendar extends Component {
-  render() {
+const Wrapper = styled.div`
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+`;
+const H1 = styled.h1`
+    margin-top:100px;
+`;
+
+export default function Calendar() {
     return (
-      <div>Calendar</div>
-    )
-  }
+        <Wrapper>
+            <H1>Calendar</H1>
+        </Wrapper>
+    );
 }

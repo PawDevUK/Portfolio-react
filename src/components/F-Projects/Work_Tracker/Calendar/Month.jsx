@@ -1,5 +1,5 @@
 import styled from 'styled-component';
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 
 const Wrapper = styled.div`
     height:196px;
@@ -7,12 +7,27 @@ const Wrapper = styled.div`
     background-color: #373435;
 `
 
-export default class Month extends Component {
-  render() {
-    return (
-      <Wrapper>
+export default function Month() {
+  
+  const [month, setMonth] = useState([]);
 
-      </Wrapper>
-    )
+  function createMont(L) {
+    const newMonth = [];
+    for (let i = 0; i < L; i++) {
+      newMonth.push(i);
+    }
+    setMonth(newMonth);
   }
+
+  useEffect(() => {
+    createMont(12); // Assuming L is 12 for the number of months
+    console.log('---------->',month);
+
+  }, []);
+
+  return (
+    <Wrapper>
+      {/* You can render your months or other content here */}
+    </Wrapper>
+  );
 }

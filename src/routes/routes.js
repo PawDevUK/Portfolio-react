@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense, useRef } from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 
 import Intro from '../components/A-Intro/intro'
@@ -23,6 +23,16 @@ const CV = lazy( ()=>import('../components/I-CV/cv') )
 const Chat = lazy( ()=>import('../components/Z-Chat/Chat') )
 
 export default function Router(){
+
+const AboutRef = useRef(null);
+
+const scrollToElement = () => {
+  // Check if elementRef is valid
+  if (AboutRef.current) {
+    // Scroll to the element
+    AboutRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+};
     
 const GlobalStyle = createGlobalStyle`
     body{
@@ -61,10 +71,10 @@ const Container = styled.div`
               <TicTacToe></TicTacToe>
             </Route>
             <Route exact path="/content">
-              <Header></Header>
+              <Header scroll={scrollToElement}></Header>
               <Chat></Chat>
               <Container>
-                <TopIntro></TopIntro>
+                <TopIntro ref={AboutRef}></TopIntro>
                 <Stack></Stack>
               </Container>
               <ReactSection></ReactSection>
