@@ -1,0 +1,9 @@
+.highlight {
+    background-color: yellow !important;
+    color: black !important;
+    border-radius: 50%;
+  }
+.calendarStyle{
+  height:350px;
+  width: 350px;
+}

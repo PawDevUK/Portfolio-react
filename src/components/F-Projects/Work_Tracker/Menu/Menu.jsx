@@ -8,20 +8,18 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import MuiAppBar from '@mui/material/AppBar';
 import MuiDrawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import  WT_Route from '../../../../actions/addWT_Route.action'
-import {store} from '../../../../configureStore.js'
+import WT_Route from '../../../../actions/addWT_Route.action';
+import { store } from '../../../../configureStore.js';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
@@ -106,26 +104,26 @@ export default function Menu(props) {
     };
 
     const handleRoute = (route) => {
-        store.dispatch(WT_Route(route))
+        store.dispatch(WT_Route(route));
     };
 
-    const AddIconToTab = (text) =>{
-       let payload = ''
-            switch(text) {
-                case "Rota Picker":
-                  payload =  <DateRangeIcon></DateRangeIcon>
-                  break;
-                case "Calendar":
-                  payload =  <CalendarMonthIcon></CalendarMonthIcon>
-                  break;
-                case "Day Tracker":
-                  payload =  <InsertInvitationIcon></InsertInvitationIcon>
-                  break;
-                default:
-                  // code block
-              }
-              return payload
-    }
+    const AddIconToTab = (text) => {
+        let payload = '';
+        switch (text) {
+            case 'Calendar':
+                payload = <CalendarMonthIcon></CalendarMonthIcon>;
+                break;
+            case 'Rota Picker':
+                payload = <DateRangeIcon></DateRangeIcon>;
+                break;
+            case 'Day Tracker':
+                payload = <InsertInvitationIcon></InsertInvitationIcon>;
+                break;
+            default:
+            // code block
+        }
+        return payload;
+    };
 
     const ReturnList = (arr) => {
         return arr.map((text, index) => {
@@ -183,7 +181,7 @@ export default function Menu(props) {
                     <IconButton onClick={handleDrawerClose}> {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
                 </DrawerHeader>
                 <Divider />
-                {ReturnList(['Rota Picker','Calendar','Day Tracker'])}
+                {ReturnList(['Calendar', 'Rota Picker', 'Day Tracker'])}
                 <Divider />
             </Drawer>
             <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
