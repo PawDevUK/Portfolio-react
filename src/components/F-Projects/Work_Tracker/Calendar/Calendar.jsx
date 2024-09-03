@@ -12,10 +12,6 @@ const CalendarWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
 `
-const MonthWrapper = styled.div`
-    width: 350px;
-    padding:5px;
-`
 const SwitchWrapper = styled.div`
   margin-top:50px;
 `
@@ -25,7 +21,8 @@ const SwitchHeader = styled.h4`
 
 export default function MyCalendarComponent() {
   const [selectedDates, setSelectedDates] = useState([]);
-  const [edit, setEdit] = useState(false);
+  const [date, setDate] = useState(new Date());
+  const [edit, setEdit] = useState(true);
 
   const handleDayClick = (value) => {
     setSelectedDates((prevItems) => {
@@ -49,15 +46,16 @@ export default function MyCalendarComponent() {
       let calendar = [];
       for (let i = 0; i < 12; i++) {
           calendar.push(
-              <MonthWrapper>
-                  <Calendar
-                    className={'calendarStyle'}
-                    key={i}
-                    onClickDay={edit ? handleDayClick : null}
-                    value={new Date(new Date().getFullYear(), i)}
-                    tileClassName={({ date, view }) => (view === 'month' && isSelected(date) ? 'highlight' : null)}
-                  />
-              </MonthWrapper>
+              <Calendar
+                  nextLabel={null}
+                  prevLabel={null}
+                  next2Label={null}
+                  prev2Label={null}
+                  calendarType='iso8601'
+                  key={i}
+                  onClickDay={edit ? handleDayClick : null}
+                  tileClassName={({ date, view }) => (view === 'month' && isSelected(date) ? 'highlight' : null)}
+              />
           );
       }
       return calendar;
@@ -67,7 +65,7 @@ export default function MyCalendarComponent() {
       <div>
           <SwitchWrapper>
               <SwitchHeader>Edit Rota</SwitchHeader>
-              <Switch onChange={allowEdit} color='primary' value='dynamic-class-name' />
+              <Switch onChange={allowEdit} checked={edit} color='primary' value='dynamic-class-name' />
           </SwitchWrapper>
           <CalendarWrapper>{returnYear()}</CalendarWrapper>
       </div>
