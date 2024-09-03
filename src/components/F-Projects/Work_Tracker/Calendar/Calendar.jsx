@@ -28,19 +28,13 @@ export default function MyCalendarComponent() {
   const [edit, setEdit] = useState(false);
 
   const handleDayClick = (value) => {
-    const newDates = [...selectedDates];
-    const index = newDates.findIndex(date => isSameDay(date, value));
-
-    if (index !== -1) {
-      // If the date is already selected, remove it
-      newDates.splice(index, 1);
-    } else {
-      // Otherwise, add the date
-      newDates.push(value);
-    }
-
-    setSelectedDates(newDates);
-    console.log(newDates); // Changed to newDates for updated logging
+    setSelectedDates((prevItems) => {
+      if (prevItems.includes(value)) {
+        return prevItems.filter(prevItem => prevItem !== value);
+      } else {
+        return [...prevItems, value];
+      }
+    })
   };
 
   const allowEdit = () => {
@@ -54,14 +48,13 @@ export default function MyCalendarComponent() {
   const returnYear = () => {
       let calendar = [];
       for (let i = 0; i < 12; i++) {
-          // Corrected loop to 12 months
           calendar.push(
               <MonthWrapper>
                   <Calendar
                     className={'calendarStyle'}
-                    key={i} // Added a unique key for each Calendar component
+                    key={i}
                     onClickDay={edit ? handleDayClick : null}
-                    value={new Date(new Date().getFullYear(), i)} // Changed to render each month
+                    value={new Date(new Date().getFullYear(), i)}
                     tileClassName={({ date, view }) => (view === 'month' && isSelected(date) ? 'highlight' : null)}
                   />
               </MonthWrapper>
