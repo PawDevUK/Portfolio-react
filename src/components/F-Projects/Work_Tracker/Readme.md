@@ -16,7 +16,7 @@ probably it will be either Mongo DB or MySQL.
 - [x] calendar tab
 - [ ] calendar to specify days off
         This calendar needs to specify days off and then on save create year with earnings. It should\
-        be saved in the list of rotas:
+        be saved in the list of rotas. It should be saved in Redux and sent to back end where saved in DB.
 - [ ] component with saved rotas
         This component needs to have lis:
             - Year rota.
