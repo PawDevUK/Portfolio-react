@@ -13,11 +13,18 @@ probably it will be either Mongo DB or MySQL.
 
 #### ToDo
 
-- [ ] calendar tab
+- [x] calendar tab
 - [ ] calendar to specify days off
+        This calendar needs to specify days off and then on save create year with earnings. It should\
+        be saved in the list of rotas:
+- [ ] component with saved rotas
+        This component needs to have lis:
+            - Year rota.
+            - Annual earnings.
+            - Edit button.
 - [ ] component to select same repeated days in the week
-- [ ] time line tab
-- [ ] time line with division for hours
+- [ ] timeline tab
+- [ ] timeline with division for hours
 - [ ] colored progress bar on the top of the time line. I should indicate basic H and overtime H
 - [ ] sumary of the worked hours, located above the time line with colored squares accordingly to basic H or overtime H
 - [ ] progres circle to visually show profit for a day
