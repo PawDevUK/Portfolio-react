@@ -99,9 +99,6 @@ export default function MyCalendarComponent() {
           />
         </SwitchWrapper>
         <ButtonsWrapper>
-          <Button variant='outlined' endIcon={<SendIcon />}>
-            Send
-          </Button>
           <Button variant='outlined' endIcon={<SaveIcon />}>
             Save
           </Button>
