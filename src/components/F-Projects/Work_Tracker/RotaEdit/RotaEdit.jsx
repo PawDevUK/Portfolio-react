@@ -51,27 +51,44 @@ function RotaEdit({Edit}) {
 
   const returnYear = () => {
     let calendar = [];
-    function returnTaxYear(year){
-      // This function needs return dates between 1st of April of the year and 31 of March next year.
-      // Create array with 9 months of the year and 3 months of +1 year
-      
-      let taxYear = []
+
+    function returnTaxYear(year) {
+      // This function needs return calendar between 1st of April of the year and 31 of March next year.
+      // Create array with 9 months of a year and 3 months of +1 year
+      let months = [4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3];
+      let taxYear = [];
+
+      months.forEach((m) => {
+        if (m >= 4) {
+          taxYear.push(
+            moment()
+              .startOf()
+              .month(m - 1)
+              .year(year)
+          );
+        } else if (m < 4) {
+          taxYear.push(
+            moment()
+              .startOf()
+              .month(m - 1)
+              .year(year + 1)
+          );
+        }
+      });
+      return taxYear;
     }
-    for (let i = 0; i < 12; i++) {
-      const firstDayOfMonth = moment()
-        .startOf('year')
-        .add(i, 'months')
-        .toDate();
+
+    returnTaxYear(2024).forEach((m, i) => {
       calendar.push(
         <Calendar
-          value={firstDayOfMonth}
+          value={m}
           nextLabel={null}
           prevLabel={null}
           next2Label={null}
           prev2Label={null}
           calendarType='iso8601'
           key={i}
-          onClickDay={ handleDayClick}
+          onClickDay={handleDayClick}
           tileClassName={({ date, view }) =>
             view === 'month' && isSelected(date)
               ? 'highlight react-calendar__tile--active'
@@ -79,9 +96,10 @@ function RotaEdit({Edit}) {
           }
         />
       );
-    }
+    });
     return calendar;
   };
+
   return (
     <CalendarWrapper>
       <ControlsWrapper>
