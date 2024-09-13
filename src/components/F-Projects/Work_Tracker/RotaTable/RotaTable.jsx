@@ -22,7 +22,14 @@ createData('2021/2022', 'G', 210, 77, '£47.000'),
 createData('2022/2023', 'G', 210, 77, '£52.000'),
 createData('2023/2024', 'G', 210, 77, '£49.000'),
 createData('2023/2024', 'G', 210, 77, '£47.000'),
+createData(),
   ];
+
+const checkEditAdd = (e) =>{
+  let t = ''
+    e.daysOff === undefined ? t = 'Add New' : t = 'Edit';
+  return t;
+}
 
 function RotaTable({ Edit }) {
   return (
@@ -58,7 +65,9 @@ function RotaTable({ Edit }) {
                     onClick={Edit}
                     endIcon={<EditIcon />}
                   >
-                    Edit
+                    {
+                      checkEditAdd(row)
+                    }
                   </Button>
                 </TableCell>
               </TableRow>
