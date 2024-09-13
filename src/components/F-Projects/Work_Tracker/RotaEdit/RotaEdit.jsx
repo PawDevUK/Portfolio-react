@@ -30,7 +30,6 @@ const ControlsWrapper = styled.div`
 `;
 
 const ButtonsWrapper = styled.div`
-  width: 200px;
   margin: 20px;
   display: flex;
   justify-content: space-between;
