@@ -1,6 +1,10 @@
 import React,{ useState } from 'react';
 import styled from 'styled-components';
+
 import Button from '@mui/material/Button';
+import Select from '@mui/joy/Select';
+import Option from '@mui/joy/Option';
+
 import 'react-calendar/dist/Calendar.css';
 import './MyCalendar.css';
 import Calendar from 'react-calendar';
@@ -20,9 +24,11 @@ const YearCalendarWrapper = styled.div`
 `;
 
 const ControlsWrapper = styled.div`
-  margin-top: 50px;
-  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
 `;
+
 const ButtonsWrapper = styled.div`
   width: 200px;
   margin: 20px;
@@ -103,6 +109,20 @@ function RotaEdit({Edit}) {
   return (
     <CalendarWrapper>
       <ControlsWrapper>
+        <Select color='primary' className='Slct' placeholder='Select Of Days'>
+          <Option value='1'>Mon/Tue</Option> 
+          <Option value='2'>Tue/Wed</Option>
+          <Option value='3'>Wed/Thu</Option>
+          <Option value='4'>Thu/Fri</Option>
+          <Option value='5'>Fri/Sat</Option>
+          <Option value='6'>Sat/Sun</Option>
+          <Option value='7'>Sun/Mon</Option>
+        </Select>
+        <Select color='primary' className='Slct' placeholder='Select Year'>
+          <Option value='22/23'>2022/2023</Option> 
+          <Option value='23/24'>2023/2024</Option>
+          <Option value='24/25'>2024/2025</Option>
+        </Select>
         <ButtonsWrapper>
           <Button variant='outlined' className={'button_save'} onClick={Edit} endIcon={<SaveIcon />}>
             Save
