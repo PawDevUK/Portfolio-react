@@ -12,6 +12,7 @@
         "@material-ui/data-grid": "^4.0.0-alpha.21",
         "@material-ui/styles": "^4.10.0",
         "@mui/icons-material": "^5.10.6",
+        "@mui/joy": "^5.0.0-beta.48",
         "@mui/material": "^5.10.6",
         "@mui/styled-engine-sc": "^5.10.6",
         "@nivo/bar": "^0.67.0",
