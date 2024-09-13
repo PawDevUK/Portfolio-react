@@ -50,6 +50,9 @@
 .MuiButton-variantOutlined{
   background-color: fff;
 }
+.Slct{
+  margin-top:15px;
+}
 .button_save{
   background-color: white !important;
 }
