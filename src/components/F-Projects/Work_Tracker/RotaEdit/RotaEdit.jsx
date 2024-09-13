@@ -104,7 +104,7 @@ function RotaEdit({Edit}) {
     <CalendarWrapper>
       <ControlsWrapper>
         <ButtonsWrapper>
-          <Button variant='outlined' onClick={Edit} endIcon={<SaveIcon />}>
+          <Button variant='outlined' className={'button_save'} onClick={Edit} endIcon={<SaveIcon />}>
             Save
           </Button>
         </ButtonsWrapper>
