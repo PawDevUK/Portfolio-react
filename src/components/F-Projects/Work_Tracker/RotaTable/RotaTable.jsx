@@ -55,7 +55,7 @@ function RotaTable({ Edit }) {
                 <TableCell component='th' scope='row'>
                   {row.workYear}
                 </TableCell>
-                <TableCell align='center' >{row.team}</TableCell>
+                <TableCell align='center'>{row.team}</TableCell>
                 <TableCell align='center'>{row.workingDays}</TableCell>
                 <TableCell align='center'>{row.daysOff}</TableCell>
                 <TableCell align='center'>{row.salary}</TableCell>
