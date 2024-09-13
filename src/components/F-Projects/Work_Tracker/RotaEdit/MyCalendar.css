@@ -50,3 +50,6 @@
 .MuiButton-variantOutlined{
   background-color: fff;
 }
+.button_save{
+  background-color: white !important;
+}
