@@ -36,7 +36,14 @@ const ButtonsWrapper = styled.div`
   justify-content: space-between;
 `;
 
-function RotaEdit({Edit}) {
+const SelectWrapper = styled.div`
+  margin-bottom: 10px;
+`;
+const SelectHeader = styled.h5`
+  
+`;
+
+function RotaEdit({ Edit }) {
   const [selectedDates, setSelectedDates] = useState([]);
   const [taxYear, setTaxYear] = useState(moment().year());
   const [fixDays, setFixedDays] = useState('');
