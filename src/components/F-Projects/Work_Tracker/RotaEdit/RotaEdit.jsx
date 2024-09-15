@@ -25,19 +25,53 @@ const YearCalendarWrapper = styled.div`
 `;
 
 const ControlsWrapper = styled.div`
-  position: fixed;
-  bottom: 20px;
-  right: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    background-color: #ffffffca;
+    border-radius: 5px;
+  @media (max-width:1100px) {
+    display:flex;
+    justify-content: center;
+    background-color: #ffffffca;
+    border-radius: 5px;
+    width: 60vw;
+    height: 90px;
+  };
+  @media (max-width:870px) {
+    width: 60vw;
+    height: 117px;
+    font-size:14px !important;
+  };
+  @media (max-width:639px) {
+    width: 400px;
+    height: 117px;
+  };
+  @media (min-width:1100px) {
+    display: block;
+    height: 222px;
+    width:210px;
+  };
 `;
 
 const ButtonsWrapper = styled.div`
   margin: 20px;
   display: flex;
-  justify-content: space-between;
+  @media (min-width:1100px) {
+    justify-content: center;
+    margin:5px;
+  };
 `;
 
 const SelectWrapper = styled.div`
-  margin-bottom: 10px;
+  margin: 10px;
+  width: 180px;
+  height: 50px;
+  @media (min-width:1100px) {
+    height: 80px;
+    width: 185px;
+    margin:10px auto 0px auto;
+  };
 `;
 
 function RotaEdit({ toggleEdit }) {
@@ -126,7 +160,7 @@ function RotaEdit({ toggleEdit }) {
     <CalendarWrapper>
       <ControlsWrapper>
         <SelectWrapper>
-          <Typography color='primary' level='title-md' variant='soft'>
+          <Typography color='primary' level='title-md' variant='soft' className='selectHeader'>
             Select fixed days off.
           </Typography>
           <Select
@@ -147,7 +181,7 @@ function RotaEdit({ toggleEdit }) {
           </Select>
         </SelectWrapper>
         <SelectWrapper>
-          <Typography color='primary' level='title-md' variant='soft'>
+          <Typography color='primary' level='title-md' variant='soft' className='selectHeader'>
             Select the work year.
           </Typography>
           <Select

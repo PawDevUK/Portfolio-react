@@ -16,6 +16,20 @@
 }
 .button_save{
   background-color: white !important;
+  margin: 10px 0px 0px 0px !important;
+  height:30px;
+  width: 90px;
+  @media (min-width:1100px) {
+    margin: 0px !important;
+  };
+  @media (max-width:870px) {
+    margin: 25px 0px 0px 0px !important;
+  };
+}
+.selectHeader{
+  @media (max-width:1100px) {
+    font-size: 14px !important;
+  };
 }
 
 /* react calendar */
