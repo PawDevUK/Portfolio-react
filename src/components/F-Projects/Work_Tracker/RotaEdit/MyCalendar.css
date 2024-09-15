@@ -1,4 +1,4 @@
-
+/* custom styling for component */
 .react-calendar button {
   border: 1px solid #aaa9bf3b;
 }
@@ -11,13 +11,20 @@
   border-radius: 5px;
   margin: 5px;
 }
+.Slct{
+  margin-top: 5px;
+}
+.button_save{
+  background-color: white !important;
+}
+
+/* react calendar */
 .react-calendar__navigation__label {
   border: none !important;
 }
 .react-calendar__navigation {
   margin-bottom: 2px;
 }
-
 .react-calendar__navigation button {
   pointer-events: none !important;
   cursor: not-allowed !important;
@@ -28,16 +35,10 @@
 .react-calendar__tile:hover {
   background-color: #17ea22a8 !important;
 }
-
-.react-calendar__tile:focus {
-  /* background: #0de9194f !important; */
-}
-
 .highlight {
-  background-color:#0de9194f;
+  background-color:#0de9194f !important;
   color: black;
 }
-
 .react-calendar__month-view__weekdays__weekday {
   margin-bottom: 5px;
 }
@@ -50,9 +51,21 @@
 .MuiButton-variantOutlined{
   background-color: fff;
 }
-.Slct{
-  margin-top: 5px;
+.react-calendar--selectRange .react-calendar__tile--hover{
+  background-color: #0de9194f !important;
 }
-.button_save{
-  background-color: white !important;
+.react-calendar__tile:enabled:hover{
+  background-color: #17ea22a8 !important;
+}
+.react-calendar__tile:enabled:focus {
+  background-color: none !important;
+}
+
+.react-datepicker__day.react-datepicker__day--keyboard-selected {
+  background: #fff !important;
+  color: black !important;
+}
+.react-calendar__tile--active {
+  background: #fff;
+  color: black;
 }
