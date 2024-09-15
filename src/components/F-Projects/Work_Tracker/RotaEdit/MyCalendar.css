@@ -57,10 +57,6 @@
 .react-calendar__tile:enabled:hover{
   background-color: #17ea22a8 !important;
 }
-.react-calendar__tile:enabled:focus {
-  background-color: none !important;
-}
-
 .react-datepicker__day.react-datepicker__day--keyboard-selected {
   background: #fff !important;
   color: black !important;
@@ -68,4 +64,11 @@
 .react-calendar__tile--active {
   background: #fff;
   color: black;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #fff !important;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #fff !important;
 }
