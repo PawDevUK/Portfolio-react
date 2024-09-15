@@ -7,10 +7,9 @@ const RotaWrapper = styled.div`
 
 `
 
-export default function MyCalendarComponent() {
+export default function Calendar() {
 
   const [edit, setEdit] = useState(false);
-
 
   const handleEditClick = () => {
     setEdit((edit) => !edit);
