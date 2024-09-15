@@ -39,9 +39,6 @@ const ButtonsWrapper = styled.div`
 const SelectWrapper = styled.div`
   margin-bottom: 10px;
 `;
-const SelectHeader = styled.h5`
-  
-`;
 
 function RotaEdit({ Edit }) {
   const [selectedDates, setSelectedDates] = useState([]);
