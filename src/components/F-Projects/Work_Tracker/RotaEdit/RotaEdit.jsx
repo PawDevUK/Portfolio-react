@@ -40,7 +40,7 @@ const SelectWrapper = styled.div`
   margin-bottom: 10px;
 `;
 
-function RotaEdit({ Edit }) {
+function RotaEdit({ toggleEdit }) {
   const [selectedDates, setSelectedDates] = useState([]);
   const [taxYear, setTaxYear] = useState(moment().year());
   const [fixDays, setFixedDays] = useState('');
@@ -150,7 +150,7 @@ function RotaEdit({ Edit }) {
           </Select>
         </SelectWrapper>
         <ButtonsWrapper>
-          <Button variant='outlined' className={'button_save'} onClick={Edit} endIcon={<SaveIcon />}>
+              toggleEdit();
             Save
           </Button>
         </ButtonsWrapper>

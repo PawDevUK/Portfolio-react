@@ -17,7 +17,7 @@ export default function Calendar() {
 
   return (
     <RotaWrapper>
-      { edit ? <RotaEdit Edit={handleEditClick}  ></RotaEdit> : <RotaTable Edit={handleEditClick} ></RotaTable>}
+      { edit ? <RotaEdit toggleEdit={handleEditClick}  ></RotaEdit> : <RotaTable Edit={handleEditClick} ></RotaTable>}
     </RotaWrapper>
   );
 }
