@@ -19,7 +19,7 @@ const CalendarWrapper = styled.div``;
 
 const YearCalendarWrapper = styled.div`
   width: 90%;
-  margin: 0px 50px 50px 50px;
+  margin: 50px 50px 50px 50px;
   display: flex;
   flex-wrap: wrap;
 `;
