@@ -129,7 +129,14 @@ function RotaEdit({ toggleEdit }) {
           <Typography color='primary' level='title-md' variant='soft'>
             Select fixed days off.
           </Typography>
-          <Select color='primary' className='Slct' placeholder='Select..' onChange={(e,v) => { setFixedDays(v) }}>
+          <Select
+            color='primary'
+            className='Slct'
+            placeholder='Select..'
+            onChange={(e, v) => {
+              setFixedDays(v);
+            }}
+          >
             <Option value='Mon/Tue'>Mon/Tue</Option>
             <Option value='Tue/Wed'>Tue/Wed</Option>
             <Option value='Wed/Thu'>Wed/Thu</Option>
@@ -143,14 +150,29 @@ function RotaEdit({ toggleEdit }) {
           <Typography color='primary' level='title-md' variant='soft'>
             Select the work year.
           </Typography>
-          <Select color='primary' className='Slct' placeholder='Select..' onChange={(e,value) => {  setTaxYear(value) }}>
+          <Select
+            color='primary'
+            className='Slct'
+            placeholder='Select..'
+            onChange={(e, value) => {
+              setTaxYear(value);
+            }}
+          >
             <Option value={2022}>2022/2023</Option>
             <Option value={2023}>2023/2024</Option>
             <Option value={2024}>2024/2025</Option>
           </Select>
         </SelectWrapper>
         <ButtonsWrapper>
+          <Button
+            variant='outlined'
+            className={'button_save'}
+            onClick={() => {
               toggleEdit();
+              Save();
+            }}
+            endIcon={<SaveIcon />}
+          >
             Save
           </Button>
         </ButtonsWrapper>
