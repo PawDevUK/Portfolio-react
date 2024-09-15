@@ -44,8 +44,9 @@ const ControlsWrapper = styled.div`
     font-size:14px !important;
   };
   @media (max-width:639px) {
-    width: 400px;
+    width: 420px;
     height: 117px;
+    margin-bottom: 50px;
   };
   @media (min-width:1100px) {
     display: block;
