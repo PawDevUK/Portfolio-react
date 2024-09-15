@@ -129,14 +129,14 @@ function RotaEdit({ Edit }) {
           <Typography color='primary' level='title-md' variant='soft'>
             Select fixed days off.
           </Typography>
-          <Select color='primary' className='Slct' placeholder='Select..' onChange={fixedDaysSet}>
-            <Option value='1'>Mon/Tue</Option>
-            <Option value='2'>Tue/Wed</Option>
-            <Option value='3'>Wed/Thu</Option>
-            <Option value='4'>Thu/Fri</Option>
-            <Option value='5'>Fri/Sat</Option>
-            <Option value='6'>Sat/Sun</Option>
-            <Option value='7'>Sun/Mon</Option>
+          <Select color='primary' className='Slct' placeholder='Select..' onChange={(e,v) => { setFixedDays(v) }}>
+            <Option value='Mon/Tue'>Mon/Tue</Option>
+            <Option value='Tue/Wed'>Tue/Wed</Option>
+            <Option value='Wed/Thu'>Wed/Thu</Option>
+            <Option value='Thu/Fri'>Thu/Fri</Option>
+            <Option value='Fri/Sat'>Fri/Sat</Option>
+            <Option value='Sat/Sun'>Sat/Sun</Option>
+            <Option value='Sun/Mon'>Sun/Mon</Option>
           </Select>
         </SelectWrapper>
         <SelectWrapper>
