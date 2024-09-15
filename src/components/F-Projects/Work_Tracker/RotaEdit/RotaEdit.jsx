@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Button from '@mui/material/Button';
@@ -38,6 +38,10 @@ const ButtonsWrapper = styled.div`
 
 function RotaEdit({Edit}) {
   const [selectedDates, setSelectedDates] = useState([]);
+
+  useEffect(()=>{
+
+  },[taxYear])
 
   const handleDayClick = (value) => {
     setSelectedDates((prevState) => {
