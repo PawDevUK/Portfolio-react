@@ -143,7 +143,7 @@ function RotaEdit({ Edit }) {
           <Typography color='primary' level='title-md' variant='soft'>
             Select the work year.
           </Typography>
-          <Select color='primary' className='Slct' placeholder='Select..' onChange={(e)=>{console.log(e.target.value);}}>
+          <Select color='primary' className='Slct' placeholder='Select..' onChange={(e,value) => {  setTaxYear(value) }}>
             <Option value={2022}>2022/2023</Option>
             <Option value={2023}>2023/2024</Option>
             <Option value={2024}>2024/2025</Option>
