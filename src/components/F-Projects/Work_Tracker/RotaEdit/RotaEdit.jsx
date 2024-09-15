@@ -38,6 +38,8 @@ const ButtonsWrapper = styled.div`
 
 function RotaEdit({Edit}) {
   const [selectedDates, setSelectedDates] = useState([]);
+  const [taxYear, setTaxYear] = useState(moment().year());
+  const [fixDays, setFixedDays] = useState('');
 
   useEffect(()=>{
 
@@ -59,7 +61,7 @@ function RotaEdit({Edit}) {
     return selectedDates.some((selectedDate) => isSameDay(selectedDate, date));
   };
 
-  const returnYear = () => {
+  const returnYear = (ty) => {
     let calendar = [];
 
     function returnTaxYear(year) {
@@ -88,7 +90,7 @@ function RotaEdit({Edit}) {
       return taxYear;
     }
 
-    returnTaxYear(2024).forEach((m, i) => {
+    returnTaxYear(ty).forEach((m, i) => {
       calendar.push(
         <Calendar
           value={m}
@@ -109,6 +111,12 @@ function RotaEdit({Edit}) {
     });
     return calendar;
   };
+
+  const fixedDaysSet = (e)=>{
+
+  }
+
+  const Save = () => {};
 
   return (
     <CalendarWrapper>
