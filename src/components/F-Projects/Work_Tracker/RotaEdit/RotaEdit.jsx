@@ -155,7 +155,7 @@ function RotaEdit({ Edit }) {
           </Button>
         </ButtonsWrapper>
       </ControlsWrapper>
-      <YearCalendarWrapper>{returnYear()}</YearCalendarWrapper>
+      <YearCalendarWrapper>{returnYear(taxYear)}</YearCalendarWrapper>
     </CalendarWrapper>
   );
 }
