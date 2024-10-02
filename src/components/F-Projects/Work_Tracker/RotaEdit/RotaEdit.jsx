@@ -1,6 +1,8 @@
 import React,{ useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import { workTrackerAPI } from 'api/workTracker.api';
+
 import Button from '@mui/material/Button';
 import Typography from '@mui/joy/Typography';
 import Select from '@mui/joy/Select';
@@ -154,9 +156,17 @@ function RotaEdit({ toggleEdit }) {
   const fixedDaysSet = (e)=>{
 
   }
-
-  const Save = () => {};
-
+    
+  const Save = () => {
+    workTrackerAPI.post('/', { workTrackerData: selectedDates })
+      .then((response) => {
+        console.log('selected dates',selectedDates);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  };
   return (
     <CalendarWrapper>
       <ControlsWrapper>
