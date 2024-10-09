@@ -18,6 +18,7 @@ import { headerJumboText } from 'config/headerJumboText.config'
 import { buttons } from 'config/common.config'
 import { intro } from 'config/topIntro.config'
 import { fonts } from 'config/fonts.config'
+import { addCalendar } from 'actions/calendar.actions'
 
 const middleware = []
 
@@ -30,6 +31,10 @@ export function sync_DB_With_Store(){
     LocalOnEnter.get('/').then((res) => {
      store.dispatch(addCounter( res.data[res.data.length-1].counter ))
     });
+}
+
+export function AddCalendarToState(data){
+    store.dispatch(addCalendar(data));
 }
 
 export function syncConfigWithStore(){
