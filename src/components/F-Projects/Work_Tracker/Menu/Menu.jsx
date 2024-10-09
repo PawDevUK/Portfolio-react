@@ -18,7 +18,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import MuiDrawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import WT_Route from '../../../../actions/addWT_Route.action';
+import { WT_Route } from '../../../../actions/calendar.actions';
 import { store } from '../../../../configureStore.js';
 
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -104,6 +104,7 @@ export default function Menu(props) {
     };
 
     const handleRoute = (route) => {
+        console.log('click');
         store.dispatch(WT_Route(route));
     };
 

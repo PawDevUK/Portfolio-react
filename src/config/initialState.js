@@ -45,4 +45,8 @@ export let initialState = {
                 pl:''
             }
         },
+        WorkTracker:{
+            WT_Route:'Calendar',
+            calendars:[]
+        }
     }

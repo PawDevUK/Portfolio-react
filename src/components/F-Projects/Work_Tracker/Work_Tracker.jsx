@@ -36,7 +36,7 @@ class WorkTracker extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        WT_Route:state.WT_Route
+        WT_Route:state.WorkTracker.WT_Route
     }
 }
 export default connect(mapStateToProps)(WorkTracker)
