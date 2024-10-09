@@ -12,7 +12,7 @@ export default function PageContent(state = initialState, action){
                     }
                 };
             case ADD_ABOUT_INTRO:
-                return{
+                return {
                     ...state,
                     aboutIntro:{ ...action.payload }
                 };
