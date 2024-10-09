@@ -24,6 +24,7 @@ import { store } from '../../../../configureStore.js';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import InsertInvitationIcon from '@mui/icons-material/InsertInvitation';
 import DateRangeIcon from '@mui/icons-material/DateRange';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const drawerWidth = 240;
 
@@ -109,21 +110,23 @@ export default function Menu(props) {
     };
 
     const AddIconToTab = (text) => {
-        let payload = '';
-        switch (text) {
-            case 'Calendar':
-                payload = <CalendarMonthIcon></CalendarMonthIcon>;
-                break;
-            case 'Rota Picker':
-                payload = <DateRangeIcon></DateRangeIcon>;
-                break;
-            case 'Day Tracker':
-                payload = <InsertInvitationIcon></InsertInvitationIcon>;
-                break;
-            default:
-            // code block
-        }
-        return payload;
+      let payload = '';
+      switch (text) {
+        case `ClockInOut`:
+          payload = <AccessTimeIcon></AccessTimeIcon>;
+          break;
+        case 'Calendar':
+          payload = <CalendarMonthIcon></CalendarMonthIcon>;
+          break;
+        case 'Rota Picker':
+          payload = <DateRangeIcon></DateRangeIcon>;
+          break;
+        case 'Day Tracker':
+          payload = <InsertInvitationIcon></InsertInvitationIcon>;
+          break;
+        default:
+      }
+      return payload;
     };
 
     const ReturnList = (arr) => {
@@ -157,37 +160,45 @@ export default function Menu(props) {
     };
 
     return (
-        <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
-            <AppBar position='fixed' open={open}>
-                <Toolbar>
-                    <IconButton
-                        color='inherit'
-                        aria-label='open drawer'
-                        onClick={handleDrawerOpen}
-                        edge='start'
-                        sx={{
-                            marginRight: 5,
-                            ...(open && { display: 'none' }),
-                        }}>
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant='h6' noWrap component='div'>
-                        Tesco Work Tracker
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Drawer variant='permanent' open={open}>
-                <DrawerHeader>
-                    <IconButton onClick={handleDrawerClose}> {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}</IconButton>
-                </DrawerHeader>
-                <Divider />
-                {ReturnList(['Calendar', 'Rota Picker', 'Day Tracker'])}
-                <Divider />
-            </Drawer>
-            <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
-                {props.children}
-            </Box>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <AppBar position='fixed' open={open}>
+          <Toolbar>
+            <IconButton
+              color='inherit'
+              aria-label='open drawer'
+              onClick={handleDrawerOpen}
+              edge='start'
+              sx={{
+                marginRight: 5,
+                ...(open && { display: 'none' }),
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant='h6' noWrap component='div'>
+              Tesco Work Tracker
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Drawer variant='permanent' open={open}>
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {' '}
+              {theme.direction === 'rtl' ? (
+                <ChevronRightIcon />
+              ) : (
+                <ChevronLeftIcon />
+              )}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
+          {ReturnList(['ClockInOut', 'Calendar', 'Rota Picker', 'Day Tracker'])}
+          <Divider />
+        </Drawer>
+        <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
+          {props.children}
         </Box>
+      </Box>
     );
 }
