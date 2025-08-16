@@ -54,7 +54,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 #### Portfolio
 
 - Add all not working projects to Portfolio to make them accessible.
-- Add initial data to LocalStorage in the TicTacToe so the stats window has some dumy data to display.
+- Add initial data to LocalStorage in the TicTacToe game so the stats window has some dummy data to display.
 - Add downloaded fonts to the project.
 - Improve text on the entire website.
 - Improve card design.

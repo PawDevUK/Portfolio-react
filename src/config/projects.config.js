@@ -6,7 +6,7 @@ export const projects = [
         alt: "TicTacToe",
         githubHref: "https://github.com/GitcrackerUK/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",
         src: TicTacToe,
-        text: "Tic-tac-toe is a game in which two players take turns in drawing either an 'O' or an 'X' in one square of a grid consisting of nine squares.",
+        text: "Tic-tac-toe is a game where two players take turns placing 'O' or 'X' on a 3x3 grid.",
         title: "Tic Tac Toe",
         webHref: { href: "/TicTacToe", button: "Visit" },
         stack: [react, js, figma, styled, nodeJS, npm]
@@ -15,7 +15,7 @@ export const projects = [
         alt: "Covid-app",
         githubHref: "https://github.com/GitcrackerUK/Covid-Tracker",
         src: CovidApp,
-        text: "Application for informational purpose with data related to Covid-19. It is react application created with create-react-app and styled with styled-components.",
+        text: "Application providing information and data related to COVID-19. It's a React app created with Create React App and styled with styled-components.",
         title: "Covid-Data",
         webHref: { href: "/covid", button: "Visit" },
         stack: [react, js, figma, styled, gcloud, nodeJS, npm]
@@ -24,7 +24,7 @@ export const projects = [
         alt: "Chat Bot",
         githubHref: "https://github.com/GitcrackerUK/Messenger ",
         src: bot,
-        text: "Bot Chat is a simple app allowing any one to have conversation with AI. It’s simple and fun. At the moment app contains only chat but will be added chat history in MERN stack.",
+        text: "Chat Bot is a simple app that lets anyone converse with an AI. It's simple and fun. Chat history and a MERN-stack backend will be added later.",
         title: "Chat Bot",
         webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
         stack: [react, router, js, figma, styled, gcloud, git, npm]
@@ -32,7 +32,7 @@ export const projects = [
         alt: "Fitness App",
         githubHref: "https://github.com/GitcrackerUK/Architect",
         src: fitnessApp,
-        text: "Very simple fitness app to track exercises duration, date. App is created in React/Node.js and deployed on Gcloud. Database used to storage inputs is MongoDb Atlas.",
+        text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
         title: "Fitness App",
         webHref: { href: "https://code-camp-front.ew.r.appspot.com/", button: "Visit" },
         stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
@@ -41,7 +41,7 @@ export const projects = [
         alt: "Nasa",
         githubHref: "https://github.com/GitcrackerUK/Nasa",
         src: nasa,
-        text: "Website about space related events and topics based on Nasa API. Front page is dedicated to SpaceX. Next pages contains images from space.",
+        text: "Website about space-related events and topics using the NASA API. The front page focuses on SpaceX; other pages contain space images.",
         title: "Nasa",
         webHref: { href: "https://gitcrackeruk.github.io/NASA/", button: "Visit" },
         stack: [js, html, css, bootstrap, git, vscode]
@@ -50,7 +50,7 @@ export const projects = [
         alt: "Register",
         githubHref: "https://github.com/GitcrackerUK/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
         src: register,
-        text: "Simple app with home component and login. App has two color schemes and is created in React with use of styled-components and React-router-dom.",
+        text: "Simple app with home and login components. The app has two color schemes and is built with React, styled-components, and react-router-dom.",
         title: "Register/Sign in Page",
         webHref: { href: "/RegisterSignIn", button: "Visit" },
         stack: [react, scss, html, css, vscode, git]
@@ -59,7 +59,7 @@ export const projects = [
         alt: "Royal Oak Architects",
         githubHref: "https://github.com/GitcrackerUK/Architect",
         src: royal,
-        text: "Light mobile-first website dedicated for customers who like simple and smart looking solutions. Website is done with use of Bootstrap",
+        text: "A light, mobile-first website for customers who prefer simple, clean designs. Built using Bootstrap.",
         title: "Royal Oak Architects",
         webHref: { href: "https://gitcrackeruk.github.io/Architect/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
@@ -67,7 +67,7 @@ export const projects = [
         alt: "Gentlemen Barber",
         githubHref: "https://github.com/GitcrackerUK/Barber",
         src: barber,
-        text: "Simple bootstrap barber website. It's informative in very friendly tone aimed for every age range customers. ",
+        text: "Simple Bootstrap barber website. It's informative and written in a friendly tone to appeal to customers of all ages.",
         title: "Gentlemen Barber",
         webHref: { href: "https://gitcrackeruk.github.io/Barber/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
@@ -76,7 +76,7 @@ export const projects = [
         alt: "Goodwood Solicitors",
         githubHref: "https://github.com/GitcrackerUK/Solicitors",
         src: solicitors,
-        text: "Mobile-first webpage with menu to sub pages. Contains light color scheme, parallax image, form, and more.",
+        text: "Mobile-first website with navigation to subpages. Features a light color scheme, parallax image, contact form, and more.",
         title: "Goodwood Solicitors",
         webHref: { href: "https://gitcrackeruk.github.io/Solicitors/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
@@ -84,7 +84,7 @@ export const projects = [
         alt: "Asparago",
         githubHref: "https://github.com/GitcrackerUK/Architect",
         src: asparago,
-        text: "Bootstrap restaurant page with menu, carousel, content, location, parallax background images. These modern design with great and easy access to every information makes it very attractive",
+        text: "Bootstrap restaurant page with menu, carousel, content, location, and parallax background images. The modern design provides easy access to information.",
         title: "Asparago",
         webHref: { href: "https://gitcrackeruk.github.io/asparago.online/", button: "Visit" },
         stack: [html, css, bootstrap, git, vscode]
