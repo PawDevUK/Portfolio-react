@@ -67,6 +67,17 @@ export const getStack = createSelector(getPageContent, (PageContent) => {
     return PageContent.stack.tools;
 });
 
+export const getReactMainText = createSelector(getLang, getPageContent,(EngLang, PageContent)=>{
+    return EngLang ? PageContent.reactInfo.MainText : PageContent.reactInfo.PolLang.MainText
+})
+
+export const getReactHeader = createSelector(getLang, getPageContent,(EngLang, PageContent)=>{
+    return EngLang ? PageContent.reactInfo.Header : PageContent.reactInfo.PolLang.Header
+})
+export const getReactPros = createSelector(getLang, getPageContent,(EngLang, PageContent)=>{
+    return EngLang ? PageContent.reactInfo.Pros : PageContent.reactInfo.PolLang.Pros
+})
+
 export const getFooterData = createSelector(getPageContent, (PageContent) => {
     return PageContent.footer;
 });
