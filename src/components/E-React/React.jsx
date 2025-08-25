@@ -1,4 +1,11 @@
+import {
+  getPLineHight,
+  getReactMainText,
+  getReactHeader,
+  getReactPros,
+} from 'selectors/pageContent.selector';
 import { ReactComponent as ReactIconSvg } from 'img/react.svg';
+import { connect } from 'react-redux';
 
 const height = '350px'
 const rotate = keyframes`
@@ -93,8 +100,13 @@ function ReactSection(props) {
   )
 }
 
-const mapStateToProps = (state)=>{
- return { pLineHeight: getPLineHight(state) }
-}
+const mapStateToProps = (state) => {
+  return {
+    pLineHeight: getPLineHight(state),
+    header: getReactHeader(state),
+    mainText: getReactMainText(state),
+    reactPros: getReactPros(state),
+  };
+};
 
-export default connect(mapStateToProps)(ReactSection)
+export default connect(mapStateToProps)(ReactSection);
