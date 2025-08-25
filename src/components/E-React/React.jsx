@@ -12,7 +12,7 @@ import { ReactComponent as ReactIconSvg } from 'img/react.svg';
 import { connect } from 'react-redux';
 import React from 'react';
 
-const height = '350px'
+const height = '350px';
 const rotate = keyframes`
  from {
     transform: rotate(0deg);
@@ -20,12 +20,12 @@ const rotate = keyframes`
   to {
     transform: rotate(359deg);
   }
-`
+`;
 const Wrapper = styled.div`
   margin: 0px;
   width: 100%;
   background-color: #17293f;
-`
+`;
 const ContentWrapper = styled.div`
   display: flex;
   @media (max-width: 1000px) {
@@ -33,19 +33,19 @@ const ContentWrapper = styled.div`
   }
   width: 1000px;
   margin: auto;
-`
+`;
 const LeftWrapper = styled.div`
   margin: 20px 0px;
   @media (max-width: 992px) {
     width: 100%;
   }
   width: 60%;
-`
+`;
 const ProsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 10px;
-`
+`;
 const ReactIcon = styled(ReactIconSvg)`
   animation: ${rotate} 30s infinite linear;
   display: flex;
@@ -57,7 +57,7 @@ const ReactIcon = styled(ReactIconSvg)`
   .ring {
     fill: #17293f;
   }
-`
+`;
 const RightWrapper = styled.div`
   @media (max-width: 992px) {
     display: none;
@@ -67,32 +67,32 @@ const RightWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: ${height};
-`
+`;
 const StP = styled(P)`
-  line-height: ${p=>p.p_line_height}px;
+  line-height: ${(p) => p.p_line_height}px;
   @media (min-width: 1000px) {
     margin-top: 17px;
   }
   margin-bottom: 15px;
-`
+`;
 
 function ReactSection(props) {
   return (
-    <Wrapper id="react">
+    <Wrapper id='react'>
       <ContentWrapper>
         <LeftWrapper>
           <JumboSectionHeader dark>{props.header}</JumboSectionHeader>
 
-          <StP p_line_height={props.pLineHeight} dark>{ReactComponentData.MainText}</StP>
+          <StP p_line_height={props.pLineHeight} dark>
+            {props.mainText}
+          </StP>
 
           <ProsWrapper>
-            {ReactComponentData.Pros.map((pro, i) => {
-              return (
-                <Pros key={i} dark>
-                  {pro}
-                </Pros>
-              )
-            })}
+            {(props.reactPros || []).map((pro, i) => (
+              <Pros key={i} dark>
+                {pro}
+              </Pros>
+            ))}
           </ProsWrapper>
         </LeftWrapper>
         <RightWrapper>
@@ -100,7 +100,7 @@ function ReactSection(props) {
         </RightWrapper>
       </ContentWrapper>
     </Wrapper>
-  )
+  );
 }
 
 const mapStateToProps = (state) => {
