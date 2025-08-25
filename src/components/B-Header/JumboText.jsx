@@ -80,7 +80,7 @@ export function JumboMainText({ ...props }) {
                 <Quote>{props.author}</Quote>
             </JumboHeaderWrapper>
             <JumboText>{props.p}</JumboText>
-            <Anchor href="https://github.com/GitcrackerUK" target="_blank">
+            <Anchor href="https://github.com/pawdevuk" target="_blank">
                 <Button mobile={props.mobile} style={{ margin: "auto" }}>{props.button}</Button>
             </Anchor>
         </JumboTextWrapper>
