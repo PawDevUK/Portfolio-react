@@ -15,15 +15,12 @@ Application created mainly in JavaScript. Frontend is done in React.Js and backe
 It's SPA and contains at the moment three elements:
 
 Top element is a header with input for username which on submit changes to header with h1 username.\
-Value from header is also send on submit to backend and then to mongodb and sorted in CurrenUser collection.
-
-Middle section is a board with two buttons in the top to choose figure "X" or "O". These button becoming disabled\
-after a game starts and stays disabled during a game. Also during a game buttons indicates players move.\
-Central section of a board is actual the game board and contains 9 button which are initially disabled but after choosing figure\
-they becoming responsive. Player by pressing single button choosing where to put his/her figure and wins if three figures are in row which triggers display of appropriate line to match win combination.
-At the moment functionality of winning lines is in the same file as main app but I will move it to separate component to make it ease to maintain.
-
-Bottom section contain list of players. It's material-ui and at the moment displays current user MongoDB collection.
+Value from header is also sent on submit to the backend and then to MongoDB and stored in the CurrentUser collection.\
+\
+Middle section is a board with two buttons at the top to choose figure "X" or "O". These buttons become disabled after a game starts and stay disabled during a game. During a game the buttons indicate the player's move.\
+The central section of the board is the game board and contains 9 buttons which are initially disabled but become active after choosing a figure. A player chooses where to place their mark by pressing a single button; a win occurs when three marks are in a row, which triggers display of the appropriate winning line. At the moment, the winning-line logic is in the same file as the main app, but it will be moved to a separate component to improve maintainability.\
+\
+Bottom section contains the list of players. It's implemented with Material‑UI and currently displays the CurrentUser MongoDB collection.
 
 ### To Do
 
@@ -36,16 +33,16 @@ Bottom section contain list of players. It's material-ui and at the moment displ
   - create "connection" which will send and get players moves every second.
 - Functionality to close a active game in case either player win or end
 
-* <s>Functionality to disable header buttons after a game starts
-* Functionality to switch header buttons as indicator of player move. Different box shadow should be fine.
-* Line to cross all same symbols in case of win. Must be 8 lines, probably svg.
-* List of active players with option to play with
-* Backend and mongodb
-* Functionality to get list of players
+- ~~Functionality to disable header buttons after a game starts~~
+- Functionality to switch header buttons as an indicator of player move (different box-shadow suggested).
+- Line to cross all identical symbols in case of win; must be 8 lines, probably SVG.
+- List of active players with option to play with.
+- Backend and MongoDB integration.
+- Functionality to get list of players
 
 - get id of player on "Join" click
   - find player by id
   - send invitation
-  - in case of accepted get opponent board with his/her move
+  - in case of acceptance get opponent board with their move
   - lock session
-  - choose move and post it</s>
+  - choose move and post it
