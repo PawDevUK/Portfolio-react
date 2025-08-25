@@ -31,14 +31,15 @@ export default function PlayerList(params) {
     //If there is data with users add it to redux and use it to fill up DataGrid.
 
     useEffect(() => {
-        if(JSON.parse(localStorage.users).length>1){
+        const usersData = localStorage.getItem('users');
+        if (usersData && usersData !== "undefined") {
             console.log('Loaded from local storage.');
-            setOnlineUsers(JSON.parse(localStorage.users));
-        }else{
+            setOnlineUsers(JSON.parse(usersData));
+        } else {
             console.log('Initialized local storage.');
-            const users = createUsers()
-            setOnlineUsers(users)
-            localStorage.setItem('users', JSON.stringify(users))
+            const users = createUsers();
+            setOnlineUsers(users);
+            localStorage.setItem('users', JSON.stringify(users));
         }
     }, []);
 
