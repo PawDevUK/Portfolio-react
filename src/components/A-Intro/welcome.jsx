@@ -1,8 +1,8 @@
 import Button from 'components/common/Button'
 import { Link } from 'react-router-dom'
 import  React from 'react'
-import { SvgLoader } from 'react-svgmt'
-import logo from 'img/pavdev.svg'
+// import { SvgLoader } from 'react-svgmt'
+import { ReactComponent as Logo } from 'img/pavdev.svg'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -17,15 +17,13 @@ const LogoTextWrapper = styled.div`
   margin: auto;
   top:30%;
 `
-const MobilLogo = styled(SvgLoader)`
+const MobilLogo = styled(Logo)`
   display: block;
   width: auto;
   height: 50px;
   margin-bottom: 10px;
 
-  > path {
-    fill: #fff;
-  }
+  path { fill: #fff; }
 `
 const H1 = styled.h5`
   margin: 0px;
@@ -52,7 +50,7 @@ function Welcome({ ...props }) {
     <Wrapper>
       <LogoTextWrapper>
         <H1>I'm</H1>
-        <MobilLogo path={logo}></MobilLogo>
+        <MobilLogo />
         <Text>
           This is my Portfolio <br />
         </Text>

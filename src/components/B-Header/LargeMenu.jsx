@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react'
-import dropdown from 'img/icon/dropdown.svg'
+import dropdown, { ReactComponent as DropdownIconSvg } from 'img/icon/dropdown.svg'
 import 'react-slidedown/lib/slidedown.css'
 import styled from 'styled-components'
-import {SvgLoader} from 'react-svgmt'
-import logo from 'img/pavdev.svg'
+import { ReactComponent as Logo } from 'img/pavdev.svg'
 import {connect} from 'react-redux'
 import {getMenu, getLang} from 'selectors/pageContent.selector'
 import LangSwitch from 'components/B-Header/LangSwitch'
@@ -26,14 +25,11 @@ const LangWrapper = styled.div`
   top:-50px;
   right:23px;
 `
-const MainLogo = styled(SvgLoader)`
+const MainLogo = styled(Logo)`
   display: inline-block;
   margin: 30px auto auto 30px;
   width: auto;
   height: 50px;
-  > path {
-    fill: #fff;
-  }
 `
 const Link = styled.a`
   position: relative;
@@ -58,7 +54,7 @@ const DropDown = styled(Link)`
     color: #fff;
   }
 `
-const DropdownIcon = styled(SvgLoader)`
+const DropdownIcon = styled(DropdownIconSvg)`
   position: absolute;
   top: 25px;
   left: 50%;
@@ -77,7 +73,7 @@ function MainLarge({ ...props }) {
 
   return (
     <Wrapper>
-      <MainLogo path={logo}></MainLogo>
+      <MainLogo></MainLogo>
       <InnerMainNav EngLang={props.EngLang}>
         <LangWrapper>
           <LangSwitch></LangSwitch>
@@ -97,7 +93,7 @@ function MainLarge({ ...props }) {
                     {item.react ? item.react.title : null}
                   </DropDown>
                 ) : item.react ? (
-                  <DropdownIcon path={dropdown}></DropdownIcon>
+                  <DropdownIcon></DropdownIcon>
                 ) : null}
               </Link>
             )

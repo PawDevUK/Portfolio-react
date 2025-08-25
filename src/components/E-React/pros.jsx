@@ -1,7 +1,6 @@
 import { P } from 'components/common/typography'
 import styled from 'styled-components'
-import icon from 'img/icon/done_24px.svg'
-import { SvgLoader } from 'react-svgmt'
+import { ReactComponent as IconSvg } from 'img/icon/done_24px.svg'
 import React from 'react'
 
 const Wrapper = styled.div`
@@ -10,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
 `
-const Icon = styled(SvgLoader)`
+const Icon = styled(IconSvg)`
   margin: 0px 4px 0px 0px;
   height: 20px;
 `
@@ -21,7 +20,7 @@ const StP = styled(P)`
 export default function Pros({ ...props }) {
   return (
     <Wrapper>
-      <Icon path={icon}></Icon>
+      <Icon />
       <StP {...props}>{props.children}</StP>
     </Wrapper>
   )

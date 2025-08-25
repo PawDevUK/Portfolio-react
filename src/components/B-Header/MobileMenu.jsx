@@ -3,18 +3,17 @@ import styled, { css } from 'styled-components'
 import Burger from 'components/common/Burger'
 import { SlideDown } from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
-import dropdown from 'img/icon/dropdown.svg'
-import { SvgLoader } from 'react-svgmt'
-import logo from 'img/pavdev.svg'
+import dropdown, { ReactComponent as DropdownIconSvg } from 'img/icon/dropdown.svg'
+import { ReactComponent as Logo } from 'img/pavdev.svg'
 import { Menu } from 'config/headerMenu.config'
 import 'aos/dist/aos.css'
 
 const Wrapper = styled.div``
-const LogoHeader = styled(SvgLoader)`
+const LogoHeader = styled(Logo)`
   margin: auto 50px auto auto;
   width: auto;
   height: 50px;
-  > path {
+  path {
     fill: #17293f;
   }
 `
@@ -63,7 +62,7 @@ const MobileLink = styled.a`
   color: #353535;
   display: block;
 `
-const DropDowIcon = styled(SvgLoader)`
+const DropDowIcon = styled(DropdownIconSvg)`
   position: absolute;
   left: 85px;
   top: 10px;
@@ -95,7 +94,7 @@ export default function MobileMenu() {
     <Wrapper>
       <MobilTopDiv>
         <Burger click={click}></Burger>
-        <LogoHeader path={logo}></LogoHeader>
+        <LogoHeader />
       </MobilTopDiv>
 
       <MobilNav toggle={toggle}>

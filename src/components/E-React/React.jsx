@@ -1,13 +1,4 @@
-import JumboSectionHeader from 'components/common/JumboSectionHeader'
-import { ReactComponentData } from 'config/reactComponent.config'
-import { getPLineHight } from 'selectors/pageContent.selector'
-import styled, { keyframes } from 'styled-components'
-import { P } from 'components/common/typography'
-import Pros from 'components/E-React/pros'
-import { SvgLoader } from 'react-svgmt'
-import { connect } from 'react-redux'
-import Reacticon from 'img/react.svg'
-import React from 'react'
+import { ReactComponent as ReactIconSvg } from 'img/react.svg';
 
 const height = '350px'
 const rotate = keyframes`
@@ -43,7 +34,7 @@ const ProsWrapper = styled.div`
   flex-wrap: wrap;
   margin-bottom: 10px;
 `
-const ReactIcon = styled(SvgLoader)`
+const ReactIcon = styled(ReactIconSvg)`
   animation: ${rotate} 30s infinite linear;
   display: flex;
   height: 270px;
@@ -95,7 +86,7 @@ function ReactSection(props) {
           </ProsWrapper>
         </LeftWrapper>
         <RightWrapper>
-          <ReactIcon path={Reacticon}> </ReactIcon>
+          <ReactIcon />
         </RightWrapper>
       </ContentWrapper>
     </Wrapper>
