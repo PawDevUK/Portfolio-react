@@ -5,8 +5,11 @@ import {
   getReactHeader,
   getReactPros,
 } from 'selectors/pageContent.selector';
+import styled, { keyframes } from 'styled-components';
+import { P } from 'components/common/typography';
 import { ReactComponent as ReactIconSvg } from 'img/react.svg';
 import { connect } from 'react-redux';
+import React from 'react';
 
 const height = '350px'
 const rotate = keyframes`
