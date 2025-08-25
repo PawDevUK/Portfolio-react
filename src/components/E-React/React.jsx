@@ -1,3 +1,4 @@
+import JumboSectionHeader from 'components/common/JumboSectionHeader';
 import {
   getPLineHight,
   getReactMainText,
@@ -76,9 +77,7 @@ function ReactSection(props) {
     <Wrapper id="react">
       <ContentWrapper>
         <LeftWrapper>
-          <JumboSectionHeader dark>
-            {ReactComponentData.Header}
-          </JumboSectionHeader>
+          <JumboSectionHeader dark>{props.header}</JumboSectionHeader>
 
           <StP p_line_height={props.pLineHeight} dark>{ReactComponentData.MainText}</StP>
 
