@@ -49,7 +49,7 @@ const Button = styled.div`
   ${(p) =>
     p.contact
       ? css`
-          margin-bottom: 20px;
+          margin-bottom: 15px;
         `
       : css``}
 `
