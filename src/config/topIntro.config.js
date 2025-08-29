@@ -2,7 +2,41 @@ export const intro = {
   "header": "About Me",
   "PolLang": {
     "header": "Trochę o mnie",
-    "text": "<p class=\"styledP\">Jestem deweloperem<span class=\"bold\">React</span> z Reading, Wielka Brytania. Tworzę aplikacje internetowe React oparte na komponentach stylizowanych za pomocą<span class=\"bold\">styled-components</span>. Głównie używam JavaScript do front-endu i mam pewną wiedzę na temat Node.js do back-endu oraz <span class=\"bold\">MongoDB</span> jako bazy danych dokumentów.</p><p class=\"styledP\">Projektuję i tworzę nowoczesne strony internetowe oraz aplikacje webowe z funkcjonalnościami, w tym <span class=\"bold\">API</span>. Używam <span class=\"bold\">Figma</span> do projektowania nowoczesnych układów z wykorzystaniem różnych popularnych wzorców projektowych. Ponieważ większość użytkowników internetu przegląda sieć na urządzeniach mobilnych, responsywny web design (RWD) jest bardzo ważny. Dlatego implementuję <span class=\"bold\">RWD</span> w moich stronach i aplikacjach.</p><p class=\"styledP\">Używam <span class=\"bold\">React</span>, co wymaga dobrej znajomości kilku technologii, takich jak <span class=\"bold\">JavaScript ES6</span>, HTML, CSS, menedżery pakietów, Webpack, Babel i wiele innych. Większość mojej pracy jest zarządzana za pomocą Git CLI na <span class=\"bold\">GitHub</span>, więc często tworzę gałęzie, dokonuję commitów, pushów, pullów i merge'ów.</p><p class=\"styledP\">Pracuję na maszynach <span class=\"bold\">Macbook</span>, <span class=\"bold\">Windows</span> oraz <span class=\"bold\">Linux</span>. Moim ulubionym edytorem kodu jest <span class=\"bold\">Visual Studio Code</span>. Dodatkowo wiem, jak zbudować back-end do prostego komunikowania się (Express.js) z front-endem (Axios) i bazą danych.</p>"
+    "text": `<p class="styledP">
+      Jestem Frontend/Backend Developerem z Reading (UK), specjalizującym się w nowoczesnych aplikacjach webowych opartych o <span class="bold">React</span>, <span class="bold">Redux Toolkit</span>, <span class="bold">Next.js</span> i <span class="bold">styled-components</span>. Pracuję z <span class="bold">JavaScript (ES6+)</span> oraz <span class="bold">TypeScript</span>.
+    </p>
+    <p class="styledP">
+      Posiadam doświadczenie w budowie aplikacji SPA, integracji z REST API, zarządzaniu stanem (Redux), routingu (React Router), a także w stosowaniu nowoczesnych narzędzi i bibliotek.
+    </p>
+    <p class="styledP">
+      Stylowanie realizuję z użyciem <span class="bold">styled-components</span>, <span class="bold">SCSS/SASS</span>, <span class="bold">Bootstrap</span>, dbając o responsywność i animacje.
+    </p>
+    <p class="styledP">
+      Backend: <span class="bold">Node.js</span>, <span class="bold">Express.js</span>, <span class="bold">MongoDB</span>, wdrożenia na <span class="bold">Google Cloud Platform</span>. Znam podstawy autoryzacji, walidacji i bezpiecznego kodowania.
+    </p>
+    <p class="styledP">
+      Pracuję z <span class="bold">Git</span>, <span class="bold">GitHub</span>, narzędziami build (<span class="bold">Webpack</span>, <span class="bold">npm</span>), testami automatycznymi (<span class="bold">React Testing Library</span>, <span class="bold">Jest</span>), oraz wdrażam projekty na <span class="bold">gh-pages</span>.
+    </p>
+    <p class="styledP">
+      Organizuję projekty w strukturze feature-folder, dbam o czytelność kodu, dokumentację i komunikację techniczną. Stawiam na rozwój, obecnie pogłębiam <span class="bold">TypeScript</span> i testy automatyczne.
+    </p>`
   },
-  "text": "<p class=\"styledP\">I am a <span class=\"bold\">React</span> developer from Reading, UK. I create React web apps based on components styled with <span class=\"bold\">styled-components</span>. I mainly use JavaScript for front-end development and have some knowledge of Node.js for back-end development and <span class=\"bold\">MongoDB</span> as a document database.</p><p class=\"styledP\">I design and build modern websites and web applications, including <span class=\"bold\">APIs</span>. I use <span class=\"bold\">Figma</span> to design modern layouts utilizing various popular design patterns. Since most internet users browse the web on mobile devices, responsive web design (RWD) is quite important. Therefore, I implement <span class=\"bold\">RWD</span> in my websites and applications.</p><p class=\"styledP\">I use <span class=\"bold\">React</span>, which requires a good understanding of technologies such as <span class=\"bold\">JavaScript ES6</span>, HTML, CSS, package managers, Webpack, Babel, and many more. Most of my work is managed via Git CLI on <span class=\"bold\">GitHub</span>, so I branch, commit, push, pull, and merge fairly often.</p><p class=\"styledP\">My work is done on <span class=\"bold\">MacBook</span>, <span class=\"bold\">Windows</span>, and <span class=\"bold\">Linux</span> machines. My code editor of choice is <span class=\"bold\">Visual Studio Code</span>. Additionally, I know how to build a back end (Express.js) that communicates with the front end (Axios) and a database.</p>"
+  "text": `<p class="styledP">
+    I am a Frontend/Backend Developer based in Reading, UK, specializing in building modern, scalable web applications with <span class="bold">React</span>, <span class="bold">Redux Toolkit</span>, <span class="bold">Next.js</span>, and <span class="bold">styled-components</span>. I have strong experience with <span class="bold">JavaScript (ES6+)</span>. Learning at the moment <span class="bold">TypeScript</span>.
+  </p>
+  <p class="styledP">
+    My expertise includes developing single-page applications (SPAs), integrating REST APIs, robust state management (Redux), and routing (React Router). I work with modern libraries and tools.
+  </p>
+  <p class="styledP">
+    For styling, I use <span class="bold">styled-components</span>, <span class="bold">SCSS/SASS</span>, and <span class="bold">Bootstrap</span>, ensuring responsive design and smooth animations.
+  </p>
+  <p class="styledP">
+    On the backend, I have experience with <span class="bold">Node.js</span>, <span class="bold">Express.js</span>, <span class="bold">MongoDB</span>, and deploying solutions to <span class="bold">Google Cloud Platform</span>. I am familiar with authentication, validation, and secure coding practices.
+  </p>
+  <p class="styledP">
+    My workflow includes <span class="bold">Git</span> and <span class="bold">GitHub</span> for version control, build tools (<span class="bold">Webpack</span>, <span class="bold">npm</span>), automated testing (<span class="bold">React Testing Library</span>, <span class="bold">Jest</span>), and deploying projects to <span class="bold">gh-pages</span>.
+  </p>
+  <p class="styledP">
+    I organize projects using a feature-folder structure, focus on clean code, documentation, and technical communication. I am committed to continuous learning, currently deepening my skills in <span class="bold">TypeScript</span> and automated testing.
+  </p>`
 }
