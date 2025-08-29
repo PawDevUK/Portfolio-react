@@ -16,7 +16,7 @@ function Cv() {
         <header className='grid-plus ' id='header'>
           <div id='header-info'>
             <h1 id='header'>pawel siwek</h1>
-            <h2>React Developer</h2>
+            <h2>Junio Full Stack Developer</h2>
           </div>
           <div id='socials'>
             <a
@@ -87,21 +87,25 @@ function Cv() {
           <article id='art-know'>
             <div class='Skills'>
               <ul>
-                <li>JavaScript ES6 (1 years)</li>
-                <li>HTML (3 years)</li>
-                <li>CSS (3 years)</li>
-                <li>React (1 year)</li>
-                <li>Node Package Manager</li>
-                <li>Styled-Components</li>
-                <li>React-Router</li>
-                <li>WebPack</li>
+                <li>JavaScript ES6 (6 years)</li>
+                <li>TypeScript (Learning)</li>
+                <li>Python (Basic)</li>
+                <li>HTML (7 years)</li>
+                <li>CSS (7 years)</li>
+                <li>React (5 year)</li>
+                <li>Next.js (Learning)</li>
+                <li>Git</li>
+                <li>NPM</li>
+                <li>Material Ui</li>
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
               </ul>
             </div>
             <div class='Skills'>
               <ul>
-                <li>Material Ui</li>
-                <li>Bootstrap</li>
-                <li>Git / GitHub</li>
+                <li>WebPack</li>
+                <li>React-Router</li>
+                <li>Styled-Components</li>
                 <li>VsCode</li>
                 <li>Babel</li>
                 <li>Linux</li>
@@ -185,6 +189,15 @@ function Cv() {
               <span>Goodwood Solicitors</span>
             </div>
             <p>Mobile-first webpage with menu to sub-pages.</p>
+            <div class='cv-h5'>
+              <span>Portfolio Server</span>
+            </div>
+            <p>
+              Backend services for the Portfolio app implemented with Node.js
+              and Express. Features include API routes, MongoDB (Mongoose)
+              integration, serverless Cloud Functions for background tasks and
+              file processing, and Nodemailer for transactional emails.
+            </p>
           </article>
         </section>
         {/* <div className="m-5 heigh-3 breaker"></div> */}
