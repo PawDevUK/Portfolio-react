@@ -41,6 +41,11 @@
 #art-know{
     display:flex;
 }
+
+#firstSkillsSet {
+    margin: 0px;
+}
+
 .Skills{
     margin: 0px 0px 0px 20px;
     font-size: 18px;
@@ -48,6 +53,8 @@
 .Skills ul li {
     line-height: 24px;
 }
+
+
 
 a:hover {
     color: #0faee1;

@@ -68,14 +68,15 @@ function Cv() {
               managing state with Redux. Skilled in styled-components,
               SCSS/SASS, Tailwind, Material-UI, and Bootstrap
               <br />
-              for responsive, modern designs.
-               Backend experience includes Node.js, Express.js,
+              for responsive, modern designs. Backend experience includes
+              Node.js, Express.js,
               <br /> MongoDB, and deploying to Google Cloud Platform and AWS.
               <br />
               Proficient in Git/GitHub/gitLab, build tools, and automated
               testing with Jest,
               <br /> React Testing Library, and deploying projects. Focused on
-              clean code, feature-based, component composition architecture, and continuous learning.
+              clean code, feature-based, component composition architecture, and
+              continuous learning.
             </p>
           </article>
         </section>
@@ -85,17 +86,13 @@ function Cv() {
             <h4>skills</h4>
           </header>
           <article id='art-know'>
-            <div class='Skills'>
+            <div class='Skills' id='firstSkillsSet'>
               <ul>
                 <li>JavaScript ES6 (6 years)</li>
                 <li>TypeScript (Learning)</li>
-                <li>Python (Basic)</li>
-                <li>HTML (7 years)</li>
-                <li>CSS (7 years)</li>
                 <li>React (5 year)</li>
+                <li>Redux Toolkit</li>
                 <li>Next.js (Learning)</li>
-                <li>Git</li>
-                <li>NPM</li>
                 <li>Material Ui</li>
                 <li>Tailwind</li>
                 <li>Bootstrap</li>
@@ -103,14 +100,14 @@ function Cv() {
             </div>
             <div class='Skills'>
               <ul>
-                <li>WebPack</li>
-                <li>React-Router</li>
                 <li>Styled-Components</li>
-                <li>VsCode</li>
-                <li>Babel</li>
-                <li>Linux</li>
+                <li>Git/Github/GitLab</li>
+                <li>React-Router</li>
+                <li>Moment.js</li>
+                <li>Jest</li>
                 <li>Figma</li>
-                <li>Gcloud</li>
+                <li>MacOS</li>
+                <li>Gcloud/AWS</li>
               </ul>
             </div>
             <div class='Skills'>
@@ -127,9 +124,13 @@ function Cv() {
             </div>
             <div class='Skills'>
               <ul>
+                <li>Python (Basic)</li>
                 <li>Nivo</li>
                 <li>Particles.js</li>
-                <li>Axios</li>
+                
+                
+                <li>NPM</li>
+                <li>Babel</li>
               </ul>
             </div>
           </article>
