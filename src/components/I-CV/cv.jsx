@@ -1,53 +1,53 @@
-import './cv.css'
+import './cv.css';
 
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const A = styled.a`
   &:hover {
     text-decoration: none;
   }
-`
+`;
 
 function Cv() {
   return (
-    <A href="/content">
-      <div id="cv" className="page">
-        <header className="grid-plus " id="header">
-          <div id="header-info">
+    <A href='/content'>
+      <div id='cv' className='page'>
+        <header className='grid-plus ' id='header'>
+          <div id='header-info'>
             <h1 id='header'>pawel siwek</h1>
-            <h2>React Developer</h2>
+            <h2>Junio Full Stack Developer</h2>
           </div>
-          <div id="socials">
+          <div id='socials'>
             <a
-              href="https://www.linkedin.com/in/pawel-s-78432119b"
-              target="_blank"
+              href='https://www.linkedin.com/in/pawel-s-78432119b'
+              target='_blank'
             >
-              <i className="fa fa-linkedin"></i>
+              <i className='fa fa-linkedin'></i>
             </a>
-            <a href="https://github.com/GitcrackerUK" target="_blank">
-              <i className="fa fa-github"></i>
+            <a href='https://github.com/GitcrackerUK' target='_blank'>
+              <i className='fa fa-github'></i>
             </a>
           </div>
         </header>
-        <section className="grid" id="contact">
+        <section className='grid' id='contact'>
           <header>
             <h4>contact details</h4>
           </header>
-          <article className="grid-plus" id="cont-art">
-            <div id="left">
-              <div className="head">email:</div>
-              <div className="head">town:</div>
-              <div className="head">telephone:</div>
-              <div className="head">portfolio:</div>
-              <div className="head">languages:</div>
+          <article className='grid-plus' id='cont-art'>
+            <div id='left'>
+              <div className='head'>email:</div>
+              <div className='head'>town:</div>
+              <div className='head'>telephone:</div>
+              <div className='head'>portfolio:</div>
+              <div className='head'>languages:</div>
             </div>
-            <div id="right">
-              <div className="info">P.F.Siwek@gmail.com</div>
-              <div className="info">Reading, UK</div>
-              <div className="info">07463765514</div>
-              <div className="info">
-                <a href="http://www.pawelsiwek.co.uk">pawelsiwek.co.uk</a>
+            <div id='right'>
+              <div className='info'>P.F.Siwek@gmail.com</div>
+              <div className='info'>Reading, UK</div>
+              <div className='info'>07463765514</div>
+              <div className='info'>
+                <a href='http://www.pawelsiwek.co.uk'>pawelsiwek.co.uk</a>
               </div>
               <ul>
                 <li>English (fluent)</li>
@@ -56,46 +56,50 @@ function Cv() {
             </div>
           </article>
         </section>
-        <section className="grid mx-4">
+        <section className='grid mx-4'>
           <header></header>
           <article>
-            <p className="mx-1">
-              A Junior React developer from Reading, UK. I have good understanding of back-end as well Creates React web apps based
-              on components styled in styled-components. Uses mainly JavaScript
-              for front-end and has experience in Node.Js for back-end and
-              MongoDB. <br />
-              Designs and creates, modern looking websites and web applications
-              with functionality including Rest API. <br /> Uses Figma to design
-              modern looking layouts with the use of number of popular design
-              patterns. Currently, most of the internet users browse Web on
-              mobile devices therefore RWD is quite important that is why
-              implements it in his websites and applications. <br />
+            <p className='mx-1'>
+              Frontend/Backend Developer from Reading, UK, specializing in
+              React, Redux Toolkit, and Next.js. Strong in JavaScript (ES6+),
+              learning TypeScript, and experienced in building SPAs, integrating
+              REST APIs, and managing state with Redux. Skilled in
+              styled-components, SCSS/SASS, Tailwind, Material-UI, and Bootstrap
+              for responsive, modern designs. Backend experience includes
+              Node.js, Express.js, MongoDB, and deploying to Google Cloud
+              Platform. Proficient in Git/GitHub, build tools, automated testing
+              (Jest, React Testing Library), and deploying projects. Focused on
+              clean code, feature-based architecture, and continuous learning.
             </p>
           </article>
         </section>
         {/* <!-- Knowledge --> */}
-        <section className="grid" id="know">
-          <header id="header-know">
+        <section className='grid' id='know'>
+          <header id='header-know'>
             <h4>Knowledge/skills</h4>
           </header>
-          <article id="art-know">
-            <div class="Skills">
+          <article id='art-know'>
+            <div class='Skills'>
               <ul>
-                <li>JavaScript ES6 (1 years)</li>
-                <li>HTML (3 years)</li>
-                <li>CSS (3 years)</li>
-                <li>React (1 year)</li>
-                <li>Node Package Manager</li>
-                <li>Styled-Components</li>
-                <li>React-Router</li>
-                <li>WebPack</li>
+                <li>JavaScript ES6 (6 years)</li>
+                <li>TypeScript (Learning)</li>
+                <li>Python (Basic)</li>
+                <li>HTML (7 years)</li>
+                <li>CSS (7 years)</li>
+                <li>React (5 year)</li>
+                <li>Next.js (Learning)</li>
+                <li>Git</li>
+                <li>NPM</li>
+                <li>Material Ui</li>
+                <li>Tailwind</li>
+                <li>Bootstrap</li>
               </ul>
             </div>
-            <div class="Skills">
+            <div class='Skills'>
               <ul>
-                <li>Material Ui</li>
-                <li>Bootstrap</li>
-                <li>Git / GitHub</li>
+                <li>WebPack</li>
+                <li>React-Router</li>
+                <li>Styled-Components</li>
                 <li>VsCode</li>
                 <li>Babel</li>
                 <li>Linux</li>
@@ -103,7 +107,7 @@ function Cv() {
                 <li>Gcloud</li>
               </ul>
             </div>
-            <div class="Skills">
+            <div class='Skills'>
               <ul>
                 <li>Node.js</li>
                 <li>Nodemon</li>
@@ -115,7 +119,7 @@ function Cv() {
                 <li>MongoDB</li>
               </ul>
             </div>
-            <div class="Skills">
+            <div class='Skills'>
               <ul>
                 <li>Nivo</li>
                 <li>Particles.js</li>
@@ -126,11 +130,11 @@ function Cv() {
         </section>
 
         {/* <!-- Work History --> */}
-        <section className="grid" id="work">
-          <header id="header-know">
+        <section className='grid' id='work'>
+          <header id='header-know'>
             <h4>Experience</h4>
           </header>
-          <article id="art-work">
+          <article id='art-work'>
             <div class='cv-h5'>
               <span>Portfolio</span>
             </div>
@@ -151,7 +155,7 @@ function Cv() {
               figma, programmed in React and hosted on Gcloud. <br /> Here are
               tools used in this project:
             </p>
-            <p class="Tools">
+            <p class='Tools'>
               BotLibre API, React, Create-React-App, React-Router-Dom, Axios,
               XML2JS, Gcloud
             </p>
@@ -179,13 +183,22 @@ function Cv() {
               <span>Goodwood Solicitors</span>
             </div>
             <p>Mobile-first webpage with menu to sub-pages.</p>
+            <div class='cv-h5'>
+              <span>Portfolio Server</span>
+            </div>
+            <p>
+              Backend services for the Portfolio app implemented with Node.js
+              and Express. Features include API routes, MongoDB (Mongoose)
+              integration, serverless Cloud Functions for background tasks and
+              file processing, and Nodemailer for transactional emails.
+            </p>
           </article>
         </section>
         {/* <div className="m-5 heigh-3 breaker"></div> */}
 
         {/* <!-- Education --> */}
-        <section className="grid" id="edu">
-          <header id="header-edu">
+        <section className='grid' id='edu'>
+          <header id='header-edu'>
             <h4>Education</h4>
           </header>
           <article>
@@ -224,7 +237,7 @@ function Cv() {
         </section>
       </div>
     </A>
-  )
+  );
 }
 
-export default Cv
+export default Cv;
