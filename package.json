@@ -56,9 +56,9 @@
     "xml2js": "^0.4.23"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && node start.js",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build && move build docs",
-    "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider node start.js",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
