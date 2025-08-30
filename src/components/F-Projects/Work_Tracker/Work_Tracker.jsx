@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Calendar from './Calendar/Calendar';
-import DayTime from './DayTime/DayTime';
+// import DayTime from './DayTime/DayTime';
 import ClockInOut from './Clock-in_out/Clock_IN_OUT';
 import Menu from './Menu/Menu';
 import { connect } from "react-redux";
@@ -18,7 +18,7 @@ class WorkTracker extends Component {
         payload = <Calendar></Calendar>;
         break;
       case 'Day Tracker':
-        payload = <DayTime></DayTime>;
+        // payload = <DayTime></DayTime>;
         break;
       default:
     }
