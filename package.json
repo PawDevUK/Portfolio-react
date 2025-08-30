@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://pawdevuk.github.io/Portfolio-react/",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
