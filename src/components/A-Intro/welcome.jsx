@@ -2,7 +2,7 @@ import Button from 'components/common/Button'
 import { Link } from 'react-router-dom'
 import  React from 'react'
 // import { SvgLoader } from 'react-svgmt'
-import { ReactComponent as Logo } from 'img/pavdev.svg'
+import { ReactComponent as Logo } from 'img/pawdev.svg'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`

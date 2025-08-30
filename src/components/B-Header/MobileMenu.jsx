@@ -4,7 +4,7 @@ import Burger from 'components/common/Burger'
 import { SlideDown } from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
 import dropdown, { ReactComponent as DropdownIconSvg } from 'img/icon/dropdown.svg'
-import { ReactComponent as Logo } from 'img/pavdev.svg'
+import { ReactComponent as Logo } from 'img/pawdev.svg'
 import { Menu } from 'config/headerMenu.config'
 import 'aos/dist/aos.css'
 
@@ -12,7 +12,7 @@ const Wrapper = styled.div``
 const LogoHeader = styled(Logo)`
   margin: auto 50px auto auto;
   width: auto;
-  height: 50px;
+  height: 30px;
   path {
     fill: #17293f;
   }

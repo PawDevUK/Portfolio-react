@@ -278,7 +278,7 @@ components.\
     │   ├── node.jpg
     │   ├── npm.png
     │   ├── pavdev.png
-    │   ├── pavdev.svg
+    │   ├── pawdev.svg
     │   ├── React.png
     │   ├── ReactRouter.png
     │   ├── react.svg
