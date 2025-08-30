@@ -8,7 +8,7 @@ export const headerJumboText = {
     },
     a:{
         header:"If you wish, you can check my GitHub repositories.",
-        href:"https://github.com/GitcrackerUK",
+        href:"https://github.com/pawdevuk",
         PolishLang:{
             header:"Jeśli chcesz, przejrzyj moje repozytoria na GitHub",
         }

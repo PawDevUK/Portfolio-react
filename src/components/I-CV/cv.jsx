@@ -25,7 +25,7 @@ function Cv() {
             >
               <i className='fa fa-linkedin'></i>
             </a>
-            <a href='https://github.com/GitcrackerUK' target='_blank'>
+            <a href='https://github.com/pawdevuk' target='_blank'>
               <i className='fa fa-github'></i>
             </a>
           </div>
