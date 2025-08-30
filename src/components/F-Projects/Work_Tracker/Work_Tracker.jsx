@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Calendar from './Calendar/Calendar.jsx';
-import DayTime from './DayTime/DayTime.jsx';
-import ClockInOut from './Clock-in_out/Clock_IN_OUT.jsx';
+import Calendar from './Calendar/Calendar';
+import DayTime from './DayTime/DayTime';
+import ClockInOut from './Clock-in_out/Clock_IN_OUT';
 import Menu from './Menu/Menu';
 import { connect } from "react-redux";
 import s from './style/style.module.css';
