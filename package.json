@@ -93,6 +93,5 @@
     "@types/yargs-parser": "^21.0.3",
     "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0"
-  },
-  "homepage": "https://pawdevuk.github.io/Portfolio-react"
+  }
 }
