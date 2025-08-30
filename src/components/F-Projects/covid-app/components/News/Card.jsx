@@ -30,7 +30,6 @@ const Thumbnail = styled.img`
 `;
 const RightInnerWrapper = styled.div`
     padding: 10px;
-    ${(p) => console.log(p)}
     ${(p) => {
         return p.src !== null
             ? css`
