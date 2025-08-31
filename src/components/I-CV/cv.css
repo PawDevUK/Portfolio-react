@@ -29,7 +29,11 @@
     font-size: 35px;
     color: #333;
     margin: 0px;
+    padding-left:0px;
     text-transform: capitalize;
+}
+#name{
+font-size: 35px;
 }
 
 .Tools{
@@ -47,7 +51,7 @@
 }
 
 .Skills{
-    margin: 0px 0px 0px 20px;
+    margin: 0px;
     font-size: 18px;
 }
 .Skills ul li {

@@ -15,19 +15,8 @@ function Cv() {
       <div id='cv' className='page'>
         <header className='grid-plus' id='header'>
           <div id='header-info'>
-            <h1 id='header'>Pawel Siwek</h1>
+            <h1 id='name'>Pawel Siwek</h1>
             <h2>Junior Full-Stack Developer</h2>
-          </div>
-          <div id='socials'>
-            <a
-              href='https://www.linkedin.com/in/pawel-s-78432119b'
-              target='_blank'
-            >
-              <i className='fa fa-linkedin'></i>
-            </a>
-            <a href='https://github.com/pawdevuk' target='_blank'>
-              <i className='fa fa-github'></i>
-            </a>
           </div>
         </header>
 
