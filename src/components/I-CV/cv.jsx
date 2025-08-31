@@ -54,7 +54,8 @@ function Cv() {
           </header>
           <Article>
             <p>
-B              React and Node.js. Experienced in building SPAs, integrating REST
+              Junior Full-Stack Developer from Reading, UK, specializing in
+              React and Node.js. Experienced in building SPAs, integrating REST
               APIs, and developing responsive, modern web applications.
             </p>
             <p>
