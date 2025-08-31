@@ -5,7 +5,9 @@
     background-color: #fff;
     box-shadow: 1px 0px 25px rgba(50, 50, 50, 0.75);
 }
-
+#WorkHeader{
+    margin-top:0px;
+}
 .cv-h5{
     font-weight: bold;
     text-transform: capitalize;
@@ -76,12 +78,14 @@ a:hover {
     /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 10px 0px 10px 0px;
 }
 
 .grid {
     /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr;
+    
 }
 
 @media (min-width: 800px) {

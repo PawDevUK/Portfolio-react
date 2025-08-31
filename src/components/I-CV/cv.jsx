@@ -9,6 +9,10 @@ const A = styled.a`
   }
 `;
 
+const Article = styled.article`
+  padding: 10px 0px 10px 0px;
+`
+
 function Cv() {
   return (
     <A href='/content'>
@@ -24,7 +28,7 @@ function Cv() {
           <header>
             <h4>Contact Details</h4>
           </header>
-          <article className='grid-plus' id='cont-art'>
+          <Article className='grid-plus' id='cont-art'>
             <div id='left'>
               <div className='head'>Email:</div>
               <div className='head'>Town:</div>
@@ -41,37 +45,36 @@ function Cv() {
               </div>
               <div className='info'>English (Fluent), Polish (Native)</div>
             </div>
-          </article>
+          </Article>
         </section>
 
         <section className='grid mx-4'>
           <header>
             <h4>About Me</h4>
           </header>
-          <article>
+          <Article>
             <p>
-              Junior Full-Stack Developer from Reading, UK, specializing in
-              React and Node.js. Experienced in building SPAs, integrating REST
+B              React and Node.js. Experienced in building SPAs, integrating REST
               APIs, and developing responsive, modern web applications.
             </p>
             <p>
               Strong knowledge of JavaScript (ES6+), currently learning
               TypeScript and React useContext. Skilled in styled-components,
-              SCSS/SASS, Tailwind, Material-UI, and Bootstrap.
+              SCSS/SASS, Tailwind, Mbaterial-UI, and Bootstrap.
             </p>
             <p>
               Backend experience includes Node.js, Express.js, MongoDB, and
               cloud deployments (GCP & AWS). Focused on clean code,
               component-based architecture, and continuous learning.
             </p>
-          </article>
+          </Article>
         </section>
 
         <section className='grid' id='know'>
           <header>
             <h4>Skills</h4>
           </header>
-          <article id='art-know'>
+          <Article id='art-know'>
             <div class='Skills'>
               <h5>Frontend</h5>
               <ul>
@@ -105,17 +108,17 @@ function Cv() {
                 <li>GCP / AWS</li>
               </ul>
             </div>
-          </article>
+          </Article>
         </section>
 
         <section className='grid' id='work'>
           <header>
             <h4>Experience</h4>
           </header>
-          <article id='art-work'>
-            <div class='cv-h5'>
+          <Article id='art-work'>
+            <div class='cv-h5' id='WorkHeader'>
               <span>Junior Full-Stack Developer – Filament AI</span>
-              <time>June 2023 – August 2025</time>
+              <time>April 2021 – Decembre 2021</time>
             </div>
             <ul>
               <li>
@@ -215,14 +218,14 @@ function Cv() {
               <span>Goodwood Solicitors</span>
             </div>
             <p>Mobile-first website with navigation menu and sub-pages.</p>
-          </article>
+          </Article>
         </section>
 
         <section className='grid' id='edu'>
           <header>
             <h4>Education</h4>
           </header>
-          <article>
+          <Article>
             <div class='cv-h5'>
               <span>Relevant Coursework</span>
             </div>
@@ -256,7 +259,7 @@ function Cv() {
               <span>Basic Vocational School</span>
               <time>2000 – 2003</time>
             </div>
-          </article>
+          </Article>
         </section>
       </div>
     </A>
