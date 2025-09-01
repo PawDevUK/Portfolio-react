@@ -11,7 +11,7 @@ const A = styled.a`
 
 const Article = styled.article`
   padding: 10px 0px 10px 0px;
-`
+`;
 
 function Cv() {
   return (
@@ -55,18 +55,22 @@ function Cv() {
           <Article>
             <p>
               Junior Full-Stack Developer from Reading, UK, specializing in
-              React and Node.js.<br/> Experienced in building SPAs, integrating REST
-              APIs, and developing responsive,<br /> modern web applications.
+              React and Node.js.
+              <br /> Experienced in building SPAs, integrating REST APIs, and
+              developing responsive,
+              <br /> modern web applications.
             </p>
             <p>
               Strong knowledge of JavaScript (ES6+), currently learning
-              TypeScript and Python.<br/> Skilled in styled-components,
-              SCSS/SASS, Tailwind, Mbaterial-UI, and Bootstrap.
+              TypeScript and Python.
+              <br /> Skilled in styled-components, SCSS/SASS, Tailwind,
+              Mbaterial-UI, and Bootstrap.
             </p>
             <p>
               Backend experience includes Node.js, Express.js, MongoDB, and
-              cloud deployments <br/> to GCP, AWS, Azure. Focused on clean code,
-              component-based architecture,<br/> and continuous learning.
+              cloud deployments <br /> to GCP, AWS, Azure. Focused on clean
+              code, component-based architecture,
+              <br /> and continuous learning.
             </p>
           </Article>
         </section>
@@ -82,11 +86,12 @@ function Cv() {
                 <li>JavaScript ES6+</li>
                 <li>TypeScript (learning)</li>
                 <li>React / Next.js</li>
-                <li>useContext / Redux Toolkit (experience)</li>
+                <li>Redux Toolkit</li>
                 <li>React Router</li>
-                <li>
-                  Styled-Components / SCSS / Tailwind / Material-UI / Bootstrap
-                </li>
+                <li>Styled-Components</li>
+                <li>Tailwind</li>
+                <li>Material-UI</li>
+                <li>Bootstrap</li>
               </ul>
             </div>
             <div class='Skills'>
@@ -96,7 +101,7 @@ function Cv() {
                 <li>MongoDB / Mongoose</li>
                 <li>REST API integration</li>
                 <li>Nodemailer / Twilio</li>
-                <li>Serverless: Google Cloud Functions</li>
+                <li>Google Cloud Functions</li>
               </ul>
             </div>
             <div class='Skills'>
