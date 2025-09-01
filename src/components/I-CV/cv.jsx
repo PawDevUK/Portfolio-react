@@ -17,14 +17,14 @@ function Cv() {
   return (
     <A href='/content'>
       <div id='cv' className='page'>
-        <header className='grid-plus' id='header'>
+        <header className='grid-plus sectionPadding'>
           <div id='header-info'>
             <h1 id='name'>Pawel Siwek</h1>
             <h2>Junior Full-Stack Developer</h2>
           </div>
         </header>
 
-        <section className='grid' id='contact'>
+        <section className='grid sectionPadding'>
           <header>
             <h4>Contact Details</h4>
           </header>
@@ -48,30 +48,30 @@ function Cv() {
           </Article>
         </section>
 
-        <section className='grid mx-4'>
+        <section className='grid sectionPadding'>
           <header>
             <h4>About Me</h4>
           </header>
           <Article>
             <p>
               Junior Full-Stack Developer from Reading, UK, specializing in
-              React and Node.js. Experienced in building SPAs, integrating REST
-              APIs, and developing responsive, modern web applications.
+              React and Node.js.<br/> Experienced in building SPAs, integrating REST
+              APIs, and developing responsive,<br /> modern web applications.
             </p>
             <p>
               Strong knowledge of JavaScript (ES6+), currently learning
-              TypeScript and React useContext. Skilled in styled-components,
+              TypeScript and Python.<br/> Skilled in styled-components,
               SCSS/SASS, Tailwind, Mbaterial-UI, and Bootstrap.
             </p>
             <p>
               Backend experience includes Node.js, Express.js, MongoDB, and
-              cloud deployments (GCP & AWS). Focused on clean code,
-              component-based architecture, and continuous learning.
+              cloud deployments <br/> to GCP, AWS, Azure. Focused on clean code,
+              component-based architecture,<br/> and continuous learning.
             </p>
           </Article>
         </section>
 
-        <section className='grid' id='know'>
+        <section className='grid sectionPadding'>
           <header>
             <h4>Skills</h4>
           </header>
@@ -112,7 +112,7 @@ function Cv() {
           </Article>
         </section>
 
-        <section className='grid' id='work'>
+        <section className='grid sectionPadding'>
           <header>
             <h4>Experience</h4>
           </header>
@@ -222,7 +222,7 @@ function Cv() {
           </Article>
         </section>
 
-        <section className='grid' id='edu'>
+        <section className='grid sectionPadding'>
           <header>
             <h4>Education</h4>
           </header>

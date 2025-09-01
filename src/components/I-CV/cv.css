@@ -66,7 +66,7 @@ a:hover {
     color: #0faee1;
 }
 
-#header, #contact, #know, #work, #edu {
+.sectionPadding{
     padding: 10px 35px;
 }
 
@@ -78,7 +78,10 @@ a:hover {
     /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 10px 0px 10px 0px;
+   
+}
+#cont-art{
+     padding: 10px 0px 10px 0px;
 }
 
 .grid {
