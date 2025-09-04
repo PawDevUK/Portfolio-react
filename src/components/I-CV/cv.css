@@ -46,6 +46,7 @@ font-size: 35px;
 
 #art-know{
     display:flex;
+    justify-content: space-between;
 }
 
 #firstSkillsSet {
