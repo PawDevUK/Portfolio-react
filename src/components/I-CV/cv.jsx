@@ -8,7 +8,12 @@ const A = styled.a`
     text-decoration: none;
   }
 `;
-
+const ExpieranceWrapper = styled.div`
+  padding-right: 30px;
+`;
+const SchoolSection = styled.div`
+  padding-right: 30px;
+`;
 const Article = styled.article`
   padding: 10px 0px 10px 0px;
 `;
@@ -99,6 +104,7 @@ function Cv() {
               <ul>
                 <li>Node.js / Express.js</li>
                 <li>MongoDB / Mongoose</li>
+                <li>Moments.js / date-fns</li>
                 <li>REST API integration</li>
                 <li>Nodemailer / Twilio</li>
                 <li>Google Cloud Functions</li>
@@ -109,7 +115,8 @@ function Cv() {
               <ul>
                 <li>Git / GitHub / GitLab</li>
                 <li>Webpack / npm</li>
-                <li>Jest / React Testing Library</li>
+                <li>React Testing Library</li>
+                <li>Jest</li>
                 <li>Figma</li>
                 <li>GCP / AWS</li>
               </ul>
@@ -122,107 +129,132 @@ function Cv() {
             <h4>Experience</h4>
           </header>
           <Article id='art-work'>
-            <div class='cv-h5' id='WorkHeader'>
-              <span>Junior Full-Stack Developer – Filament AI</span>
-              <time>April 2021 – Decembre 2021</time>
-            </div>
-            <ul>
-              <li>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>FilesConverto.com</span>
+              </div>
+              <p>
+                Files converter build with TypeScript styled with Tailwind.
+                Framework of choice is Next.js. The user can upload a file with
+                use of dropzone and then sent it to backend for convertion. At
+                the moment frontend is in development process and constantly
+                updated.
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Work Tracker</span>
+              </div>
+              <p>
+                Work Tracker is a full-stack payroll management app for
+                businesses with complex shift patterns. Built with
+                Node.js/Express and React, it tracks work hours and calculates
+                earnings across multiple pay rates (base, night, weekend,
+                overtime). Features include yearly calendar generation, payroll
+                period tracking, RESTful API, MongoDB integration, and schedule
+                management. The system supports employee self-service, automated
+                payroll, and flexible scheduling.
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Junior Full-Stack Developer – Filament AI</span>
+                <time>April 2021 – Decembre 2021</time>
+              </div>
+              <p>
                 Developed and customized chat widgets for multiple clients,
                 aligning with website themes and functional requirements (e.g.,
-                Rentokill, Versus Arthritis).
-              </li>
-              <li>
-                Extended Google Cloud Functions to support ticket creation with
-                additional service options.
-              </li>
-              <li>
+                Rentokill, Versus Arthritis). Extended Google Cloud Functions to
+                support ticket creation with additional service options.
                 Configured and optimized EBM chatbot dialog flows, adding new
-                features to meet client needs.
-              </li>
-              <li>
-                Enhanced Filament UI (custom CSS library) by implementing new
-                features and resolving bugs.
-              </li>
-              <li>
+                features to meet client needs. Enhanced Filament UI (custom CSS
+                library) by implementing new features and resolving bugs.
                 <strong>Tools & Technologies:</strong> React, Node.js, Google
                 Cloud Functions, EBM, Filament UI, REST APIs
-              </li>
-            </ul>
-
-            <div class='cv-h5'>
-              <span>Portfolio Frontend</span>
-            </div>
-            <p>
-              Developed personal portfolio website using React,
-              create-react-app, React-Bootstrap, React Router, and
-              styled-components. Designed UI/UX in Figma and deployed on GitHub
-              Pages.
-            </p>
-            <p>
-              <strong>Tools & Technologies:</strong> React, React Router,
-              Styled-Components, Material-UI, Figma
-            </p>
-
-            <div class='cv-h5'>
-              <span>Portfolio Backend</span>
-            </div>
-            <p>
-              Implemented backend services for portfolio application using
-              Node.js and Express. Features include API routes, MongoDB
-              integration, serverless Cloud Functions, and Nodemailer for
-              transactional emails.
-            </p>
-            <p>
-              <strong>Tools & Technologies:</strong> Node.js, Express.js,
-              MongoDB, Google Cloud Functions, Nodemailer
-            </p>
-
-            <div class='cv-h5'>
-              <span>Bot Chat</span>
-            </div>
-            <p>
-              Simple AI chat application allowing conversational interaction.
-              Built in React, hosted on Google Cloud, using BotLibre API for AI
-              responses.
-            </p>
-            <p>
-              <strong>Tools & Technologies:</strong> React, Create-React-App,
-              BotLibre API, Google Cloud, Axios
-            </p>
-
-            <div class='cv-h5'>
-              <span>Fitness App</span>
-            </div>
-            <p>
-              App to track exercises with duration and date. Frontend in React,
-              backend in Node.js with MongoDB Atlas, deployed on Google Cloud.
-            </p>
-            <p>
-              <strong>Tools & Technologies:</strong> React, Node.js, MongoDB,
-              Google Cloud
-            </p>
-
-            <div class='cv-h5'>
-              <span>NASA Website</span>
-            </div>
-            <p>
-              Vanilla JS website with Bootstrap for RWD. Fetches space-related
-              data from NASA API.
-            </p>
-            <p>
-              <strong>Tools & Technologies:</strong> Vanilla JS, Bootstrap, NASA
-              API
-            </p>
-
-            <div class='cv-h5'>
-              <span>Gentleman Barber</span>
-            </div>
-            <p>Simple barber shop website for demonstration purposes.</p>
-
-            <div class='cv-h5'>
-              <span>Goodwood Solicitors</span>
-            </div>
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Portfolio Frontend</span>
+              </div>
+              <p>
+                Developed personal portfolio website using React,
+                create-react-app, React-Bootstrap, React Router, and
+                styled-components. Designed UI/UX in Figma and deployed on
+                GitHub Pages.
+              </p>
+              <p>
+                <strong>Tools & Technologies:</strong> React, React Router,
+                Styled-Components, Material-UI, Figma
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Portfolio Backend</span>
+              </div>
+              <p>
+                Implemented backend services for portfolio application using
+                Node.js and Express. Features include API routes, MongoDB
+                integration, serverless Cloud Functions, and Nodemailer for
+                transactional emails.
+              </p>
+              <p>
+                <strong>Tools & Technologies:</strong> Node.js, Express.js,
+                MongoDB, Google Cloud Functions, Nodemailer
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Bot Chat</span>
+              </div>
+              <p>
+                Simple AI chat application allowing conversational interaction.
+                Built in React, hosted on Google Cloud, using BotLibre API for
+                AI responses.
+              </p>
+              <p>
+                <strong>Tools & Technologies:</strong> React, Create-React-App,
+                BotLibre API, Google Cloud, Axios
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Fitness App</span>
+              </div>
+              <p>
+                App to track exercises with duration and date. Frontend in
+                React, backend in Node.js with MongoDB Atlas, deployed on Google
+                Cloud.
+              </p>
+              <p>
+                <strong>Tools & Technologies:</strong> React, Node.js, MongoDB,
+                Google Cloud
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>NASA Website</span>
+              </div>
+              <p>
+                Vanilla JS website with Bootstrap for RWD. Fetches space-related
+                data from NASA API.
+              </p>
+              <p>
+                <strong>Tools & Technologies:</strong> Vanilla JS, Bootstrap,
+                NASA API
+              </p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Gentleman Barber</span>
+              </div>
+              <p>Simple barber shop website for demonstration purposes.</p>
+            </ExpieranceWrapper>
+            <ExpieranceWrapper>
+              <div class='cv-h5'>
+                <span>Goodwood Solicitors</span>
+              </div>
+            </ExpieranceWrapper>
             <p>Mobile-first website with navigation menu and sub-pages.</p>
           </Article>
         </section>
@@ -246,25 +278,26 @@ function Cv() {
               </li>
               <li>Figma - UI/UX Design</li>
             </ul>
+            <SchoolSection>
+              <div class='cv-h5'>
+                <span>Python Backend Bootcamp</span>
+                <time>January 2019 – February 2019</time>
+              </div>
+              <p>
+                Four-week backend bootcamp covering Python, Flask, Django, HTML,
+                CSS, JavaScript, Git, and Testing.
+              </p>
 
-            <div class='cv-h5'>
-              <span>Python Backend Bootcamp</span>
-              <time>January 2019 – February 2019</time>
-            </div>
-            <p>
-              Four-week backend bootcamp covering Python, Flask, Django, HTML,
-              CSS, JavaScript, Git, and Testing.
-            </p>
+              <div class='cv-h5'>
+                <span>Technical School of Mechanical Engineering</span>
+                <time>2003 – 2004</time>
+              </div>
 
-            <div class='cv-h5'>
-              <span>Technical School of Mechanical Engineering</span>
-              <time>2003 – 2004</time>
-            </div>
-
-            <div class='cv-h5'>
-              <span>Basic Vocational School</span>
-              <time>2000 – 2003</time>
-            </div>
+              <div class='cv-h5'>
+                <span>Basic Vocational School</span>
+                <time>2000 – 2003</time>
+              </div>
+            </SchoolSection>
           </Article>
         </section>
       </div>

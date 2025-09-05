@@ -5,7 +5,7 @@
     background-color: #fff;
     box-shadow: 1px 0px 25px rgba(50, 50, 50, 0.75);
 }
-#WorkHeader{
+#topEpierance{
     margin-top:0px;
 }
 .cv-h5{
@@ -45,6 +45,7 @@ font-size: 35px;
 }
 
 #art-know{
+    padding-right: 30px;
     display:flex;
     justify-content: space-between;
 }
