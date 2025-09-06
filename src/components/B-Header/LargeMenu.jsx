@@ -31,6 +31,7 @@ const MainLogo = styled(Logo)`
   height: 50px;
 `
 const Link = styled.a`
+  cursor: pointer;
   position: relative;
   font-size: 18px;
   color: 
@@ -46,6 +47,39 @@ const Link = styled.a`
 
 function MainLarge({ ...props }) {
   function getLangMenu(obj) {
+    let PolishTitle = obj.PolishLang ? obj.PolishLang.title : obj.title;
+    return props.EngLang ? obj.title : PolishTitle;
+  }
+
+  const smoothScrollTo = (targetY, duration = 500) => {
+    const startY = window.scrollY;
+    const diff = targetY - startY;
+    let start;
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const time = timestamp - start;
+      const percent = Math.min(time / duration, 1);
+
+      window.scrollTo(0, startY + diff * percent);
+
+      if (time < duration) {
+        requestAnimationFrame(step);
+      }
+    };
+    requestAnimationFrame(step);
+  };
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      smoothScrollTo(top, 600);
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  };
 
   return (
     <Wrapper>
