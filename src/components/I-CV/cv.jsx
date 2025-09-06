@@ -3,7 +3,7 @@ import './cv.css';
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.a`
+const Wrapper = styled.div`
 `;
 const ExpieranceWrapper = styled.div`
   padding-right: 30px;
