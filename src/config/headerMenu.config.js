@@ -1,7 +1,7 @@
 export const Menu = [
     {
         title: "About",
-        href: "#about",
+        section: "about",
         disabled: false,
         PolishLang:{
             title:"Trochę o mnie"
@@ -9,14 +9,14 @@ export const Menu = [
     },
     {
         title: "What I Use",
-        href: "#use",
+        section: "use",
         disabled: false,
         PolishLang:{
             title:"Co używam..."
         },
         react: {
             title: "Why I use React ?",
-            href: "#react",
+            href: "react",
             style: "Blue",
             disabled: false,
             PolishLang:{
@@ -26,7 +26,7 @@ export const Menu = [
     },
     {
         title: "Projects",
-        href: "#projects",
+        section: "projects",
         style: "Green",
         disabled: false,
         PolishLang:{
@@ -50,7 +50,7 @@ export const Menu = [
     },
     {
         title: "Contact",
-        href: "#contact",
+        section: "contact",
         disabled: true,
         PolishLang:{
             title:"Kontakt"
