@@ -1,7 +1,16 @@
-import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm } from 'img'
+import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto } from 'img';
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts } from 'img'
 
 export const projects = [
+    {
+        alt: "FilesConverto.com",
+        githubHref: "https://github.com/pawdevuk/Filesconverto",
+        src: filesconverto,
+        text: "",
+        title: "FilesConverto",
+        webHref: { href: "https://filesconverto-1161r60cb-pawdevs-projects-c1e9b938.vercel.app/", button: "Visit" },
+        stack: [react, nextjs, ts, styled, tailwind, nodeJS, npm]
+    },
     {
         alt: "TicTacToe",
         githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",

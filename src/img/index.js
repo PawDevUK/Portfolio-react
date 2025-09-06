@@ -11,6 +11,7 @@ export { default as CovidApp } from './CovidApp.webp';
 export { default as MyPhoto } from './MyPhoto.png';
 export { default as BrainBot } from './BrainBot.png';
 export { default as TicTacToe } from './tictactoe.webp';
+export { default as filesconverto } from './filesconverto.png'
 
 export { default as react } from './React.png'
 export { default as reactSvg } from './react.svg'
@@ -33,6 +34,9 @@ export { default as npm } from './npm.png'
 export { default as ubuntu } from './ubuntu.png'
 export { default as PolskaFlaga } from './poland.png'
 export { default as EnglishFlag } from './united-kingdom.png'
+export { default as tailwind } from './tailwind.png'
+export { default as nextjs } from './nextjs.png'
+export { default as ts } from './ts.png'
 
 
 
