@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react'
-import dropdown, { ReactComponent as DropdownIconSvg } from 'img/icon/dropdown.svg'
-import 'react-slidedown/lib/slidedown.css'
-import styled from 'styled-components'
-import { ReactComponent as Logo } from 'img/pawdev.svg'
-import {connect} from 'react-redux'
-import {getMenu, getLang} from 'selectors/pageContent.selector'
-import LangSwitch from 'components/B-Header/LangSwitch'
+import React from 'react';
+import 'react-slidedown/lib/slidedown.css';
+import styled from 'styled-components';
+import { ReactComponent as Logo } from 'img/pawdev.svg';
+import { connect } from 'react-redux';
+import { getMenu, getLang } from 'selectors/pageContent.selector';
+import LangSwitch from 'components/B-Header/LangSwitch';
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,33 +42,10 @@ const Link = styled.a`
     text-decoration: none;
     color: #cdcdcd;
   }
-`
-const DropDown = styled(Link)`
-  width: 200px;
-  position: absolute;
-  top: 30px;
-  left: 0px;
-  padding: 0px;
-  &:hover {
-    color: #fff;
-  }
-`
-const DropdownIcon = styled(DropdownIconSvg)`
-  position: absolute;
-  top: 25px;
-  left: 50%;
-`
-function MainLarge({ ...props }) {
+`;
 
-  const [mouseOver, setMouseOver] = useState(false)
-  useEffect(() => {})
-  function handleMouseHover() {
-    setMouseOver((mouseOver) => !mouseOver)
-  }
-  function getLangMenu(obj){
-    let PolishTitle = obj.PolishLang ? obj.PolishLang.title : obj.title
-    return  props.EngLang ? obj.title : PolishTitle
-  }
+function MainLarge({ ...props }) {
+  function getLangMenu(obj) {
 
   return (
     <Wrapper>
@@ -77,27 +53,22 @@ function MainLarge({ ...props }) {
       <InnerMainNav EngLang={props.EngLang}>
         <LangWrapper>
           <LangSwitch></LangSwitch>
-        </LangWrapper> 
-          {props.menu.map((item, i) => {
-            return (
-              <Link
-                onMouseEnter={item.react ? handleMouseHover : null}
-                onMouseLeave={item.react ? handleMouseHover : null}
-                key={i}
-                href={item.href}
-                target={item.target ? item.target : ""}
-              >
-                {getLangMenu(item)}
-                {mouseOver ? (
-                  <DropDown href={item.href}>
-                    {item.react ? item.react.title : null}
-                  </DropDown>
-                ) : item.react ? (
-                  <DropdownIcon></DropdownIcon>
-                ) : null}
-              </Link>
-            )
-          })}
+        </LangWrapper>
+        {props.menu.map((item, i) => {
+          return item.section ? (
+            <Link key={i} onClick={() => scrollToSection(item.section)}>
+              {getLangMenu(item)}
+            </Link>
+          ) : (
+            <Link
+              key={i}
+              href={item.href}
+              onClick={() => scrollToSection(item.href)}
+            >
+              {getLangMenu(item)}
+            </Link>
+          );
+        })}
       </InnerMainNav>
     </Wrapper>
   )
