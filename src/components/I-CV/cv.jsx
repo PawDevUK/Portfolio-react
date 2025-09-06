@@ -3,10 +3,7 @@ import './cv.css';
 import React from 'react';
 import styled from 'styled-components';
 
-const A = styled.a`
-  &:hover {
-    text-decoration: none;
-  }
+const Wrapper = styled.a`
 `;
 const ExpieranceWrapper = styled.div`
   padding-right: 30px;
@@ -20,7 +17,7 @@ const Article = styled.article`
 
 function Cv() {
   return (
-    <A href='/content'>
+    <Wrapper>
       <div id='cv' className='page'>
         <header className='grid-plus sectionPadding'>
           <div id='header-info'>
@@ -301,7 +298,7 @@ function Cv() {
           </Article>
         </section>
       </div>
-    </A>
+     </Wrapper>
   );
 }
 
