@@ -10,32 +10,31 @@ const Wrapper = styled.div`
   display: flex;
   height: 110px;
   width: 100%;
-`
+`;
 const InnerMainNav = styled.div`
-  position:relative;
+  position: relative;
   display: flex;
   margin: 55px 0px 0px auto;
-  width:${p=>p.EngLang?574:671}px;
-`
+  width: ${(p) => (p.EngLang ? 574 : 671)}px;
+`;
 const LangWrapper = styled.div`
   display: flex;
   z-index: 2500;
   position: absolute;
-  top:-50px;
-  right:23px;
-`
+  top: -50px;
+  right: 23px;
+`;
 const MainLogo = styled(Logo)`
   display: inline-block;
   margin: 30px auto auto 30px;
   width: auto;
   height: 50px;
-`
+`;
 const Link = styled.a`
   cursor: pointer;
   position: relative;
   font-size: 18px;
-  color: 
-  #fff;
+  color: #fff;
   text-transform: capitalize;
   margin-right: 25px;
   font-weight: 700;
@@ -105,14 +104,14 @@ function MainLarge({ ...props }) {
         })}
       </InnerMainNav>
     </Wrapper>
-  )
+  );
 }
 
 const mapStateToProps = (state) => {
   return {
-    menu:getMenu(state),
-    EngLang:getLang(state),
-  }
-}
+    menu: getMenu(state),
+    EngLang: getLang(state),
+  };
+};
 
-export default connect(mapStateToProps)(MainLarge)
+export default connect(mapStateToProps)(MainLarge);
