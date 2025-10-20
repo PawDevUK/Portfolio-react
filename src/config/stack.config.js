@@ -1,20 +1,32 @@
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, ubuntu } from 'img'
-
-
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, ubuntu, tailwind, nextjs, ts, momentjs, python } from 'img'
 
 export const stack = {
-    header : 'What I Use',
-    PolishLang:{
-        header:'Czego Używam',
+    header: 'What I Use',
+    PolishLang: {
+        header: 'Czego Używam',
     },
-    tools:[
+    tools: [
         {
+            img: ts,
+            title: "TypeScript",
+            text: "TypeScript",
+            webHref: "https://www.typescriptlang.org/docs/",
+        }, {
+            img: tailwind,
+            title: "Tailwind",
+            text: "",
+            webHref: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        }, {
             img: html,
             title: "HTML",
             text: "",
             webHref: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-        }
-        , {
+        }, {
+            img: nextjs,
+            title: "Next js",
+            text: "",
+            webHref: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        }, {
             img: css,
             title: "CSS",
             text: "",
@@ -25,33 +37,33 @@ export const stack = {
             title: "JavaScript",
             text: "",
             webHref: "https://javascript.info/",
-        },
-        {
+        }, {
+            img: python,
+            title: "Python",
+            text: "",
+            webHref: "https://www.python.org/",
+        }, {
             img: npm,
             title: "NPM",
             text: "",
             webHref: "https://www.npmjs.com/",
-        },
-        {
+        }, {
             img: react,
             title: "React",
             text: "React makes it painless to create interactive UIs. Design simple views...",
             webHref: "https://reactjs.org/",
-        },
-        {
+        }, {
             img: styled,
             title: "Styled-components",
             text: "",
             webHref: "https://styled-components.com/",
             styled: true
-        },
-        {
+        }, {
             img: router,
             title: "React-Router",
             text: "",
             webHref: "https://reactrouter.com/",
-        },
-        {
+        }, {
             img: bootstrap,
             title: "Bootstarp",
             text: "Quickly design and customize responsive mobile-first sites with Bootst...",
@@ -72,12 +84,16 @@ export const stack = {
             text: "Google Cloud Platform is a suite of public cloud computing services of...",
             webHref: "https://cloud.google.com/",
         }, {
+            img: momentjs,
+            title: "Momentsjs",
+            text: "Parse, validate, manipulate, and display dates and times in JavaScript.",
+            webHref: "https://momentjs.com/",
+        }, {
             img: nodeJS,
             title: "NodeJs",
             text: "Node.Js (Node) is an open source development platform for executing Ja...",
             webHref: "https://nodejs.org/en/",
-        },
-        {
+        }, {
             img: express,
             title: "Express.js",
             text: "",
@@ -97,8 +113,7 @@ export const stack = {
             title: "VS Code",
             text: "",
             webHref: "https://code.visualstudio.com/",
-        }
-        , {
+        }, {
             img: ubuntu,
             title: "Ubuntu",
             text: "",

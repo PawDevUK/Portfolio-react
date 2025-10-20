@@ -37,6 +37,8 @@ export { default as EnglishFlag } from './united-kingdom.png'
 export { default as tailwind } from './tailwind.png'
 export { default as nextjs } from './nextjs.png'
 export { default as ts } from './ts.png'
+export { default as momentjs } from './momentjs.png'
+export { default as python } from './python.png'
 
 
 
