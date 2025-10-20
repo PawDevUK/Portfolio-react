@@ -91,7 +91,10 @@
     "@types/json-schema": "^7.0.15",
     "@types/minimatch": "^6.0.0",
     "@types/yargs-parser": "^21.0.3",
+    "autoprefixer": "^10.4.21",
     "cross-env": "^7.0.3",
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.15"
   }
 }
