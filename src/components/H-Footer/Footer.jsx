@@ -76,7 +76,6 @@ const NickHover = css`
 const H2 = styled.h2`
   width: 100%;
   font-size: 16px;
-  cursor: pointer;
   color: #fff;
   padding: 0px;
   margin: 5px 0px 0px 0px;
