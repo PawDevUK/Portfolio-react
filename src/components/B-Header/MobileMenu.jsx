@@ -30,7 +30,7 @@ const MobilTopDiv = styled.div`
     display: flex;
     width: 100%;
   }
-`
+`;
 const MobilNav = styled.div`
   ${(p) =>
     p.toggle
@@ -44,7 +44,7 @@ const MobilNav = styled.div`
     margin: 0px;
     background-color: #ffffff;
   }
-`
+`;
 const LinkContainer = styled.div`
   padding-bottom: 20px;
   margin: 16px auto 0px 86px;
@@ -52,7 +52,7 @@ const LinkContainer = styled.div`
   @media (min-width: 992px) {
     display: none;
   }
-`
+`;
 
 const MobileLink = styled.a`
   &:hover {
@@ -64,16 +64,16 @@ const MobileLink = styled.a`
   position: relative;
   color: #353535;
   display: block;
-`
+`;
 const DropDowIcon = styled(DropdownIconSvg)`
   position: absolute;
   left: 85px;
   top: 10px;
-`
+`;
 const DropDown = styled(MobileLink)`
   margin-left: 50px;
   padding: 0px;
-`
+`;
 const MobileText = styled.p`
   color: #444444;
   display: inline-block;
@@ -81,17 +81,17 @@ const MobileText = styled.p`
   @media (min-width: 992px) {
     display: none;
   }
-`
+`;
 export default function MobileMenu() {
-  const [toggle, setToggle] = useState(false)
-  const [mouseOver, setMouseOver] = useState(false)
+  const [toggle, setToggle] = useState(false);
+  const [mouseOver, setMouseOver] = useState(false);
 
   function click() {
-    setToggle((p) => !p)
+    setToggle((p) => !p);
   }
 
   function handleMouseHover() {
-    setMouseOver((mouseOver) => !mouseOver)
+    setMouseOver((mouseOver) => !mouseOver);
   }
   return (
     <Wrapper>
@@ -112,27 +112,26 @@ export default function MobileMenu() {
         <MobileText>PAWEL SIWEK PORTFOLIO</MobileText>
         <LinkContainer>
           {Menu.map((item, i) => (
-              <MobileLink
-                onMouseEnter={item.react ? handleMouseHover : null}
-                onMouseLeave={item.react ? handleMouseHover : null}
-                key={i}
-                href={item.href}
-              >
-                {item.title}
-                <SlideDown>
-                  {mouseOver ? (
-                    <DropDown href={item.href}>
-                      {item.react ? item.react.title : null}
-                    </DropDown>
-                  ) : item.react ? (
-                    <DropDowIcon path={dropdown}></DropDowIcon>
-                  ) : null}
-                </SlideDown>
-              </MobileLink>
-            )
-          )}
+            <MobileLink
+              onMouseEnter={item.react ? handleMouseHover : null}
+              onMouseLeave={item.react ? handleMouseHover : null}
+              key={i}
+              href={item.href}
+            >
+              {item.title}
+              <SlideDown>
+                {mouseOver ? (
+                  <DropDown href={item.href}>
+                    {item.react ? item.react.title : null}
+                  </DropDown>
+                ) : item.react ? (
+                  <DropDowIcon path={dropdown}></DropDowIcon>
+                ) : null}
+              </SlideDown>
+            </MobileLink>
+          ))}
         </LinkContainer>
       </MobilNav>
     </Wrapper>
-  )
+  );
 }
