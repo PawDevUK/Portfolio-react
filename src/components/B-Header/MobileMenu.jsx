@@ -96,6 +96,15 @@ export default function MobileMenu() {
   return (
     <Wrapper>
       <MobilTopDiv>
+        <IconButton
+          onClick={click}
+          sx={{
+            color: '#17293f',
+            '&:hover': { backgroundColor: 'rgba(23, 41, 63, 0.1)' },
+          }}
+        >
+          {toggle ? <CloseIcon /> : <MenuIcon />}
+        </IconButton>
         <LogoHeader>pawdev</LogoHeader>
       </MobilTopDiv>
 
