@@ -68,6 +68,7 @@ const Right = styled.div`
     display: none;
   }
 `;
+
 const NickHover = css`
   color: #01579b;
   font-size: 20px;
@@ -82,6 +83,7 @@ const H2 = styled.h2`
   display: flex;
   justify-content: center;
 `;
+
 const Nick = styled.p`
   font-family: 'Ubuntu-Light';
   font-weight: 500;
@@ -97,6 +99,7 @@ const Nick = styled.p`
           color: #fff;
         `};
 `;
+
 const Text = styled.p`
   color: #fff;
   font-size: 16px;
