@@ -55,7 +55,7 @@ const TitleWrapper = styled.div`
   text-align: center;
 `;
 const Header = styled.h5`
-  font-size: 24px;
+  font-size: 20px;
   margin: 8px 0px 4px 0px;
   position: relative;
   display: inline-block;

@@ -54,7 +54,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
-- [ ] Update About Me to reflect my skills and work history.
+- [x] Reduce size of projects cards header as it is well to big.
 - [ ] Update CV to reflect my skills and work history
 - [ ] Connect visitor counter to back-end.
 - [ ] Add all not working projects to Portfolio to make them accessible.
