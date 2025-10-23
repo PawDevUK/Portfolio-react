@@ -85,6 +85,8 @@ const H2 = styled.h2`
 const Nick = styled.p`
   font-family: 'Ubuntu-Light';
   font-weight: 500;
+  margin: 0px 3px;
+  font-size: 30px;
   font-weight: 600;
   ${(p) =>
     p.nick
