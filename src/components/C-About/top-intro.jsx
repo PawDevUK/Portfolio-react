@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
-import JumboSectionHeader from 'components/common/JumboSectionHeader'
-import styled from 'styled-components'
-import 'aos/dist/aos.css'
-import AOS from 'aos'
-import {connect} from 'react-redux'
-import { getAboutText, getAboutHeader } from 'selectors/pageContent.selector'
+import React, { useEffect } from 'react';
+import JumboSectionHeader from 'components/common/JumboSectionHeader';
+import styled from 'styled-components';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import { connect } from 'react-redux';
+import { getAboutText, getAboutHeader } from 'selectors/pageContent.selector';
+import { P } from '../common/typography';
 
 const Wrapper = styled.div`
   padding: 10px 0px;
@@ -22,7 +23,7 @@ function TopIntro(props) {
     <Wrapper id="about">
       <Card data-aos="fade-right">
         <JumboSectionHeader>{props.header}</JumboSectionHeader>
-        {props.about}
+        <P styleP>{props.about}</P>
       </Card>
     </Wrapper>
   )
