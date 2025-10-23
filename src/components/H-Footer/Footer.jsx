@@ -1,4 +1,3 @@
-import Particles from '@tsparticles/react';
 import { getRightFooterData } from 'selectors/pageContent.selector';
 import { BackgroundBlue } from 'styled';
 import styled, { css } from 'styled-components';
@@ -19,11 +18,10 @@ const Wrapper = styled.div`
   position: relative;
   ${BackgroundBlue}
   width: 100%;
-`;
-const StParticles = styled(Particles)`
-  position: absolute;
-  height: 90%;
-  width: 100%;
+  height: 90px;
+  @media (max-width: 900px) {
+    height: auto;
+  }
 `;
 const InnerWrapper = styled.div`
   height: 90px;
@@ -111,32 +109,24 @@ const StyledLi = styled.li`
   list-style: none;
 `;
 
-class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      nick: false,
-    };
-
-    this.mouseEnterH2 = this.mouseEnterH2.bind(this);
+const HeaderWrapper = styled.div`
+  text-align: center;
+  padding: 0px !important;
+  margin: 0px auto;
+  width: 280px;
+  @media (max-width: 400px) {
+    width: 265px;
   }
+`;
 
-  mouseEnterH2() {
-    this.setState({
-      nick: !this.state.nick,
-    });
-  }
+const Footer = ({ visitors, rightData }) => {
+  const [nick, setNick] = useState(false);
 
-  FooterHeader(nick) {
-    const HeaderWrapper = styled.div`
-      text-align: center;
-      padding: 0px !important;
-      margin: 0px auto;
-      width: 280px;
-      @media (max-width: 400px) {
-        width: 265px;
-      }
-    `;
+  const handleMouseEnter = () => {
+    setNick(!nick);
+  };
+
+  const FooterHeader = () => {
     return (
       <HeaderWrapper>
         <H2>
@@ -145,66 +135,38 @@ class Footer extends Component {
         <H2>London {getYear()}</H2>
       </HeaderWrapper>
     );
-  }
-  rightDataMap() {
-    const render = this.props.rightData.map((li, i) => {
-      return (
-        <StyledLi key={i}>
-          <Text>{li}</Text>
-        </StyledLi>
-      );
-    });
+  };
 
-    return render;
-  }
+  const rightDataMap = () => {
+    return rightData.map((li, i) => (
+      <StyledLi key={i}>
+        <Text>{li}</Text>
+      </StyledLi>
+    ));
+  };
 
-  render() {
-    return (
-      <Wrapper
-        onMouseEnter={this.mouseEnterH2}
-        onMouseLeave={this.mouseEnterH2}
-        id='FooterWrapper'
-      >
-        <StParticles
-          params={{
-            particles: {
-              number: {
-                value: 30,
-              },
-              size: {
-                value: 1,
-              },
-              autoPlay: true,
-
-              opacity: {
-                value: 0.06,
-                random: true,
-              },
-              links: {
-                enable: true,
-                opacity: 0.06,
-              },
-            },
-          }}
-        />
-        <InnerWrapper>
-          <Left></Left>
-          <Mid>
-            {this.FooterHeader(this.state.nick)}
-            <VisitorCounter
-              h2={H2}
-              visitors={this.props.visitors}
-            ></VisitorCounter>
-          </Mid>
-          <Right>
-            <StyledUl>{this.rightDataMap()}</StyledUl>
-          </Right>
-          <Mobile>{this.FooterHeader(this.state.nick)}</Mobile>
-        </InnerWrapper>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseEnter}
+      id='FooterWrapper'
+    >
+      <InnerWrapper>
+        <Left>
+          <Nick>pawdev</Nick>
+        </Left>
+        <Mid>
+          {FooterHeader()}
+          <VisitorCounter h2={H2} visitors={visitors} />
+        </Mid>
+        <Right>
+          <StyledUl>{rightDataMap()}</StyledUl>
+        </Right>
+        <Mobile>{FooterHeader()}</Mobile>
+      </InnerWrapper>
+    </Wrapper>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
