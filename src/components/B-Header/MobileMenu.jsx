@@ -12,7 +12,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 const Wrapper = styled.div``;
-
+const BurgerWrapper = styled.div`
+  padding: 15px;
+`;
 const LogoHeader = styled.p`
   font-family: 'Ubuntu-Medium';
   color: #17293f;
@@ -96,15 +98,20 @@ export default function MobileMenu() {
   return (
     <Wrapper>
       <MobilTopDiv>
-        <IconButton
-          onClick={click}
-          sx={{
-            color: '#17293f',
-            '&:hover': { backgroundColor: 'rgba(23, 41, 63, 0.1)' },
-          }}
-        >
-          {toggle ? <CloseIcon /> : <MenuIcon />}
-        </IconButton>
+        <BurgerWrapper>
+          <IconButton
+            onClick={click}
+            disableRipple
+            sx={{
+              color: '#17293f',
+              '&:hover': {
+                backgroundColor: 'transparent',
+              },
+            }}
+          >
+            {toggle ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
+        </BurgerWrapper>
         <LogoHeader>pawdev</LogoHeader>
       </MobilTopDiv>
 
