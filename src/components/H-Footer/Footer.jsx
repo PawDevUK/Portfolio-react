@@ -28,13 +28,15 @@ const InnerWrapper = styled.div`
   display: flex;
   margin: auto;
   width: 95%;
-  @media (max-width: 992px) {
+  position: relative;
+  z-index: 2;
+  @media (max-width: 900px) {
     display: block;
     height: auto;
   }
 `;
 const Left = styled.div`
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     display: none;
   }
   ${center};
@@ -45,13 +47,13 @@ const Mid = styled.div`
   ${center};
   flex-direction: column;
   width: 60%;
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `;
 const Mobile = styled.div`
   display: none;
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     text-align: center;
     padding: 10px;
     display: block;
@@ -62,7 +64,7 @@ const Mobile = styled.div`
 const Right = styled.div`
   ${center};
   width: 20%;
-  @media (max-width: 992px) {
+  @media (max-width: 900px) {
     display: none;
   }
 `;
