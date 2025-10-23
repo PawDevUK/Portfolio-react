@@ -79,7 +79,7 @@ const DropDown = styled(MobileLink)`
 const MobileText = styled.p`
   color: #444444;
   display: inline-block;
-  margin: 30px auto 16px 64px;
+  margin: 16px auto 16px 48px;
   @media (min-width: 992px) {
     display: none;
   }
