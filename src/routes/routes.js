@@ -9,6 +9,7 @@ import TopIntro from '../components/C-About/top-intro'
 import Contact from '../components/G-Contact/Contact'
 import Stack from '../components/D-Stack/stack.jsx'
 import ReactSection from '../components/E-React/React'
+import TimelineSection from '../components/TimeLine/TimeLine'
 import Projects from '../components/F-Projects/projects'
 import Footer from '../components/H-Footer/Footer.jsx'
 
@@ -18,6 +19,7 @@ const Login = lazy(() => import('../components/F-Projects/Register_Login/Login')
 const Register = lazy(() => import('../components/F-Projects/Register_Login/Register'))
 const RegisterSignIn = lazy(() => import('../components/F-Projects/Register_Login/RegisterSignIn'))
 const Covid = lazy(() => import('../components/F-Projects/covid-app/Covid'))
+
 
 const CV = lazy(() => import('../components/I-CV/cv'))
 const Chat = lazy(() => import('../components/Z-Chat/Chat'))
@@ -80,6 +82,7 @@ export default function Router() {
                 <TopIntro ref={AboutRef}></TopIntro>
                 <Stack></Stack>
               </Container>
+              <TimelineSection></TimelineSection>
               <ReactSection></ReactSection>
               <Container>
                 <Projects></Projects>
