@@ -11,28 +11,29 @@ const Wrapper = styled.div`
   padding: 10px 0px;
   margin: 0px auto;
   width: 100%;
-`
+`;
+
 const Card = styled.div`
   background: #fff;
   width: 100%;
-`
+`;
 
 function TopIntro(props) {
-  useEffect(() => AOS.init({ duration: 1000 }))
+  useEffect(() => AOS.init({ duration: 1000 }));
   return (
-    <Wrapper id="about">
-      <Card data-aos="fade-right">
+    <Wrapper id='about'>
+      <Card data-aos='fade-right'>
         <JumboSectionHeader>{props.header}</JumboSectionHeader>
         <P styleP>{props.about}</P>
       </Card>
     </Wrapper>
-  )
+  );
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
   return {
-    header:getAboutHeader(state),
-    about:getAboutText(state)
-  }
-}
-export default connect(mapStateToProps)(TopIntro)
+    header: getAboutHeader(state),
+    about: getAboutText(state),
+  };
+};
+export default connect(mapStateToProps)(TopIntro);
