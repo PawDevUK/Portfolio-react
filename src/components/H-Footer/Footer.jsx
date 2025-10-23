@@ -39,7 +39,8 @@ const Left = styled.div`
   @media (max-width: 900px) {
     display: none;
   }
-  ${center};
+  display: flex;
+  align-items: center;
   width: 20%;
 `;
 
