@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
-import styled, { css } from 'styled-components'
-import Burger from 'components/common/Burger'
-import { SlideDown } from 'react-slidedown'
-import 'react-slidedown/lib/slidedown.css'
-import dropdown, { ReactComponent as DropdownIconSvg } from 'img/icon/dropdown.svg'
-import { ReactComponent as Logo } from 'img/pawdev.svg'
-import { Menu } from 'config/headerMenu.config'
-import 'aos/dist/aos.css'
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
+import { SlideDown } from 'react-slidedown';
+import 'react-slidedown/lib/slidedown.css';
+import dropdown, {
+  ReactComponent as DropdownIconSvg,
+} from 'img/icon/dropdown.svg';
+import { Menu } from 'config/headerMenu.config';
+import 'aos/dist/aos.css';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
-const Wrapper = styled.div``
-const LogoHeader = styled(Logo)`
+const Wrapper = styled.div``;
+
+const LogoHeader = styled.p`
+  font-family: 'Ubuntu-Medium';
+  color: #17293f;
+  font-size: 28px;
+  font-weight: 500;
   margin: auto 50px auto auto;
-  width: auto;
-  height: 30px;
-  path {
-    fill: #17293f;
-  }
-`
+`;
 
 const MobilTopDiv = styled.div`
   display: none;
