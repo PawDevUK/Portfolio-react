@@ -104,6 +104,17 @@ class Footer extends Component{
 
   constructor(props){
     super(props)
+
+const StyledUl = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const StyledLi = styled.li`
+  list-style: none;
+`;
+
     this.state = {
       nick:false
     }
@@ -138,16 +149,16 @@ class Footer extends Component{
       </HeaderWrapper> 
     )
   }
-  rightDataMap(){
+  rightDataMap() {
     const render = this.props.rightData.map((li, i) => {
-        return (
-          <li key={i}>
-            <Text>{li}</Text>
-          </li>
-        )
-      })
-      
-      return render
+      return (
+        <StyledLi key={i}>
+          <Text>{li}</Text>
+        </StyledLi>
+      );
+    });
+
+    return render;
   }
 
   render(){
