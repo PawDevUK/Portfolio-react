@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   ${boxShadow12};
   width:65%;
   @media (max-width:600px) {
-    width:60%;
+    width: 90%;
   }
   @media (min-width:992px) {
     width:45%;
