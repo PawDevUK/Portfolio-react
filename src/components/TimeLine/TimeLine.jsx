@@ -94,6 +94,7 @@ const TimelineSection = () => {
                 sx={{
                   position: 'relative',
                   pl: { xs: 3, sm: 5 },
+                  pr: { xs: 1, sm: 3 },
                   mb: index !== articles.length - 1 ? '15px' : 0,
                 }}
               >
