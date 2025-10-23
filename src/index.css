@@ -4,3 +4,9 @@
     src: url('./fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url('./fonts/Ubuntu/Ubuntu-Medium.ttf') format('truetype');
+    font-style: normal;
+}
