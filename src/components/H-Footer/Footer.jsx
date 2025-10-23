@@ -78,7 +78,7 @@ const H2 = styled.h2`
   font-size: 16px;
   color: #fff;
   padding: 0px;
-  margin: 5px 0px 0px 0px;
+  margin: 2px 0px 0px 0px;
   display: flex;
   justify-content: center;
 `;
