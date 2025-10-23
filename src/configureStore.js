@@ -2,22 +2,22 @@ import {
     configureStore
 } from '@reduxjs/toolkit'
 import rootReducer from './reducers'
-import { addUUID_ToObject } from 'factory/factory'
+import { addUUID_ToObject } from './factory/factory'
 
-import addCounter from 'actions/addCounter.actions'
-import { AddParticlesOptions } from 'actions/addParticlesOptions.actions'
-import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro, } from 'actions/pageContent.actions'
-import {LocalOnEnter} from './api/VisitorsAPI.config'
-import { rightData } from 'config/footer.config'
-import { Menu } from 'config/headerMenu.config'
-import { stack } from 'config/stack.config'
-import { projects } from 'config/projects.config'
-import { particlesOptions } from 'config/particles.config'
-import { ReactComponentData } from 'config/reactComponent.config'
-import { headerJumboText } from 'config/headerJumboText.config'
-import { buttons } from 'config/common.config'
-import { intro } from 'config/topIntro.config'
-import { fonts } from 'config/fonts.config'
+import addCounter from './actions/addCounter.actions'
+import { AddParticlesOptions } from './actions/addParticlesOptions.actions'
+import { AddFonts, AddHeaderMenu, AddHeaderJumboText, AddProjects, AddReactInfo, AddStack, AddFooterRightData, AddButtons, AddAboutIntro, } from './actions/pageContent.actions'
+import { LocalOnEnter } from './api/VisitorsAPI.config'
+import { rightData } from './config/footer.config'
+import { Menu } from './config/headerMenu.config'
+import { stack } from './config/stack.config'
+import { projects } from './config/projects.config'
+import { particlesOptions } from './config/particles.config'
+import { ReactComponentData } from './config/reactComponent.config'
+import { headerJumboText } from './config/headerJumboText.config'
+import { buttons } from './config/common.config'
+import { intro } from './config/topIntro.config'
+import { fonts } from './config/fonts.config'
 
 const middleware = []
 
@@ -26,13 +26,13 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware)
 })
 
-export function sync_DB_With_Store(){
+export function sync_DB_With_Store() {
     LocalOnEnter.get('/').then((res) => {
-     store.dispatch(addCounter( res.data[res.data.length-1].counter ))
+        store.dispatch(addCounter(res.data[res.data.length - 1].counter))
     });
 }
 
-export function syncConfigWithStore(){
+export function syncConfigWithStore() {
     store.dispatch(AddHeaderMenu(addUUID_ToObject(Menu)))
     store.dispatch(AddStack(addUUID_ToObject(stack)))
     store.dispatch(AddReactInfo(addUUID_ToObject(ReactComponentData)))
