@@ -54,6 +54,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+- [ ] Update About Me to reflect my skills and work history.
+- [ ] Update CV to reflect my skills and work history
+- [ ] Connect visitor counter to back-end.
 - [ ] Add all not working projects to Portfolio to make them accessible.
 - [ ] Add initial data to LocalStorage in the TicTacToe so the stats window has some dummy data to display.
 - [ ] Add downloaded fonts to the project.
