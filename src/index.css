@@ -1,0 +1,6 @@
+/* Global styles */
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: url('./fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
+    font-style: normal;
+}
