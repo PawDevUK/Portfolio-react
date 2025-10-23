@@ -54,6 +54,10 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+- [ ] Add padding right to time line content so the text is not that close to scroll button.
+- [ ] Make sure that component P is used for all paragraphs for consistency.
+- [ ] Add vercel to the stack.
+- [ ] Add Chatgpt to stack used.
 - [ ] Reduce space between projects header and first project card.
 - [ ] Fix mobile menu links.
 - [ ] Remove "Why I use React?"
