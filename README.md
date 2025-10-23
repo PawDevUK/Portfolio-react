@@ -54,7 +54,10 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
-- [x] Reduce size of projects cards header as it is well to big.
+- [ ] Reduce space between projects header and first project card.
+- [ ] Fix mobile menu links.
+- [ ] Remove "Why I use React?"
+- [ ] Add text to FilesConverto card.
 - [ ] Update CV to reflect my skills and work history
 - [ ] Connect visitor counter to back-end.
 - [ ] Add all not working projects to Portfolio to make them accessible.
@@ -73,6 +76,12 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [ ] Refactor code.
 - [ ] Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - [ ] Create a stats component to display visitors.
+- [x] Enlarge projects cards on mobile devices.
+- [x] Reduce size of projects cards header as it is well to big.
+- [x] Update nick text and css. Find apealing font type and change it for footer and header.
+- [x] Update About Me to reflect my skills and work history.
+- [x] Update burger as curent one is not symetrical. Lines are difrent thicknes.
+- [x] Remove list items dots.
 - [x] Add a 'kill-switch' to the server project.
 - [x] Run Lighthouse test.
 - [x] Fix image issues for mobile projects in cards (Nasa/Gentlemen Barber/Goodwood Solicitors/Asparagus).
