@@ -2,7 +2,7 @@ import { getRightFooterData } from 'selectors/pageContent.selector';
 import { BackgroundBlue } from 'styled';
 import styled, { css } from 'styled-components';
 import { getYear } from 'factory/factory';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import VisitorCounter from 'components/H-Footer/VisitorCounter';
 import { getVisitors } from '../../selectors/visitors.selector';
 import { connect } from 'react-redux';
