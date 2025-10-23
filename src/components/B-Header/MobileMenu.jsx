@@ -93,8 +93,7 @@ export default function MobileMenu() {
   return (
     <Wrapper>
       <MobilTopDiv>
-        <Burger click={click}></Burger>
-        <LogoHeader />
+        <LogoHeader>pawdev</LogoHeader>
       </MobilTopDiv>
 
       <MobilNav toggle={toggle}>

@@ -24,11 +24,13 @@ const LangWrapper = styled.div`
   top: -50px;
   right: 23px;
 `;
-const MainLogo = styled(Logo)`
+const MainLogo = styled.p`
   display: inline-block;
-  margin: 30px auto auto 30px;
-  width: auto;
-  height: 50px;
+  margin: 55px auto auto 35px;
+  font-family: 'Ubuntu-Medium';
+  color: #fff;
+  font-size: 35px;
+  font-weight: 500;
 `;
 const Link = styled.a`
   cursor: pointer;
@@ -82,7 +84,7 @@ function MainLarge({ ...props }) {
 
   return (
     <Wrapper>
-      <MainLogo></MainLogo>
+      <MainLogo>pawdev</MainLogo>
       <InnerMainNav EngLang={props.EngLang}>
         <LangWrapper>
           <LangSwitch></LangSwitch>
