@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, useTheme } from '@mui/material';
 import { articles } from './articles';
+import Header from 'components/common/Header';
 
 const TimelineSection = () => {
   const theme = useTheme();
@@ -65,36 +66,7 @@ const TimelineSection = () => {
                 }}
               />
 
-              {/* Text */}
-              <Typography
-                variant='h6'
-                sx={{
-                  fontWeight: 600,
-                  color: theme.palette.text.primary,
-                }}
-              >
-                {item.title}
-              </Typography>
-              <Typography
-                variant='subtitle2'
-                sx={{
-                  color: theme.palette.text.secondary,
-                  mb: 1,
-                }}
-              >
-                {item.date}
-              </Typography>
-              <Typography
-                variant='body1'
-                sx={{
-                  color: theme.palette.text.secondary,
-                  lineHeight: 1.7,
-                }}
-              >
-                {item.description}
-              </Typography>
-            </Box>
-          ))}
+                <Header>{item.title}</Header>
         </Box>
       </Container>
     </Box>

@@ -8,6 +8,7 @@ import { LimitText } from 'factory/factory';
 import React, { useEffect, useState } from 'react';
 import { cardTextLength } from 'factory/factory';
 import Stack from './Stack';
+import Header from '../common/Header';
 
 const Underline = styled.div`
   position: absolute;
@@ -53,12 +54,6 @@ const HeaderWrapper = styled.div`
 const TitleWrapper = styled.div`
   width: 100%;
   text-align: center;
-`;
-const Header = styled.h5`
-  font-size: 20px;
-  margin: 8px 0px 4px 0px;
-  position: relative;
-  display: inline-block;
 `;
 const Expand = styled.div`
   margin: 0 0 0 auto;
