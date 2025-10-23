@@ -1,44 +1,14 @@
 export const articles = [
     {
-        title: "Project Kickoff",
-        date: "January 2024",
+        title: "Portfolio Frontend",
+        date: "23/10/25",
         description:
-            "Started initial planning and project setup for FilesConverto.",
+            "Focused on component modernization, UI improvements, and timeline feature implementation. Converted Footer from class-based to functional component using React hooks (useState) for state management. Replaced custom Burger component with Material-UI IconButton, implementing MenuIcon and CloseIcon with disabled ripple effect and transparent hover background. Added Ubuntu font family (Light and Medium weights) with proper @font-face declarations in index.css, applying them to Footer Nick and Mobile Menu LogoHeader. Removed particles.js from Footer for better performance. Updated README documentation by converting TODO lists to GitHub checkbox format. Fixed multiple build configuration issues in jsconfig.json by keeping baseUrl: \"src\" with ignoreDeprecations: \"6.0\". Corrected import paths in app.jsx and configureStore.js. Fixed CSS comment syntax issues in styled-components. Improved project card layouts by reducing header size, enlarging card width, and adjusting spacing. Updated Polish translations in reactComponent.config.js. Created comprehensive Timeline section with Material-UI components featuring scrollable content with custom scrollbar styling, vertical timeline with markers and descriptions, click-and-drag scrolling functionality with grab cursor, responsive design with WebkitOverflowScrolling for mobile touch support, and proper z-index handling for timeline markers. Implemented articles.js data structure to display project history chronologically. Created reusable Header component for consistent typography across timeline and project cards. Fixed styled-components specificity issues with global CSS by using && selector and !important declarations. Added margin and color styling for P component with styleP prop. Integrated timeline route in routes.js and added TimelineSection to main app component. Created comprehensive implementation report (report.md) detailing automated timeline synchronization system architecture with 6 main components, 5 implementation phases, testing strategy, and 12-16 hour development estimate. Made 46+ commits total, modified 24 files with 700 insertions and 524 deletions (net +176 lines). Successfully migrated from custom components to Material-UI, implemented new timeline feature with smooth scrolling and mobile support, and planned future automation for multi-repository timeline aggregation.",
     },
     {
-        title: "Backend Development",
-        date: "March 2024",
+        title: "Portfolio Frontend",
+        date: "20/10/25",
         description:
-            "Implemented Node.js API for file conversion handling and storage.",
-    },
-    {
-        title: "Frontend Integration",
-        date: "June 2024",
-        description:
-            "Integrated React frontend with the backend and added drag-and-drop uploads.",
-    },
-    {
-        title: "Deployment",
-        date: "August 2024",
-        description:
-            "Deployed FilesConverto to Google Cloud with CI/CD pipeline.",
-    },
-    {
-        title: "Backend Development",
-        date: "March 2024",
-        description:
-            "Implemented Node.js API for file conversion handling and storage.Implemented Node.js API for file conversion handling and storage.",
-    },
-    {
-        title: "Frontend Integration",
-        date: "June 2024",
-        description:
-            "Integrated React frontend with the backend and added drag-and-drop uploads.",
-    },
-    {
-        title: "Deployment",
-        date: "August 2024",
-        description:
-            "Deployed FilesConverto to Google Cloud with CI/CD pipeline.",
+            "Created comprehensive Work Tracker Presentation component (561 lines) displaying work tracking data with multiple views including summary cards for total earned, days worked, total hours, and average daily earnings. Implemented interactive calendar grid view with visual indicators for work days, month picker navigation, year summary view with aggregated statistics, and detailed work log table showing date, hours, and earnings breakdowns by type (night, day, weekend). Added fullYear24_25.json data file (9,415 lines) containing complete work calendar data for financial year 2024-25 and integrated it into Work_Tracker.jsx component with route handling for Presentation view. Updated Menu.jsx component (304 line changes) improving navigation between ClockInOut, Calendar, and Presentation views with enhanced Material-UI drawer implementation. Experimented with Tailwind CSS but reverted back to styled-components for consistency with existing codebase architecture and better integration with Material-UI components. Updated stack.config.js adding Python and Moment.js technology logos. Made 5 commits, modified 11 files with 12,747 insertions and 307 deletions (net +12,440 lines). Successfully implemented data visualization with responsive grid layouts, interactive hover effects, color-coded visual indicators, and gradient backgrounds for improved user experience.",
     },
 ];
