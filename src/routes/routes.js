@@ -80,13 +80,13 @@ export default function Router() {
               <Chat></Chat>
               <Container>
                 <TopIntro ref={AboutRef}></TopIntro>
+                <TimelineSection></TimelineSection>
                 <Stack></Stack>
               </Container>
-              <TimelineSection></TimelineSection>
-              <ReactSection></ReactSection>
               <Container>
                 <Projects></Projects>
               </Container>
+              <ReactSection></ReactSection>
               <Contact></Contact>
               <Footer></Footer>
             </Route>
