@@ -82,8 +82,8 @@ const H2 = styled.h2`
   justify-content: center;
 `;
 const Nick = styled.p`
-  margin: -1px 3px;
-  font-size: 20px;
+  font-family: 'Ubuntu-Light';
+  font-weight: 500;
   font-weight: 600;
   ${(p) =>
     p.nick
