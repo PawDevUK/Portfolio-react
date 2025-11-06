@@ -1,5 +1,5 @@
 export const particlesOptions = {
-    fullScreen:false,
+    fullScreen: false,
     fpsLimit: 60,
     interactivity: {
         events: {
@@ -18,7 +18,7 @@ export const particlesOptions = {
                 quantity: 4,
             },
             repulse: {
-                distance: 200,
+                distance: 100,
                 duration: 0.4,
             },
         },
@@ -31,8 +31,8 @@ export const particlesOptions = {
             color: "#ffffff",
             distance: 80,
             enable: true,
-            opacity: 0.9,
-            width: 0.1,
+            opacity: 1,
+            width: 0.2,
         },
         collisions: {
             enable: true,
