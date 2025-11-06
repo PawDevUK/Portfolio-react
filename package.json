@@ -67,8 +67,7 @@
     "heroku-postbuild": "npm run build"
   },
   "engines": {
-    "node": ">=20",
-    "npm": "8.5.0"
+    "node": ">=20"
   },
   "eslintConfig": {
     "extends": [
