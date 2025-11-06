@@ -21,7 +21,6 @@ export default function DownloadCV() {
     try {
       const canvas = await html2canvas(cvElement, {
         scale: 2,
-        useCORS: true,
         logging: false,
         ignoreElements: (element) => {
           return element.classList.contains('no-pdf');
