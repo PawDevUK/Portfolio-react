@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 `;
 
 export default function DownloadCV() {
-  const downloadCV = () => {
+  const downloadCV = async () => {
     const cvElement = document.getElementById('cv');
 
     if (!cvElement) {
