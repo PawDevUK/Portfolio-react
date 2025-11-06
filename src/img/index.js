@@ -39,6 +39,10 @@ export { default as nextjs } from './nextjs.png'
 export { default as ts } from './ts.png'
 export { default as momentjs } from './momentjs.png'
 export { default as python } from './python.png'
+export { default as chatgpt } from './chatgpt.png'
+export { default as copilot } from './copilot.png'
+export { default as vercel } from './vercel.png'
+
 
 
 
@@ -46,4 +50,4 @@ export { default as chat } from './chat24.png'
 export { default as expand } from './expand-23.png'
 export { default as SkyScraper } from './skyScrapers.png'
 export { default as ChatButtonLarge1px } from './ChatButtonLarge1px.svg'
-export { default as projectsBackground } from  './y-so-serious-white.png'
+export { default as projectsBackground } from './y-so-serious-white.png'

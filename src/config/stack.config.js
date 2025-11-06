@@ -1,4 +1,4 @@
-import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, ubuntu, tailwind, nextjs, ts, momentjs, python } from 'img'
+import { react, git, mongo, nodeJS, material, gcloud, bootstrap, figma, html, css, js, styled, router, express, vscode, npm, ubuntu, tailwind, nextjs, ts, momentjs, python, copilot, chatgpt, vercel } from 'img'
 
 export const stack = {
     header: 'What I Use',
@@ -114,8 +114,18 @@ export const stack = {
             text: "",
             webHref: "https://code.visualstudio.com/",
         }, {
-            img: ubuntu,
-            title: "Ubuntu",
+            img: chatgpt,
+            title: "ChatGPT",
+            text: "",
+            webHref: "https://chatgpt.com/",
+        }, {
+            img: copilot,
+            title: "Copilot",
+            text: "",
+            webHref: "https://copilot.microsoft.com/",
+        }, {
+            img: vercel,
+            title: "Vercel",
             text: "",
             webHref: "https://ubuntu.com/",
         }
