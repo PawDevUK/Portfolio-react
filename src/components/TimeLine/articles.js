@@ -1,6 +1,12 @@
 export const articles = [
     {
         title: "Portfolio Frontend",
+        date: "06/11/25 - Evening (21:39)",
+        description:
+            "Enhanced stack icons and adjusted particle effects. Added AI development tools to stack.config.js: ChatGPT, GitHub Copilot, and Vercel logos with corresponding PNG images. Reduced particles repulse distance from 200 to 100 pixels to create smaller hover interaction circle. Updated README.md todo list. Restructured timeline to separate same-day work by time (Morning/Afternoon/Evening) instead of creating duplicate date entries. Split 06/11/25 articles.js entry into two separate timeline items with time-specific dates for better visual separation in timeline display. Made 3 commits, modified 9 files with 37 insertions and 14 deletions (net +23 lines plus 3 binary image files).",
+    },
+    {
+        title: "Portfolio Frontend",
         date: "06/11/25 - Afternoon (12:50)",
         description:
             "Optimized PDF download file size and quality, fixed deployment issues. Investigated excessive 25MB PDF file size caused by PNG format with scale: 2. Converted image format from PNG to JPEG with 0.95 quality compression, reducing file size from 25MB to 1.1MB. Increased scale parameter from 2 to 2.5 to improve visual quality while maintaining optimal file size around 2-3MB for better text sharpness and clarity. Removed useCORS: true configuration after determining it was unnecessary for same-domain images (default is false). Fixed Vercel deployment npm dependency conflict by creating .npmrc file with legacy-peer-deps=true flag to handle peer dependency resolution issues, and removed strict npm version requirement from package.json engines field (changed from npm: \"8.5.0\" to only requiring node >= 20). Made 6 commits, modified 4 files. Successfully balanced PDF quality with file size and resolved production deployment configuration.",
