@@ -80,6 +80,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [ ] Refactor code.
 - [ ] Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - [ ] Create a stats component to display visitors.
+- [x] Add download button of the CV.
 - [x] Enlarge projects cards on mobile devices.
 - [x] Reduce size of projects cards header as it is well to big.
 - [x] Update nick text and css. Find apealing font type and change it for footer and header.
