@@ -54,6 +54,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+- [x] Fix downladed page layout. The article is cut in half between pages as the cv is copied as one page and then splited into two whitout checking of the text layout.
 - [ ] Add padding right to time line content so the text is not that close to scroll button.
 - [ ] Make sure that component P is used for all paragraphs for consistency.
 - [ ] Add vercel to the stack.
