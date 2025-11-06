@@ -54,7 +54,6 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
-- [x] Fix downladed page layout. The article is cut in half between pages as the cv is copied as one page and then splited into two whitout checking of the text layout.
 - [ ] Add padding right to time line content so the text is not that close to scroll button.
 - [ ] Make sure that component P is used for all paragraphs for consistency.
 - [ ] Add vercel to the stack.
@@ -81,6 +80,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [ ] Refactor code.
 - [ ] Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - [ ] Create a stats component to display visitors.
+- [x] Fix downladed page layout. The article is cut in half between pages as the cv is copied as one page and then splited into two whitout checking of the text layout.
 - [x] Add download button of the CV.
 - [x] Enlarge projects cards on mobile devices.
 - [x] Reduce size of projects cards header as it is well to big.
