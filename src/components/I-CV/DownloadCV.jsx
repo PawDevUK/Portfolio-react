@@ -21,9 +21,12 @@ export default function DownloadCV() {
         ignoreElements: (element) => {
           return element.classList.contains('no-pdf');
         },
-
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
+          const h5Elements = clonedDoc.querySelectorAll('.cv-h5');
+          h5Elements.forEach((element) => {
+            if (element.textContent.includes('Portfolio Frontend')) {
+              element.classList.add('cv-h5-for-Donload');
+            }
+          });
 
         // Add new pages if content is longer than one page
         while (heightLeft >= 0) {
