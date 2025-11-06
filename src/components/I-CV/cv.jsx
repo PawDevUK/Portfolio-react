@@ -141,7 +141,7 @@ function Cv() {
             </header>
             <Article id='art-work'>
               <ExpieranceWrapper>
-                <div class='cv-h5'>
+                <div class='cv-h5-nonMargin-top'>
                   <span>FilesConverto.com</span>
                 </div>
                 <p>
@@ -276,7 +276,7 @@ function Cv() {
               <h4>Education</h4>
             </header>
             <Article>
-              <div class='cv-h5'>
+              <div class='cv-h5-nonMargin-top'>
                 <span>Relevant Coursework</span>
               </div>
               <ul>

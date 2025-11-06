@@ -5,14 +5,26 @@
     background-color: #fff;
     box-shadow: 1px 0px 25px rgba(50, 50, 50, 0.75);
 }
-#topEpierance{
-    margin-top:0px;
+
+#topEpierance {
+    margin-top: 0px;
 }
-.cv-h5{
+
+.cv-h5,
+.cv-h5-nonMargin-top,
+.cv-h5-for-Donload {
     font-weight: bold;
     text-transform: capitalize;
     font-size: 19px;
     margin: 20px 0px 5px 0px;
+}
+
+.cv-h5-nonMargin-top {
+    margin-top: 0px;
+}
+
+.cv-h5-for-Donload {
+    margin-top: 120px
 }
 
 .info {
@@ -31,22 +43,23 @@
     font-size: 35px;
     color: #333;
     margin: 0px;
-    padding-left:0px;
+    padding-left: 0px;
     text-transform: capitalize;
 }
-#name{
-font-size: 35px;
+
+#name {
+    font-size: 35px;
 }
 
-.Tools{
+.Tools {
     font-weight: bold;
     font-size: 15px;
-    color:#585858;
+    color: #585858;
 }
 
-#art-know{
+#art-know {
     padding-right: 30px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -54,10 +67,11 @@ font-size: 35px;
     margin: 0px;
 }
 
-.Skills{
+.Skills {
     margin: 0px;
     font-size: 18px;
 }
+
 .Skills ul li {
     line-height: 24px;
 }
@@ -68,8 +82,8 @@ a:hover {
     color: #0faee1;
 }
 
-.sectionPadding{
-    padding: 10px 35px;
+.sectionPadding {
+    padding: 0px 35px 10px 35px;
 }
 
 #header {
@@ -80,17 +94,18 @@ a:hover {
     /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-   
+
 }
-#cont-art{
-     padding: 10px 0px 10px 0px;
+
+#cont-art {
+    padding: 10px 0px 10px 0px;
 }
 
 .grid {
     /* margin-top: 20px; */
     display: grid;
     grid-template-columns: 1fr;
-    
+
 }
 
 @media (min-width: 800px) {
@@ -136,7 +151,8 @@ a:hover {
     text-transform: capitalize;
 }
 
-#cont-art #right, ul {
+#cont-art #right,
+ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
@@ -146,4 +162,3 @@ a:hover {
 .non-margin-top {
     margin-top: 0px;
 }
-
