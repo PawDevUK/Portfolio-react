@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   }
 `;
 const HeaderWrapper = styled.div`
-  margin: 0px auto 5px auto;
+  margin: 0px auto 0px auto;
   width: 100%;
   display: flex;
   position: relative;
@@ -67,13 +67,14 @@ const TextWrapper = styled.div`
   padding: 5px;
   z-index: 10000;
   text-align: center;
-  margin: 5px 20px;
+  margin: 0px 20px 5px 20px;
 `;
 const StImg = styled.img`
   display: block;
   margin: auto;
   /* height:200px; */
-  width: 80%;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
@@ -106,6 +107,7 @@ function Card({ ...props }) {
 
   return (
     <Wrapper>
+      <StImg src={props.item.src} alt={props.item.alt}></StImg>
       <HeaderWrapper>
         <TitleWrapper>
           <Header>
@@ -118,7 +120,6 @@ function Card({ ...props }) {
         </TopBtnWrapper> */}
       </HeaderWrapper>
       {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
-      <StImg src={props.item.src} alt={props.item.alt}></StImg>
       <TextWrapper>
         <P p_line_height={props.p_line_height}>
           {LimitText(props.item.text, !textLength ? 150 : textLength)}
