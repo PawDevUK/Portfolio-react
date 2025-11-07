@@ -38,11 +38,6 @@ export const stack = {
             text: "",
             webHref: "https://javascript.info/",
         }, {
-            img: python,
-            title: "Python",
-            text: "",
-            webHref: "https://www.python.org/",
-        }, {
             img: npm,
             title: "NPM",
             text: "",
@@ -128,7 +123,14 @@ export const stack = {
             title: "Vercel",
             text: "",
             webHref: "https://ubuntu.com/",
-        }
+        },
+        // {
+        //     img: python,
+        //     title: "Python",
+        //     text: "",
+        //     webHref: "https://www.python.org/",
+        // }, 
+
 
     ]
 }

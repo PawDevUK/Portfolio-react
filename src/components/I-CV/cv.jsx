@@ -78,7 +78,7 @@ function Cv() {
               </p>
               <p>
                 Strong knowledge of JavaScript (ES6+), currently learning
-                TypeScript and Python.
+                TypeScript.
                 <br /> Skilled in styled-components, SCSS/SASS, Tailwind,
                 Mbaterial-UI, and Bootstrap.
               </p>
