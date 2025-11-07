@@ -54,15 +54,18 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
-- [x] Add padding right to time line content so the text is not that close to scroll button.
+- Mobile card spacing looks good.
+- [ ] Update CV to reflect my skills and work history.
+- [ ] Update 'About Me' section.
+- [ ] Fix spacing of the elements in the card.
+- [ ] Fix vertical spacing between cards as is greater than vertical.
+- [ ] Add text to FilesConverto card.
+- [ ] Connect the visitor counter to backend and to DB
+- [ ] Change the setting for PDF download to improve the download quality of the CV.
 - [ ] Make sure that component P is used for all paragraphs for consistency.
-- [x] Add vercel to the stack.
-- [x] Add Chatgpt to stack used.
 - [ ] Reduce space between projects header and first project card.
 - [ ] Fix mobile menu links.
 - [ ] Remove "Why I use React?"
-- [ ] Add text to FilesConverto card.
-- [ ] Update CV to reflect my skills and work history
 - [ ] Connect visitor counter to back-end.
 - [ ] Add all not working projects to Portfolio to make them accessible.
 - [ ] Add initial data to LocalStorage in the TicTacToe so the stats window has some dummy data to display.
@@ -73,20 +76,23 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [ ] Finish Register/Login functionality.
 - [ ] Finish language support for Polish.
 - [ ] Improve application performance.
-- [ ] Update 'About Me' section.
 - [ ] Update all application text content.
 - [ ] Update CV.
 - [ ] Add a personal image to the "About" component.
 - [ ] Refactor code.
 - [ ] Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - [ ] Create a stats component to display visitors.
-- [x] Fix downladed page layout. The article is cut in half between pages as the cv is copied as one page and then splited into two whitout checking of the text layout.
+- [x] Move the image of the card to the top of the card.
+- [x] Add vercel to the stack.
+- [x] Add Chatgpt to stack used.
+- [x] Add padding right to time line content so the text is not that close to scroll button.
+- [x] Fix downloaded page layout. The article is cut in half between pages as the CV is copied as one page and then split into two without checking the text layout.
 - [x] Add download button of the CV.
-- [x] Enlarge projects cards on mobile devices.
-- [x] Reduce size of projects cards header as it is well to big.
-- [x] Update nick text and css. Find apealing font type and change it for footer and header.
+- [x] Enlarge project cards on mobile devices.
+- [x] Reduce size of project cards header as it is way too big.
+- [x] Update nick text and CSS. Find appealing font type and change it for footer and header.
 - [x] Update About Me to reflect my skills and work history.
-- [x] Update burger as curent one is not symetrical. Lines are difrent thicknes.
+- [x] Update burger as current one is not symmetrical. Lines are different thickness.
 - [x] Remove list items dots.
 - [x] Add a 'kill-switch' to the server project.
 - [x] Run Lighthouse test.
