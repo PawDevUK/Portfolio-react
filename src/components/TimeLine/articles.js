@@ -1,6 +1,12 @@
 export const articles = [
     {
         title: "Portfolio Frontend",
+        date: "07/11/25 - Morning (11:39)",
+        description:
+            "Updated portfolio content and refined CV skills section. Enhanced topIntro.config.js with improved English descriptions making them more professional and detailed (e.g., \"modern, scalable web applications\", \"robust state management\", \"continuous learning\"). Added comprehensive Filament AI employment section describing chat widget customization for major clients (Rentokil, Versus Arthritis, Tesco), Google Cloud Functions extensions, EBM chatbot dialog flow configuration, and Filament UI enhancements. Updated Polish translations to match enhanced English content with proper technical terminology and professional tone. Removed Python from skills in cv.jsx and stack.config.js as not currently fluent enough for professional showcase. Improved project card layout in card.jsx by moving StImg component to top position before HeaderWrapper and adjusting element spacing for better visual hierarchy. Updated README.md TODO list. Made 5 commits, modified 4 files with 62 insertions and 37 deletions (net +25 lines). Successfully refined professional presentation and ensured accuracy in skills representation.",
+    },
+    {
+        title: "Portfolio Frontend",
         date: "06/11/25 - Evening (21:39)",
         description:
             "Enhanced stack icons and adjusted particle effects. Added AI development tools to stack.config.js: ChatGPT, GitHub Copilot, and Vercel logos with corresponding PNG images. Reduced particles repulse distance from 200 to 100 pixels to create smaller hover interaction circle. Updated README.md todo list. Restructured timeline to separate same-day work by time (Morning/Afternoon/Evening) instead of creating duplicate date entries. Split 06/11/25 articles.js entry into two separate timeline items with time-specific dates for better visual separation in timeline display. Made 3 commits, modified 9 files with 37 insertions and 14 deletions (net +23 lines plus 3 binary image files).",
