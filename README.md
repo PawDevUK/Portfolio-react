@@ -54,9 +54,6 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
-- Mobile card spacing looks good.
-- [ ] Update CV to reflect my skills and work history.
-- [ ] Update 'About Me' section.
 - [ ] Fix spacing of the elements in the card.
 - [ ] Fix vertical spacing between cards as is greater than vertical.
 - [ ] Add text to FilesConverto card.
@@ -82,6 +79,9 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [ ] Refactor code.
 - [ ] Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - [ ] Create a stats component to display visitors.
+- [x] Fix mobile card spacing.
+- [x] Update 'About Me' section.
+- [x] Update CV to reflect my skills and work history.
 - [x] Move the image of the card to the top of the card.
 - [x] Add vercel to the stack.
 - [x] Add Chatgpt to stack used.
