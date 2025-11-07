@@ -3,26 +3,30 @@ export const intro = {
   "PolLang": {
     "header": "Trochę o mnie",
     "text": `<p class="styledP">
-      Jestem Frontend/Backend Developerem z Reading (UK), specjalizującym się w nowoczesnych aplikacjach webowych opartych o <span class="bold">React</span>, <span class="bold">Redux Toolkit</span>, <span class="bold">Next.js</span> i <span class="bold">styled-components</span>. Pracuję z <span class="bold">JavaScript (ES6+)</span> oraz <span class="bold">TypeScript</span>.
+      Jestem Junior Full-Stack Developerem z Reading (UK), specjalizującym się w tworzeniu nowoczesnych, skalowalnych aplikacji webowych z użyciem <span class="bold">React</span>, <span class="bold">Redux Toolkit</span>, <span class="bold">Next.js</span> i <span class="bold">styled-components</span>. Posiadam bogate doświadczenie w <span class="bold">JavaScript (ES6+)</span>. Aktualnie uczę się <span class="bold">TypeScript</span>.
     </p>
     <p class="styledP">
-      Posiadam doświadczenie w budowie aplikacji SPA, integracji z REST API, zarządzaniu stanem (Redux), routingu (React Router), a także w stosowaniu nowoczesnych narzędzi i bibliotek.
+      Moja specjalizacja obejmuje tworzenie aplikacji jednostronicowych (SPA), integrację z REST API, zaawansowane zarządzanie stanem (Redux) oraz routing (React Router). Pracuję z nowoczesnymi bibliotekami i narzędziami.
     </p>
     <p class="styledP">
-      Stylowanie realizuję z użyciem <span class="bold">styled-components</span>, <span class="bold">SCSS/SASS</span>, <span class="bold">Bootstrap</span>, dbając o responsywność i animacje.
+      Do stylowania używam <span class="bold">styled-components</span>, <span class="bold">SCSS/SASS</span> oraz <span class="bold">Bootstrap</span>, zapewniając responsywny design i płynne animacje.
     </p>
     <p class="styledP">
-      Backend: <span class="bold">Node.js</span>, <span class="bold">Express.js</span>, <span class="bold">MongoDB</span>, wdrożenia na <span class="bold">Google Cloud Platform</span>. Znam podstawy autoryzacji, walidacji i bezpiecznego kodowania.
+      Po stronie backendu posiadam doświadczenie z <span class="bold">Node.js</span>, <span class="bold">Express.js</span>, <span class="bold">MongoDB</span> oraz wdrażaniem rozwiązań na <span class="bold">Google Cloud Platform</span>. Znam się na autentykacji, walidacji i bezpiecznych praktykach kodowania.
     </p>
     <p class="styledP">
-      Pracuję z <span class="bold">Git</span>, <span class="bold">GitHub</span>, narzędziami build (<span class="bold">Webpack</span>, <span class="bold">npm</span>), testami automatycznymi (<span class="bold">React Testing Library</span>, <span class="bold">Jest</span>), oraz wdrażam projekty na <span class="bold">gh-pages</span>.
+      W moim workflow wykorzystuję <span class="bold">Git</span> i <span class="bold">GitHub</span> do kontroli wersji, narzędzia build (<span class="bold">Webpack</span>, <span class="bold">npm</span>), testy automatyczne (<span class="bold">React Testing Library</span>, <span class="bold">Jest</span>) oraz wdrażam projekty na <span class="bold">gh-pages</span>.
     </p>
     <p class="styledP">
-      Organizuję projekty w strukturze feature-folder, dbam o czytelność kodu, dokumentację i komunikację techniczną. Stawiam na rozwój, obecnie pogłębiam <span class="bold">TypeScript</span> i testy automatyczne.
+      Organizuję projekty w strukturze feature-folder, stawiam na czysty kod, dokumentację i komunikację techniczną. Jestem zaangażowany w ciągły rozwój, obecnie pogłębiam umiejętności w zakresie <span class="bold">TypeScript</span> i testów automatycznych.
+    </p>
+    <p class="styledP">
+      Podczas pracy w <span class="bold">Filament AI</span>, rozwijałem i dostosowywałem widgety czatu <br> dla wielu klientów (np. <span class="bold">Rentokil, Versus Arthritis, Tesco</span>), zapewniając zgodność z motywami stron internetowych i wymaganiami funkcjonalnymi. Rozszerzyłem Google Cloud Functions o obsługę tworzenia zgłoszeń z dodatkowymi opcjami serwisowymi. Konfigurowałem i optymalizowałem przepływy dialogowe chatbota EBM, dodając nowe funkcje zgodnie z potrzebami klientów. Dodatkowo, rozwijałem Filament UI (niestandardową bibliotekę CSS), implementując nowe funkcjonalności i rozwiązując błędy.
+      <br>Narzędzia i Technologie: React, Node.js, Google Cloud Functions, EBM, Filament UI, REST APIs
     </p>`
   },
   "text": `<p class="styledP">
-    I am a Frontend/Backend Developer based in Reading, UK, specializing in building modern, scalable web applications with <span class="bold">React</span>, <span class="bold">Redux Toolkit</span>, <span class="bold">Next.js</span>, and <span class="bold">styled-components</span>. I have strong experience with <span class="bold">JavaScript (ES6+)</span>. Learning at the moment <span class="bold">TypeScript</span>.
+    I am a Junior Full-Stack Developer based in Reading, UK, specializing in building modern, scalable web applications with <span class="bold">React</span>, <span class="bold">Redux Toolkit</span>, <span class="bold">Next.js</span>, and <span class="bold">styled-components</span>. I have strong experience with <span class="bold">JavaScript (ES6+)</span>. Learning at the moment <span class="bold">TypeScript</span>.
   </p>
   <p class="styledP">
     My expertise includes developing single-page applications (SPAs), integrating REST APIs, robust state management (Redux), and routing (React Router). I work with modern libraries and tools.
@@ -38,5 +42,9 @@ export const intro = {
   </p>
   <p class="styledP">
     I organize projects using a feature-folder structure, focus on clean code, documentation, and technical communication. I am committed to continuous learning, currently deepening my skills in <span class="bold">TypeScript</span> and automated testing.
-  </p>`
+  </p>
+  <p class="styledP">
+   During my employment at <span class="bold">Filament AI</span>, I developed and customized chat widgets <br> for multiple clients (e.g.,<span class="bold"> Rentokil, Versus Arthritis, Tesco</span>), ensuring alignment with website themes and functional requirements. I extended Google Cloud Functions to support ticket creation with additional service options. I configured and optimized EBM chatbot dialog flows, adding new features to meet client needs.
+  Additionally, I enhanced Filament UI (a custom CSS library) by implementing new features and resolving bugs.
+  <br>Tools & Technologies:<span class="bold"> React, Node.js, Google Cloud Functions, EBM, Filament UI, REST APIs </span></p>`
 }
