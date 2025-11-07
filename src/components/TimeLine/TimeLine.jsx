@@ -88,14 +88,14 @@ const TimelineSection = () => {
               },
             }}
           >
-            {articles.map((item, index) => (
+            {articles.map((article, articleIndex) => (
               <Box
-                key={index}
+                key={articleIndex}
                 sx={{
                   position: 'relative',
                   pl: { xs: 3, sm: 5 },
                   pr: { xs: 1, sm: 3 },
-                  mb: index !== articles.length - 1 ? '15px' : 0,
+                  mb: articleIndex !== articles.length - 1 ? '30px' : 0,
                 }}
               >
                 {/* Marker */}
@@ -112,18 +112,43 @@ const TimelineSection = () => {
                   }}
                 />
 
-                {/* Text */}
-                <Header>{item.title}</Header>
+                {/* Date Header */}
+                <Header>{article.title}</Header>
                 <Typography
                   variant='subtitle2'
                   sx={{
                     color: theme.palette.text.secondary,
-                    mb: 1,
+                    mb: 2,
+                    fontWeight: 'bold',
                   }}
                 >
-                  {item.date}
+                  {article.date}
                 </Typography>
-                <P>{item.description}</P>
+
+                {/* Multiple updates for the same day */}
+                {article.updates.map((update, updateIndex) => (
+                  <Box
+                    key={updateIndex}
+                    sx={{
+                      mb: updateIndex !== article.updates.length - 1 ? 2 : 0,
+                    }}
+                  >
+                    {/* Show period only if there are multiple updates for this day */}
+                    {article.updates.length > 1 && update.period && (
+                      <Typography
+                        variant='body2'
+                        sx={{
+                          color: theme.palette.text.secondary,
+                          fontStyle: 'italic',
+                          mb: 1,
+                        }}
+                      >
+                        {update.period}
+                      </Typography>
+                    )}
+                    <P>{update.description}</P>
+                  </Box>
+                ))}
               </Box>
             ))}
           </Box>
