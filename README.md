@@ -54,10 +54,13 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
+- [ ] Fix deployment for ChatBot, Fitness App.
+- [ ] Add the target=blank to cv link as it opens in the same tab/window and there is no return to portfolio option.
 - [ ] Fix spacing of the elements in the card.
 - [ ] Fix vertical spacing between cards as is greater than vertical.
 - [ ] Add text to FilesConverto card.
-- [ ] Connect the visitor counter to backend and to DB
+- [ ] Connect the visitor counter to backend and to DB.
+- [ ] Create the systme to combine the time line from other projects.
 - [ ] Change the setting for PDF download to improve the download quality of the CV.
 - [ ] Make sure that component P is used for all paragraphs for consistency.
 - [ ] Reduce space between projects header and first project card.
@@ -79,6 +82,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [ ] Refactor code.
 - [ ] Add a heart/like feature to project cards (implement a database to store a global counter for all hearts/likes).
 - [ ] Create a stats component to display visitors.
+- [x] Update TimeLine.jsx to render day summary with optional updates to work with time stamps inside the same day. Currently the updates are separated by header, date, parts of the day and time.
 - [x] Fix mobile card spacing.
 - [x] Update 'About Me' section.
 - [x] Update CV to reflect my skills and work history.
