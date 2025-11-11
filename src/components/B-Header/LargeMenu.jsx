@@ -99,6 +99,7 @@ function MainLarge({ ...props }) {
               key={i}
               href={item.href}
               onClick={() => scrollToSection(item.href)}
+              target={item.target ? item.target : ''}
             >
               {getLangMenu(item)}
             </Link>

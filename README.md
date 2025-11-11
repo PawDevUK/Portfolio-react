@@ -55,7 +55,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 #### Portfolio
 
 - [ ] Fix deployment for ChatBot, Fitness App.
-- [ ] Add the target=blank to cv link as it opens in the same tab/window and there is no return to portfolio option.
+- [x] Add the target=blank to cv link as it opens in the same tab/window and there is no return to portfolio option.
 - [ ] Fix spacing of the elements in the card.
 - [ ] Fix vertical spacing between cards as is greater than vertical.
 - [ ] Add text to FilesConverto card.
