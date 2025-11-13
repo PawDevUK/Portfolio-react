@@ -1,6 +1,15 @@
 import axios from 'axios';
+import SERVER_URL from '../../../../api/index'
 
-const BASE_URL = 'https://portfolio-server-104qu2sac-pawdevs-projects-c1e9b938.vercel.app';
+const BASE_URL =
+    window.location.hostname === 'localhost'
+        ? 'http://localhost:8080/fitnessapp' // Local development server
+        : `${SERVER_URL}/fitnessapp`; // Production server
+
+export const fetchData = async () => {
+    const response = await fetch(`${BASE_URL}/endpoint`);
+    return response.json();
+};
 
 export const getUsers = async () => {
     const response = await axios.get(`${BASE_URL}/users/`);
