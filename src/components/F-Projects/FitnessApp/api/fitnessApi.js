@@ -42,6 +42,6 @@ export const deleteExercise = async (id) => {
 };
 
 export const addUser = async (userData) => {
-    const response = await axios.post(`${BASE_URL}/users/add/`, userData);
+    const response = await axios.post(`${BASE_URL}/users/add`, userData);
     return response.data;
 };
