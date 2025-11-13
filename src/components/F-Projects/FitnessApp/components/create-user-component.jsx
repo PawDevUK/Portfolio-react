@@ -1,79 +1,72 @@
-import React, { Component } from 'react';
-import UserTable from './user-table-component'
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import UserTable from './user-table-component';
+import { getUsers, addUser } from '../api/fitnessApi';
 
-export default class CreateUser extends Component {
-	constructor(prop) {
-		super(prop);
+export default function CreateUser() {
+  const [username, setUsername] = useState('');
+  const [users, setUsers] = useState([]);
 
-		this.state = {
-			username : '',
-			users    : []
-		};
+  useEffect(() => {
+    fetchUsers();
+  }, []);
 
-		this.ChangeUserName = this.ChangeUserName.bind(this);
-		this.onSubmit = this.onSubmit.bind(this);
-	}
-	componentDidMount() {
-		this.getUsers();
-	}
-	componentDidUpdate(prevProp,prevState){
-		if(prevState.users !== this.state.users){
-			console.log("State has changed");
-			
-		}
-	}
+  useEffect(() => {
+    if (users.length > 0) {
+      console.log('State has changed');
+    }
+  }, [users]);
 
-	getUsers = async()=>{
-		let asyncRes = await axios.get('https://code-camp-291818.ew.r.appspot.com/users/')
-		this.setState({
-			users: asyncRes.data
-		})		
-	};
+  const fetchUsers = async () => {
+    try {
+      const data = await getUsers();
+      setUsers(data);
+    } catch (err) {
+      console.log('Error fetching users:', err);
+    }
+  };
 
-	ChangeUserName(e) {
-		this.setState({
-			username : e.target.value
-		});
-	}
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
 
-	onSubmit(e) {
-		e.preventDefault();
-		const user = {
-			username : this.state.username
-		};
-		axios.post('https://code-camp-291818.ew.r.appspot.com/users/add/', user)
-		.then((res) => console.log(res))
-		.then(()=>{
-			this.setState({
-				username : ''
-			});
-		})
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const user = {
+      username: username,
+    };
 
-		
-		
-	}
+    try {
+      const response = await addUser(user);
+      console.log(response);
+      setUsername('');
+      fetchUsers(); // Refresh user list
+    } catch (err) {
+      console.log('Error adding user:', err);
+    }
+  };
 
-	render() {
-		return (
-			<div>
-				<h3>You are on Create/Delate User Page.</h3>
-				<form action="" onSubmit={this.onSubmit}>
-					<div className="form-group col-12 col-md-6 mt-5 mx-auto">
-						<label>User</label>
-						<input
-							type="text"
-							value={this.state.username}
-							onChange={this.ChangeUserName}
-							className="form-control"
-						/>
-					</div>
-					<div className="form-group col-12 col-md-6 mx-auto">
-						<input type="submit" value="Create User" className="btn btn-primary " />
-					</div>
-				</form>
-				<UserTable user={this.state}> </UserTable>
-			</div>
-		);
-	}
+  return (
+    <div>
+      <h3>You are on Create/Delate User Page.</h3>
+      <form action='' onSubmit={handleSubmit}>
+        <div className='form-group col-12 col-md-6 mt-5 mx-auto'>
+          <label>User</label>
+          <input
+            type='text'
+            value={username}
+            onChange={handleUsernameChange}
+            className='form-control'
+          />
+        </div>
+        <div className='form-group col-12 col-md-6 mx-auto'>
+          <input
+            type='submit'
+            value='Create User'
+            className='btn btn-primary '
+          />
+        </div>
+      </form>
+      <UserTable user={{ username, users }}> </UserTable>
+    </div>
+  );
 }
