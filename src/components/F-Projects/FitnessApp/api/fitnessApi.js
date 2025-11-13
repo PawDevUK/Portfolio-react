@@ -1,7 +1,6 @@
 import axios from 'axios';
-import 'dotenv/config';
 
-const BASE_URL = process.env.SERVER_BASE || 'https://code-camp-291818.ew.r.appspot.com';
+const BASE_URL = 'https://portfolio-server-104qu2sac-pawdevs-projects-c1e9b938.vercel.app/'
 
 export const getUsers = async () => {
     const response = await axios.get(`${BASE_URL}/users/`);
