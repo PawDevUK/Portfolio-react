@@ -1,2 +1,2 @@
-const SERVER_URL = 'https://portfolio-server-104qu2sac-pawdevs-projects-c1e9b938.vercel.app'
+const SERVER_URL = 'https://portfolio-server-kappa-weld.vercel.app/'
 export default SERVER_URL;
