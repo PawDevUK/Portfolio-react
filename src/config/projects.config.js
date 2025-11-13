@@ -39,11 +39,11 @@ export const projects = [
         stack: [react, router, js, figma, styled, gcloud, git, npm]
     }, {
         alt: "Fitness App",
-        githubHref: "https://github.com/pawdevuk/Architect",
+        githubHref: "https://github.com/pawdevuk/FitnessApp",
         src: fitnessApp,
         text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
         title: "Fitness App",
-        webHref: { href: "https://code-camp-front.ew.r.appspot.com/", button: "Visit" },
+        webHref: { href: "/FitnessApp", button: "Visit" },
         stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
     },
     {
