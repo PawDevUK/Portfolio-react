@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://portfolio-server-104qu2sac-pawdevs-projects-c1e9b938.vercel.app/'
+const BASE_URL = 'https://portfolio-server-104qu2sac-pawdevs-projects-c1e9b938.vercel.app';
 
 export const getUsers = async () => {
     const response = await axios.get(`${BASE_URL}/users/`);
