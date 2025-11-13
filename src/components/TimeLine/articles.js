@@ -1,5 +1,42 @@
 export const articles = [
     {
+        title: "Portfolio Server",
+        date: "13/11/25",
+        updates: [
+            {
+                period: "Morning",
+                description:
+                    "FitnessApp Integration: Added new FitnessApp route with MongoDB integration for exercise and user management. Created Mongoose models for users (username field with unique constraint, timestamps) and exercises. Established routes for user and exercise CRUD operations. Added API documentation in api_routes.md. Configured MongoDB connection with proper error handling and automatic index management (drops old indexes on startup to prevent conflicts).",
+            },
+            {
+                period: "Afternoon",
+                description:
+                    "FitnessApp Refactoring: Consolidated FitnessApp routes into a single index file structure, removing separate server.js. Refactored route handlers to use consolidated approach. Added CORS configuration updates to allow localhost:3000 and Vercel server access. Fixed MongoDB connection URI encoding issues and improved error handling for malformed JSON requests. Added username validation in user creation route to ensure data integrity.",
+            },
+            {
+                period: "Evening",
+                description:
+                    "CORS Configuration Updates: Iteratively refined CORS configuration in server.js to dynamically allow Vercel preview and production deployments. Updated allowed origins to include multiple frontend domains. Changed from indexOf to includes method for cleaner code. Added logic to allow all .vercel.app subdomains dynamically. Resolved 'Access-Control-Allow-Origin' header issues preventing frontend-backend communication across different Vercel deployment URLs.",
+            },
+            {
+                period: "Night",
+                description:
+                    "Debugging and Testing: Diagnosed MongoDB connection timeout issues on Vercel (10-second buffering timeout). Verified local endpoints returning 200 responses with proper JSON data. Tested API with Insomnia confirming server-side functionality. Identified CORS as root cause of frontend errors when origin didn't match allowed list. Updated timeline.json with comprehensive session documentation. Confirmed successful local development with FitnessApp returning user data from MongoDB Atlas.",
+            },
+        ],
+    },
+    {
+        title: "Portfolio Frontend",
+        date: "13/11/25",
+        updates: [
+            {
+                period: "Afternoon (14:00-15:00)",
+                description:
+                    "Resolved deployment and API configuration issues for production environment. Fixed Fitness App API endpoints by removing trailing slashes and updating SERVER_URL to point to correct production server (portfolio-server-104qu2sac-pawdevs........). Refactored BASE_URL in fitnessApi.js to conditionally use SERVER_URL for production and localhost:8080 for local development based on window.location.hostname. Addressed CORS policy issues between frontend (pawelsiwek.co.uk) and backend by documenting need for Access-Control-Allow-Origin headers and preflight request handling. Updated vercel.json build configuration with NODE_OPTIONS=--openssl-legacy-provider flag to resolve OpenSSL compatibility issues with Node.js 17+. Removed unused imports (ubuntu, python) from stack.config.js and createSelector from particlesOptions.selector.js to eliminate build warnings. Converted class-based components to functional components. Removed .env configuration in favor of hardcoded environment-based URL switching. Updated project card links and deploy scripts. Made 18 commits, modified multiple API and configuration files. Successfully debugged and resolved production deployment failures, API endpoint misconfigurations, and build compatibility issues while maintaining local development workflow.",
+            },
+        ],
+    },
+    {
         title: "Portfolio Frontend",
         date: "07/11/25",
         updates: [

@@ -1,5 +1,11 @@
 # Time Line
 
+## 13/11/25
+
+**Afternoon (14:00-15:00):** Resolved deployment and API configuration issues for production environment. Fixed Fitness App API endpoints by removing trailing slashes and updating SERVER_URL to point to correct production server (portfolio-server-104qu2sac-pawdevs-projects-c1e9b938.vercel.app). Refactored BASE_URL in fitnessApi.js to conditionally use SERVER_URL for production and localhost:8080 for local development based on window.location.hostname. Addressed CORS policy issues between frontend (pawelsiwek.co.uk) and backend by documenting need for Access-Control-Allow-Origin headers and preflight request handling. Updated vercel.json build configuration with NODE_OPTIONS=--openssl-legacy-provider flag to resolve OpenSSL compatibility issues with Node.js 17+. Removed unused imports (ubuntu, python) from stack.config.js and createSelector from particlesOptions.selector.js to eliminate build warnings. Converted class-based components to functional components. Removed .env configuration in favor of hardcoded environment-based URL switching. Updated project card links and deploy scripts. Made 18 commits, modified multiple API and configuration files. Successfully debugged and resolved production deployment failures, API endpoint misconfigurations, and build compatibility issues while maintaining local development workflow.
+
+---
+
 ## 07/11/25
 
 **Afternoon (13:00):** Restructured timeline component for better data organization and display. Refactored articles.js data structure from flat list with date-period strings to nested structure with separate date and updates array, where each update contains period and description fields. Updated TimeLine.jsx to render one section per day with single date header, displaying multiple time-period updates under the same marker when multiple updates exist for the same day (e.g., 06/11/25 shows Morning, Afternoon, and Evening updates together). Removed complex date-parsing and grouping logic from component in favor of simpler data-driven approach. Updated README.md TODO list marking timeline restructuring task as completed and adding new task for multi-repository timeline aggregation system. Made 3 commits, modified 3 files. Successfully simplified timeline architecture and improved visual hierarchy with better date grouping.
