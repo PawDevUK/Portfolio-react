@@ -1,7 +1,11 @@
 {
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
   "build": {
     "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider"
+      "NODE_OPTIONS": "--openssl-legacy-provider",
+      "CI": "false"
     }
   }
 }
