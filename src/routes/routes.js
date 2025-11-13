@@ -19,7 +19,7 @@ const Login = lazy(() => import('../components/F-Projects/Register_Login/Login')
 const Register = lazy(() => import('../components/F-Projects/Register_Login/Register'))
 const RegisterSignIn = lazy(() => import('../components/F-Projects/Register_Login/RegisterSignIn'))
 const Covid = lazy(() => import('../components/F-Projects/covid-app/Covid'))
-
+const FitnessApp = lazy(() => import('../components/F-Projects/FitnessApp/FitnessApp'))
 
 const CV = lazy(() => import('../components/I-CV/cv'))
 const Chat = lazy(() => import('../components/Z-Chat/Chat'))
@@ -104,6 +104,9 @@ export default function Router() {
             </Route>
             <Route exact path='/signIn' >
               <Login></Login>
+            </Route>
+            <Route exact path='/FitnessApp'>
+              <FitnessApp></FitnessApp>
             </Route>
             <Route exact path="/">
               <Intro></Intro>
