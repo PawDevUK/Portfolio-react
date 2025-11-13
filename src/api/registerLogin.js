@@ -1,6 +1,6 @@
-import {serverURL} from './base_server_URI'
 import axios from 'axios'
+import SERVER_URL from './index'
 
 export const registerLogin_API = axios.create({
-    baseURL: serverURL + '/register',
+    baseURL: SERVER_URL + '/register',
 })

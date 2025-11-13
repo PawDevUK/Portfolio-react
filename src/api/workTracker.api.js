@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { serverURL } from './base_server_URI';
+import SERVER_URL from './index'
 
 export const workTrackerAPI = axios.create({
-    baseURL: serverURL + '/workTracker',
+    baseURL: SERVER_URL + '/workTracker',
     timeout: 1000,
-    headers: {'X-Custom-Header': 'foobar'}
+    headers: { 'X-Custom-Header': 'foobar' }
 });
