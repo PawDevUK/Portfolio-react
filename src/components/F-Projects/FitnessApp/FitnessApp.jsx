@@ -6,17 +6,17 @@ import CreateUser from './components/create-user-component';
 import ExerciseList from './components/exercises-list-component';
 import EditExercise from './components/edit-exercises-component';
 import CreateExercise from './components/create-exercises-component';
-
+import Carousel from './components/LandingPage/Carousel';
 function FitnessApp() {
   return (
     <Router>
-      <div className='container'>
+      <div>
         <Navbar />
-        <br />
         <Route path='/' exact component={ExerciseList} />
         <Route path='/edit/:id' component={EditExercise} />
         <Route path='/create' component={CreateExercise} />
         <Route path='/user' component={CreateUser} />
+        <Carousel />
       </div>
     </Router>
   );
