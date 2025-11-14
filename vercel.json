@@ -7,5 +7,9 @@
       "NODE_OPTIONS": "--openssl-legacy-provider",
       "CI": "false"
     }
+  },
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
   }
 }
