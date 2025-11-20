@@ -10,7 +10,7 @@ import '../styles/styles.css';
 function App() {
   useEffect(() => {
     syncConfigWithStore();
-  });
+  }, []);
 
   return (
     <Provider store={store}>
