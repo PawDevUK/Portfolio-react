@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import Toggler from 'components/common/Toggler'
-import styled, { keyframes } from 'styled-components'
-import {store} from 'configureStore'
-import {toggleLang} from 'actions/toggleLang.actions'
-import {PolskaFlaga} from 'img/index'
-import {EnglishFlag} from 'img/index'
+import React, { useState } from 'react';
+import Toggler from 'components/common/Toggler';
+import styled, { keyframes } from 'styled-components';
+import { store } from 'configureStore';
+import { toggleLang } from 'actions/toggleLang.actions';
+import { PolskaFlaga } from 'img/index';
+import { EnglishFlag } from 'img/index';
 
 const appear = keyframes`
   0% {
@@ -20,28 +20,24 @@ const appear = keyframes`
 
 const Wrapper = styled.div`
   animation: ${appear} 1s ease-out;
-`
+`;
 
-export default class LangSwitch extends Component {
-  
-  constructor(props){
-    super(props)
-    this.state = {
-      checked:false
-    }
-    this.onChange = this.onChange.bind(this)
-  }
+export default function LangSwitch() {
+  const [checked, setChecked] = useState(false);
 
-  onChange(){
-    this.setState( {checked:!this.state.checked })
-    store.dispatch(toggleLang(this.state.checked))
-  }
+  const onChange = () => {
+    setChecked(!checked);
+    store.dispatch(toggleLang(checked));
+  };
 
-  render() {
-    return (
-        <Wrapper>
-            <Toggler checkedImg={EnglishFlag} uncheckedImg={PolskaFlaga} onChange={this.onChange} checked={this.state.checked}></Toggler>
-        </Wrapper>
-    )
-  }
+  return (
+    <Wrapper>
+      <Toggler
+        checkedImg={EnglishFlag}
+        uncheckedImg={PolskaFlaga}
+        onChange={onChange}
+        checked={checked}
+      ></Toggler>
+    </Wrapper>
+  );
 }
