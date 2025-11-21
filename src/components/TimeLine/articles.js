@@ -1,6 +1,6 @@
 export const articles = [
     {
-        title: "Portfolio Frontend",
+        title: "Portfolio - Fitness App",
         date: "14/11/25",
         updates: [
             {
