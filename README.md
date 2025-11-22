@@ -54,10 +54,10 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 #### Portfolio
 
-- [ ] Add some UI components to the Fitness App landing page. At the moment, it is very basic and needs some extra features to make it UX acceptable.
+- [ ] Add some UI components to the Fitness App landing page. At the moment, it's very basic and needs some extra features to make better UX.
 - [x] Fix deployment for Fitness App.
 - [ ] Add fetching data and store it in indexDB on FitnessApp first page load to remove laging of the fetching the data. At the moment the data is fetched on the comonent mount and affects user exprience.
-- [ ] Fix deployment for ChatBot.
+- [ ] Fix deployment of the ChatBot. (Not sure if I should dedicate the time as there is plenty of other tasks to do.)
 - [x] Add the target=blank to cv link as it opens in the same tab/window and there is no return to portfolio option.
 - [ ] Fix spacing of the elements in the card.
 - [ ] Fix vertical spacing between cards as is greater than vertical.
