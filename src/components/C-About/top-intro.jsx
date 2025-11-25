@@ -18,17 +18,20 @@ const Card = styled.div`
   width: 100%;
 `;
 
-function TopIntro(props) {
-  useEffect(() => AOS.init({ duration: 1000 }));
+const TopIntro = React.forwardRef((props, ref) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <Wrapper id='about'>
+    <Wrapper id='about' ref={ref}>
       <Card data-aos='fade-right'>
         <JumboSectionHeader>{props.header}</JumboSectionHeader>
         <P styleP>{props.about}</P>
       </Card>
     </Wrapper>
   );
-}
+});
 
 const mapStateToProps = (state) => {
   return {
@@ -36,4 +39,6 @@ const mapStateToProps = (state) => {
     about: getAboutText(state),
   };
 };
-export default connect(mapStateToProps)(TopIntro);
+export default connect(mapStateToProps, null, null, { forwardRef: true })(
+  TopIntro
+);

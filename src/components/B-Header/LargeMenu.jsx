@@ -1,7 +1,6 @@
 import React from 'react';
 import 'react-slidedown/lib/slidedown.css';
 import styled from 'styled-components';
-import { ReactComponent as Logo } from 'img/pawdev.svg';
 import { connect } from 'react-redux';
 import { getMenu, getLang } from 'selectors/pageContent.selector';
 import LangSwitch from 'components/B-Header/LangSwitch';

@@ -105,7 +105,7 @@ export default function Router() {
             <Route exact path='/signIn' >
               <Login></Login>
             </Route>
-            <Route exact path='/FitnessApp'>
+            <Route path='/FitnessApp'>
               <FitnessApp></FitnessApp>
             </Route>
             <Route exact path="/">
