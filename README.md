@@ -157,3 +157,7 @@ with the technology, but it doesn't look good. I need to decide to use one of th
 style types and stick to it. It will be hard to convert everything from style
 components to SCSS, but there should not be a problem converting SCSS into styled\
 components.\
+
+## Directory
+
+For the complete project directory structure, see [Directory.md](Directory.md).
