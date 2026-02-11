@@ -1,4 +1,4 @@
-export const articles = [
+export const defaultArticles = [
     {
         title: "FilesConverto - JumboCard Click Detection",
         date: "22/11/25",

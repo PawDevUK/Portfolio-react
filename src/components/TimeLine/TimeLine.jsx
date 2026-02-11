@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { articles } from './articles';
+import { defaultArticles } from './articles';
 import JumboSectionHeader from '../common/JumboSectionHeader';
 import Header from 'components/common/Header';
 import { P } from '../common/typography';
@@ -9,6 +9,27 @@ import { P } from '../common/typography';
 const TimelineSection = () => {
   const theme = useTheme();
   const scrollRef = useRef(null);
+
+  const [articles, setArticles] = useState(defaultArticles);
+  const [fetchedTimeLine, setFetchedTL] = useState([]);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const response = await fetch(
+        'https://time-line-generator.vercel.app/api/timeline'
+      );
+      const data = await response.json();
+      setFetchedTL(data);
+    };
+
+    fetchArticles();
+  }, []);
+
+  useEffect(() => {
+    if (fetchedTimeLine.length > 0) {
+      setArticles(fetchedTimeLine);
+    }
+  }, [fetchedTimeLine]);
 
   const handleMouseDown = (e) => {
     const slider = scrollRef.current;
