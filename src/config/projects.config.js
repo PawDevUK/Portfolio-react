@@ -1,7 +1,16 @@
-import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts } from 'img'
+import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto, tlg } from 'img';
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, chatgpt } from 'img'
 
 export const projects = [
+    {
+        alt: "Time Line Generator",
+        githubHref: "https://github.com/PawDevUK/TLG",
+        src: tlg,
+        text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
+        title: "Time Line Generator",
+        webHref: { href: "https://time-line-generator.vercel.app/timeLine", button: "Visit" },
+        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt]
+    },
     {
         alt: "FilesConverto.com",
         githubHref: "https://github.com/pawdevuk/Filesconverto",
