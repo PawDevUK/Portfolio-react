@@ -146,30 +146,8 @@ const TimelineSection = () => {
                   {article.date}
                 </Typography>
 
-                {/* Multiple updates for the same day */}
-                {article.updates.map((update, updateIndex) => (
-                  <Box
-                    key={updateIndex}
-                    sx={{
-                      mb: updateIndex !== article.updates.length - 1 ? 2 : 0,
-                    }}
-                  >
-                    {/* Show period only if there are multiple updates for this day */}
-                    {article.updates.length > 1 && update.period && (
-                      <Typography
-                        variant='body2'
-                        sx={{
-                          color: theme.palette.text.secondary,
-                          fontStyle: 'italic',
-                          mb: 1,
-                        }}
-                      >
-                        {update.period}
-                      </Typography>
-                    )}
-                    <P>{update.description}</P>
-                  </Box>
-                ))}
+                {/* Description */}
+                <P>{article.description}</P>
               </Box>
             ))}
           </Box>
