@@ -27,7 +27,9 @@ const TopIntro = React.forwardRef((props, ref) => {
     <Wrapper id='about' ref={ref}>
       <Card data-aos='fade-right'>
         <JumboSectionHeader>{props.header}</JumboSectionHeader>
-        <P styleP>{props.about}</P>
+        <div style={{ margin: '10px', fontSize: '16px', lineHeight: '22px' }}>
+          {props.about}
+        </div>
       </Card>
     </Wrapper>
   );
