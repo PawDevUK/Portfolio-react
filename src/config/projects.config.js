@@ -8,7 +8,7 @@ export const projects = [
         src: tlg,
         text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
         title: "Time Line Generator",
-        webHref: { href: "https://time-line-generator.vercel.app/timeLine", button: "Visit" },
+        webHref: { href: "https://time-line-generator.vercel.app", button: "Visit" },
         stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt]
     },
     {
