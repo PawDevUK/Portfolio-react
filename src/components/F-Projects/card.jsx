@@ -22,18 +22,16 @@ const Underline = styled.div`
   transition: opacity 0.3s ease;
 `;
 const Wrapper = styled.div`
+  margin: 20px 20px 0px 0px;
   @media (max-width: 992px) {
-    margin: 20px 0px 0px 0px;
+    margin: 20px auto 0px auto;
   }
-  /* To push inner wrapper all the way down */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* ------- */
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
-  margin: 20px 20px 0px 0px;
   border-radius: 10px;
   ${boxShadow12};
   width: 65%;
@@ -43,8 +41,10 @@ const Wrapper = styled.div`
   @media (min-width: 992px) {
     width: 45%;
   }
-  &:nth-child(even) {
-    margin-right: 0px;
+  @media (min-width: 992px) {
+    &:nth-child(even) {
+      margin-right: 0px;
+    }
   }
   &:hover ${Underline} {
     opacity: 1;
@@ -87,17 +87,17 @@ const ButtonWrapper = styled.div`
   margin: auto auto 10px auto;
   display: flex;
   width: 250px;
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     flex-direction: column;
     width: 120px;
-  }
+  } */
 `;
 const P = styled.p`
   line-height: ${(p) => p.p_line_height}px;
   font-size: 16px;
 `;
 const A = styled.a`
-  margin: 5px auto;
+  margin: 10px;
   :hover {
     text-decoration: none;
   }
