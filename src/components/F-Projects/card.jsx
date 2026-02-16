@@ -99,6 +99,14 @@ const P = styled.p`
 `;
 const A = styled.a`
   margin: 10px;
+  display: block;
+  ${(props) =>
+    props.disabled &&
+    `
+      pointer-events: none;
+      opacity: 0.5;
+      cursor: not-allowed;
+    `}
   :hover {
     text-decoration: none;
   }
@@ -133,7 +141,11 @@ function Card({ ...props }) {
         </P>
       </TextWrapper>
       <ButtonWrapper>
-        <A href={props.item.webHref.href} target='_blank'>
+        <A
+          href={props.item.webHref.href}
+          disabled={props.item.webHref.href ? false : true}
+          target='_blank'
+        >
           <Button light>{props.item.webHref.button}</Button>
         </A>
         <A href={props.item.githubHref} target='_blank'>
