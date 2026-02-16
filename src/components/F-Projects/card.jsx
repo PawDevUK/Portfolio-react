@@ -34,7 +34,6 @@ const Wrapper = styled.div`
   background-color: #fff;
   border: solid 1px #dbdbdb;
   margin: 20px 20px 0px 0px;
-  padding: 4px;
   border-radius: 10px;
   ${boxShadow12};
   width: 65%;
