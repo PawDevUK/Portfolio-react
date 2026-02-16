@@ -44,6 +44,9 @@ const Wrapper = styled.div`
   @media (min-width: 992px) {
     width: 45%;
   }
+  &:nth-child(even) {
+    margin-right: 0px;
+  }
   &:hover ${Underline} {
     opacity: 1;
   }
