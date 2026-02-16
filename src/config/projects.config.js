@@ -15,7 +15,7 @@ export const projects = [
         alt: "FilesConverto.com",
         githubHref: "https://github.com/pawdevuk/Filesconverto",
         src: filesconverto,
-        text: "",
+        text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats.",
         title: "FilesConverto",
         webHref: { href: "https://filesconverto.vercel.app/", button: "Visit" },
         stack: [react, nextjs, ts, styled, tailwind, nodeJS, npm]
@@ -46,15 +46,16 @@ export const projects = [
         title: "Chat Bot",
         webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
         stack: [react, router, js, figma, styled, gcloud, git, npm]
-    }, {
-        alt: "Fitness App",
-        githubHref: "https://github.com/pawdevuk/FitnessApp",
-        src: fitnessApp,
-        text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
-        title: "Fitness App",
-        webHref: { href: "/FitnessApp", button: "Visit" },
-        stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
     },
+    //  {
+    //     alt: "Fitness App",
+    //     githubHref: "https://github.com/pawdevuk/FitnessApp",
+    //     src: fitnessApp,
+    //     text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
+    //     title: "Fitness App",
+    //     webHref: { href: "/FitnessApp", button: "Visit" },
+    //     stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
+    // },
     {
         alt: "Nasa",
         githubHref: "https://github.com/pawdevuk/Nasa",
@@ -64,15 +65,15 @@ export const projects = [
         webHref: { href: "https://pawdevuk.github.io/NASA/", button: "Visit" },
         stack: [js, html, css, bootstrap, git, vscode]
     },
-    {
-        alt: "Register",
-        githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
-        src: register,
-        text: "Simple app with home and login components. The app has two color schemes and is built with React, styled-components, and react-router-dom.",
-        title: "Register/Sign in Page",
-        webHref: { href: "/RegisterSignIn", button: "Visit" },
-        stack: [react, scss, html, css, vscode, git]
-    },
+    // {
+    //     alt: "Register",
+    //     githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
+    //     src: register,
+    //     text: "Simple app with home and login components. The app has two color schemes and is built with React, styled-components, and react-router-dom.",
+    //     title: "Register/Sign in Page",
+    //     webHref: { href: "/RegisterSignIn", button: "Visit" },
+    //     stack: [react, scss, html, css, vscode, git]
+    // },
     {
         alt: "Royal Oak Architects",
         githubHref: "https://github.com/pawdevuk/Architect",
