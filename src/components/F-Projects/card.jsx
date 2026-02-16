@@ -22,6 +22,9 @@ const Underline = styled.div`
   transition: opacity 0.3s ease;
 `;
 const Wrapper = styled.div`
+  @media (max-width: 992px) {
+    margin: 20px 0px 0px 0px;
+  }
   /* To push inner wrapper all the way down */
   display: flex;
   flex-direction: column;
@@ -30,7 +33,7 @@ const Wrapper = styled.div`
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
-  margin: 20px auto 0px auto;
+  margin: 20px 20px 0px 0px;
   padding: 4px;
   border-radius: 10px;
   ${boxShadow12};
@@ -45,6 +48,7 @@ const Wrapper = styled.div`
     opacity: 1;
   }
 `;
+
 const HeaderWrapper = styled.div`
   margin: 0px auto 0px auto;
   width: 100%;
