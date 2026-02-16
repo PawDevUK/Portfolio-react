@@ -13,6 +13,7 @@ export { default as BrainBot } from './BrainBot.png';
 export { default as TicTacToe } from './tictactoe.webp';
 export { default as filesconverto } from './filesconverto.png'
 export { default as tlg } from './tlg.png'
+export { default as profitRadar } from './profit-radar.png'
 
 export { default as react } from './React.png'
 export { default as reactSvg } from './react.svg'
