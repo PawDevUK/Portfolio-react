@@ -80,6 +80,7 @@ const StImg = styled.img`
   /* margin: auto; */
   /* height:200px; */
   width: 100%;
+  height: 100%;
   border-radius: 5px 5px 0px 0px;
 `;
 const ButtonWrapper = styled.div`
