@@ -1,5 +1,5 @@
 import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto, tlg } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, chatgpt } from 'img'
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, chatgpt, vercel } from 'img'
 
 export const projects = [
     {
@@ -9,16 +9,16 @@ export const projects = [
         text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
         title: "Time Line Generator",
         webHref: { href: "https://time-line-generator.vercel.app", button: "Visit" },
-        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt]
+        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt, vercel]
     },
     {
         alt: "FilesConverto.com",
         githubHref: "https://github.com/pawdevuk/Filesconverto",
         src: filesconverto,
-        text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats.",
+        text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats. The platform features a drag-and-drop uploader.",
         title: "FilesConverto",
         webHref: { href: "https://filesconverto.vercel.app/", button: "Visit" },
-        stack: [react, nextjs, ts, styled, tailwind, nodeJS, npm]
+        stack: [react, nextjs, ts, styled, tailwind, nodeJS, npm, vercel]
     },
     {
         alt: "TicTacToe",
@@ -44,18 +44,18 @@ export const projects = [
         src: bot,
         text: "Chat Bot is a simple app that lets anyone converse with an AI. It's simple and fun. Chat history and a MERN-stack backend will be added later.",
         title: "Chat Bot",
-        webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
+        webHref: { href: "", button: "Visit" },
         stack: [react, router, js, figma, styled, gcloud, git, npm]
     },
-    //  {
-    //     alt: "Fitness App",
-    //     githubHref: "https://github.com/pawdevuk/FitnessApp",
-    //     src: fitnessApp,
-    //     text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
-    //     title: "Fitness App",
-    //     webHref: { href: "/FitnessApp", button: "Visit" },
-    //     stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
-    // },
+    {
+        alt: "Fitness App",
+        githubHref: "https://github.com/pawdevuk/FitnessApp",
+        src: fitnessApp,
+        text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
+        title: "Fitness App",
+        webHref: { href: "", button: "Visit" },
+        stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
+    },
     {
         alt: "Nasa",
         githubHref: "https://github.com/pawdevuk/Nasa",
