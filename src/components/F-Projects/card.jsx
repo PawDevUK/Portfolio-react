@@ -77,7 +77,7 @@ const TextWrapper = styled.div`
 `;
 const StImg = styled.img`
   display: block;
-  margin: auto;
+  /* margin: auto; */
   /* height:200px; */
   width: 100%;
   border-radius: 5px 5px 0px 0px;
