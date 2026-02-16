@@ -24,7 +24,7 @@ export const projects = [
         alt: "TicTacToe",
         githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",
         src: TicTacToe,
-        text: "Tic-tac-toe is a game where two players take turns placing 'O' or 'X' on a 3x3 grid.",
+        text: "Tic-tac-toe is a game where two players take turns placing 'O' or 'X' on a 3x3 grid. This React app features a simple interface and a game logic.",
         title: "Tic Tac Toe",
         webHref: { href: "/TicTacToe", button: "Visit" },
         stack: [react, js, figma, styled, nodeJS, npm]
