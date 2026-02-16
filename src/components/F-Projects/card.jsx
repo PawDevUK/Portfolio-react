@@ -70,7 +70,7 @@ const Expand = styled.div`
   width: 30px;
 `;
 const TextWrapper = styled.div`
-  padding: 5px;
+  /* padding: 5px; */
   z-index: 10000;
   text-align: center;
   margin: 0px 20px 5px 20px;
@@ -123,6 +123,7 @@ function Card({ ...props }) {
   return (
     <Wrapper>
       <StImg src={props.item.src} alt={props.item.alt}></StImg>
+      {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
       <HeaderWrapper>
         <TitleWrapper>
           <Header>
@@ -134,7 +135,6 @@ function Card({ ...props }) {
           <Expand></Expand>
         </TopBtnWrapper> */}
       </HeaderWrapper>
-      {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
       <TextWrapper>
         <P p_line_height={props.p_line_height}>
           {LimitText(props.item.text, !textLength ? 150 : textLength)}
