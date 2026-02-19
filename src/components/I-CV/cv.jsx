@@ -70,52 +70,6 @@ function Cv() {
               <h4>About Me</h4>
             </header>
             <Article>
-              {/* <p>
-                Junior Full-Stack Developer based in Reading, UK, specializing
-                in: <br /> <strong>React</strong>,{' '}
-                <strong>Next.js (App Router)</strong>,
-                <strong>TypeScript</strong>, and <strong>Node.js</strong>.
-              </p>
-              <p>
-                I build modern, responsive web applications with clean
-                architecture, focusing on performance, user experience, secure
-                API integrations, and maintainable code. Experienced in SPAs,
-                RESTful APIs, state management (Redux Toolkit), and full-stack
-                deployment (Vercel, GCP).
-              </p>
-              <p>
-                Actively using <strong>TypeScript</strong> in production and
-                increasingly integrating <strong>AI</strong> (OpenAI GPT models)
-                to add intelligent automation and data processing capabilities.
-              </p>
-              <p>Recent personal projects:</p>
-              <strong>TLG (Time Line Generator)</strong> — Next.js app that
-              tracks GitHub repositories, fetches commits, groups activity by
-              day, and generates concise development summaries using OpenAI GPT.
-              Summaries are stored in MongoDB and displayed in an interactive
-              timeline UI.
-              <br />
-              <em>
-                Showcases GitHub API integration, AI prompting, MongoDB
-                persistence, and automated developer workflow tools.
-              </em>
-              <br />
-              <strong>Profit Radar</strong> — Next.js tool for monitoring Copart
-              salvage vehicle auctions (with Otomoto cross-checks). Features
-              server-side scraping with proxy support, MongoDB storage,
-              calendar/lot browsing, and AI-powered title/description parsing
-              for actionable insights.
-              <br />
-              <p>
-                Professional experience includes customizing chat widgets and
-                extending Google Cloud Functions for major clients at Filament
-                AI (2021).
-              </p>
-              <p>
-                Committed to clean code, best practices, automated testing, and
-                continuous learning in full-stack development and AI-augmented
-                tools.
-              </p> */}
               <p>
                 I'm a Junior Full-Stack Developer based in Reading, UK, focused
                 on building modern, responsive web applications. I specialize in{' '}
