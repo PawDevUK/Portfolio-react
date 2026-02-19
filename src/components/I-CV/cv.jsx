@@ -154,6 +154,20 @@ function Cv() {
             <Article id='art-work'>
               <ExperienceWrapper>
                 <div className='cv-h5-nonMargin-top'>
+                  <span>Profit Radar </span>
+                </div>
+                <p>
+                  Next.js tool for Copart auction monitoring with server-side
+                  scraping, proxy support, MongoDB persistence, and AI title
+                  parsing. Helps identify potential resale opportunities.
+                </p>
+                <p>
+                  <strong>Tools & Technologies:</strong> Next.js (App Router),
+                  TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
+                </p>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
+                <div className='cv-h5'>
                   <span>TLG – Time Line Generator</span>
                 </div>
                 <p>
@@ -166,21 +180,6 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> Next.js (App Router),
                   TypeScript, Tailwind CSS, MongoDB/Mongoose, OpenAI API, GitHub
                   API
-                </p>
-              </ExperienceWrapper>
-
-              <ExperienceWrapper>
-                <div className='cv-h5'>
-                  <span>Profit Radar </span>
-                </div>
-                <p>
-                  Next.js tool for Copart auction monitoring with server-side
-                  scraping, proxy support, MongoDB persistence, and AI title
-                  parsing. Helps identify potential resale opportunities.
-                </p>
-                <p>
-                  <strong>Tools & Technologies:</strong> Next.js (App Router),
-                  TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
