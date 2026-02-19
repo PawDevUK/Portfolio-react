@@ -5,6 +5,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div``;
+
 const ExpieranceWrapper = styled.div`
   padding-right: 30px;
 `;
@@ -69,24 +70,89 @@ function Cv() {
               <h4>About Me</h4>
             </header>
             <Article>
-              <p>
-                Junior Full-Stack Developer from Reading, UK, specializing in
-                React and Node.js.
-                <br /> Experienced in building SPAs, integrating REST APIs, and
-                developing responsive,
-                <br /> modern web applications.
+              {/* <p>
+                Junior Full-Stack Developer based in Reading, UK, specializing
+                in: <br /> <strong>React</strong>,{' '}
+                <strong>Next.js (App Router)</strong>,
+                <strong>TypeScript</strong>, and <strong>Node.js</strong>.
               </p>
               <p>
-                Strong knowledge of JavaScript (ES6+), currently learning
-                TypeScript.
-                <br /> Skilled in styled-components, SCSS/SASS, Tailwind,
-                Mbaterial-UI, and Bootstrap.
+                I build modern, responsive web applications with clean
+                architecture, focusing on performance, user experience, secure
+                API integrations, and maintainable code. Experienced in SPAs,
+                RESTful APIs, state management (Redux Toolkit), and full-stack
+                deployment (Vercel, GCP).
               </p>
               <p>
-                Backend experience includes Node.js, Express.js, MongoDB, and
-                cloud deployments <br /> to GCP, AWS, Azure. Focused on clean
-                code, component-based architecture,
-                <br /> and continuous learning.
+                Actively using <strong>TypeScript</strong> in production and
+                increasingly integrating <strong>AI</strong> (OpenAI GPT models)
+                to add intelligent automation and data processing capabilities.
+              </p>
+              <p>Recent personal projects:</p>
+              <strong>TLG (Time Line Generator)</strong> — Next.js app that
+              tracks GitHub repositories, fetches commits, groups activity by
+              day, and generates concise development summaries using OpenAI GPT.
+              Summaries are stored in MongoDB and displayed in an interactive
+              timeline UI.
+              <br />
+              <em>
+                Showcases GitHub API integration, AI prompting, MongoDB
+                persistence, and automated developer workflow tools.
+              </em>
+              <br />
+              <strong>Profit Radar</strong> — Next.js tool for monitoring Copart
+              salvage vehicle auctions (with Otomoto cross-checks). Features
+              server-side scraping with proxy support, MongoDB storage,
+              calendar/lot browsing, and AI-powered title/description parsing
+              for actionable insights.
+              <br />
+              <p>
+                Professional experience includes customizing chat widgets and
+                extending Google Cloud Functions for major clients at Filament
+                AI (2021).
+              </p>
+              <p>
+                Committed to clean code, best practices, automated testing, and
+                continuous learning in full-stack development and AI-augmented
+                tools.
+              </p> */}
+              <p>
+                I'm a Junior Full-Stack Developer based in Reading, UK, focused
+                on building modern, responsive web applications. I specialize in{' '}
+                <strong>React</strong>, <strong>Next.js (App Router)</strong>,{' '}
+                <strong>TypeScript</strong>, and <strong>Node.js</strong>,
+                always prioritizing clean architecture and user experience.
+              </p>
+              <p>
+                My expertise covers SPAs, <strong>RESTful APIs</strong>, state
+                management with <strong>Redux Toolkit</strong>, and full-stack
+                deployments on <strong>Vercel</strong> and{' '}
+                <strong>Google Cloud Platform</strong>. I use{' '}
+                <strong>TypeScript</strong> daily and increasingly integrate{' '}
+                <strong>OpenAI GPT</strong> for automation and smarter features.
+              </p>
+              <p>
+                Recent projects include{' '}
+                <strong>TLG (Time Line Generator)</strong>—a Next.js app that
+                tracks GitHub activity and generates AI-powered summaries—and{' '}
+                <strong>Profit Radar</strong>, a tool for monitoring Copart
+                auctions with AI-driven insights. Both highlight my skills in
+                API integration, MongoDB, and practical automation.
+                <br />
+                <em>
+                  Showcases: GitHub API, AI prompting, MongoDB, workflow tools.
+                </em>
+              </p>
+              <p>
+                Professionally, I gained hands-on experience at{' '}
+                <strong>Filament AI</strong> in 2021, customizing chat widgets
+                and extending <strong>Google Cloud Functions</strong> for client
+                projects.
+              </p>
+              <p>
+                I'm committed to clean code, best practices, automated testing,
+                and continuous learning in full-stack and AI-augmented
+                development.
               </p>
             </Article>
           </section>
@@ -141,7 +207,40 @@ function Cv() {
             </header>
             <Article id='art-work'>
               <ExpieranceWrapper>
-                <div class='cv-h5-nonMargin-top'>
+                <div className='cv-h5-nonMargin-top'>
+                  <span>
+                    TLG – Time Line Generator (Personal Project, 2025–2026)
+                  </span>
+                </div>
+                <p>
+                  Full-stack Next.js application that automates GitHub commit
+                  tracking and generates AI-powered daily development summaries
+                  using OpenAI GPT. Features interactive timeline UI, MongoDB
+                  storage, and REST API endpoints.
+                </p>
+                <p>
+                  <strong>Tools & Technologies:</strong> Next.js (App Router),
+                  TypeScript, Tailwind CSS, MongoDB/Mongoose, OpenAI API, GitHub
+                  API
+                </p>
+              </ExpieranceWrapper>
+
+              <ExpieranceWrapper>
+                <div className='cv-h5'>
+                  <span>Profit Radar (Personal Project, 2025–2026)</span>
+                </div>
+                <p>
+                  Next.js tool for Copart auction monitoring with server-side
+                  scraping, proxy support, MongoDB persistence, and AI title
+                  parsing. Helps identify potential resale opportunities.
+                </p>
+                <p>
+                  <strong>Tools & Technologies:</strong> Next.js (App Router),
+                  TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
+                </p>
+              </ExpieranceWrapper>
+              <ExpieranceWrapper>
+                <div class='cv-h5'>
                   <span>FilesConverto.com</span>
                 </div>
                 <p>
@@ -170,7 +269,7 @@ function Cv() {
               <ExpieranceWrapper>
                 <div class='cv-h5'>
                   <span>Junior Full-Stack Developer – Filament AI</span>
-                  <time>April 2021 – Decembre 2021</time>
+                  <time>April 2021 – December 2021</time>
                 </div>
                 <p>
                   Developed and customized chat widgets for multiple clients,
