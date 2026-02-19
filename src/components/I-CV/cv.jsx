@@ -115,43 +115,33 @@ function Cv() {
             <header>
               <h4>Skills</h4>
             </header>
-            <Article id='art-know'>
-              <div class='Skills'>
-                <h5>Frontend</h5>
-                <ul>
-                  <li>JavaScript ES6+</li>
-                  <li>TypeScript (learning)</li>
-                  <li>React / Next.js</li>
-                  <li>Redux Toolkit</li>
-                  <li>React Router</li>
-                  <li>Styled-Components</li>
-                  <li>Tailwind</li>
-                  <li>Material-UI</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-              <div class='Skills'>
-                <h5>Backend</h5>
-                <ul>
-                  <li>Node.js / Express.js</li>
-                  <li>MongoDB / Mongoose</li>
-                  <li>Moments.js / date-fns</li>
-                  <li>REST API integration</li>
-                  <li>Nodemailer / Twilio</li>
-                  <li>Google Cloud Functions</li>
-                </ul>
-              </div>
-              <div class='Skills'>
-                <h5>Tools & Testing</h5>
-                <ul>
-                  <li>Git / GitHub / GitLab</li>
-                  <li>Webpack / npm</li>
-                  <li>React Testing Library</li>
-                  <li>Jest</li>
-                  <li>Figma</li>
-                  <li>GCP / AWS</li>
-                </ul>
-              </div>
+            <Article id='art-know' className='skills-columns'>
+              <ul className='Skills merged-skills'>
+                <li>JavaScript ES6+</li>
+                <li>TypeScript (learning)</li>
+                <li>React / Next.js</li>
+                <li>OpenAI API</li>
+                <li>Redux Toolkit</li>
+                <li>React Router</li>
+                <li>Styled-Components</li>
+                <li>Tailwind</li>
+                <li>Material-UI</li>
+                <li>Bootstrap</li>
+                <li>Node.js / Express.js</li>
+                <li>MongoDB / Mongoose</li>
+                <li>Moments.js / date-fns</li>
+                <li>REST API integration</li>
+                <li>Nodemailer / Twilio</li>
+                <li>Google Cloud Functions</li>
+                <li>Vercel</li>
+                <li>AWS</li>
+                <li>Git / GitHub / GitLab</li>
+                <li>Webpack / npm</li>
+                <li>React Testing Library</li>
+                <li>Jest</li>
+                <li>Figma</li>
+                <li>GCP / AWS</li>
+              </ul>
             </Article>
           </section>
 
@@ -162,9 +152,7 @@ function Cv() {
             <Article id='art-work'>
               <ExpieranceWrapper>
                 <div className='cv-h5-nonMargin-top'>
-                  <span>
-                    TLG – Time Line Generator (Personal Project, 2025–2026)
-                  </span>
+                  <span>TLG – Time Line Generator</span>
                 </div>
                 <p>
                   Full-stack Next.js application that automates GitHub commit
@@ -181,7 +169,7 @@ function Cv() {
 
               <ExpieranceWrapper>
                 <div className='cv-h5'>
-                  <span>Profit Radar (Personal Project, 2025–2026)</span>
+                  <span>Profit Radar </span>
                 </div>
                 <p>
                   Next.js tool for Copart auction monitoring with server-side

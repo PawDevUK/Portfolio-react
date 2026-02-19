@@ -69,7 +69,24 @@
 
 .Skills {
     margin: 0px;
-    font-size: 18px;
+    font-size: 16px;
+    column-count: 3;
+    column-gap: 24px;
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.Skills li {
+    break-inside: avoid;
+    /* margin-bottom: 8px; */
+}
+
+@media (max-width: 600px) {
+    .Skills {
+        column-count: 2;
+        column-gap: 12px;
+    }
 }
 
 .Skills ul li {
