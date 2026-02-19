@@ -8,6 +8,9 @@ const Wrapper = styled.div``;
 
 const ExpieranceWrapper = styled.div`
   padding-right: 30px;
+  @media (max-width: 600px) {
+    padding-right: 0px;
+  }
 `;
 const SchoolSection = styled.div`
   padding-right: 30px;
