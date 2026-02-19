@@ -55,6 +55,12 @@
     font-size: 35px;
 }
 
+@media(max-width: 600px) {
+    #name {
+        width: 250px;
+    }
+}
+
 .Tools {
     font-weight: bold;
     font-size: 15px;
