@@ -80,6 +80,7 @@ function Cv() {
                 <strong>TypeScript</strong>, and <strong>Node.js</strong>,
                 always prioritizing clean architecture and user experience.
               </p>
+              <br />
               <p>
                 My expertise covers SPAs, <strong>RESTful APIs</strong>, state
                 management with <strong>Redux Toolkit</strong>, and full-stack
@@ -90,16 +91,14 @@ function Cv() {
               </p>
               <p>
                 Recent projects include{' '}
-                <strong>TLG (Time Line Generator)</strong>—a Next.js app that
-                tracks GitHub activity and generates AI-powered summaries—and{' '}
+                <strong>TLG (Time Line Generator)</strong> a Next.js app that
+                tracks GitHub activity and generates AI-powered summaries and{' '}
                 <strong>Profit Radar</strong>, a tool for monitoring Copart
                 auctions with AI-driven insights. Both highlight my skills in
                 API integration, MongoDB, and practical automation.
                 <br />
-                <em>
-                  Showcases: GitHub API, AI prompting, MongoDB, workflow tools.
-                </em>
               </p>
+              <br />
               <p>
                 Professionally, I gained hands-on experience at{' '}
                 <strong>Filament AI</strong> in 2021, customizing chat widgets
