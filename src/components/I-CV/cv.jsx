@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div``;
 
-const ExpieranceWrapper = styled.div`
+const ExperienceWrapper = styled.div`
   padding-right: 30px;
   @media (max-width: 600px) {
     padding-right: 0px;
@@ -153,7 +153,7 @@ function Cv() {
               <h4>Experience</h4>
             </header>
             <Article id='art-work'>
-              <ExpieranceWrapper>
+              <ExperienceWrapper>
                 <div className='cv-h5-nonMargin-top'>
                   <span>TLG – Time Line Generator</span>
                 </div>
@@ -168,9 +168,9 @@ function Cv() {
                   TypeScript, Tailwind CSS, MongoDB/Mongoose, OpenAI API, GitHub
                   API
                 </p>
-              </ExpieranceWrapper>
+              </ExperienceWrapper>
 
-              <ExpieranceWrapper>
+              <ExperienceWrapper>
                 <div className='cv-h5'>
                   <span>Profit Radar </span>
                 </div>
@@ -183,8 +183,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> Next.js (App Router),
                   TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>FilesConverto.com</span>
                 </div>
@@ -195,8 +195,8 @@ function Cv() {
                   convertion. At the moment frontend is in development process
                   and constantly updated.
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Work Tracker</span>
                 </div>
@@ -210,8 +210,8 @@ function Cv() {
                   schedule management. The system supports employee
                   self-service, automated payroll, and flexible scheduling.
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Junior Full-Stack Developer – Filament AI</span>
                   <time>April 2021 – December 2021</time>
@@ -228,8 +228,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> React, Node.js, Google
                   Cloud Functions, EBM, Filament UI, REST APIs
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Portfolio Frontend</span>
                 </div>
@@ -243,8 +243,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> React, React Router,
                   Styled-Components, Material-UI, Figma
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Portfolio Backend</span>
                 </div>
@@ -258,8 +258,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> Node.js, Express.js,
                   MongoDB, Google Cloud Functions, Nodemailer
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Bot Chat</span>
                 </div>
@@ -272,8 +272,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> React,
                   Create-React-App, BotLibre API, Google Cloud, Axios
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Fitness App</span>
                 </div>
@@ -286,8 +286,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> React, Node.js,
                   MongoDB, Google Cloud
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>NASA Website</span>
                 </div>
@@ -299,18 +299,18 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> Vanilla JS, Bootstrap,
                   NASA API
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Gentleman Barber</span>
                 </div>
                 <p>Simple barber shop website for demonstration purposes.</p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Goodwood Solicitors</span>
                 </div>
-              </ExpieranceWrapper>
+              </ExperienceWrapper>
               <p>Mobile-first website with navigation menu and sub-pages.</p>
             </Article>
           </section>
