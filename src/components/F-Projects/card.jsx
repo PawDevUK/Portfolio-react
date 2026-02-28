@@ -87,11 +87,10 @@ const ButtonWrapper = styled.div`
   justify-content: space-between;
   margin: auto auto 10px auto;
   display: flex;
-  width: 250px;
-  /* @media (max-width: 600px) {
-    flex-direction: column;
-    width: 120px;
-  } */
+  width: 300px;
+  @media (max-width: 600px) {
+    width: 287px;
+  }
 `;
 const P = styled.p`
   line-height: ${(p) => p.p_line_height}px;
