@@ -22,24 +22,24 @@ const Underline = styled.div`
   transition: opacity 0.3s ease;
 `;
 const Wrapper = styled.div`
-  margin: 20px 20px 0px 0px;
-  @media (max-width: 992px) {
-    margin: 20px auto 0px auto;
-  }
+  margin: 40px 40px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
-  border-radius: 10px;
+  border-radius: 20px;
   ${boxShadow12};
+  @media (max-width: 992px) {
+    margin: 20px auto 0px auto;
+  }
   width: 65%;
   @media (max-width: 600px) {
     width: 90%;
   }
   @media (min-width: 992px) {
-    width: 45%;
+    width: 42%;
   }
   @media (min-width: 992px) {
     &:nth-child(even) {
@@ -81,7 +81,7 @@ const StImg = styled.img`
   /* height:200px; */
   width: 100%;
   height: 100%;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
