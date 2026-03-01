@@ -66,10 +66,10 @@ const ButtonWrapper = styled.div`
   padding: 10px;
   width: 350px;
   @media (max-width: 992px) {
-    flex-direction: column;
+    /* flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100px;
+    align-items: center; */
+    width: 280px;
     gap: 10px;
   }
 `;
