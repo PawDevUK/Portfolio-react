@@ -16,6 +16,7 @@ const Button = styled.div`
   //mobile size
   @media (max-width: 700px) {
     font-size: 15px;
+    width: 120px;
   }
   width: 130px;
 
