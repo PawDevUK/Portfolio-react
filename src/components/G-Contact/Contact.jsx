@@ -66,9 +66,6 @@ const ButtonWrapper = styled.div`
   padding: 10px;
   width: 350px;
   @media (max-width: 992px) {
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     width: 280px;
     gap: 10px;
   }
