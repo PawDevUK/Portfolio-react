@@ -54,6 +54,7 @@ function Cv() {
                 <div className='head'>Town:</div>
                 <div className='head'>Telephone:</div>
                 <div className='head'>Portfolio:</div>
+                <div className='head'>GitHub:</div>
                 <div className='head'>Languages:</div>
               </div>
               <div id='right'>
@@ -63,6 +64,7 @@ function Cv() {
                 <div className='info'>
                   <a href='https://pawelsiwek.co.uk'>pawelsiwek.co.uk</a>
                 </div>
+                <div className='info'>PawDevUK</div>
                 <div className='info'>English (Fluent), Polish (Native)</div>
               </div>
             </Article>
@@ -120,7 +122,7 @@ function Cv() {
             <Article id='art-know' className='skills-columns'>
               <ul className='Skills merged-skills'>
                 <li>JavaScript ES6+</li>
-                <li>TypeScript (learning)</li>
+                <li>TypeScript</li>
                 <li>React / Next.js</li>
                 <li>OpenAI API</li>
                 <li>Redux Toolkit</li>
