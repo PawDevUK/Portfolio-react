@@ -90,8 +90,8 @@ const ButtonWrapper = styled.div`
   width: 300px;
   @media (max-width: 600px) {
     justify-content: center;
-    width: 100%;
-    margin: 10px;
+    width: 80%;
+    margin: 0px auto 10px auto;
   }
 `;
 const P = styled.p`
