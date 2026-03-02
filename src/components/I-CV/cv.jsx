@@ -37,11 +37,11 @@ function Cv() {
               <h1 id='name'>Pawel Siwek</h1>
               <h2>Junior Full-Stack Developer</h2>
             </div>
-            <ButtonWrapper>
+            {/* <ButtonWrapper>
               <ButtonInnerWrapper>
                 <DownloadCV />
               </ButtonInnerWrapper>
-            </ButtonWrapper>
+            </ButtonWrapper> */}
           </header>
 
           <section className='grid sectionPadding'>
