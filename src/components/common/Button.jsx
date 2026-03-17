@@ -7,7 +7,7 @@ const Button = styled.div`
     0px 4px 5px rgba(0, 0, 0, 0.14),
     0px 1px 10px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.2);
-  height: 30px;
+  height: 33px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -15,12 +15,17 @@ const Button = styled.div`
 
   //mobile size
   @media (max-width: 700px) {
-    font-size: 12px;
+    font-size: 15px;
+    width: 120px;
   }
+<<<<<<< HEAD
   @media (min-width: 700px) {
     height: ${(p) => (p.height ? p.height : '30px')};
   }
   width: 110px;
+=======
+  width: 130px;
+>>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
 
   //light theme
   ${(p) =>
@@ -45,7 +50,7 @@ const Button = styled.div`
       p.light
         ? css`
             background-color: #17293f;
-            border: 1px solid white;
+            border: 1px solid #17293f;
             color: #fff;
             transition: background-color 0.2s linear;
           `

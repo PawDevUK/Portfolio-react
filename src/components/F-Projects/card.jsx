@@ -22,31 +22,49 @@ const Underline = styled.div`
   transition: opacity 0.3s ease;
 `;
 const Wrapper = styled.div`
-  /* To push inner wrapper all the way down */
+  margin: 40px 40px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* ------- */
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
+<<<<<<< HEAD
   padding: 4px;
   border-radius: 10px;
   ${boxShadow12};
   width: 100%;
   max-width: 520px;
   flex: 1 1 420px;
+=======
+  border-radius: 20px;
+  ${boxShadow12};
+  @media (max-width: 992px) {
+    margin: 20px auto 0px auto;
+  }
+  width: 65%;
+>>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
   @media (max-width: 600px) {
     max-width: 100%;
     flex-basis: 90%;
   }
   @media (min-width: 992px) {
+<<<<<<< HEAD
     max-width: 45%;
+=======
+    width: 42%;
+  }
+  @media (min-width: 992px) {
+    &:nth-child(even) {
+      margin-right: 0px;
+    }
+>>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
   }
   &:hover ${Underline} {
     opacity: 1;
   }
 `;
+
 const HeaderWrapper = styled.div`
   margin: 0px auto 0px auto;
   width: 100%;
@@ -66,26 +84,33 @@ const Expand = styled.div`
   width: 30px;
 `;
 const TextWrapper = styled.div`
-  padding: 5px;
+  /* padding: 5px; */
   z-index: 10000;
   text-align: center;
   margin: 0px 10px 0px 10px;
 `;
 const StImg = styled.img`
   display: block;
-  margin: auto;
+  /* margin: auto; */
   /* height:200px; */
   width: 100%;
-  border-radius: 5px 5px 0px 0px;
+  height: 100%;
+  border-radius: 20px 20px 0px 0px;
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
   margin: 0px auto 10px auto;
   display: flex;
-  width: 250px;
+  width: 300px;
   @media (max-width: 600px) {
+<<<<<<< HEAD
     flex-direction: row;
     /* width: 220px; */
+=======
+    justify-content: center;
+    width: 80%;
+    margin: 0px auto 10px auto;
+>>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
   }
 `;
 const P = styled.p`
@@ -93,7 +118,18 @@ const P = styled.p`
   font-size: 16px;
 `;
 const A = styled.a`
-  margin: 5px auto;
+  @media (max-width: 600px) {
+    margin: 5px;
+  }
+  margin: 10px;
+  display: block;
+  ${(props) =>
+    props.disabled &&
+    `
+      pointer-events: none;
+      opacity: 0.5;
+      cursor: not-allowed;
+    `}
   :hover {
     text-decoration: none;
   }
@@ -110,6 +146,7 @@ function Card({ ...props }) {
   return (
     <Wrapper>
       <StImg src={props.item.src} alt={props.item.alt}></StImg>
+      {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
       <HeaderWrapper>
         <TitleWrapper>
           <Header>
@@ -121,17 +158,26 @@ function Card({ ...props }) {
           <Expand></Expand>
         </TopBtnWrapper> */}
       </HeaderWrapper>
-      {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
       <TextWrapper>
         <P p_line_height={props.p_line_height}>
-          {LimitText(props.item.text, !textLength ? 150 : textLength)}
+          {props.item.text}
+          {/* {LimitText(props.item.text, !textLength ? 350 : textLength)} */}
         </P>
       </TextWrapper>
       <ButtonWrapper>
+<<<<<<< HEAD
         <A href={props.item.webHref.href} target='_blank'>
           <Button light height='35px'>
             {props.item.webHref.button}
           </Button>
+=======
+        <A
+          href={props.item.webHref.href}
+          disabled={props.item.webHref.href ? false : true}
+          target='_blank'
+        >
+          <Button light>{props.item.webHref.button}</Button>
+>>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
         </A>
         <A href={props.item.githubHref} target='_blank'>
           <Button light height='35px'>

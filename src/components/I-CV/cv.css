@@ -10,6 +10,10 @@
     margin-top: 0px;
 }
 
+#cv {
+    padding: 30px 0px 0px 0px;
+}
+
 .cv-h5,
 .cv-h5-nonMargin-top,
 .cv-h5-for-Donload {
@@ -51,6 +55,12 @@
     font-size: 35px;
 }
 
+@media(max-width: 600px) {
+    #name {
+        width: 250px;
+    }
+}
+
 .Tools {
     font-weight: bold;
     font-size: 15px;
@@ -63,13 +73,36 @@
     justify-content: space-between;
 }
 
+@media (min-width: 600px) {
+    #art-about {
+        padding-right: 30px;
+    }
+}
+
 #firstSkillsSet {
     margin: 0px;
 }
 
 .Skills {
     margin: 0px;
-    font-size: 18px;
+    font-size: 16px;
+    column-count: 3;
+    column-gap: 24px;
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.Skills li {
+    break-inside: avoid;
+    /* margin-bottom: 8px; */
+}
+
+@media (max-width: 600px) {
+    .Skills {
+        column-count: 2;
+        column-gap: 12px;
+    }
 }
 
 .Skills ul li {

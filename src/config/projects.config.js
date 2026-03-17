@@ -1,7 +1,16 @@
-import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto, tlg } from 'img';
-import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, chatgpt } from 'img'
+import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto, tlg, profitRadar } from 'img';
+import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, chatgpt, vercel } from 'img'
 
 export const projects = [
+    {
+        alt: "Profit Radar",
+        githubHref: "https://github.com/PawDevUK/profit-radar",
+        src: profitRadar,
+        text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analyzing lot details with market enrichment.",
+        title: "Profit Radar",
+        webHref: { href: "https://profit-radar-ten.vercel.app/", button: "Visit" },
+        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt, vercel]
+    },
     {
         alt: "Time Line Generator",
         githubHref: "https://github.com/PawDevUK/TLG",
@@ -9,22 +18,22 @@ export const projects = [
         text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
         title: "Time Line Generator",
         webHref: { href: "https://time-line-generator.vercel.app", button: "Visit" },
-        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt]
+        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt, vercel]
     },
     {
         alt: "FilesConverto.com",
         githubHref: "https://github.com/pawdevuk/Filesconverto",
         src: filesconverto,
-        text: "",
+        text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats. The platform features a drag-and-drop uploader.",
         title: "FilesConverto",
         webHref: { href: "https://filesconverto.vercel.app/", button: "Visit" },
-        stack: [react, nextjs, ts, styled, tailwind, nodeJS, npm]
+        stack: [react, nextjs, ts, styled, tailwind, nodeJS, npm, vercel]
     },
     {
         alt: "TicTacToe",
         githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe",
         src: TicTacToe,
-        text: "Tic-tac-toe is a game where two players take turns placing 'O' or 'X' on a 3x3 grid.",
+        text: "Tic-tac-toe is a game where two players take turns placing 'O' or 'X' on a 3x3 grid. This React app features a simple interface and a game logic.",
         title: "Tic Tac Toe",
         webHref: { href: "/TicTacToe", button: "Visit" },
         stack: [react, js, figma, styled, nodeJS, npm]
@@ -44,15 +53,16 @@ export const projects = [
         src: bot,
         text: "Chat Bot is a simple app that lets anyone converse with an AI. It's simple and fun. Chat history and a MERN-stack backend will be added later.",
         title: "Chat Bot",
-        webHref: { href: "https://botchat-301119.ew.r.appspot.com/", button: "Visit" },
+        webHref: { href: "", button: "Visit" },
         stack: [react, router, js, figma, styled, gcloud, git, npm]
-    }, {
+    },
+    {
         alt: "Fitness App",
         githubHref: "https://github.com/pawdevuk/FitnessApp",
         src: fitnessApp,
         text: "A simple fitness app to track exercise duration and date. The app is built with React/Node.js and deployed on Google Cloud. Data is stored in MongoDB Atlas.",
         title: "Fitness App",
-        webHref: { href: "/FitnessApp", button: "Visit" },
+        webHref: { href: "", button: "Visit" },
         stack: [react, bootstrap, nodeJS, express, mongo, gcloud, git]
     },
     {
@@ -64,15 +74,15 @@ export const projects = [
         webHref: { href: "https://pawdevuk.github.io/NASA/", button: "Visit" },
         stack: [js, html, css, bootstrap, git, vscode]
     },
-    {
-        alt: "Register",
-        githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
-        src: register,
-        text: "Simple app with home and login components. The app has two color schemes and is built with React, styled-components, and react-router-dom.",
-        title: "Register/Sign in Page",
-        webHref: { href: "/RegisterSignIn", button: "Visit" },
-        stack: [react, scss, html, css, vscode, git]
-    },
+    // {
+    //     alt: "Register",
+    //     githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/RegisterLogin/src/components/F-Projects/Register_Login",
+    //     src: register,
+    //     text: "Simple app with home and login components. The app has two color schemes and is built with React, styled-components, and react-router-dom.",
+    //     title: "Register/Sign in Page",
+    //     webHref: { href: "/RegisterSignIn", button: "Visit" },
+    //     stack: [react, scss, html, css, vscode, git]
+    // },
     {
         alt: "Royal Oak Architects",
         githubHref: "https://github.com/pawdevuk/Architect",

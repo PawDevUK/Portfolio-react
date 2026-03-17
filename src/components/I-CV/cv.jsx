@@ -5,8 +5,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div``;
-const ExpieranceWrapper = styled.div`
+
+const ExperienceWrapper = styled.div`
   padding-right: 30px;
+  @media (max-width: 600px) {
+    padding-right: 0px;
+  }
 `;
 const SchoolSection = styled.div`
   padding-right: 30px;
@@ -33,11 +37,11 @@ function Cv() {
               <h1 id='name'>Pawel Siwek</h1>
               <h2>Junior Full-Stack Developer</h2>
             </div>
-            <ButtonWrapper>
+            {/* <ButtonWrapper>
               <ButtonInnerWrapper>
                 <DownloadCV />
               </ButtonInnerWrapper>
-            </ButtonWrapper>
+            </ButtonWrapper> */}
           </header>
 
           <section className='grid sectionPadding'>
@@ -50,6 +54,7 @@ function Cv() {
                 <div className='head'>Town:</div>
                 <div className='head'>Telephone:</div>
                 <div className='head'>Portfolio:</div>
+                <div className='head'>GitHub:</div>
                 <div className='head'>Languages:</div>
               </div>
               <div id='right'>
@@ -59,6 +64,7 @@ function Cv() {
                 <div className='info'>
                   <a href='https://pawelsiwek.co.uk'>pawelsiwek.co.uk</a>
                 </div>
+                <div className='info'>PawDevUK</div>
                 <div className='info'>English (Fluent), Polish (Native)</div>
               </div>
             </Article>
@@ -68,25 +74,43 @@ function Cv() {
             <header>
               <h4>About Me</h4>
             </header>
-            <Article>
+            <Article id='art-about'>
               <p>
-                Junior Full-Stack Developer from Reading, UK, specializing in
-                React and Node.js.
-                <br /> Experienced in building SPAs, integrating REST APIs, and
-                developing responsive,
-                <br /> modern web applications.
+                I'm a Junior Full-Stack Developer based in Reading, UK, focused
+                on building modern, responsive web applications. I specialize in{' '}
+                <strong>React</strong>, <strong>Next.js (App Router)</strong>,{' '}
+                <strong>TypeScript</strong>, and <strong>Node.js</strong>,
+                always prioritizing clean architecture and user experience.
+              </p>
+              <br />
+              <p>
+                My expertise covers SPAs, <strong>RESTful APIs</strong>, state
+                management with <strong>Redux Toolkit</strong>, and full-stack
+                deployments on <strong>Vercel</strong> and{' '}
+                <strong>Google Cloud Platform</strong>. I use{' '}
+                <strong>TypeScript</strong> daily and increasingly integrate{' '}
+                <strong>OpenAI GPT</strong> for automation and smarter features.
               </p>
               <p>
-                Strong knowledge of JavaScript (ES6+), currently learning
-                TypeScript.
-                <br /> Skilled in styled-components, SCSS/SASS, Tailwind,
-                Mbaterial-UI, and Bootstrap.
+                Recent projects include{' '}
+                <strong>TLG (Time Line Generator)</strong> a Next.js app that
+                tracks GitHub activity and generates AI-powered summaries and{' '}
+                <strong>Profit Radar</strong>, a tool for monitoring Copart
+                auctions with AI-driven insights. Both highlight my skills in
+                API integration, MongoDB, and practical automation.
+                <br />
+              </p>
+              <br />
+              <p>
+                Professionally, I gained hands-on experience at{' '}
+                <strong>Filament AI</strong> in 2021, customizing chat widgets
+                and extending <strong>Google Cloud Functions</strong> for client
+                projects.
               </p>
               <p>
-                Backend experience includes Node.js, Express.js, MongoDB, and
-                cloud deployments <br /> to GCP, AWS, Azure. Focused on clean
-                code, component-based architecture,
-                <br /> and continuous learning.
+                I'm committed to clean code, best practices, automated testing,
+                and continuous learning in full-stack and AI-augmented
+                development.
               </p>
             </Article>
           </section>
@@ -95,43 +119,33 @@ function Cv() {
             <header>
               <h4>Skills</h4>
             </header>
-            <Article id='art-know'>
-              <div class='Skills'>
-                <h5>Frontend</h5>
-                <ul>
-                  <li>JavaScript ES6+</li>
-                  <li>TypeScript (learning)</li>
-                  <li>React / Next.js</li>
-                  <li>Redux Toolkit</li>
-                  <li>React Router</li>
-                  <li>Styled-Components</li>
-                  <li>Tailwind</li>
-                  <li>Material-UI</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </div>
-              <div class='Skills'>
-                <h5>Backend</h5>
-                <ul>
-                  <li>Node.js / Express.js</li>
-                  <li>MongoDB / Mongoose</li>
-                  <li>Moments.js / date-fns</li>
-                  <li>REST API integration</li>
-                  <li>Nodemailer / Twilio</li>
-                  <li>Google Cloud Functions</li>
-                </ul>
-              </div>
-              <div class='Skills'>
-                <h5>Tools & Testing</h5>
-                <ul>
-                  <li>Git / GitHub / GitLab</li>
-                  <li>Webpack / npm</li>
-                  <li>React Testing Library</li>
-                  <li>Jest</li>
-                  <li>Figma</li>
-                  <li>GCP / AWS</li>
-                </ul>
-              </div>
+            <Article id='art-know' className='skills-columns'>
+              <ul className='Skills merged-skills'>
+                <li>JavaScript ES6+</li>
+                <li>TypeScript</li>
+                <li>React / Next.js</li>
+                <li>OpenAI API</li>
+                <li>Redux Toolkit</li>
+                <li>React Router</li>
+                <li>Styled-Components</li>
+                <li>Tailwind</li>
+                <li>Material-UI</li>
+                <li>Bootstrap</li>
+                <li>Node.js / Express.js</li>
+                <li>MongoDB / Mongoose</li>
+                <li>Moments.js / date-fns</li>
+                <li>REST API integration</li>
+                <li>Nodemailer / Twilio</li>
+                <li>Google Cloud Functions</li>
+                <li>Vercel</li>
+                <li>AWS</li>
+                <li>Git / GitHub / GitLab</li>
+                <li>Webpack / npm</li>
+                <li>React Testing Library</li>
+                <li>Jest</li>
+                <li>Figma</li>
+                <li>GCP / AWS</li>
+              </ul>
             </Article>
           </section>
 
@@ -140,8 +154,38 @@ function Cv() {
               <h4>Experience</h4>
             </header>
             <Article id='art-work'>
-              <ExpieranceWrapper>
-                <div class='cv-h5-nonMargin-top'>
+              <ExperienceWrapper>
+                <div className='cv-h5-nonMargin-top'>
+                  <span>Profit Radar </span>
+                </div>
+                <p>
+                  Next.js tool for Copart auction monitoring with server-side
+                  scraping, proxy support, MongoDB persistence, and AI title
+                  parsing. Helps identify potential resale opportunities.
+                </p>
+                <p>
+                  <strong>Tools & Technologies:</strong> Next.js (App Router),
+                  TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
+                </p>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
+                <div className='cv-h5'>
+                  <span>TLG – Time Line Generator</span>
+                </div>
+                <p>
+                  Full-stack Next.js application that automates GitHub commit
+                  tracking and generates AI-powered daily development summaries
+                  using OpenAI GPT. Features interactive timeline UI, MongoDB
+                  storage, and REST API endpoints.
+                </p>
+                <p>
+                  <strong>Tools & Technologies:</strong> Next.js (App Router),
+                  TypeScript, Tailwind CSS, MongoDB/Mongoose, OpenAI API, GitHub
+                  API
+                </p>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
+                <div class='cv-h5'>
                   <span>FilesConverto.com</span>
                 </div>
                 <p>
@@ -151,8 +195,8 @@ function Cv() {
                   convertion. At the moment frontend is in development process
                   and constantly updated.
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Work Tracker</span>
                 </div>
@@ -166,11 +210,11 @@ function Cv() {
                   schedule management. The system supports employee
                   self-service, automated payroll, and flexible scheduling.
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Junior Full-Stack Developer – Filament AI</span>
-                  <time>April 2021 – Decembre 2021</time>
+                  <time>April 2021 – December 2021</time>
                 </div>
                 <p>
                   Developed and customized chat widgets for multiple clients,
@@ -184,8 +228,8 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> React, Node.js, Google
                   Cloud Functions, EBM, Filament UI, REST APIs
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
+              </ExperienceWrapper>
+              <ExperienceWrapper>
                 <div class='cv-h5'>
                   <span>Portfolio Frontend</span>
                 </div>
@@ -199,75 +243,7 @@ function Cv() {
                   <strong>Tools & Technologies:</strong> React, React Router,
                   Styled-Components, Material-UI, Figma
                 </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
-                <div class='cv-h5'>
-                  <span>Portfolio Backend</span>
-                </div>
-                <p>
-                  Implemented backend services for portfolio application using
-                  Node.js and Express. Features include API routes, MongoDB
-                  integration, serverless Cloud Functions, and Nodemailer for
-                  transactional emails.
-                </p>
-                <p>
-                  <strong>Tools & Technologies:</strong> Node.js, Express.js,
-                  MongoDB, Google Cloud Functions, Nodemailer
-                </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
-                <div class='cv-h5'>
-                  <span>Bot Chat</span>
-                </div>
-                <p>
-                  Simple AI chat application allowing conversational
-                  interaction. Built in React, hosted on Google Cloud, using
-                  BotLibre API for AI responses.
-                </p>
-                <p>
-                  <strong>Tools & Technologies:</strong> React,
-                  Create-React-App, BotLibre API, Google Cloud, Axios
-                </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
-                <div class='cv-h5'>
-                  <span>Fitness App</span>
-                </div>
-                <p>
-                  App to track exercises with duration and date. Frontend in
-                  React, backend in Node.js with MongoDB Atlas, deployed on
-                  Google Cloud.
-                </p>
-                <p>
-                  <strong>Tools & Technologies:</strong> React, Node.js,
-                  MongoDB, Google Cloud
-                </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
-                <div class='cv-h5'>
-                  <span>NASA Website</span>
-                </div>
-                <p>
-                  Vanilla JS website with Bootstrap for RWD. Fetches
-                  space-related data from NASA API.
-                </p>
-                <p>
-                  <strong>Tools & Technologies:</strong> Vanilla JS, Bootstrap,
-                  NASA API
-                </p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
-                <div class='cv-h5'>
-                  <span>Gentleman Barber</span>
-                </div>
-                <p>Simple barber shop website for demonstration purposes.</p>
-              </ExpieranceWrapper>
-              <ExpieranceWrapper>
-                <div class='cv-h5'>
-                  <span>Goodwood Solicitors</span>
-                </div>
-              </ExpieranceWrapper>
-              <p>Mobile-first website with navigation menu and sub-pages.</p>
+              </ExperienceWrapper>
             </Article>
           </section>
 

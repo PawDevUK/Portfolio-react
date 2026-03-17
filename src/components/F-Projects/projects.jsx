@@ -15,6 +15,7 @@ import AOS from 'aos';
 const MainWrapper = styled.div`
   padding: 0px 0px 50px 0px;
   position: relative;
+<<<<<<< HEAD
   max-width: 1000px;
 `;
 
@@ -27,6 +28,17 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: stretch;
   gap: 24px;
+=======
+`;
+
+const Wrapper = styled.div`
+  @media (max-width: 992px) {
+    display: block;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+>>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
 `;
 export default function Projects() {
   useEffect(() => {
