@@ -18,14 +18,10 @@ const Button = styled.div`
     font-size: 15px;
     width: 120px;
   }
-<<<<<<< HEAD
   @media (min-width: 700px) {
     height: ${(p) => (p.height ? p.height : '30px')};
   }
   width: 110px;
-=======
-  width: 130px;
->>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
 
   //light theme
   ${(p) =>
