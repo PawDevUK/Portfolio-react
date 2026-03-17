@@ -20,6 +20,7 @@ const Button = styled.div`
   }
   @media (min-width: 700px) {
     height: ${(p) => (p.height ? p.height : '30px')};
+    width: ${(p) => (p.width ? p.width : '110px')};
   }
   width: 110px;
 
