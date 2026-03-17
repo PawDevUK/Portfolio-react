@@ -30,16 +30,18 @@ const Wrapper = styled.div`
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
-  margin: 20px auto 0px auto;
   padding: 4px;
   border-radius: 10px;
   ${boxShadow12};
-  width: 65%;
+  width: 100%;
+  max-width: 520px;
+  flex: 1 1 420px;
   @media (max-width: 600px) {
-    width: 90%;
+    max-width: 100%;
+    flex-basis: 90%;
   }
   @media (min-width: 992px) {
-    width: 45%;
+    max-width: 45%;
   }
   &:hover ${Underline} {
     opacity: 1;
@@ -67,7 +69,7 @@ const TextWrapper = styled.div`
   padding: 5px;
   z-index: 10000;
   text-align: center;
-  margin: 0px 20px 5px 20px;
+  margin: 0px 10px 0px 10px;
 `;
 const StImg = styled.img`
   display: block;
@@ -78,12 +80,12 @@ const StImg = styled.img`
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
-  margin: auto auto 10px auto;
+  margin: 0px auto 10px auto;
   display: flex;
   width: 250px;
   @media (max-width: 600px) {
-    flex-direction: column;
-    width: 120px;
+    flex-direction: row;
+    /* width: 220px; */
   }
 `;
 const P = styled.p`
@@ -127,10 +129,14 @@ function Card({ ...props }) {
       </TextWrapper>
       <ButtonWrapper>
         <A href={props.item.webHref.href} target='_blank'>
-          <Button light>{props.item.webHref.button}</Button>
+          <Button light height='35px'>
+            {props.item.webHref.button}
+          </Button>
         </A>
         <A href={props.item.githubHref} target='_blank'>
-          <Button light>Github Repo</Button>
+          <Button light height='35px'>
+            Github
+          </Button>
         </A>
       </ButtonWrapper>
     </Wrapper>
