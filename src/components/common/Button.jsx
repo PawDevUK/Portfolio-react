@@ -1,9 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 const Button = styled.div`
-  margin:${p=>p.margin?css`p.margin`:css``};
-  font-size:16px;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12),
+  margin: ${(p) => (p.margin ? css`p.margin` : css``)};
+  font-size: 16px;
+  box-shadow:
+    0px 4px 5px rgba(0, 0, 0, 0.14),
+    0px 1px 10px rgba(0, 0, 0, 0.12),
     0px 2px 4px rgba(0, 0, 0, 0.2);
   height: 30px;
   border-radius: 5px;
@@ -14,6 +16,9 @@ const Button = styled.div`
   //mobile size
   @media (max-width: 700px) {
     font-size: 12px;
+  }
+  @media (min-width: 700px) {
+    height: ${(p) => (p.height ? p.height : '30px')};
   }
   width: 110px;
 
@@ -52,5 +57,5 @@ const Button = styled.div`
           margin-bottom: 15px;
         `
       : css``}
-`
-export default Button
+`;
+export default Button;
