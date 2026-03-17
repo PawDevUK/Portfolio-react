@@ -1,12 +1,9 @@
 import { getPLineHight } from 'selectors/pageContent.selector';
-import { expand } from 'img';
 import Button from 'components/common/Button';
 import styled from 'styled-components';
 import { boxShadow12 } from 'styled.js';
 import { connect } from 'react-redux';
-import { LimitText } from 'factory/factory';
 import React, { useEffect, useState } from 'react';
-import { cardTextLength } from 'factory/factory';
 import Stack from './Stack';
 import Header from '../common/Header';
 
@@ -22,43 +19,22 @@ const Underline = styled.div`
   transition: opacity 0.3s ease;
 `;
 const Wrapper = styled.div`
-  margin: 40px 40px 0px 0px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: stretch;
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
-<<<<<<< HEAD
-  padding: 4px;
-  border-radius: 10px;
-  ${boxShadow12};
-  width: 100%;
-  max-width: 520px;
-  flex: 1 1 420px;
-=======
   border-radius: 20px;
   ${boxShadow12};
-  @media (max-width: 992px) {
-    margin: 20px auto 0px auto;
-  }
-  width: 65%;
->>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
+  max-width: 400px;
+  flex: 1 1 360px;
   @media (max-width: 600px) {
     max-width: 100%;
-    flex-basis: 90%;
+    flex-basis: 100%;
   }
-  @media (min-width: 992px) {
-<<<<<<< HEAD
-    max-width: 45%;
-=======
-    width: 42%;
-  }
-  @media (min-width: 992px) {
-    &:nth-child(even) {
-      margin-right: 0px;
-    }
->>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
+  @media (max-width: 992px) {
+    max-width: 640px;
   }
   &:hover ${Underline} {
     opacity: 1;
@@ -74,14 +50,6 @@ const HeaderWrapper = styled.div`
 const TitleWrapper = styled.div`
   width: 100%;
   text-align: center;
-`;
-const Expand = styled.div`
-  margin: 0 0 0 auto;
-  background-image: url(${expand});
-  background-size: cover;
-  background-position: center;
-  height: 30px;
-  width: 30px;
 `;
 const TextWrapper = styled.div`
   /* padding: 5px; */
@@ -101,16 +69,11 @@ const ButtonWrapper = styled.div`
   justify-content: space-between;
   margin: 0px auto 10px auto;
   display: flex;
-  width: 300px;
+  /* width: 300px; */
   @media (max-width: 600px) {
-<<<<<<< HEAD
-    flex-direction: row;
-    /* width: 220px; */
-=======
     justify-content: center;
     width: 80%;
     margin: 0px auto 10px auto;
->>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
   }
 `;
 const P = styled.p`
@@ -135,13 +98,16 @@ const A = styled.a`
   }
 `;
 function Card({ ...props }) {
-  const [textLength, setTextLength] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    window.addEventListener('resize', () => setWidth(window.innerWidth));
-    setTextLength(cardTextLength(width));
-  }, [width]);
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <Wrapper>
@@ -165,22 +131,17 @@ function Card({ ...props }) {
         </P>
       </TextWrapper>
       <ButtonWrapper>
-<<<<<<< HEAD
-        <A href={props.item.webHref.href} target='_blank'>
-          <Button light height='35px'>
-            {props.item.webHref.button}
-          </Button>
-=======
         <A
           href={props.item.webHref.href}
           disabled={props.item.webHref.href ? false : true}
           target='_blank'
         >
-          <Button light>{props.item.webHref.button}</Button>
->>>>>>> d990d53bba5e6ba4add49868638db01227d32e21
+          <Button light height='35px' width='150px'>
+            {props.item.webHref.button}
+          </Button>
         </A>
         <A href={props.item.githubHref} target='_blank'>
-          <Button light height='35px'>
+          <Button light height='35px' width='150px'>
             Github
           </Button>
         </A>
