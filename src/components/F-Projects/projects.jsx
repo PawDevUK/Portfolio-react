@@ -15,18 +15,20 @@ import AOS from 'aos';
 const MainWrapper = styled.div`
   padding: 0px 0px 50px 0px;
   position: relative;
-  max-width: 1000px;
+  width: 100%;
 `;
 
 const Wrapper = styled.div`
-  width: 90%;
-  margin: auto;
-  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto 0px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
   gap: 24px;
+  @media (max-width: 600px) {
+    gap: 16px;
+  }
 `;
 
 export default function Projects() {
