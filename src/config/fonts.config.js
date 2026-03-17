@@ -9,5 +9,5 @@ export const fonts = {
     family: {
         main: 'Nunito Sans , sans-serif'
     },
-    paragraph_line_height: '22'
+    paragraph_line_height: '20'
 }
