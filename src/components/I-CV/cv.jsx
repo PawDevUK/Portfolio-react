@@ -90,6 +90,13 @@ function Cv() {
                 deployments on <strong>Vercel</strong> and{' '}
                 <strong>Google Cloud Platform</strong>.
               </p>
+              <p>
+                In production environments, I actively use{' '}
+                <strong>TypeScript</strong> and increasingly incorporate AI
+                capabilities—particularly <strong>OpenAI API models</strong>—to
+                enable intelligent automation, data processing, and smarter
+                application features.
+              </p>
               <br />
               <p>
                 Recent projects include{' '}

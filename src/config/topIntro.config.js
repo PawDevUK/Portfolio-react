@@ -9,7 +9,7 @@ export const intro = {
       Moja praca obejmuje aplikacje full-stack — od responsywnych interfejsów front-endowych i zarządzania stanem z użyciem <span class="bold">Redux Toolkit</span> oraz <span class="bold">Zustand</span> po skalowalne systemy back-endowe, <span class="bold">RESTful API</span> oraz wdrożenia na platformach <span class="bold">Vercel</span> i <span class="bold">Google Cloud Platform</span>.
     </p>
     <p class="styledP">
-      Na co dzień w środowisku produkcyjnym aktywnie korzystam z <span class="bold">TypeScript</span> i coraz częściej wdrażam możliwości AI — szczególnie <span class="bold">OpenAI API</span> — aby umożliwić inteligentną automatyzację, przetwarzanie danych i inteligentniejsze funkcje w aplikacjach.
+      W środowiskach produkcyjnych aktywnie korzystam z <span class="bold">TypeScript</span> i coraz częściej wdrażam możliwości AI — szczególnie modele <span class="bold">OpenAI API</span> — aby umożliwiać inteligentną automatyzację, przetwarzanie danych i inteligentniejsze funkcje aplikacji.
     </p>
     <p class="styledP">
       Wśród moich ostatnich projektów znalazł się <span class="bold">TLG (Time Line Generator)</span>, aplikacja <span class="bold">Next.js</span> łącząca się z <span class="bold">GitHub API</span> w celu śledzenia repozytoriów, pobierania historii commitów, organizowania aktywności deweloperskiej według dni i generowania zwięzłych podsumowań rozwoju zasilanych przez <span class="bold">OpenAI API</span>. Podsumowania te są przechowywane w <span class="bold">MongoDB</span> i prezentowane w interaktywnym widoku osi czasu. Projekt ten podkreśla moje umiejętności integracji z GitHub API, przemyślanego promptowania AI, trwałości danych w MongoDB oraz tworzenia praktycznych narzędzi usprawniających workflow dewelopera.
@@ -54,7 +54,7 @@ export const intro = {
     My work spans full-stack web applications, from responsive front-end interfaces and state management with <strong>Redux Toolkit</strong> and <strong>Zustand</strong> to scalable back-end systems, <strong>RESTful APIs</strong>, and deployments on <strong>Vercel</strong> and <strong>Google Cloud Platform</strong>. 
   </p>
   <p class="styledP">
-    In production environments, I actively use <span class="bold">TypeScript</span> every day and have been increasingly incorporating AI capabilities—particularly <span class="bold">OpenAI API models</span>—to enable intelligent automation, data processing, and smarter features within applications.
+    In production environments, I actively use <span class="bold">TypeScript</span> and increasingly incorporate AI capabilities—particularly <span class="bold">OpenAI API models</span>—to enable intelligent automation, data processing, and smarter application features.
   </p>
   <p class="styledP">
     Among my recent personal projects, I've developed <span class="bold">TLG (Time Line Generator)</span>, a <span class="bold">Next.js</span> application that connects to the <span class="bold">GitHub API</span> to track repositories, pull commit history, organize developer activity by day, and generate concise, insightful development summaries powered by <span class="bold">OpenAI API</span>. These summaries get stored in <span class="bold">MongoDB</span> and presented through an interactive timeline interface. This project highlights my skills in GitHub API integration, thoughtful AI prompting, MongoDB persistence, and creating practical tools that streamline developer workflows.
