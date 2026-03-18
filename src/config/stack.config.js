@@ -49,7 +49,7 @@ export const stack = {
             webHref: "https://reactjs.org/",
         }, {
             img: styled,
-            title: "Styled-components",
+            title: "Styled..",
             text: "",
             webHref: "https://styled-components.com/",
             styled: true
