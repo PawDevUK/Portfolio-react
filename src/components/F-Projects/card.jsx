@@ -21,7 +21,7 @@ const Underline = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justify-content: space-between;
   z-index: 1000;
   background-color: #fff;
   border: solid 1px #dbdbdb;
@@ -57,13 +57,20 @@ const TextWrapper = styled.div`
   text-align: center;
   margin: 0px 10px 0px 10px;
 `;
+const ImgWrapper = styled.div`
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+  flex-shrink: 0;
+  @media (max-width: 600px) {
+    height: 180px;
+  }
+`;
 const StImg = styled.img`
   display: block;
-  /* margin: auto; */
-  /* height:200px; */
   width: 100%;
   height: 100%;
-  border-radius: 20px 20px 0px 0px;
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
@@ -111,7 +118,9 @@ function Card({ ...props }) {
 
   return (
     <Wrapper>
-      <StImg src={props.item.src} alt={props.item.alt}></StImg>
+      <ImgWrapper>
+        <StImg src={props.item.src} alt={props.item.alt}></StImg>
+      </ImgWrapper>
       {width >= 650 ? <Stack stack={props.stack}></Stack> : null}
       <HeaderWrapper>
         <TitleWrapper>
