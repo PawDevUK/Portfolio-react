@@ -70,8 +70,9 @@ function Cv() {
                 I'm a Junior Full-Stack Developer based in Reading, UK, focused
                 on building modern, responsive web applications. I specialize in{' '}
                 <strong>React</strong>, <strong>Next.js (App Router)</strong>,{' '}
-                <strong>TypeScript</strong>, and <strong>Node.js</strong>,
-                always prioritizing clean architecture and user experience.
+                <strong>TypeScript</strong>, <br />
+                and <strong>Node.js</strong>, always prioritizing clean
+                architecture and user experience.
               </p>
               <p>
                 My work spans full-stack web applications, from responsive
