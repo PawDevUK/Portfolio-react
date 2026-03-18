@@ -1,5 +1,4 @@
 import './cv.css';
-import DownloadCV from './DownloadCV';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -17,14 +16,6 @@ const SchoolSection = styled.div`
 `;
 const Article = styled.article`
   padding: 10px 0px 10px 0px;
-`;
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end; /* Pushes button to the right */
-  align-items: start; /* Vertically centers with h2 */
-`;
-const ButtonInnerWrapper = styled.div`
-  padding: 10px;
 `;
 
 function Cv() {
@@ -133,6 +124,7 @@ function Cv() {
                 <li>React / Next.js</li>
                 <li>OpenAI API</li>
                 <li>Redux Toolkit</li>
+                <li>Zustand</li>
                 <li>React Router</li>
                 <li>Styled-Components</li>
                 <li>Tailwind</li>
@@ -151,7 +143,7 @@ function Cv() {
                 <li>React Testing Library</li>
                 <li>Jest</li>
                 <li>Figma</li>
-                <li>GCP / AWS</li>
+                <li>GCP</li>
               </ul>
             </Article>
           </section>
@@ -192,19 +184,19 @@ function Cv() {
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>FilesConverto.com</span>
                 </div>
                 <p>
-                  Files converter build with TypeScript styled with Tailwind.
-                  Framework of choice is Next.js. The user can upload a file
-                  with use of dropzone and then sent it to backend for
-                  convertion. At the moment frontend is in development process
-                  and constantly updated.
+                  File converter built with TypeScript and styled with Tailwind.
+                  The framework of choice is Next.js. Users can upload files
+                  with Dropzone and send them to the backend for conversion. The
+                  frontend is currently in active development and continuously
+                  updated.
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>Work Tracker</span>
                 </div>
                 <p>
@@ -219,7 +211,7 @@ function Cv() {
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>Junior Full-Stack Developer – Filament AI</span>
                   <time>April 2021 – December 2021</time>
                 </div>
@@ -237,7 +229,7 @@ function Cv() {
                 </p>
               </ExperienceWrapper>
               <ExperienceWrapper>
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>Portfolio Frontend</span>
                 </div>
                 <p>
@@ -259,7 +251,7 @@ function Cv() {
               <h4>Education</h4>
             </header>
             <Article>
-              <div class='cv-h5-nonMargin-top'>
+              <div className='cv-h5-nonMargin-top'>
                 <span>Relevant Coursework</span>
               </div>
               <ul>
@@ -276,7 +268,7 @@ function Cv() {
                 <li>Figma - UI/UX Design</li>
               </ul>
               <SchoolSection>
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>Python Backend Bootcamp</span>
                   <time>January 2019 – February 2019</time>
                 </div>
@@ -285,12 +277,12 @@ function Cv() {
                   HTML, CSS, JavaScript, Git, and Testing.
                 </p>
 
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>Technical School of Mechanical Engineering</span>
                   <time>2003 – 2004</time>
                 </div>
 
-                <div class='cv-h5'>
+                <div className='cv-h5'>
                   <span>Basic Vocational School</span>
                   <time>2000 – 2003</time>
                 </div>
