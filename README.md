@@ -56,17 +56,17 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 
 - [ ] Add some UI components to the Fitness App landing page. At the moment, it's very basic and needs some extra features to make better UX.
 - [x] Fix deployment for Fitness App.
-- [ ] Add fetching data and store it in indexDB on FitnessApp first page load to remove laging of the fetching the data. At the moment the data is fetched on the comonent mount and affects user exprience.
+- [ ] Add data fetching and store it in IndexedDB on the first FitnessApp page load to remove fetch lag. At the moment, data is fetched on component mount and affects user experience.
 - [ ] Fix deployment of the ChatBot. (Not sure if I should dedicate the time as there is plenty of other tasks to do.)
 - [x] Add the target=blank to cv link as it opens in the same tab/window and there is no return to portfolio option.
-- [ ] Fix spacing of the elements in the card.
-- [ ] Fix vertical spacing between cards as is greater than vertical.
-- [ ] Add text to FilesConverto card.
+- [x] Fix spacing of the elements in the card.
+- [x] Fix vertical spacing between cards as is greater than vertical.
+- [x] Add text to FilesConverto card.
 - [ ] Connect the visitor counter to backend and to DB.
-- [ ] Create the systme to combine the time line from other projects.
+- [x] Create a system to combine timelines from other projects.
 - [ ] Change the setting for PDF download to improve the download quality of the CV.
 - [ ] Make sure that component P is used for all paragraphs for consistency.
-- [ ] Reduce space between projects header and first project card.
+- [x] Reduce space between projects header and first project card.
 - [ ] Fix mobile menu links.
 - [ ] Remove "Why I use React?"
 - [ ] Connect visitor counter to back-end.
