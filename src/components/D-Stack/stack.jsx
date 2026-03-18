@@ -1,15 +1,15 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import MiniCard from './card.jsx'
-import styled from 'styled-components'
-import JumboSectionHeader from 'components/common/JumboSectionHeader'
-import { getStack, getStackHeader } from 'selectors/pageContent.selector'
+import React from 'react';
+import { connect } from 'react-redux';
+import MiniCard from './card.jsx';
+import styled from 'styled-components';
+import JumboSectionHeader from 'components/common/JumboSectionHeader';
+import { getStack, getStackHeader } from 'selectors/pageContent.selector';
 
 const Wrapper = styled.div`
   background: #fff;
   width: 100%;
-  margin: 0px auto 50px auto;
-`
+  margin: 0px auto 32px auto;
+`;
 const Thumbnails = styled.div`
   justify-content: center;
   margin: auto;
@@ -19,11 +19,11 @@ const Thumbnails = styled.div`
   @media (max-width: 700px) {
     width: 100%;
   }
-`
+`;
 
 function Stack(props) {
   return (
-    <Wrapper id="use">
+    <Wrapper id='use'>
       <JumboSectionHeader>{props.header}</JumboSectionHeader>
       <Thumbnails>
         {props.tools.map((item, i) => {
@@ -36,18 +36,18 @@ function Stack(props) {
               text={item.text}
               href={item.webHref}
             ></MiniCard>
-          )
+          );
         })}
       </Thumbnails>
     </Wrapper>
-  )
+  );
 }
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state) => {
   return {
-    header:getStackHeader(state),
-    tools:getStack(state)
-  }
-}
+    header: getStackHeader(state),
+    tools: getStack(state),
+  };
+};
 
-export default connect(mapStateToProps)(Stack)
+export default connect(mapStateToProps)(Stack);
