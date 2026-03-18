@@ -82,15 +82,15 @@ function Cv() {
                 <strong>TypeScript</strong>, and <strong>Node.js</strong>,
                 always prioritizing clean architecture and user experience.
               </p>
-              <br />
               <p>
-                My expertise covers SPAs, <strong>RESTful APIs</strong>, state
-                management with <strong>Redux Toolkit</strong>, and full-stack
+                My work spans full-stack web applications, from responsive
+                front-end interfaces and state management with{' '}
+                <strong>Redux Toolkit</strong> and <strong>Zustand</strong> to
+                scalable back-end systems, <strong>RESTful APIs</strong>, and
                 deployments on <strong>Vercel</strong> and{' '}
-                <strong>Google Cloud Platform</strong>. I use{' '}
-                <strong>TypeScript</strong> daily and increasingly integrate{' '}
-                <strong>OpenAI API</strong> for automation and smarter features.
+                <strong>Google Cloud Platform</strong>.
               </p>
+              <br />
               <p>
                 Recent projects include{' '}
                 <strong>TLG (Time Line Generator)</strong> a Next.js app that
@@ -259,7 +259,7 @@ function Cv() {
                 <li>
                   Complete React Developer (2021, w/ Redux, Hooks, GraphQL)
                 </li>
-                <li>JavaScript: Understanding the Weird Parts</li>
+                <li>JavaScript - Understanding the Weird Parts</li>
                 <li>The Modern JavaScript Bootcamp Course (2020)</li>
                 <li>React styled-components v5 (2021 edition)</li>
                 <li>
