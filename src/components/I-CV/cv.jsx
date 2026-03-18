@@ -89,7 +89,7 @@ function Cv() {
                 deployments on <strong>Vercel</strong> and{' '}
                 <strong>Google Cloud Platform</strong>. I use{' '}
                 <strong>TypeScript</strong> daily and increasingly integrate{' '}
-                <strong>OpenAI GPT</strong> for automation and smarter features.
+                <strong>OpenAI API</strong> for automation and smarter features.
               </p>
               <p>
                 Recent projects include{' '}
@@ -175,7 +175,7 @@ function Cv() {
                 <p>
                   Full-stack Next.js application that automates GitHub commit
                   tracking and generates AI-powered daily development summaries
-                  using OpenAI GPT. Features interactive timeline UI, MongoDB
+                  using OpenAI API. Features interactive timeline UI, MongoDB
                   storage, and REST API endpoints.
                 </p>
                 <p>
