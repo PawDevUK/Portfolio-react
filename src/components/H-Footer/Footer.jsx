@@ -137,7 +137,7 @@ const Footer = ({ visitors, rightData }) => {
     return (
       <HeaderWrapper>
         <H2>All rights reserved</H2>
-        <H2>London {getYear()}</H2>
+        <H2>Reading UK {getYear()}</H2>
       </HeaderWrapper>
     );
   };
