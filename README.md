@@ -1,8 +1,16 @@
 # Portfolio
 
-This website showcases my projects and skills. It's a React app created with create-react-app and styled using styled-components. The source code is hosted on Google Cloud Platform (GCP).
+This portfolio showcases my projects, technical skills, and professional experience as a Full-Stack Developer. It is built with React (create-react-app), Redux, styled-components, and modern UI tooling, with selected full-stack projects integrated directly into the site.
 
-Live: [Portfolio](http://pawelsiwek.co.uk/)
+Live: [Portfolio](https://pawelsiwek.co.uk/)
+
+## Current Stack
+
+- Frontend: React 18, React Router, Redux Toolkit, Zustand, styled-components
+- Backend integrations: Node.js APIs, MongoDB-based project features
+- UI/UX: Tailwind CSS (project-specific), Material UI, AOS animations
+- Tooling: npm, Webpack (via CRA), Jest/RTL
+- Deployment: Custom domain with Vercel and Google Cloud Platform services
 
 <hr>
 
@@ -21,6 +29,11 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 ---
 
 ## Updates
+
+- Updated About Me and CV content (EN/PL) to reflect current full-stack and AI-focused skills.
+- Added Zustand to state management stack references.
+- Improved project card layout and image consistency.
+- Refined CV copy for clearer project descriptions.
 
 - Removed particles.js as it is deprecated.
 - Installed react-tsparticles as it is fully supported.
