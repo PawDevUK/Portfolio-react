@@ -9,7 +9,7 @@ user interface created in React, and backend build in Node.js.\
 At the moment I’m not entirely sure which DB I will use for this project but\
 probably it will be either Mongo DB or MySQL.
 
-### FrontEnd 
+### FrontEnd
 
 #### ToDo
 
@@ -25,10 +25,7 @@ probably it will be either Mongo DB or MySQL.
 - [ ] component to select same repeated days in the week
 - [ ] timeline tab
 - [ ] timeline with division for hours
-- [ ] colored progress bar on the top of the time line. I should indicate basic H and overtime H
-- [ ] sumary of the worked hours, located above the time line with colored squares accordingly to basic H or overtime H
+- [ ] colored progress bar on the top of the timeline. I should indicate basic H and overtime H
+- [ ] sumary of the worked hours, located above the timeline with colored squares accordingly to basic H or overtime H
 - [ ] progres circle to visually show profit for a day
 - [x] menu
-
-
-

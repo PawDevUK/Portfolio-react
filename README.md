@@ -92,7 +92,7 @@ Live: [Portfolio](http://pawelsiwek.co.uk/)
 - [x] Move the image of the card to the top of the card.
 - [x] Add vercel to the stack.
 - [x] Add Chatgpt to stack used.
-- [x] Add padding right to time line content so the text is not that close to scroll button.
+- [x] Add padding right to timeline content so the text is not that close to scroll button.
 - [x] Fix downloaded page layout. The article is cut in half between pages as the CV is copied as one page and then split into two without checking the text layout.
 - [x] Add download button of the CV.
 - [x] Enlarge project cards on mobile devices.

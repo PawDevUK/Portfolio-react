@@ -67,7 +67,7 @@ const TimelineSection = () => {
         py: { xs: 2, md: 4 },
       }}
     >
-      <JumboSectionHeader>Time Line</JumboSectionHeader>
+      <JumboSectionHeader>Timeline</JumboSectionHeader>
       <Container maxWidth='md'>
         <Box
           ref={scrollRef}
