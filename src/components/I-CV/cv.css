@@ -1,5 +1,13 @@
+:root {
+    --primary-text-color: #232222;
+}
+
+.textPrimary {
+    color: var(--primary-text-color);
+}
+
 .page {
-    color: #585858;
+    color: var(--primary-text-color);
     max-width: 900px;
     margin: 0 auto;
     background-color: #fff;
@@ -64,7 +72,7 @@
 .Tools {
     font-weight: bold;
     font-size: 15px;
-    color: #585858;
+    color: --primary-text-color;
 }
 
 #art-know {
@@ -108,8 +116,6 @@
 .Skills ul li {
     line-height: 24px;
 }
-
-
 
 a:hover {
     color: #0faee1;
@@ -158,7 +164,7 @@ a:hover {
 }
 
 #socials a {
-    color: #585858;
+    color: --primary-text-color;
     margin: 5px;
 }
 

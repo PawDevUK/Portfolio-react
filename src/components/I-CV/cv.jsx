@@ -65,8 +65,8 @@ function Cv() {
             <header>
               <h4>About Me</h4>
             </header>
-            <Article id='art-about'>
-              <p>
+            <Article id='art-about' className='textPrimary'>
+              <p className='textPrimary'>
                 I'm a Junior Full-Stack Developer based in Reading, UK, focused
                 on building modern, responsive web applications. I specialize in{' '}
                 <strong>React</strong>, <strong>Next.js (App Router)</strong>,{' '}
@@ -74,7 +74,7 @@ function Cv() {
                 and <strong>Node.js</strong>, always prioritizing clean
                 architecture and user experience.
               </p>
-              <p>
+              <p className='textPrimary'>
                 My work spans full-stack web applications, from responsive
                 front-end interfaces and state management with{' '}
                 <strong>Redux Toolkit</strong> and <strong>Zustand</strong> to
@@ -82,7 +82,7 @@ function Cv() {
                 deployments on <strong>Vercel</strong> and{' '}
                 <strong>Google Cloud Platform</strong>.
               </p>
-              <p>
+              <p className='textPrimary'>
                 In production environments, I actively use{' '}
                 <strong>TypeScript</strong> and increasingly incorporate AI
                 capabilities—particularly <strong>OpenAI API models</strong>—to
@@ -90,7 +90,7 @@ function Cv() {
                 application features.
               </p>
               <br />
-              <p>
+              <p className='textPrimary'>
                 Recent projects include{' '}
                 <strong>TLG (Time Line Generator)</strong> a Next.js app that
                 tracks GitHub activity and generates AI-powered summaries and{' '}
@@ -100,13 +100,13 @@ function Cv() {
                 <br />
               </p>
               <br />
-              <p>
+              <p className='textPrimary'>
                 Professionally, I gained hands-on experience at{' '}
                 <strong>Filament AI</strong> in 2021, customizing chat widgets
                 and extending <strong>Google Cloud Functions</strong> for client
                 projects.
               </p>
-              <p>
+              <p className='textPrimary'>
                 I'm committed to clean code, best practices, automated testing,
                 and continuous learning in full-stack and AI-augmented
                 development.
@@ -158,12 +158,12 @@ function Cv() {
                 <div className='cv-h5-nonMargin-top'>
                   <span>Profit Radar </span>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   Next.js tool for Copart auction monitoring with server-side
                   scraping, proxy support, MongoDB persistence, and AI title
                   parsing. Helps identify potential resale opportunities.
                 </p>
-                <p>
+                <p className='textPrimary'>
                   <strong>Tools & Technologies:</strong> Next.js (App Router),
                   TypeScript, Puppeteer, MongoDB, OpenAI API, Vercel
                 </p>
@@ -172,13 +172,13 @@ function Cv() {
                 <div className='cv-h5'>
                   <span>TLG – Time Line Generator</span>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   Full-stack Next.js application that automates GitHub commit
                   tracking and generates AI-powered daily development summaries
                   using OpenAI API. Features interactive timeline UI, MongoDB
                   storage, and REST API endpoints.
                 </p>
-                <p>
+                <p className='textPrimary'>
                   <strong>Tools & Technologies:</strong> Next.js (App Router),
                   TypeScript, Tailwind CSS, MongoDB/Mongoose, OpenAI API, GitHub
                   API
@@ -188,7 +188,7 @@ function Cv() {
                 <div className='cv-h5'>
                   <span>FilesConverto.com</span>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   File converter built with TypeScript and styled with Tailwind.
                   The framework of choice is Next.js. Users can upload files
                   with Dropzone and send them to the backend for conversion. The
@@ -200,7 +200,7 @@ function Cv() {
                 <div className='cv-h5'>
                   <span>Work Tracker</span>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   Work Tracker is a full-stack payroll management app for
                   businesses with complex shift patterns. Built with
                   Node.js/Express and React, it tracks work hours and calculates
@@ -216,7 +216,7 @@ function Cv() {
                   <span>Junior Full-Stack Developer – Filament AI</span>
                   <time>April 2021 – December 2021</time>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   Developed and customized chat widgets for multiple clients,
                   aligning with website themes and functional requirements
                   (e.g., Rentokill, Versus Arthritis). Extended Google Cloud
@@ -233,13 +233,13 @@ function Cv() {
                 <div className='cv-h5'>
                   <span>Portfolio Frontend</span>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   Developed personal portfolio website using React,
                   create-react-app, React-Bootstrap, React Router, and
                   styled-components. Designed UI/UX in Figma and deployed on
                   GitHub Pages.
                 </p>
-                <p>
+                <p className='textPrimary'>
                   <strong>Tools & Technologies:</strong> React, React Router,
                   Styled-Components, Material-UI, Figma
                 </p>
@@ -273,7 +273,7 @@ function Cv() {
                   <span>Python Backend Bootcamp</span>
                   <time>January 2019 – February 2019</time>
                 </div>
-                <p>
+                <p className='textPrimary'>
                   Four-week backend bootcamp covering Python, Flask, Django,
                   HTML, CSS, JavaScript, Git, and Testing.
                 </p>
