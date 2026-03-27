@@ -31,6 +31,10 @@
     margin: 20px 0px 5px 0px;
 }
 
+.cv-low-case {
+    text-transform: lowercase;
+}
+
 .cv-h5-nonMargin-top {
     margin-top: 0px;
 }

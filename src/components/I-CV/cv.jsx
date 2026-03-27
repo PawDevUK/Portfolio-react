@@ -87,7 +87,7 @@ function Cv() {
               <br />
               <p className='textPrimary'>
                 Recent projects include{' '}
-                <strong>TLG (Time Line Generator)</strong> a Next.js app that
+                <strong>TLG (timeline Generator)</strong> a Next.js app that
                 tracks GitHub activity and generates AI-powered summaries and{' '}
                 <strong>Profit Radar</strong>, a tool for monitoring Copart
                 auctions with AI-driven insights. Both highlight my skills in
@@ -114,32 +114,26 @@ function Cv() {
               <h4>Skills</h4>
             </header>
             <Article id='art-know' className='skills-columns'>
-              <ul className='Skills merged-skills'>
-                <li>JavaScript ES6+</li>
-                <li>TypeScript</li>
-                <li>React / Next.js</li>
-                <li>OpenAI API</li>
-                <li>Redux Toolkit</li>
-                <li>Zustand</li>
-                <li>React Router</li>
-                <li>Styled-Components</li>
-                <li>Tailwind</li>
-                <li>Material-UI</li>
-                <li>Bootstrap</li>
-                <li>Node.js / Express.js</li>
-                <li>MongoDB / Mongoose</li>
-                <li>Moments.js / date-fns</li>
-                <li>REST API integration</li>
-                <li>Nodemailer / Twilio</li>
-                <li>Google Cloud Functions</li>
-                <li>Vercel</li>
-                <li>AWS</li>
-                <li>Git / GitHub / GitLab</li>
-                <li>Webpack / npm</li>
-                <li>React Testing Library</li>
-                <li>Jest</li>
-                <li>Figma</li>
-                <li>GCP</li>
+              <ul>
+                <li>
+                  <strong>Frontend:</strong> React, Next.js, TypeScript,
+                  Tailwind, Styled-Components, Redux Toolkit
+                </li>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express.js, MongoDB,
+                  Mongoose, REST APIs
+                </li>
+                <li>
+                  <strong>AI & Automation:</strong> OpenAI API, AI-powered
+                  features, data processing
+                </li>
+                <li>
+                  <strong>Cloud & DevOps:</strong> Vercel, Google Cloud
+                  Functions
+                </li>
+                <li>
+                  <strong>Tools:</strong> Git, GitHub, GitLab
+                </li>
               </ul>
             </Article>
           </section>
@@ -165,7 +159,7 @@ function Cv() {
               </ExperienceWrapper>
               <ExperienceWrapper>
                 <div className='cv-h5'>
-                  <span>TLG – Time Line Generator</span>
+                  <span>Timeline Generator</span>
                 </div>
                 <p className='textPrimary'>
                   Full-stack Next.js application that automates GitHub commit
@@ -181,7 +175,10 @@ function Cv() {
               </ExperienceWrapper>
               <ExperienceWrapper>
                 <div className='cv-h5'>
-                  <span>FilesConverto.com</span>
+                  <span>
+                    FilesConverto.com
+                    <span className='cv-low-case'> (file conversion tool)</span>
+                  </span>
                 </div>
                 <p className='textPrimary'>
                   File converter built with TypeScript and styled with Tailwind.
@@ -208,7 +205,7 @@ function Cv() {
               </ExperienceWrapper>
               <ExperienceWrapper>
                 <div className='cv-h5'>
-                  <span>Portfolio Frontend</span>
+                  <span>Portfolio</span>
                 </div>
                 <p className='textPrimary'>
                   Developed personal portfolio website using React,
@@ -230,7 +227,7 @@ function Cv() {
             <Article id='art-work'>
               <ExperienceWrapper>
                 <div className='cv-h5-nonMargin-top'>
-                  <span>Junior Full-Stack Developer – Filament AI</span>
+                  <span>Full-Stack Developer – Filament AI</span>
                   <time>April 2021 – December 2021</time>
                 </div>
                 <p className='textPrimary'>
