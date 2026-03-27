@@ -62,7 +62,7 @@
   "scripts": {
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider node start.js",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "postbuild": "node -e \"if(process.env.VERCEL){console.log('Skipping react-snap on Vercel')}else{require('child_process').execSync('react-snap',{stdio:'inherit'})}\"",
+    "postbuild": "node -e \"if(process.env.VERCEL){console.log('Skipping react-snap on Vercel')}else{try{require('child_process').execSync('react-snap',{stdio:'inherit'})}catch(err){console.warn('react-snap failed, continuing build')}}\"",
     "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build"
