@@ -1,0 +1,351 @@
+#!/usr/bin/env node
+
+/**
+ * Static Portfolio HTML Generator
+ * Generates a crawlable static HTML version of portfolio
+ * Run: node scripts/generateStaticPortfolio.js
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+// Portfolio data (hardcoded from React config)
+const projectsData = [
+  {
+    title: "Profit Radar",
+    text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analyzing lot details with market enrichment.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "OpenAI", "Vercel"],
+    webHref: "https://profit-radar-ten.vercel.app/",
+    githubHref: "https://github.com/PawDevUK/profit-radar"
+  },
+  {
+    title: "Timeline Generator",
+    text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "OpenAI", "Vercel"],
+    webHref: "https://time-line-generator.vercel.app",
+    githubHref: "https://github.com/PawDevUK/TLG"
+  },
+  {
+    title: "FilesConverto",
+    text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats. The platform features a drag-and-drop uploader.",
+    stack: ["Next.js", "React", "TypeScript", "styled-components", "Tailwind", "Node.js", "Vercel"],
+    webHref: "https://filesconverto.vercel.app/",
+    githubHref: "https://github.com/pawdevuk/Filesconverto"
+  },
+  {
+    title: "Tic Tac Toe",
+    text: "Tic-tac-toe game where two players take turns placing 'O' or 'X' on a 3x3 grid. This React app features a simple interface and game logic.",
+    stack: ["React", "JavaScript", "styled-components", "Node.js"],
+    webHref: "/TicTacToe",
+    githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe"
+  },
+  {
+    title: "Covid Data",
+    text: "Application providing information and data related to COVID-19. It's a React app created with Create React App and styled with styled-components.",
+    stack: ["React", "JavaScript", "styled-components", "Google Cloud", "Node.js"],
+    webHref: "/covid",
+    githubHref: "https://github.com/pawdevuk/Covid-Tracker"
+  },
+  {
+    title: "Chat Bot",
+    text: "Chat Bot is a simple app that lets anyone converse with an AI. It's simple and fun. Chat history and a MERN-stack backend will be added later.",
+    stack: ["React", "JavaScript", "styled-components", "Google Cloud"],
+    webHref: "",
+    githubHref: "https://github.com/pawdevuk/Messenger"
+  }
+];
+
+const skillsData = [
+  "React & Next.js", "TypeScript", "JavaScript (ES6+)", "Node.js & Express",
+  "MongoDB & Mongoose", "Redux Toolkit & Zustand", "styled-components", "Tailwind CSS",
+  "REST APIs", "Material-UI", "React Router", "OpenAI API", "Vercel", "Google Cloud Platform", "Git & GitHub"
+];
+
+function generateProjectsHTML() {
+  return projectsData
+    .map(project => `
+    <article class="project">
+      <h3>${project.title}</h3>
+      <p>${project.text}</p>
+      <div class="project-stack">
+        ${project.stack.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
+      </div>
+      <div class="project-links">
+        ${project.webHref ? `<a href="${project.webHref}" target="_blank" rel="noopener noreferrer">View Project</a>` : ''}
+        <a href="${project.githubHref}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </article>
+  `)
+    .join('');
+}
+
+function generateSkillsHTML() {
+  return skillsData
+    .map(skill => `<li>${skill}</li>`)
+    .join('');
+}
+
+function generateHTML() {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawel Siwek - Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Full-Stack Developer based in Reading, UK. Specializing in React, Next.js, TypeScript, Node.js, and MongoDB.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Pawel Siwek">
+  <link rel="canonical" href="https://pawelsiwek.co.uk/portfolio.html">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .contact-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+    .contact-links a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .contact-links a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 2em;
+      color: #222;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #007bff;
+    }
+    .about-text {
+      font-size: 1.05em;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    .project {
+      background: #f8f9fa;
+      padding: 25px;
+      border-radius: 8px;
+      border-left: 4px solid #007bff;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+    }
+    .project h3 {
+      color: #007bff;
+      margin-bottom: 12px;
+      font-size: 1.4em;
+    }
+    .project p {
+      color: #555;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    .tech-badge {
+      background: #e7f3ff;
+      color: #007bff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 500;
+    }
+    .project-links {
+      display: flex;
+      gap: 12px;
+    }
+    .project-links a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border: 1px solid #007bff;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-size: 0.9em;
+    }
+    .project-links a:hover {
+      background: #007bff;
+      color: white;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .skills-grid ul {
+      list-style: none;
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #007bff;
+    }
+    .skills-grid li {
+      padding: 8px 0;
+      color: #555;
+      font-size: 1em;
+    }
+    .skills-grid li:before {
+      content: "✓ ";
+      color: #007bff;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px solid #ddd;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .cta {
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 30px 0;
+    }
+    .cta a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .cta a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      .container {
+        padding: 20px;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Pawel Siwek</h1>
+      <p class="subtitle">Full-Stack Developer | React • Next.js • TypeScript • Node.js</p>
+      <p class="subtitle">Reading, UK</p>
+      <div class="contact-links">
+        <a href="https://pawelsiwek.co.uk/content" target="_blank" rel="noopener noreferrer">Interactive Portfolio</a>
+        <a href="https://github.com/pawdevuk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/pawel-siwek-78432119b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:contact@pawelsiwek.co.uk">Email</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-text">
+        <p>I'm a Junior Full-Stack Developer specializing in React, Next.js, TypeScript, and Node.js. I build modern, responsive web applications with clean architecture, high performance, and excellent user experience.</p>
+        <p>My expertise spans full-stack development: responsive front-end interfaces with React and Next.js, state management (Redux Toolkit, Zustand), scalable back-end systems with Node.js and Express, RESTful APIs, MongoDB databases, and cloud deployment on Vercel and Google Cloud Platform.</p>
+        <p>In production, I actively use TypeScript and increasingly incorporate AI capabilities—particularly OpenAI API integrations—to enable intelligent automation, data processing, and smarter application features.</p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        ${generateProjectsHTML()}
+      </div>
+      <div class="cta">
+        <p>Explore more projects and view the interactive portfolio:</p>
+        <a href="https://pawelsiwek.co.uk/content">Visit Full Portfolio</a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Core Skills & Tools</h2>
+      <div class="skills-grid">
+        <ul>
+          ${generateSkillsHTML()}
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>Generated: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <p>This page is automatically generated from portfolio data. Last updated: ${new Date().toISOString().split('T')[0]}</p>
+      <p><a href="https://pawelsiwek.co.uk/resume.html">View Static Resume</a> | <a href="https://pawelsiwek.co.uk/content">Interactive Portfolio</a></p>
+    </footer>
+  </div>
+</body>
+</html>`;
+}
+
+// Write to public/portfolio.html
+const outputPath = path.join(__dirname, '../public/portfolio.html');
+const html = generateHTML();
+
+fs.writeFileSync(outputPath, html, 'utf-8');
+console.log(`✅ Generated static portfolio at: ${outputPath}`);
