@@ -61,8 +61,9 @@
   },
   "scripts": {
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider node start.js",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build && node scripts/generateStaticPortfolio.js",
     "postbuild": "node -e \"if(process.env.VERCEL){console.log('Skipping react-snap on Vercel')}else{try{require('child_process').execSync('react-snap',{stdio:'inherit'})}catch(err){console.warn('react-snap failed, continuing build')}}\"",
+    "generate-portfolio": "node scripts/generateStaticPortfolio.js",
     "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build"
