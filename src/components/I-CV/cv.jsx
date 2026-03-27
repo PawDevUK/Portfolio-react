@@ -87,7 +87,7 @@ function Cv() {
               <br />
               <p className='textPrimary'>
                 Recent projects include{' '}
-                <strong>TLG (timeline Generator)</strong> a Next.js app that
+                <strong>TLG (timeline generator)</strong> a Next.js app that
                 tracks GitHub activity and generates AI-powered summaries and{' '}
                 <strong>Profit Radar</strong>, a tool for monitoring Copart
                 auctions with AI-driven insights. Both highlight my skills in
@@ -208,14 +208,16 @@ function Cv() {
                   <span>Portfolio</span>
                 </div>
                 <p className='textPrimary'>
-                  Developed personal portfolio website using React,
-                  create-react-app, React-Bootstrap, React Router, and
-                  styled-components. Designed UI/UX in Figma and deployed on
-                  GitHub Pages.
+                  Developed and continuously improved a full-stack portfolio
+                  platform built with React and create-react-app. The platform
+                  includes multilingual content, project showcases, CV section,
+                  responsive card-based layouts, and integrated app demos.
                 </p>
                 <p className='textPrimary'>
                   <strong>Tools & Technologies:</strong> React, React Router,
-                  Styled-Components, Material-UI, Figma
+                  TypeScript, Redux Toolkit, Styled-Components, Material-UI,
+                  Tailwind CSS, Node.js, MongoDB, Vercel, Google Cloud Platform,
+                  Figma
                 </p>
               </ExperienceWrapper>
             </Article>
