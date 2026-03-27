@@ -3,67 +3,110 @@
 /**
  * Static Portfolio HTML Generator
  * Generates a crawlable static HTML version of portfolio
+ * Imports data from React config files (single source of truth)
  * Run: node scripts/generateStaticPortfolio.js
  */
 
 const fs = require('fs');
 const path = require('path');
+const babel = require('@babel/core');
+const transformModulesCommonJS = require('@babel/plugin-transform-modules-commonjs');
 
-// Portfolio data (hardcoded from React config)
-const projectsData = [
-  {
-    title: "Profit Radar",
-    text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analyzing lot details with market enrichment.",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "OpenAI", "Vercel"],
-    webHref: "https://profit-radar-ten.vercel.app/",
-    githubHref: "https://github.com/PawDevUK/profit-radar"
-  },
-  {
-    title: "Timeline Generator",
-    text: "Full-stack Next.js application that automatically tracks GitHub repositories and generates AI-powered daily summaries.",
-    stack: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "OpenAI", "Vercel"],
-    webHref: "https://time-line-generator.vercel.app",
-    githubHref: "https://github.com/PawDevUK/TLG"
-  },
-  {
-    title: "FilesConverto",
-    text: "Next.js + TypeScript web application for converting, compressing, and managing files in various formats. The platform features a drag-and-drop uploader.",
-    stack: ["Next.js", "React", "TypeScript", "styled-components", "Tailwind", "Node.js", "Vercel"],
-    webHref: "https://filesconverto.vercel.app/",
-    githubHref: "https://github.com/pawdevuk/Filesconverto"
-  },
-  {
-    title: "Tic Tac Toe",
-    text: "Tic-tac-toe game where two players take turns placing 'O' or 'X' on a 3x3 grid. This React app features a simple interface and game logic.",
-    stack: ["React", "JavaScript", "styled-components", "Node.js"],
-    webHref: "/TicTacToe",
-    githubHref: "https://github.com/pawdevuk/Portfolio-react/tree/master/src/components/F-Projects/TicTacToe"
-  },
-  {
-    title: "Covid Data",
-    text: "Application providing information and data related to COVID-19. It's a React app created with Create React App and styled with styled-components.",
-    stack: ["React", "JavaScript", "styled-components", "Google Cloud", "Node.js"],
-    webHref: "/covid",
-    githubHref: "https://github.com/pawdevuk/Covid-Tracker"
-  },
-  {
-    title: "Chat Bot",
-    text: "Chat Bot is a simple app that lets anyone converse with an AI. It's simple and fun. Chat history and a MERN-stack backend will be added later.",
-    stack: ["React", "JavaScript", "styled-components", "Google Cloud"],
-    webHref: "",
-    githubHref: "https://github.com/pawdevuk/Messenger"
-  }
-];
+function prettifyTechLabel(raw) {
+    const key = String(raw || '').trim();
+    const dictionary = {
+        js: 'JavaScript',
+        ts: 'TypeScript',
+        nextjs: 'Next.js',
+        nodeJS: 'Node.js',
+        gcloud: 'Google Cloud',
+        chatgpt: 'OpenAI',
+        router: 'React Router',
+        styled: 'styled-components',
+        mongo: 'MongoDB',
+        express: 'Express',
+        vercel: 'Vercel',
+        npm: 'npm',
+    };
 
-const skillsData = [
-  "React & Next.js", "TypeScript", "JavaScript (ES6+)", "Node.js & Express",
-  "MongoDB & Mongoose", "Redux Toolkit & Zustand", "styled-components", "Tailwind CSS",
-  "REST APIs", "Material-UI", "React Router", "OpenAI API", "Vercel", "Google Cloud Platform", "Git & GitHub"
-];
+    if (dictionary[key]) return dictionary[key];
+    if (!key) return '';
 
-function generateProjectsHTML() {
-  return projectsData
-    .map(project => `
+    return key
+        .replace(/([a-z])([A-Z])/g, '$1 $2')
+        .replace(/[_-]+/g, ' ')
+        .replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function createImgStub() {
+    return new Proxy({}, {
+        get: (_, prop) => {
+            const label = prettifyTechLabel(prop);
+            return { title: label, alt: label };
+        }
+    });
+}
+
+function loadConfigModule(relativePath) {
+    const absolutePath = path.join(__dirname, relativePath);
+    const source = fs.readFileSync(absolutePath, 'utf-8');
+
+    const transformed = babel.transformSync(source, {
+        filename: absolutePath,
+        babelrc: false,
+        configFile: false,
+        plugins: [transformModulesCommonJS],
+    });
+
+    const Module = require('module');
+    const mod = new Module(absolutePath, module.parent);
+    mod.filename = absolutePath;
+    mod.paths = Module._nodeModulePaths(path.dirname(absolutePath));
+
+    const localRequire = (request) => {
+        if (request === 'img') return createImgStub();
+        if (request.startsWith('.')) {
+            return require(path.resolve(path.dirname(absolutePath), request));
+        }
+        return require(request);
+    };
+
+    mod.require = localRequire;
+    mod._compile(transformed.code, absolutePath);
+
+    return mod.exports;
+}
+
+// Load and normalize source-of-truth data from React config files
+function loadConfigData() {
+    const projectsConfig = loadConfigModule('../src/config/projects.config.js');
+    const stackConfig = loadConfigModule('../src/config/stack.config.js');
+
+    const projectsData = (projectsConfig.projects || [])
+        .filter((project) => project && project.title && project.text)
+        .slice(0, 6)
+        .map((project) => ({
+            title: project.title,
+            text: project.text,
+            stack: (project.stack || [])
+                .map((tech) => tech?.title || tech?.alt || prettifyTechLabel(tech))
+                .filter(Boolean),
+            webHref: project.webHref?.href || '',
+            githubHref: project.githubHref || '',
+        }));
+
+    const skillsData = Array.from(new Set(
+        (stackConfig.stack?.tools || [])
+            .map((tool) => tool?.title)
+            .filter(Boolean)
+    ));
+
+    return { projectsData, skillsData };
+}
+
+function generateProjectsHTML(projectsData) {
+    return projectsData
+        .map(project => `
     <article class="project">
       <h3>${project.title}</h3>
       <p>${project.text}</p>
@@ -76,17 +119,17 @@ function generateProjectsHTML() {
       </div>
     </article>
   `)
-    .join('');
+        .join('');
 }
 
-function generateSkillsHTML() {
-  return skillsData
-    .map(skill => `<li>${skill}</li>`)
-    .join('');
+function generateSkillsHTML(skillsData) {
+    return skillsData
+        .map(skill => `<li>${skill}</li>`)
+        .join('');
 }
 
-function generateHTML() {
-  return `<!DOCTYPE html>
+function generateHTML(projectsData, skillsData) {
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -316,7 +359,7 @@ function generateHTML() {
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
-        ${generateProjectsHTML()}
+        ${generateProjectsHTML(projectsData)}
       </div>
       <div class="cta">
         <p>Explore more projects and view the interactive portfolio:</p>
@@ -328,14 +371,14 @@ function generateHTML() {
       <h2>Core Skills & Tools</h2>
       <div class="skills-grid">
         <ul>
-          ${generateSkillsHTML()}
+          ${generateSkillsHTML(skillsData)}
         </ul>
       </div>
     </section>
 
     <footer>
       <p>Generated: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-      <p>This page is automatically generated from portfolio data. Last updated: ${new Date().toISOString().split('T')[0]}</p>
+      <p>This page is automatically generated from portfolio config files. Last updated: ${new Date().toISOString().split('T')[0]}</p>
       <p><a href="https://pawelsiwek.co.uk/resume.html">View Static Resume</a> | <a href="https://pawelsiwek.co.uk/content">Interactive Portfolio</a></p>
     </footer>
   </div>
@@ -343,9 +386,15 @@ function generateHTML() {
 </html>`;
 }
 
-// Write to public/portfolio.html
-const outputPath = path.join(__dirname, '../public/portfolio.html');
-const html = generateHTML();
+// Main execution
+try {
+    const { projectsData, skillsData } = loadConfigData();
+    const outputPath = path.join(__dirname, '../public/portfolio.html');
+    const html = generateHTML(projectsData, skillsData);
 
-fs.writeFileSync(outputPath, html, 'utf-8');
-console.log(`✅ Generated static portfolio at: ${outputPath}`);
+    fs.writeFileSync(outputPath, html, 'utf-8');
+    console.log(`✅ Generated static portfolio at: ${outputPath}`);
+} catch (error) {
+    console.error('❌ Error generating portfolio:', error.message);
+    process.exit(1);
+}
