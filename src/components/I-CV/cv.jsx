@@ -26,13 +26,8 @@ function Cv() {
           <header className='grid-plus sectionPadding'>
             <div id='header-info'>
               <h1 id='name'>Pawel Siwek</h1>
-              <h2>Junior Full-Stack Developer</h2>
+              <h2>Full-Stack Developer</h2>
             </div>
-            {/* <ButtonWrapper>
-              <ButtonInnerWrapper>
-                <DownloadCV />
-              </ButtonInnerWrapper>
-            </ButtonWrapper> */}
           </header>
 
           <section className='grid sectionPadding'>
@@ -42,20 +37,20 @@ function Cv() {
             <Article className='grid-plus' id='cont-art'>
               <div id='left'>
                 <div className='head'>Email:</div>
-                <div className='head'>Town:</div>
-                <div className='head'>Telephone:</div>
                 <div className='head'>Portfolio:</div>
                 <div className='head'>GitHub:</div>
+                <div className='head'>Telephone:</div>
+                <div className='head'>Location:</div>
                 <div className='head'>Languages:</div>
               </div>
               <div id='right'>
                 <div className='info'>P.F.Siwek@gmail.com</div>
-                <div className='info'>Reading, UK</div>
-                <div className='info'>07463765514</div>
                 <div className='info'>
-                  <a href='https://pawelsiwek.co.uk'>pawelsiwek.co.uk</a>
+                  <a href='https://pawelsiwek.co.uk'>PawelSiwek.co.uk</a>
                 </div>
                 <div className='info'>PawDevUK</div>
+                <div className='info'>+44 7463 765514</div>
+                <div className='info'>Reading, UK</div>
                 <div className='info'>English (Fluent), Polish (Native)</div>
               </div>
             </Article>
@@ -67,8 +62,8 @@ function Cv() {
             </header>
             <Article id='art-about' className='textPrimary'>
               <p className='textPrimary'>
-                I'm a Junior Full-Stack Developer based in Reading, UK, focused
-                on building modern, responsive web applications. I specialize in{' '}
+                I'm a Full-Stack Developer based in Reading, UK, focused on
+                building modern, responsive web applications. I specialize in{' '}
                 <strong>React</strong>, <strong>Next.js (App Router)</strong>,{' '}
                 <strong>TypeScript</strong>, <br />
                 and <strong>Node.js</strong>, always prioritizing clean
@@ -213,6 +208,28 @@ function Cv() {
               </ExperienceWrapper>
               <ExperienceWrapper>
                 <div className='cv-h5'>
+                  <span>Portfolio Frontend</span>
+                </div>
+                <p className='textPrimary'>
+                  Developed personal portfolio website using React,
+                  create-react-app, React-Bootstrap, React Router, and
+                  styled-components. Designed UI/UX in Figma and deployed on
+                  GitHub Pages.
+                </p>
+                <p className='textPrimary'>
+                  <strong>Tools & Technologies:</strong> React, React Router,
+                  Styled-Components, Material-UI, Figma
+                </p>
+              </ExperienceWrapper>
+            </Article>
+          </section>
+          <section className='grid sectionPadding'>
+            <header>
+              <h4>Professional Experience</h4>
+            </header>
+            <Article id='art-work'>
+              <ExperienceWrapper>
+                <div className='cv-h5-nonMargin-top'>
                   <span>Junior Full-Stack Developer – Filament AI</span>
                   <time>April 2021 – December 2021</time>
                 </div>
@@ -227,21 +244,6 @@ function Cv() {
                   resolving bugs.
                   <strong>Tools & Technologies:</strong> React, Node.js, Google
                   Cloud Functions, EBM, Filament UI, REST APIs
-                </p>
-              </ExperienceWrapper>
-              <ExperienceWrapper>
-                <div className='cv-h5'>
-                  <span>Portfolio Frontend</span>
-                </div>
-                <p className='textPrimary'>
-                  Developed personal portfolio website using React,
-                  create-react-app, React-Bootstrap, React Router, and
-                  styled-components. Designed UI/UX in Figma and deployed on
-                  GitHub Pages.
-                </p>
-                <p className='textPrimary'>
-                  <strong>Tools & Technologies:</strong> React, React Router,
-                  Styled-Components, Material-UI, Figma
                 </p>
               </ExperienceWrapper>
             </Article>
