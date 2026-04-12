@@ -49,7 +49,7 @@ const MobilNav = styled.div`
 `;
 const LinkContainer = styled.div`
   padding-bottom: 20px;
-  margin: 16px auto 0px 86px;
+  margin: 10px auto 0px 86px;
   height: auto;
   @media (min-width: 992px) {
     display: none;
@@ -79,7 +79,7 @@ const DropDown = styled(MobileLink)`
 const MobileText = styled.p`
   color: #444444;
   display: inline-block;
-  margin: 16px auto 16px 48px;
+  margin: 6px auto 6px 48px;
   @media (min-width: 992px) {
     display: none;
   }
