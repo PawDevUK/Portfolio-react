@@ -1,4 +1,4 @@
-import { bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto, tlg, profitRadar } from 'img';
+import { pup, bot, asparago, nasa, royal, barber, solicitors, fitnessApp, CovidApp, register, TicTacToe, filesconverto, tlg, profitRadar } from 'img';
 import { react, git, mongo, nodeJS, gcloud, bootstrap, figma, html, css, scss, js, styled, router, express, vscode, npm, tailwind, nextjs, ts, chatgpt, vercel } from 'img'
 
 export const projects = [
@@ -9,7 +9,7 @@ export const projects = [
         text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analyzing lot details with market enrichment.",
         title: "Profit Radar",
         webHref: { href: "https://profit-radar-ten.vercel.app/", button: "Visit" },
-        stack: [react, nextjs, ts, tailwind, nodeJS, chatgpt, vercel]
+        stack: [react, nextjs, ts, tailwind, pup, nodeJS, chatgpt, vercel]
     },
     {
         alt: "Timeline Generator",
