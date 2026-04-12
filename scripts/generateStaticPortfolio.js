@@ -350,7 +350,7 @@ function generateHTML(projectsData, skillsData) {
     <section id="about">
       <h2>About Me</h2>
       <div class="about-text">
-        <p>I'm a Junior Full-Stack Developer specializing in React, Next.js, TypeScript, and Node.js. I build modern, responsive web applications with clean architecture, high performance, and excellent user experience.</p>
+        <p>I'm a Full-Stack Developer specializing in React, Next.js, TypeScript, and Node.js. I build modern, responsive web applications with clean architecture, high performance, and excellent user experience.</p>
         <p>My expertise spans full-stack development: responsive front-end interfaces with React and Next.js, state management (Redux Toolkit, Zustand), scalable back-end systems with Node.js and Express, RESTful APIs, MongoDB databases, and cloud deployment on Vercel and Google Cloud Platform.</p>
         <p>In production, I actively use TypeScript and increasingly incorporate AI capabilities—particularly OpenAI API integrations—to enable intelligent automation, data processing, and smarter application features.</p>
       </div>
