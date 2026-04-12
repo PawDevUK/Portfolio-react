@@ -4,7 +4,6 @@ import { useTheme } from '@mui/material/styles';
 import { defaultArticles } from './articles';
 import JumboSectionHeader from '../common/JumboSectionHeader';
 import Header from 'components/common/Header';
-import { P } from '../common/typography';
 
 const TimelineSection = () => {
   const theme = useTheme();

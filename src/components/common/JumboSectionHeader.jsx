@@ -14,7 +14,7 @@ const Wrapper = styled.div`
           z-index: 1000;
         `
       : css``}
-  padding:40px 0px;
+  padding:20px 0px;
   height: 60px;
   position: relative;
   margin: 5px;
