@@ -87,8 +87,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 const P = styled.p`
-  line-height: ${(p) => p.p_line_height}px;
-  font-size: 16px;
+  margin: 0px 10px 0px 10px;
 `;
 const A = styled.a`
   @media (max-width: 600px) {
@@ -137,10 +136,7 @@ function Card({ ...props }) {
         </TopBtnWrapper> */}
       </HeaderWrapper>
       <TextWrapper>
-        <P p_line_height={props.p_line_height}>
-          {props.item.text}
-          {/* {LimitText(props.item.text, !textLength ? 350 : textLength)} */}
-        </P>
+        <P className='styledP'>{props.item.text}</P>
       </TextWrapper>
       <ButtonWrapper>
         <A

@@ -145,9 +145,7 @@ const TimelineSection = () => {
                 >
                   {article.date}
                 </Typography>
-
-                {/* Description */}
-                <P>{article.description}</P>
+                <p className='styledP'>{article.description}</p>
               </Box>
             ))}
           </Box>
