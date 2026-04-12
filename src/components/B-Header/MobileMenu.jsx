@@ -173,15 +173,7 @@ export default function MobileMenu() {
               onClick={(event) => handleNavClick(event, item)}
             >
               {item.title}
-              <SlideDown>
-                {mouseOver ? (
-                  <DropDown href={item.href}>
-                    {item.react ? item.react.title : null}
-                  </DropDown>
-                ) : item.react ? (
-                  <DropDowIcon path={dropdown}></DropDowIcon>
-                ) : null}
-              </SlideDown>
+              <SlideDown></SlideDown>
             </MobileLink>
           ))}
         </LinkContainer>
