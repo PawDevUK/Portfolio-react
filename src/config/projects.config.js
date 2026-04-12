@@ -6,7 +6,7 @@ export const projects = [
         alt: "Profit Radar",
         githubHref: "https://github.com/PawDevUK/profit-radar",
         src: profitRadar,
-        text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analyzing lot details with market enrichment.",
+        text: "Modern Next.js application and scraping toolkit for tracking Copart auctions, exploring sale calendars, and analysing lot details with market enrichment.",
         title: "Profit Radar",
         webHref: { href: "https://profit-radar-ten.vercel.app/", button: "Visit" },
         stack: [react, nextjs, ts, tailwind, pup, nodeJS, chatgpt, vercel]
