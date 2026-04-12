@@ -42,7 +42,10 @@ const Wrapper = styled.div`
 `;
 
 const HeaderWrapper = styled.div`
-  margin: 5px auto 0px auto;
+  @media (max-width: 600px) {
+    margin: 5px auto 0px auto;
+  }
+  margin: 0px auto 0px auto;
   width: 100%;
   display: flex;
   position: relative;
