@@ -87,6 +87,7 @@ const MobileText = styled.p`
 export default function MobileMenu() {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
+  const MOBILE_HEADER_OFFSET = 0;
 
   function click() {
     setToggle((p) => !p);
@@ -95,6 +96,50 @@ export default function MobileMenu() {
   function handleMouseHover() {
     setMouseOver((mouseOver) => !mouseOver);
   }
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const top =
+        el.getBoundingClientRect().top + window.scrollY - MOBILE_HEADER_OFFSET;
+      window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
+    }
+  };
+
+  const closeMenuThenScroll = (id) => {
+    setToggle(false);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        scrollToSection(id);
+      });
+    });
+  };
+
+  const handleNavClick = (event, item) => {
+    if (item?.section) {
+      event.preventDefault();
+      closeMenuThenScroll(item.section);
+      return;
+    }
+
+    if (item?.href?.startsWith('#')) {
+      event.preventDefault();
+      closeMenuThenScroll(item.href.replace('#', ''));
+      return;
+    }
+
+    setToggle(false);
+  };
+
+  const handleReactDropdownClick = (event, item) => {
+    if (!item?.react?.href) {
+      return;
+    }
+
+    event.preventDefault();
+    closeMenuThenScroll(item.react.href);
+  };
+
   return (
     <Wrapper>
       <MobilTopDiv>
@@ -123,7 +168,9 @@ export default function MobileMenu() {
               onMouseEnter={item.react ? handleMouseHover : null}
               onMouseLeave={item.react ? handleMouseHover : null}
               key={i}
-              href={item.href}
+              href={item.href || `#${item.section || ''}`}
+              target={item.target ? item.target : ''}
+              onClick={(event) => handleNavClick(event, item)}
             >
               {item.title}
               <SlideDown>
