@@ -27,10 +27,12 @@ const Wrapper = styled.div`
   border: solid 1px #dbdbdb;
   border-radius: 20px;
   ${boxShadow12};
-  max-width: 400px;
+  max-width: 450px;
+  height: 488px;
   flex: 1 1 360px;
   @media (max-width: 600px) {
     max-width: 100%;
+    height: 388px;
     flex-basis: 100%;
   }
   @media (max-width: 992px) {
@@ -61,6 +63,7 @@ const TextWrapper = styled.div`
   margin: 0px 10px 0px 10px;
 `;
 const ImgWrapper = styled.div`
+  position: relative;
   width: 100%;
   height: 220px;
   overflow: hidden;
@@ -106,6 +109,31 @@ const A = styled.a`
     text-decoration: none;
   }
 `;
+
+const YearWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #172a3f;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  z-index: 10000;
+`;
+
+const HeaderInnerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`;
+
 function Card({ ...props }) {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -127,7 +155,9 @@ function Card({ ...props }) {
       <HeaderWrapper>
         <TitleWrapper>
           <Header>
-            {props.item.title}
+            <HeaderInnerWrapper>
+              {props.item.title} <p>({props.item.year})</p>
+            </HeaderInnerWrapper>
             <Underline></Underline>
           </Header>
         </TitleWrapper>
