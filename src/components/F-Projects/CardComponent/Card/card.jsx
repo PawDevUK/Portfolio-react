@@ -5,7 +5,7 @@ import { boxShadow12 } from 'styled.js';
 import { connect } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import Stack from './Stack';
-import Header from '../common/Header';
+import Header from '../../../common/Header';
 
 const Underline = styled.div`
   position: absolute;

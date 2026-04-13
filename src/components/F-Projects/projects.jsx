@@ -3,7 +3,8 @@ import '../../../node_modules/aos/dist/aos.css';
 import styled from 'styled-components';
 import React, { useEffect } from 'react';
 import { projects } from 'config/projects.config';
-import Card from './card';
+import Card from './CardComponent/Card/card';
+import CardBeta from './CardComponent/CardBeta/cardBeta';
 import AOS from 'aos';
 
 //  Add "enlarge" card button to every card to top right corner.
@@ -21,11 +22,7 @@ const MainWrapper = styled.div`
 const Wrapper = styled.div`
   width: 80%;
   margin: 20px auto 0px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 24px;
+
   @media (max-width: 600px) {
     gap: 16px;
   }
@@ -40,7 +37,9 @@ export default function Projects() {
       <JumboSectionHeader projects>Projects</JumboSectionHeader>
       <Wrapper>
         {projects.map((item, index) => {
-          return <Card stack={item.stack} key={index} item={item}></Card>;
+          return (
+            <CardBeta stack={item.stack} key={index} item={item}></CardBeta>
+          );
         })}
       </Wrapper>
     </MainWrapper>
