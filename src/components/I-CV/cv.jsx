@@ -281,12 +281,7 @@ function Cv() {
 
                 <div className='cv-h5'>
                   <span>Technical School of Mechanical Engineering</span>
-                  <time>2003 – 2004</time>
-                </div>
-
-                <div className='cv-h5'>
-                  <span>Basic Vocational School</span>
-                  <time>2000 – 2003</time>
+                  <time>2000 – 2004</time>
                 </div>
               </SchoolSection>
             </Article>
