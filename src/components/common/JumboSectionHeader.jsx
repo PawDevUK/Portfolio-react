@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   padding:20px 0px;
   height: 60px;
   position: relative;
-  margin: 5px;
+  margin: 5px 5px 30px 5px;
 `;
 const Header = styled(SectionHeader)`
   @media (max-width: 992px) {
