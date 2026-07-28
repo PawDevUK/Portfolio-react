@@ -75,10 +75,7 @@ const ImgWrapper = styled.div`
 `;
 const StImg = styled.img`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
+  height: auto;
 `;
 const ButtonWrapper = styled.div`
   justify-content: space-between;
@@ -143,7 +140,7 @@ function Card({ ...props }) {
             <HeaderInnerWrapper>
               {props.item.title} <p>({props.item.year})</p>
             </HeaderInnerWrapper>
-            <Underline></Underline>
+            {/* <Underline></Underline> */}
           </Header>
         </TitleWrapper>
         {/* <TopBtnWrapper>
